@@ -12,9 +12,11 @@ public class Object: Codable {
     // MARK: - Properties
 
     public let id: String
+    public var dateCreated: Date!
 
     private enum CodingKeys: String, CodingKey {
         case id
+        case dateCreated
     }
 
     // MARK: - Object lifecycle
@@ -28,6 +30,7 @@ public class Object: Codable {
     public required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(String.self, forKey: .id)
+        dateCreated = try values.decodeIfPresent(Date.self, forKey: .dateCreated)
     }
 
     // MARK: - Encodable
@@ -35,5 +38,12 @@ public class Object: Codable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(id, forKey: .id)
+        try container.encodeIfPresent(dateCreated, forKey: .dateCreated)
+    }
+}
+
+extension Object: Equatable {
+    public static func == (lhs: Object, rhs: Object) -> Bool {
+        return lhs.id == rhs.id
     }
 }

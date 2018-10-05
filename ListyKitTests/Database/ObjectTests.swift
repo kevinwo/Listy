@@ -43,6 +43,6 @@ class ObjectTests: XCTestCase {
         let decodedObject = try! jsonDecoder.decode(Object.self, from: jsonData)
 
         // then
-        XCTAssertEqual(object.id, decodedObject.id)
+        XCTAssertEqual(object, decodedObject)
     }
 }
