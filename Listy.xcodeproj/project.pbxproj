@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		260D68E42166FD2C003B7DD9 /* ListyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; };
-		260D68E92166FD2C003B7DD9 /* ListyKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D68E82166FD2C003B7DD9 /* ListyKitTests.swift */; };
 		260D68EB2166FD2C003B7DD9 /* ListyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 260D68DD2166FD2C003B7DD9 /* ListyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		260D690021670804003B7DD9 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D68FF21670804003B7DD9 /* Database.swift */; };
+		260D69022167081B003B7DD9 /* DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D69012167081B003B7DD9 /* DatabaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +28,9 @@
 		260D68DD2166FD2C003B7DD9 /* ListyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListyKit.h; sourceTree = "<group>"; };
 		260D68DE2166FD2C003B7DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		260D68E32166FD2C003B7DD9 /* ListyKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListyKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		260D68E82166FD2C003B7DD9 /* ListyKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListyKitTests.swift; sourceTree = "<group>"; };
 		260D68EA2166FD2C003B7DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		260D68FF21670804003B7DD9 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		260D69012167081B003B7DD9 /* DatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		260D68DC2166FD2C003B7DD9 /* ListyKit */ = {
 			isa = PBXGroup;
 			children = (
+				260D68FD216707DF003B7DD9 /* Database */,
 				260D68DD2166FD2C003B7DD9 /* ListyKit.h */,
 				260D68DE2166FD2C003B7DD9 /* Info.plist */,
 			);
@@ -80,10 +83,26 @@
 		260D68E72166FD2C003B7DD9 /* ListyKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				260D68E82166FD2C003B7DD9 /* ListyKitTests.swift */,
+				260D68FE216707E6003B7DD9 /* Database */,
 				260D68EA2166FD2C003B7DD9 /* Info.plist */,
 			);
 			path = ListyKitTests;
+			sourceTree = "<group>";
+		};
+		260D68FD216707DF003B7DD9 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				260D68FF21670804003B7DD9 /* Database.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		260D68FE216707E6003B7DD9 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				260D69012167081B003B7DD9 /* DatabaseTests.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				260D690021670804003B7DD9 /* Database.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				260D68E92166FD2C003B7DD9 /* ListyKitTests.swift in Sources */,
+				260D69022167081B003B7DD9 /* DatabaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +413,7 @@
 		260D68F02166FD2C003B7DD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -466,6 +487,7 @@
 		260D68F12166FD2C003B7DD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
