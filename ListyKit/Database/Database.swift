@@ -9,6 +9,10 @@ import Foundation
 
 public class Database {
 
+    // MARK: - Properties
+
+    public static let defaultPath: String = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.path
+
     let path: String
 
     public init(path: String) {
@@ -16,6 +20,10 @@ public class Database {
     }
 
     // MARK: - Public interface
+
+    public static func newInstance() -> Database {
+        return Database(path: Database.defaultPath)
+    }
 
     public func objects(ofType type: Object.Type) -> [Object]? {
         let url = objectsUrl(for: type)

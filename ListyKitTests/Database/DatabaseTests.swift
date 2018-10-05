@@ -29,6 +29,19 @@ class DatabaseTests: XCTestCase {
         XCTAssertEqual(sut.path, path)
     }
 
+    // MARK: + newInstance()
+
+    func testNewInstance() {
+        // given
+        let path = Database.defaultPath
+
+        // when
+        let database = Database.newInstance()
+
+        // then
+        XCTAssertEqual(path, database.path)
+    }
+
     // MARK: - object(ofType:id)
 
     func testObjectOfTypeId_WhenObjectExists() {

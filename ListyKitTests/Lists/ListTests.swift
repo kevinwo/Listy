@@ -20,6 +20,10 @@ class ListTests: XCTestCase {
         sut = nil
     }
 
+    // MARK: - Tests
+
+    // MARK: - Properties
+
     func testSetTitle() {
         // given
         let title = "Cool List"

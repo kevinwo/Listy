@@ -15,6 +15,8 @@
 		260D690921670CCC003B7DD9 /* ObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D690821670CCC003B7DD9 /* ObjectTests.swift */; };
 		260D691221672FE3003B7DD9 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D691121672FE3003B7DD9 /* List.swift */; };
 		260D69142167305A003B7DD9 /* ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D69132167305A003B7DD9 /* ListTests.swift */; };
+		260D691621674F78003B7DD9 /* ListsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D691521674F78003B7DD9 /* ListsTests.swift */; };
+		260D691821674F87003B7DD9 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D691721674F87003B7DD9 /* Lists.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		260D690821670CCC003B7DD9 /* ObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTests.swift; sourceTree = "<group>"; };
 		260D691121672FE3003B7DD9 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		260D69132167305A003B7DD9 /* ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTests.swift; sourceTree = "<group>"; };
+		260D691521674F78003B7DD9 /* ListsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsTests.swift; sourceTree = "<group>"; };
+		260D691721674F87003B7DD9 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				260D691121672FE3003B7DD9 /* List.swift */,
+				260D691721674F87003B7DD9 /* Lists.swift */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				260D69132167305A003B7DD9 /* ListTests.swift */,
+				260D691521674F78003B7DD9 /* ListsTests.swift */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				260D6905216709F0003B7DD9 /* Object.swift in Sources */,
+				260D691821674F87003B7DD9 /* Lists.swift in Sources */,
 				260D690021670804003B7DD9 /* Database.swift in Sources */,
 				260D691221672FE3003B7DD9 /* List.swift in Sources */,
 			);
@@ -252,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				260D690921670CCC003B7DD9 /* ObjectTests.swift in Sources */,
+				260D691621674F78003B7DD9 /* ListsTests.swift in Sources */,
 				260D69022167081B003B7DD9 /* DatabaseTests.swift in Sources */,
 				260D69142167305A003B7DD9 /* ListTests.swift in Sources */,
 			);
