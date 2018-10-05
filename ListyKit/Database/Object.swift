@@ -40,6 +40,12 @@ open class Object: Codable {
         try container.encode(id, forKey: .id)
         try container.encodeIfPresent(dateCreated, forKey: .dateCreated)
     }
+
+    // MARK: - Public interface
+
+    open class func decode(_ data: Data, with decoder: PropertyListDecoder) throws -> Decodable {
+        return try decoder.decode([Object].self, from: data)
+    }
 }
 
 extension Object: Equatable {

@@ -31,7 +31,7 @@ public class Database {
         if let data = try? Data(contentsOf: url) {
             let decoder = PropertyListDecoder()
 
-            if let objects = try? decoder.decode([Object].self, from: data) {
+            if let objects = try? type.decode(data, with: decoder) as? [Object] {
                 return objects
             }
         }
