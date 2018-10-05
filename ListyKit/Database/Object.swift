@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class Object: Codable {
+open class Object: Codable {
 
     // MARK: - Properties
 
@@ -35,7 +35,7 @@ public class Object: Codable {
 
     // MARK: - Encodable
 
-    public func encode(to encoder: Encoder) throws {
+    open func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(id, forKey: .id)
         try container.encodeIfPresent(dateCreated, forKey: .dateCreated)
