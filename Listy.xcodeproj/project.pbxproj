@@ -13,6 +13,8 @@
 		260D69022167081B003B7DD9 /* DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D69012167081B003B7DD9 /* DatabaseTests.swift */; };
 		260D6905216709F0003B7DD9 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D6904216709F0003B7DD9 /* Object.swift */; };
 		260D690921670CCC003B7DD9 /* ObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D690821670CCC003B7DD9 /* ObjectTests.swift */; };
+		260D691221672FE3003B7DD9 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D691121672FE3003B7DD9 /* List.swift */; };
+		260D69142167305A003B7DD9 /* ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D69132167305A003B7DD9 /* ListTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		260D69012167081B003B7DD9 /* DatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTests.swift; sourceTree = "<group>"; };
 		260D6904216709F0003B7DD9 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		260D690821670CCC003B7DD9 /* ObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTests.swift; sourceTree = "<group>"; };
+		260D691121672FE3003B7DD9 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		260D69132167305A003B7DD9 /* ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		260D68DC2166FD2C003B7DD9 /* ListyKit */ = {
 			isa = PBXGroup;
 			children = (
+				260D690F21672F3E003B7DD9 /* Lists */,
 				260D68FD216707DF003B7DD9 /* Database */,
 				260D68DD2166FD2C003B7DD9 /* ListyKit.h */,
 				260D68DE2166FD2C003B7DD9 /* Info.plist */,
@@ -87,6 +92,7 @@
 		260D68E72166FD2C003B7DD9 /* ListyKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				260D691021672FD2003B7DD9 /* Lists */,
 				260D68FE216707E6003B7DD9 /* Database */,
 				260D68EA2166FD2C003B7DD9 /* Info.plist */,
 			);
@@ -109,6 +115,22 @@
 				260D690821670CCC003B7DD9 /* ObjectTests.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		260D690F21672F3E003B7DD9 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				260D691121672FE3003B7DD9 /* List.swift */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		260D691021672FD2003B7DD9 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				260D69132167305A003B7DD9 /* ListTests.swift */,
+			);
+			path = Lists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +243,7 @@
 			files = (
 				260D6905216709F0003B7DD9 /* Object.swift in Sources */,
 				260D690021670804003B7DD9 /* Database.swift in Sources */,
+				260D691221672FE3003B7DD9 /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +253,7 @@
 			files = (
 				260D690921670CCC003B7DD9 /* ObjectTests.swift in Sources */,
 				260D69022167081B003B7DD9 /* DatabaseTests.swift in Sources */,
+				260D69142167305A003B7DD9 /* ListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@
 //  Created by Kevin Wolkober on 10/5/18.
 //
 
-import UIKit
+import Foundation
 
 open class Object: Codable {
 
