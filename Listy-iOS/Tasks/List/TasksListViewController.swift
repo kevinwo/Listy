@@ -48,3 +48,19 @@ class TasksListViewController: UITableViewController {
         self.presenter.addTask()
     }
 }
+
+// MARK: - UITableViewDataSource
+
+extension TasksListViewController {
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            self.presenter.deleteTask(at: indexPath)
+        }
+
+        return [delete]
+    }
+}

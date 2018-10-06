@@ -44,4 +44,16 @@ class TasksListInteractor {
 
         return task
     }
+
+    func deleteTask(at indexPath: IndexPath) {
+        let task = self.dataSource.object(at: indexPath) as! Task
+
+        do {
+            try self.tasks.delete(task)
+            self.dataSource.sections[indexPath.section].remove(at: indexPath.row)
+            self.output.deleteRow(at: indexPath)
+        } catch(let error) {
+            self.output.showErrorAlert(error)
+        }
+    }
 }

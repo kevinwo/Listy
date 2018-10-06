@@ -38,4 +38,8 @@ public class Tasks: NSObject {
     public func add(_ task: Task) throws {
         try self.database.save(task)
     }
+
+    public func delete(_ task: Task) throws {
+        try self.database.delete(task)
+    }
 }

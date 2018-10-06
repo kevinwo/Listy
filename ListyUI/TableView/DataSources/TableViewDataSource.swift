@@ -49,4 +49,8 @@ extension TableViewDataSource: UITableViewDataSource {
 
         return cell
     }
+
+    open func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
 }
