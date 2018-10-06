@@ -7,7 +7,13 @@
 
 import UIKit
 @testable import Listy_iOS
+@testable import ListyKit
 
 class FakeTasksListRouter: TasksListRouter {
 
+    var didShowEditTaskView: Bool = false
+
+    override func showEditTaskView(with: Task) {
+        self.didShowEditTaskView = true
+    }
 }

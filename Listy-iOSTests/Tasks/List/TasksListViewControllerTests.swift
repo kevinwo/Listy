@@ -48,6 +48,8 @@ class TasksListViewControllerTests: XCTestCase {
 
     func testOutlets() {
         XCTAssertNotNil(sut.tableView)
+        XCTAssertNotNil(sut.addBarButtonItem)
+        XCTAssertEqual(sut.navigationItem.rightBarButtonItem, sut.addBarButtonItem)
     }
 
     // MARK: - viewDidLoad()
@@ -55,5 +57,15 @@ class TasksListViewControllerTests: XCTestCase {
     func testViewDidLoad() {
         XCTAssertEqual(sut.title, list.title)
         XCTAssertTrue(fakePresenter.didCallViewDidLoad)
+    }
+
+    // MARK: - Button actions
+
+    func testAddBarButtonItemTapped() {
+        // when
+        sut.addBarButtonItem.tap()
+
+        // then
+        XCTAssertTrue(fakePresenter.didCallAddTask)
     }
 }

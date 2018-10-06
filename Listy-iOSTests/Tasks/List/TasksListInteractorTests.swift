@@ -96,4 +96,15 @@ class TasksListInteractorTests: XCTestCase {
         XCTAssert(sut.dataSource.objects!.contains(task))
         XCTAssertTrue(fakePresenter.didCallUpdateView)
     }
+
+    // MARK: - newTask()
+
+    func testNewTask() {
+        // when
+        let task = sut.newTask()
+
+        // then
+        XCTAssertNotNil(task)
+        XCTAssertNil(task.title)
+    }
 }

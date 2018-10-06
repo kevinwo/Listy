@@ -40,6 +40,11 @@ class TasksListPresenter: Presenter {
         self.interactor.fetchData()
     }
 
+    func addTask() {
+        let task = self.interactor.newTask()
+        self.router.showEditTaskView(with: task)
+    }
+
     // MARK: - Interactor output
 
     func updateView() {

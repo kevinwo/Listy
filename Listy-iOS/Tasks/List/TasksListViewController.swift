@@ -11,6 +11,8 @@ import ListyKit
 
 class TasksListViewController: UITableViewController {
 
+    var addBarButtonItem: UIBarButtonItem!
+
     var presenter: TasksListPresenter!
     var list: List!
 
@@ -27,7 +29,16 @@ class TasksListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonItemTapped(_:)))
+        self.navigationItem.rightBarButtonItem = self.addBarButtonItem
+
         self.title = list.title
         self.presenter.viewDidLoad()
+    }
+
+    // MARK: - Button actions
+
+    @objc func addBarButtonItemTapped(_ sender: Any) {
+        self.presenter.addTask()
     }
 }

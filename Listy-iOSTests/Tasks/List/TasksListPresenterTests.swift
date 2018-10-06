@@ -79,4 +79,14 @@ class TasksListPresenterTests: XCTestCase {
         // then
         XCTAssertTrue(fakeInteractor.didCallFetchData)
     }
+
+    // MARK: - addTask()
+
+    func testAddTask() {
+        // when
+        sut.addTask()
+
+        // then
+        XCTAssertTrue(fakeRouter.didShowEditTaskView)
+    }
 }

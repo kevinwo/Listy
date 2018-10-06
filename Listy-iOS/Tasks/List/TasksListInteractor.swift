@@ -32,4 +32,8 @@ class TasksListInteractor {
         self.dataSource.objects = self.tasks.all()
         self.output.updateView()
     }
+
+    func newTask() -> Task {
+        return Task()
+    }
 }
