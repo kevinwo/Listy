@@ -26,6 +26,12 @@ class ListsListRouter: NSObject, Router {
 
     // MARK: - Public interface
 
-    func showEditListView(with: List) {
+    func showEditListView(with list: List) {
+        let storyboard = UIStoryboard(name: "EditList", bundle: nil)
+        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+        let controller = (navigationController.topViewController as! EditListViewController)
+        controller.list = list
+
+        self.view.present(navigationController, animated: true, completion: nil)
     }
 }

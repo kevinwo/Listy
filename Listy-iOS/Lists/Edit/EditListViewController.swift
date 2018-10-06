@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import ListyKit
 
 class EditListViewController: UITableViewController {
 
-    var presenter: EditListPresenter! 
+    // MARK: - Properties
 
-    // MARK: Object lifecycle
+    var presenter: EditListPresenter!
+    var list: List!
+
+    // MARK: - Object lifecycle
 
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
@@ -20,7 +24,7 @@ class EditListViewController: UITableViewController {
         self.presenter = EditListPresenter(view: self)
     }
 
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
