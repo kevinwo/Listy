@@ -15,6 +15,7 @@ class EditListViewController: UITableViewController {
 
     @IBOutlet weak var cancelBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
+    @IBOutlet weak var titleTextField: UITextField!
 
     var presenter: EditListPresenter!
     var list: List!

@@ -25,6 +25,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UN8-Zb-wWg" id="qYr-Vj-l9S">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Dt-Vi-uEz">
+                                                    <rect key="frame" x="16" y="11" width="343" height="38"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5Dt-Vi-uEz" firstAttribute="bottom" secondItem="qYr-Vj-l9S" secondAttribute="bottomMargin" id="2GD-BQ-hBK"/>
+                                                <constraint firstItem="5Dt-Vi-uEz" firstAttribute="top" secondItem="qYr-Vj-l9S" secondAttribute="topMargin" id="FSF-Ir-jnJ"/>
+                                                <constraint firstItem="5Dt-Vi-uEz" firstAttribute="trailing" secondItem="qYr-Vj-l9S" secondAttribute="trailingMargin" id="Zyf-xY-TBs"/>
+                                                <constraint firstItem="5Dt-Vi-uEz" firstAttribute="leading" secondItem="qYr-Vj-l9S" secondAttribute="leadingMargin" id="vtG-8m-RW6"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -50,6 +64,7 @@
                     <connections>
                         <outlet property="cancelBarButtonItem" destination="sud-iV-Gbw" id="Ul6-VR-nbc"/>
                         <outlet property="saveBarButtonItem" destination="OOH-8W-uEr" id="RSC-FK-lc6"/>
+                        <outlet property="titleTextField" destination="5Dt-Vi-uEz" id="ZQW-fz-tYg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bv5-3R-bF3" userLabel="First Responder" sceneMemberID="firstResponder"/>

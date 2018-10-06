@@ -43,7 +43,9 @@ class EditListViewControllerTests: XCTestCase {
 
     func testOutlets() {
         XCTAssertNotNil(sut.tableView)
-        XCTAssertNotNil(sut.tableView)
+        XCTAssertNotNil(sut.cancelBarButtonItem)
+        XCTAssertNotNil(sut.saveBarButtonItem)
+        XCTAssertNotNil(sut.titleTextField)
     }
 
     // MARK: - Button actions
