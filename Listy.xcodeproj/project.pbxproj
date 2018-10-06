@@ -21,6 +21,8 @@
 		260D691E2167703F003B7DD9 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D691D2167703F003B7DD9 /* Tasks.swift */; };
 		260D69202167704F003B7DD9 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D691F2167704F003B7DD9 /* Task.swift */; };
 		260D69222167705C003B7DD9 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D69212167705C003B7DD9 /* TaskTests.swift */; };
+		260D6924216841B0003B7DD9 /* SectionedDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D6923216841B0003B7DD9 /* SectionedDataSourceTests.swift */; };
+		260D6926216841BB003B7DD9 /* SectionedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D6925216841BB003B7DD9 /* SectionedDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		260D691D2167703F003B7DD9 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		260D691F2167704F003B7DD9 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		260D69212167705C003B7DD9 /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
+		260D6923216841B0003B7DD9 /* SectionedDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedDataSourceTests.swift; sourceTree = "<group>"; };
+		260D6925216841BB003B7DD9 /* SectionedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 			children = (
 				260D68FF21670804003B7DD9 /* Database.swift */,
 				260D6904216709F0003B7DD9 /* Object.swift */,
+				260D6925216841BB003B7DD9 /* SectionedDataSource.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			children = (
 				260D69012167081B003B7DD9 /* DatabaseTests.swift */,
 				260D690821670CCC003B7DD9 /* ObjectTests.swift */,
+				260D6923216841B0003B7DD9 /* SectionedDataSourceTests.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 				260D690021670804003B7DD9 /* Database.swift in Sources */,
 				260D691E2167703F003B7DD9 /* Tasks.swift in Sources */,
 				260D69202167704F003B7DD9 /* Task.swift in Sources */,
+				260D6926216841BB003B7DD9 /* SectionedDataSource.swift in Sources */,
 				260D691221672FE3003B7DD9 /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +299,7 @@
 				260D691621674F78003B7DD9 /* ListsTests.swift in Sources */,
 				260D69022167081B003B7DD9 /* DatabaseTests.swift in Sources */,
 				260D69142167305A003B7DD9 /* ListTests.swift in Sources */,
+				260D6924216841B0003B7DD9 /* SectionedDataSourceTests.swift in Sources */,
 				260D69222167705C003B7DD9 /* TaskTests.swift in Sources */,
 				260D691C21677022003B7DD9 /* TasksTests.swift in Sources */,
 			);
