@@ -31,15 +31,22 @@
 		260D695021684964003B7DD9 /* Mirror+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D694F21684964003B7DD9 /* Mirror+LIST.swift */; };
 		265EA91021684F8F0009FF96 /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		265EA94F216856800009FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA94E216856800009FF96 /* AppDelegate.swift */; };
-		265EA951216856800009FF96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA950216856800009FF96 /* ViewController.swift */; };
-		265EA954216856800009FF96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265EA952216856800009FF96 /* Main.storyboard */; };
 		265EA956216856820009FF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265EA955216856820009FF96 /* Assets.xcassets */; };
 		265EA959216856820009FF96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265EA957216856820009FF96 /* LaunchScreen.storyboard */; };
-		265EA964216856830009FF96 /* Listy_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA963216856830009FF96 /* Listy_iOSTests.swift */; };
 		265EA96C216856AC0009FF96 /* ListyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; };
 		265EA96D216856AC0009FF96 /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		265EA970216856AC0009FF96 /* ListyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D692C216846F9003B7DD9 /* ListyUI.framework */; };
 		265EA971216856AC0009FF96 /* ListyUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260D692C216846F9003B7DD9 /* ListyUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		265EA97D216857340009FF96 /* ListsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA979216857340009FF96 /* ListsListPresenter.swift */; };
+		265EA97E216857340009FF96 /* ListsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA97A216857340009FF96 /* ListsListRouter.swift */; };
+		265EA97F216857340009FF96 /* ListsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA97B216857340009FF96 /* ListsListViewController.swift */; };
+		265EA980216857340009FF96 /* ListsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA97C216857340009FF96 /* ListsListInteractor.swift */; };
+		265EA984216857480009FF96 /* ListsListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA981216857480009FF96 /* ListsListViewControllerTests.swift */; };
+		265EA985216857480009FF96 /* ListsListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA982216857480009FF96 /* ListsListInteractorTests.swift */; };
+		265EA986216857480009FF96 /* ListsListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA983216857480009FF96 /* ListsListPresenterTests.swift */; };
+		265EA988216857880009FF96 /* ListsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265EA987216857880009FF96 /* ListsList.storyboard */; };
+		265EA98A216858410009FF96 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA989216858410009FF96 /* Router.swift */; };
+		265EA98C216858880009FF96 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA98B216858880009FF96 /* Presenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,14 +150,21 @@
 		260D694F21684964003B7DD9 /* Mirror+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mirror+LIST.swift"; sourceTree = "<group>"; };
 		265EA94C216856800009FF96 /* Listy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Listy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265EA94E216856800009FF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		265EA950216856800009FF96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		265EA953216856800009FF96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		265EA955216856820009FF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		265EA958216856820009FF96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		265EA95A216856820009FF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		265EA95F216856820009FF96 /* Listy-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Listy-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		265EA963216856830009FF96 /* Listy_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listy_iOSTests.swift; sourceTree = "<group>"; };
 		265EA965216856830009FF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		265EA979216857340009FF96 /* ListsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsListPresenter.swift; sourceTree = "<group>"; };
+		265EA97A216857340009FF96 /* ListsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsListRouter.swift; sourceTree = "<group>"; };
+		265EA97B216857340009FF96 /* ListsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsListViewController.swift; sourceTree = "<group>"; };
+		265EA97C216857340009FF96 /* ListsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsListInteractor.swift; sourceTree = "<group>"; };
+		265EA981216857480009FF96 /* ListsListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsListViewControllerTests.swift; sourceTree = "<group>"; };
+		265EA982216857480009FF96 /* ListsListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsListInteractorTests.swift; sourceTree = "<group>"; };
+		265EA983216857480009FF96 /* ListsListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsListPresenterTests.swift; sourceTree = "<group>"; };
+		265EA987216857880009FF96 /* ListsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListsList.storyboard; sourceTree = "<group>"; };
+		265EA989216858410009FF96 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		265EA98B216858880009FF96 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +331,8 @@
 				260D6944216847AA003B7DD9 /* TableView */,
 				260D692E216846F9003B7DD9 /* ListyUI.h */,
 				260D692F216846F9003B7DD9 /* Info.plist */,
+				265EA98B216858880009FF96 /* Presenter.swift */,
+				265EA989216858410009FF96 /* Router.swift */,
 			);
 			path = ListyUI;
 			sourceTree = "<group>";
@@ -380,9 +396,8 @@
 		265EA94D216856800009FF96 /* Listy-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				265EA975216857050009FF96 /* Lists */,
 				265EA94E216856800009FF96 /* AppDelegate.swift */,
-				265EA950216856800009FF96 /* ViewController.swift */,
-				265EA952216856800009FF96 /* Main.storyboard */,
 				265EA955216856820009FF96 /* Assets.xcassets */,
 				265EA957216856820009FF96 /* LaunchScreen.storyboard */,
 				265EA95A216856820009FF96 /* Info.plist */,
@@ -393,10 +408,48 @@
 		265EA962216856830009FF96 /* Listy-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				265EA963216856830009FF96 /* Listy_iOSTests.swift */,
+				265EA977216857130009FF96 /* Lists */,
 				265EA965216856830009FF96 /* Info.plist */,
 			);
 			path = "Listy-iOSTests";
+			sourceTree = "<group>";
+		};
+		265EA975216857050009FF96 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				265EA9762168570A0009FF96 /* List */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		265EA9762168570A0009FF96 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				265EA97B216857340009FF96 /* ListsListViewController.swift */,
+				265EA979216857340009FF96 /* ListsListPresenter.swift */,
+				265EA97C216857340009FF96 /* ListsListInteractor.swift */,
+				265EA97A216857340009FF96 /* ListsListRouter.swift */,
+				265EA987216857880009FF96 /* ListsList.storyboard */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		265EA977216857130009FF96 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				265EA978216857170009FF96 /* List */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		265EA978216857170009FF96 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				265EA981216857480009FF96 /* ListsListViewControllerTests.swift */,
+				265EA982216857480009FF96 /* ListsListInteractorTests.swift */,
+				265EA983216857480009FF96 /* ListsListPresenterTests.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -623,7 +676,7 @@
 			files = (
 				265EA959216856820009FF96 /* LaunchScreen.storyboard in Resources */,
 				265EA956216856820009FF96 /* Assets.xcassets in Resources */,
-				265EA954216856800009FF96 /* Main.storyboard in Resources */,
+				265EA988216857880009FF96 /* ListsList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +723,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265EA98C216858880009FF96 /* Presenter.swift in Sources */,
+				265EA98A216858410009FF96 /* Router.swift in Sources */,
 				260D6949216847D4003B7DD9 /* TableViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,7 +741,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265EA951216856800009FF96 /* ViewController.swift in Sources */,
+				265EA97F216857340009FF96 /* ListsListViewController.swift in Sources */,
+				265EA97E216857340009FF96 /* ListsListRouter.swift in Sources */,
+				265EA980216857340009FF96 /* ListsListInteractor.swift in Sources */,
+				265EA97D216857340009FF96 /* ListsListPresenter.swift in Sources */,
 				265EA94F216856800009FF96 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,7 +753,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265EA964216856830009FF96 /* Listy_iOSTests.swift in Sources */,
+				265EA984216857480009FF96 /* ListsListViewControllerTests.swift in Sources */,
+				265EA985216857480009FF96 /* ListsListInteractorTests.swift in Sources */,
+				265EA986216857480009FF96 /* ListsListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,14 +795,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		265EA952216856800009FF96 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				265EA953216856800009FF96 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		265EA957216856820009FF96 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
