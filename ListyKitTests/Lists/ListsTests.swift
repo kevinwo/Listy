@@ -10,11 +10,12 @@ import XCTest
 
 class ListsTests: XCTestCase {
 
+    let databasePath = NSTemporaryDirectory()
     var database: Database!
     var sut: Lists!
 
     override func setUp() {
-        database = Database.newInstance()
+        database = Database.newInstance(path: databasePath)
         sut = Lists(database: database)
     }
 
@@ -28,7 +29,7 @@ class ListsTests: XCTestCase {
     // MARK: - init()
 
     func testInit() {
-        XCTAssertEqual(sut.database.path, database.path)
+        XCTAssertEqual(sut.database.path, databasePath)
     }
 
     // MARK: - all()

@@ -21,8 +21,8 @@ public class Database {
 
     // MARK: - Public interface
 
-    public static func newInstance() -> Database {
-        return Database(path: Database.defaultPath)
+    public static func newInstance(path: String? = nil) -> Database {
+        return Database(path: path ?? Database.defaultPath)
     }
 
     public func objects(ofType type: Object.Type) -> [Object]? {

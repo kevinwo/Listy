@@ -10,11 +10,12 @@ import XCTest
 
 class TasksTests: XCTestCase {
 
+    let databasePath = NSTemporaryDirectory()
     var database: Database!
     var sut: Tasks!
 
     override func setUp() {
-        database = Database.newInstance()
+        database = Database.newInstance(path: databasePath)
         sut = Tasks(database: database)
     }
 
@@ -28,7 +29,7 @@ class TasksTests: XCTestCase {
     // MARK: - init()
 
     func testInit() {
-        XCTAssertEqual(sut.database.path, database.path)
+        XCTAssertEqual(sut.database.path, databasePath)
     }
 
     // MARK: - all()
