@@ -29,6 +29,11 @@ class ListsListPresenter: Presenter {
         // Load cool stuff, generally with the interactor
     }
 
+    func addList() {
+    }
+
+    // MARK: - Interactor output
+
     func updateView() {
         // Update the view
     }

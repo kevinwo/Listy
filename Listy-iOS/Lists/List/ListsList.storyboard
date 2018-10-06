@@ -41,7 +41,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lists" id="mhK-4b-rpN">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="My9-A0-lQJ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="My9-A0-lQJ">
+                            <connections>
+                                <action selector="addBarButtonItemTapped:" destination="up2-ol-q9c" id="eOL-hB-w7y"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addBarButtonItem" destination="My9-A0-lQJ" id="Mmf-nz-NEx"/>

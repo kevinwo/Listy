@@ -16,7 +16,7 @@ class ListsListViewController: UITableViewController {
 
     var presenter: ListsListPresenter!
 
-    // MARK: Object lifecycle
+    // MARK: - Object lifecycle
 
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
@@ -24,11 +24,17 @@ class ListsListViewController: UITableViewController {
         self.presenter = ListsListPresenter(view: self)
     }
 
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.presenter.viewDidLoad()
+    }
+
+    // MARK: - Button actions
+
+    @IBAction func addBarButtonItemTapped(_ sender: Any) {
+        self.presenter.addList()
     }
 }

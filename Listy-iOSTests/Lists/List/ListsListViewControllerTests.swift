@@ -12,6 +12,7 @@ import XCTest
 class ListsListViewControllerTests: XCTestCase {
 
     var sut: ListsListViewController!
+    var fakePresenter: FakeListsListPresenter!
     var navigationController: UINavigationController!
     var window: UIWindow!
 
@@ -24,6 +25,9 @@ class ListsListViewControllerTests: XCTestCase {
         let storyboard = UIStoryboard(name: "ListsList", bundle: nil)
         navigationController = (storyboard.instantiateInitialViewController() as! UINavigationController)
         sut = (navigationController.topViewController as! ListsListViewController)
+
+        fakePresenter = FakeListsListPresenter(view: sut)
+        sut.presenter = fakePresenter
         _ = sut.view
     }
 
@@ -40,5 +44,15 @@ class ListsListViewControllerTests: XCTestCase {
     func testOutlets() {
         XCTAssertNotNil(sut.addBarButtonItem)
         XCTAssertNotNil(sut.tableView)
+    }
+
+    // MARK: - Button actions
+
+    func testAddBarButtonItemTapped() {
+        // when
+        sut.addBarButtonItem.tap()
+
+        // then
+        XCTAssertTrue(fakePresenter.didAddList)
     }
 }
