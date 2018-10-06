@@ -40,7 +40,12 @@
                             <outlet property="delegate" destination="up2-ol-q9c" id="F6Q-cE-AHj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lists" id="mhK-4b-rpN"/>
+                    <navigationItem key="navigationItem" title="Lists" id="mhK-4b-rpN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="My9-A0-lQJ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addBarButtonItem" destination="My9-A0-lQJ" id="Mmf-nz-NEx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87r-4Y-qes" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

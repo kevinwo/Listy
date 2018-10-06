@@ -27,7 +27,7 @@ class ListsListViewControllerTests: XCTestCase {
         _ = sut.view
     }
 
-    override func tearDown(){
+    override func tearDown() {
         sut = nil
         navigationController = nil
         window = nil
@@ -38,6 +38,7 @@ class ListsListViewControllerTests: XCTestCase {
     // MARK: - Tests
 
     func testOutlets() {
+        XCTAssertNotNil(sut.addBarButtonItem)
         XCTAssertNotNil(sut.tableView)
     }
 }

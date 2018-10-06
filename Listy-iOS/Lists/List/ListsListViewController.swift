@@ -10,6 +10,10 @@ import UIKit
 
 class ListsListViewController: UITableViewController {
 
+    // MARK: - Properties
+
+    @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
+
     var presenter: ListsListPresenter!
 
     // MARK: Object lifecycle
