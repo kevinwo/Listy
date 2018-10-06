@@ -20,8 +20,12 @@ class EditTaskInteractor {
         self.tasks = Tasks(database: Database.newInstance())
     }
 
+    func loadTask(_ task: Task) {
+        self.task = task
+    }
+
     func saveTask(title: String) {
-        let task = self.task ?? Task()
+        let task = self.task!
         task.title = title
 
         do {

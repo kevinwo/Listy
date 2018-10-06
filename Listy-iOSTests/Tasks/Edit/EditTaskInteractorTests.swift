@@ -24,6 +24,7 @@ class EditTaskInteractorTests: XCTestCase {
 
         let storyboard = UIStoryboard(name: "EditTask", bundle: nil)
         controller = (storyboard.instantiateViewController(withIdentifier: "EditTaskViewController") as! EditTaskViewController)
+        controller.task = Task()
 
         fakePresenter = FakeEditTaskPresenter(view: controller)
         controller.presenter = fakePresenter
@@ -54,6 +55,19 @@ class EditTaskInteractorTests: XCTestCase {
 
         // then
         XCTAssertEqual(interactor.output, fakePresenter)
+    }
+
+    // MARK: - loadTask(_:)
+
+    func testLoadTask() {
+        // given
+        let task = Task()
+
+        // when
+        sut.loadTask(task)
+
+        // then
+        XCTAssertEqual(sut.task, task)
     }
 
     // MARK: - saveList(title:)

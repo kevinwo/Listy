@@ -25,6 +25,12 @@ public class Tasks: NSObject {
         return self.database.objects(ofType: Task.self) as? [Task] ?? [Task]()
     }
 
+    public func inList(_ list: List) -> [Task] {
+        return all()
+            .filter({ $0.listId == list.id })
+            .sorted(by: { $0.dateCreated > $1.dateCreated })
+    }
+
     public func fetch(by id: String) -> Task? {
         return self.database.object(ofType: Task.self, with: id) as? Task
     }

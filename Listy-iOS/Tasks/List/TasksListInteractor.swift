@@ -34,7 +34,7 @@ class TasksListInteractor {
     }
 
     func fetchData() {
-        self.dataSource.objects = self.tasks.all()
+        self.dataSource.objects = self.tasks.inList(self.list)
         self.output.updateView()
     }
 

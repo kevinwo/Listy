@@ -27,7 +27,7 @@ class EditTaskPresenter: Presenter {
     // MARK: - Public interface
 
     override func viewDidLoad() {
-        // Load cool stuff, generally with the interactor
+        self.interactor.loadTask(self.view.task)
     }
 
     override func showErrorAlert(_ error: Error) {

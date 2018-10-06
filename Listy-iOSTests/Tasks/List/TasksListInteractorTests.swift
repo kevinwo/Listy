@@ -94,9 +94,10 @@ class TasksListInteractorTests: XCTestCase {
         task.listId = list.id
         try! tasks.add(task)
 
+        sut.list = list
         sut.loadDataSource(
             for: controller.tableView,
-            with: controller.list,
+            with: list,
             cellConfigurationBlock: cellConfigurationBlock)
 
         // when

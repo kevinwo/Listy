@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Listy_iOS
+@testable import ListyKit
 
 class EditTaskViewControllerTests: XCTestCase {
 
@@ -25,6 +26,7 @@ class EditTaskViewControllerTests: XCTestCase {
         let storyboard = UIStoryboard(name: "EditTask", bundle: nil)
         navigationController = (storyboard.instantiateInitialViewController() as! UINavigationController)
         sut = (navigationController.topViewController as! EditTaskViewController)
+        sut.task = Task()
 
         fakePresenter = FakeEditTaskPresenter(view: sut)
         sut.presenter = fakePresenter
