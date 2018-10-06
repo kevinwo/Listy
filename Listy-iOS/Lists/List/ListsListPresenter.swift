@@ -45,6 +45,9 @@ class ListsListPresenter: Presenter {
         self.router.showEditListView(with: list)
     }
 
+    func handleActionForSelectedRow(at indexPath: IndexPath) {
+    }
+
     // MARK: - Interactor output
 
     func updateView() {

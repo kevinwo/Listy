@@ -44,3 +44,11 @@ class ListsListViewController: UITableViewController {
         self.presenter.addList()
     }
 }
+
+// MARK: - UITableViewDelegate
+
+extension ListsListViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter.handleActionForSelectedRow(at: indexPath)
+    }
+}

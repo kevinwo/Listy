@@ -72,4 +72,20 @@ class ListsListViewControllerTests: XCTestCase {
         // then
         XCTAssertTrue(fakePresenter.didCallAddList)
     }
+
+    // MARK: - UITableViewDelegate
+
+    // MARK: - tableView(_:didSelectRowAt:)
+
+    func testTableViewDidSelectRowAtIndexPath() {
+        // given
+        let tableView = sut.tableView!
+        let indexPath = IndexPath(row: 0, section: 0)
+
+        // when
+        sut.tableView(tableView, didSelectRowAt: indexPath)
+
+        // then
+        XCTAssertTrue(fakePresenter.didCallHandleActionForSelectedRow)
+    }
 }

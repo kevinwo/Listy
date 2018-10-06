@@ -29,7 +29,7 @@ class TasksListViewControllerTests: XCTestCase {
         _ = sut.view
     }
 
-    override func tearDown(){
+    override func tearDown() {
         sut = nil
         window = nil
         fakePresenter = nil
