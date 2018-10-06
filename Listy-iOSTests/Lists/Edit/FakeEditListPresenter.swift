@@ -10,8 +10,14 @@ import UIKit
 
 class FakeEditListPresenter: EditListPresenter {
 
+    var didCallShowErrorAlert: Bool = false
     var didCancel: Bool = false
     var didSave: Bool = false
+    var didCallUpdateView: Bool = false
+
+    override func showErrorAlert(_ error: Error) {
+        self.didCallShowErrorAlert = true
+    }
 
     override func cancel() {
         self.didCancel = true
@@ -19,5 +25,9 @@ class FakeEditListPresenter: EditListPresenter {
 
     override func save() {
         self.didSave = true
+    }
+
+    override func updateView() {
+        self.didCallUpdateView = true
     }
 }
