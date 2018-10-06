@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Tasks: NSObject {
+public class Tasks: NSObject {
 
     // MARK: - Properties
 

@@ -17,6 +17,7 @@ class TasksListInteractorTests: XCTestCase {
     var fakePresenter: FakeTasksListPresenter!
     var controller: TasksListViewController!
     var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock!
+    var tasks: Tasks!
 
     // MARK: - Test lifecycle
 
@@ -34,6 +35,9 @@ class TasksListInteractorTests: XCTestCase {
 
         sut = TasksListInteractor(output: fakePresenter)
         fakePresenter.interactor = sut
+
+        tasks = Tasks(database: Database.newInstance(path: NSTemporaryDirectory()))
+        sut.tasks = tasks
 
         cellConfigurationBlock = { (cell, object) in
             cell.textLabel!.text = object.id
@@ -74,5 +78,22 @@ class TasksListInteractorTests: XCTestCase {
         // then
         XCTAssertEqual(sut.dataSource.tableView, tableView)
         XCTAssertNotNil(sut.dataSource.cellConfigurationBlock)
+    }
+
+    // MARK: - fetchData()
+
+    func testFetchData() {
+        // given
+        let task = Task()
+        task.title = "Important task"
+        try! tasks.add(task)
+        sut.loadDataSource(for: controller.tableView, cellConfigurationBlock: cellConfigurationBlock)
+
+        // when
+        sut.fetchData()
+
+        // then
+        XCTAssert(sut.dataSource.objects!.contains(task))
+        XCTAssertTrue(fakePresenter.didCallUpdateView)
     }
 }

@@ -11,8 +11,13 @@ import UIKit
 class FakeTasksListPresenter: TasksListPresenter {
 
     var didCallViewDidLoad: Bool = false
+    var didCallUpdateView: Bool = false
 
     override func viewDidLoad() {
         self.didCallViewDidLoad = true
+    }
+
+    override func updateView() {
+        self.didCallUpdateView = true
     }
 }

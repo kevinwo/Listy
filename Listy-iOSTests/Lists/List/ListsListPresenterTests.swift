@@ -65,6 +65,7 @@ class ListsListPresenterTests: XCTestCase {
 
         // then
         XCTAssertTrue(fakeInteractor.didCallLoadDataSource)
+        XCTAssertTrue(fakeInteractor.didCallFetchData)
     }
 
     // MARK: - reloadData()

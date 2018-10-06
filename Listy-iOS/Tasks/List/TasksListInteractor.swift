@@ -7,6 +7,7 @@
 //
 
 import ListyUI
+import ListyKit
 
 class TasksListInteractor {
 
@@ -14,14 +15,21 @@ class TasksListInteractor {
 
     var output: TasksListPresenter!
     var dataSource: TableViewDataSource!
+    var tasks: Tasks!
 
     init(output: TasksListPresenter) {
         self.output = output
+        self.tasks = Tasks(database: Database.newInstance())
     }
 
     // MARK: - Public interface
 
     func loadDataSource(for tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
         self.dataSource = TableViewDataSource(tableView: tableView, cellConfigurationBlock: cellConfigurationBlock)
+    }
+
+    func fetchData() {
+        self.dataSource.objects = self.tasks.all()
+        self.output.updateView()
     }
 }

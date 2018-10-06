@@ -32,9 +32,17 @@ class TasksListPresenter: Presenter {
             let task = (object as! Task)
             cell.textLabel!.text = task.title
         }
+
+        reloadData()
     }
 
+    func reloadData() {
+        self.interactor.fetchData()
+    }
+
+    // MARK: - Interactor output
+
     func updateView() {
-        // Update the view
+        self.view.tableView.reloadData()
     }
 }
