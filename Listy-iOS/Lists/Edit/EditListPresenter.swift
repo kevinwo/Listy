@@ -29,10 +29,22 @@ class EditListPresenter: Presenter {
         // Load cool stuff, generally with the interactor
     }
 
-    func save() {
+    override func showErrorAlert(_ error: Error) {
+        // Present error info to the user
     }
 
     func cancel() {
+        self.view.delegate.didCancelWithController(self.view)
+    }
+
+    func save() {
+        guard let title = self.view.titleTextField.text, !title.isEmpty else {
+            let error = NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
+            showErrorAlert(error)
+            return
+        }
+
+        self.interactor.saveList(title: title)
     }
 
     // MARK: - Interactor output

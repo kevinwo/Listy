@@ -46,8 +46,12 @@ class ListsListPresenterTests: XCTestCase {
     // MARK: - init(view:)
 
     func testInitWithView() {
-        XCTAssertNotNil(sut.view)
-        XCTAssertNotNil(sut.interactor)
+        // given
+        let presenter = ListsListPresenter(view: controller)
+
+        // then
+        XCTAssertNotNil(presenter.view)
+        XCTAssertNotNil(presenter.interactor)
     }
 
     // MARK: - addList()

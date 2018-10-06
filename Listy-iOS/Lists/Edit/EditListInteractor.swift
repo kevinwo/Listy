@@ -20,4 +20,7 @@ class EditListInteractor {
         // Load some cool data
         self.output.updateView()
     }
+
+    func saveList(title: String) {
+    }
 }

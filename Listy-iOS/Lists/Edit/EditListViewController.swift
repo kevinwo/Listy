@@ -9,6 +9,11 @@
 import UIKit
 import ListyKit
 
+protocol EditListViewControllerDelegate: NSObjectProtocol {
+    func didCancelWithController(_ controller: EditListViewController)
+    func controller(_ controller: EditListViewController, didSaveList list: List)
+}
+
 class EditListViewController: UITableViewController {
 
     // MARK: - Properties
@@ -19,6 +24,7 @@ class EditListViewController: UITableViewController {
 
     var presenter: EditListPresenter!
     var list: List!
+    weak var delegate: EditListViewControllerDelegate!
 
     // MARK: - Object lifecycle
 
