@@ -7,6 +7,7 @@
 //
 
 import ListyUI
+import ListyKit
 
 class ListsListRouter: NSObject, Router {
 
@@ -21,5 +22,10 @@ class ListsListRouter: NSObject, Router {
 
     required init(view: ListsListViewController) {
         self.view = view
+    }
+
+    // MARK: - Public interface
+
+    func showEditListView(with: List) {
     }
 }

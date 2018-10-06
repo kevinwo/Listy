@@ -30,6 +30,8 @@ class ListsListPresenter: Presenter {
     }
 
     func addList() {
+        let list = self.interactor.newList()
+        self.router.showEditListView(with: list)
     }
 
     // MARK: - Interactor output
