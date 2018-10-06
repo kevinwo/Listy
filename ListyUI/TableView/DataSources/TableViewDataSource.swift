@@ -25,6 +25,10 @@ open class TableViewDataSource: SectionedDataSource {
 
         self.tableView.dataSource = self
     }
+
+    public func object(at indexPath: IndexPath) -> Object {
+        return self.sections[indexPath.section][indexPath.row]
+    }
 }
 
 extension TableViewDataSource: UITableViewDataSource {

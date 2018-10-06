@@ -58,6 +58,23 @@ class TableViewDataSourceTests: XCTestCase {
         XCTAssertEqual(dataSource.sections.first?.first, object1)
     }
 
+    // MARK: - object(at:)
+
+    func testObjectAtIndexPath() {
+        // given
+        let indexPath = IndexPath(row: 1, section: 0)
+        let object1 = Object()
+        let object2 = Object()
+        let sections = [[object1], [object2]]
+        sut.sections = sections
+
+        // when
+        let fetchedObject = sut.object(at: indexPath)
+
+        // then
+        XCTAssertEqual(fetchedObject, object2)
+    }
+
     // MARK: - UITableViewDataSource
 
     // MARK: - numberOfSections(in:)
