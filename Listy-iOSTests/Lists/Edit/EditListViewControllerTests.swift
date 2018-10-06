@@ -12,6 +12,7 @@ import XCTest
 class EditListViewControllerTests: XCTestCase {
 
     var sut: EditListViewController!
+    var fakePresenter: FakeEditListPresenter!
     var navigationController: UINavigationController!
     var window: UIWindow!
 
@@ -24,6 +25,9 @@ class EditListViewControllerTests: XCTestCase {
         let storyboard = UIStoryboard(name: "EditList", bundle: nil)
         navigationController = (storyboard.instantiateInitialViewController() as! UINavigationController)
         sut = (navigationController.topViewController as! EditListViewController)
+
+        fakePresenter = FakeEditListPresenter(view: sut)
+        sut.presenter = fakePresenter
         _ = sut.view
     }
 
@@ -39,5 +43,24 @@ class EditListViewControllerTests: XCTestCase {
 
     func testOutlets() {
         XCTAssertNotNil(sut.tableView)
+        XCTAssertNotNil(sut.tableView)
+    }
+
+    // MARK: - Button actions
+
+    func testCancelBarButtonItemTapped() {
+        // when
+        sut.cancelBarButtonItem.tap()
+
+        // then
+        XCTAssertTrue(fakePresenter.didCancel)
+    }
+
+    func testSaveBarButtonItemTapped() {
+        // when
+        sut.saveBarButtonItem.tap()
+
+        // then
+        XCTAssertTrue(fakePresenter.didSave)
     }
 }

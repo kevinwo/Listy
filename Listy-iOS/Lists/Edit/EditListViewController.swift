@@ -13,6 +13,9 @@ class EditListViewController: UITableViewController {
 
     // MARK: - Properties
 
+    @IBOutlet weak var cancelBarButtonItem: UIBarButtonItem!
+    @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
+
     var presenter: EditListPresenter!
     var list: List!
 
@@ -30,5 +33,15 @@ class EditListViewController: UITableViewController {
         super.viewDidLoad()
 
         self.presenter.viewDidLoad()
+    }
+
+    // MARK: - Button actions
+
+    @IBAction func cancelBarButtonItemTapped(_ sender: Any) {
+        self.presenter.cancel()
+    }
+
+    @IBAction func saveBarButtonItemTapped(_ sender: Any) {
+        self.presenter.save()
     }
 }

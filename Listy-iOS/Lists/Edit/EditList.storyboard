@@ -35,7 +35,22 @@
                             <outlet property="delegate" destination="TUm-gI-RPk" id="SLx-u0-j5B"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Edit List" id="5zR-vD-jSL"/>
+                    <navigationItem key="navigationItem" title="Edit List" id="5zR-vD-jSL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sud-iV-Gbw">
+                            <connections>
+                                <action selector="cancelBarButtonItemTapped:" destination="TUm-gI-RPk" id="h8t-Oi-DlU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="OOH-8W-uEr">
+                            <connections>
+                                <action selector="saveBarButtonItemTapped:" destination="TUm-gI-RPk" id="6LB-77-Aap"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelBarButtonItem" destination="sud-iV-Gbw" id="Ul6-VR-nbc"/>
+                        <outlet property="saveBarButtonItem" destination="OOH-8W-uEr" id="RSC-FK-lc6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bv5-3R-bF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

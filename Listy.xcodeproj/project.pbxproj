@@ -58,6 +58,7 @@
 		265EA9A3216881200009FF96 /* UIBarButtonItem+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9A2216881200009FF96 /* UIBarButtonItem+Tests.swift */; };
 		265EA9A5216881B60009FF96 /* FakeListsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9A4216881B60009FF96 /* FakeListsListPresenter.swift */; };
 		265EA9A7216885220009FF96 /* FakeListsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9A6216885220009FF96 /* FakeListsListRouter.swift */; };
+		265EA9A921688A4F0009FF96 /* FakeEditListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9A821688A4F0009FF96 /* FakeEditListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +188,7 @@
 		265EA9A2216881200009FF96 /* UIBarButtonItem+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Tests.swift"; sourceTree = "<group>"; };
 		265EA9A4216881B60009FF96 /* FakeListsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsListPresenter.swift; sourceTree = "<group>"; };
 		265EA9A6216885220009FF96 /* FakeListsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsListRouter.swift; sourceTree = "<group>"; };
+		265EA9A821688A4F0009FF96 /* FakeEditListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -497,6 +499,7 @@
 				265EA99121685DE20009FF96 /* EditListViewControllerTests.swift */,
 				265EA99221685DE20009FF96 /* EditListInteractorTests.swift */,
 				265EA99321685DE20009FF96 /* EditListPresenterTests.swift */,
+				265EA9A821688A4F0009FF96 /* FakeEditListPresenter.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -816,6 +819,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				265EA99621685DE20009FF96 /* EditListPresenterTests.swift in Sources */,
+				265EA9A921688A4F0009FF96 /* FakeEditListPresenter.swift in Sources */,
 				265EA9A5216881B60009FF96 /* FakeListsListPresenter.swift in Sources */,
 				265EA99421685DE20009FF96 /* EditListViewControllerTests.swift in Sources */,
 				265EA9A3216881200009FF96 /* UIBarButtonItem+Tests.swift in Sources */,

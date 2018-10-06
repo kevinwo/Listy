@@ -29,6 +29,14 @@ class EditListPresenter: Presenter {
         // Load cool stuff, generally with the interactor
     }
 
+    func save() {
+    }
+
+    func cancel() {
+    }
+
+    // MARK: - Interactor output
+
     func updateView() {
         // Update the view
     }
