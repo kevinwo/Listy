@@ -35,6 +35,7 @@ class ListsListViewControllerTests: XCTestCase {
         sut = nil
         navigationController = nil
         window = nil
+        fakePresenter = nil
 
         super.tearDown()
     }

@@ -49,7 +49,7 @@ class ListsListPresenterTests: XCTestCase {
     // MARK: - init(view:)
 
     func testInitWithView() {
-        // given
+        // when
         let presenter = ListsListPresenter(view: controller)
 
         // then
