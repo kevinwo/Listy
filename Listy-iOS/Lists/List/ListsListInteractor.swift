@@ -16,10 +16,14 @@ class ListsListInteractor {
     var output: ListsListPresenter!
     var dataSource: TableViewDataSource!
     var lists: Lists
+    var tasks: Tasks
 
     init(output: ListsListPresenter) {
         self.output = output
-        self.lists = Lists(database: Database.newInstance())
+
+        let database = Database.newInstance()
+        self.lists = Lists(database: database)
+        self.tasks = Tasks(database: database)
     }
 
     // MARK: - Public interface
@@ -39,5 +43,22 @@ class ListsListInteractor {
 
     func list(at indexPath: IndexPath) -> List {
         return (self.dataSource.object(at: indexPath) as! List)
+    }
+
+    func deleteList(at indexPath: IndexPath) {
+        let list = self.dataSource.object(at: indexPath) as! List
+        let tasksInList = self.tasks.inList(list)
+
+        do {
+            for task in tasksInList {
+                try self.tasks.delete(task)
+            }
+
+            try self.lists.delete(list)
+            self.dataSource.sections[indexPath.section].remove(at: indexPath.row)
+            self.output.deleteRow(at: indexPath)
+        } catch(let error) {
+            self.output.showErrorAlert(error)
+        }
     }
 }

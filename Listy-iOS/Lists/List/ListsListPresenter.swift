@@ -50,9 +50,17 @@ class ListsListPresenter: Presenter {
         self.router.showTasks(for: list)
     }
 
+    func deleteList(at indexPath: IndexPath) {
+        self.interactor.deleteList(at: indexPath)
+    }
+
     // MARK: - Interactor output
 
     func updateView() {
         self.view.tableView.reloadData()
+    }
+
+    func deleteRow(at indexPath: IndexPath) {
+        self.view.tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }

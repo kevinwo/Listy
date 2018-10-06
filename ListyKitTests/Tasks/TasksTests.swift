@@ -115,4 +115,5 @@ class TasksTests: XCTestCase {
 
         // when/then
         XCTAssertThrowsError(try tasks.add(task))
-    }}
+    }
+}

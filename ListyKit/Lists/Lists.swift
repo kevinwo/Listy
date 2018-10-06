@@ -36,4 +36,8 @@ public class Lists {
     public func add(_ list: List) throws {
         try self.database.save(list)
     }
+
+    public func delete(_ list: List) throws {
+        try self.database.delete(list)
+    }
 }
