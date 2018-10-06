@@ -62,7 +62,7 @@ class TableViewDataSourceTests: XCTestCase {
 
     func testObjectAtIndexPath() {
         // given
-        let indexPath = IndexPath(row: 1, section: 0)
+        let indexPath = IndexPath(row: 0, section: 1)
         let object1 = Object()
         let object2 = Object()
         let sections = [[object1], [object2]]
