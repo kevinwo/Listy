@@ -36,4 +36,8 @@ class ListsListInteractor {
     func newList() -> List {
         return List()
     }
+
+    func list(at indexPath: IndexPath) -> List {
+        return (self.dataSource.object(at: indexPath) as! List)
+    }
 }

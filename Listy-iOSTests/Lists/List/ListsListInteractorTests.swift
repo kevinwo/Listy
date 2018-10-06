@@ -108,4 +108,22 @@ class ListsListInteractorTests: XCTestCase {
         XCTAssertNotNil(list)
         XCTAssertNil(list.title)
     }
+
+    // MARK: - list(at:)
+
+    func testListAtIndexPath() {
+        // given
+        let indexPath = IndexPath(row: 0, section: 0)
+        let list = List()
+        list.title = "Cool List"
+        try! lists.add(list)
+        sut.loadDataSource(for: controller.tableView, cellConfigurationBlock: cellConfigurationBlock)
+        sut.fetchData()
+
+        // when
+        let fetchedList = sut.list(at: indexPath)
+
+        // then
+        XCTAssertEqual(fetchedList, list)
+    }
 }

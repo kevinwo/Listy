@@ -86,4 +86,19 @@ class ListsListPresenterTests: XCTestCase {
         // then
         XCTAssertTrue(fakeRouter.didShowEditListView)
     }
+
+    // MARK: handleActionForSelectedRow(at:)
+
+    func testHandleActionForSelectedRow() {
+        // given
+        let indexPath = IndexPath(row: 0, section: 0)
+        let list = fakeInteractor.testList
+
+        // when
+        sut.handleActionForSelectedRow(at: indexPath)
+
+        // then
+        XCTAssertTrue(fakeRouter.didShowTasks)
+        XCTAssertEqual(fakeRouter.didShowTasksList, list)
+    }
 }

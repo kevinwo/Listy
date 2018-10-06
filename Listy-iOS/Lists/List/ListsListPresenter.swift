@@ -46,6 +46,8 @@ class ListsListPresenter: Presenter {
     }
 
     func handleActionForSelectedRow(at indexPath: IndexPath) {
+        let list = self.interactor.list(at: indexPath)
+        self.router.showTasks(for: list)
     }
 
     // MARK: - Interactor output

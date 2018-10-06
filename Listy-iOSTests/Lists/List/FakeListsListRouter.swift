@@ -12,8 +12,15 @@ import UIKit
 class FakeListsListRouter: ListsListRouter {
 
     var didShowEditListView: Bool = false
+    var didShowTasks: Bool = false
+    var didShowTasksList: List?
 
     override func showEditListView(with: List) {
         self.didShowEditListView = true
+    }
+
+    override func showTasks(for list: List) {
+        self.didShowTasks = true
+        self.didShowTasksList = list
     }
 }

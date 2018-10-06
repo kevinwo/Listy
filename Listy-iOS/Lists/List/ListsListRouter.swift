@@ -35,6 +35,9 @@ class ListsListRouter: NSObject, Router {
 
         self.view.present(navigationController, animated: true, completion: nil)
     }
+
+    func showTasks(for list: List) {
+    }
 }
 
 extension ListsListRouter: EditListViewControllerDelegate {
