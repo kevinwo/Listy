@@ -31,7 +31,19 @@ class ListsListRouter: NSObject, Router {
         let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
         let controller = (navigationController.topViewController as! EditListViewController)
         controller.list = list
+        controller.delegate = self
 
         self.view.present(navigationController, animated: true, completion: nil)
     }
 }
+
+extension ListsListRouter: EditListViewControllerDelegate {
+    func didCancelWithController(_ controller: EditListViewController) {
+        self.view.dismiss(animated: true, completion: nil)
+    }
+
+    func controller(_ controller: EditListViewController, didSaveList list: List) {
+        self.view.dismiss(animated: true, completion: nil)
+    }
+}
+
