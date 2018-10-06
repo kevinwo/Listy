@@ -14,18 +14,23 @@ class ListsListInteractor {
     // MARK: - Properties
 
     var output: ListsListPresenter!
+    var dataSource: TableViewDataSource!
+    var lists: Lists
 
     init(output: ListsListPresenter) {
         self.output = output
+        self.lists = Lists(database: Database.newInstance())
     }
 
     // MARK: - Public interface
 
     func loadDataSource(for tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
-        // Load some cool data
+        self.dataSource = TableViewDataSource(tableView: tableView, cellConfigurationBlock: cellConfigurationBlock)
     }
 
     func fetchData() {
+        self.dataSource.objects = self.lists.all()
+        self.output.updateView()
     }
 
     func newList() -> List {
