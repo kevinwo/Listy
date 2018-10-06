@@ -32,6 +32,12 @@ class ListsListPresenter: Presenter {
             let list = (object as! List)
             cell.textLabel!.text = list.title
         }
+
+        reloadData()
+    }
+
+    func reloadData() {
+        self.interactor.fetchData()
     }
 
     func addList() {

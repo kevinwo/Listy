@@ -25,6 +25,9 @@ class ListsListInteractor {
         // Load some cool data
     }
 
+    func fetchData() {
+    }
+
     func newList() -> List {
         return List()
     }

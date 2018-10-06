@@ -67,6 +67,16 @@ class ListsListPresenterTests: XCTestCase {
         XCTAssertTrue(fakeInteractor.didCallLoadDataSource)
     }
 
+    // MARK: - reloadData()
+
+    func testReloadData() {
+        // when
+        sut.reloadData()
+
+        // then
+        XCTAssertTrue(fakeInteractor.didCallFetchData)
+    }
+
     // MARK: - addList()
 
     func testAddList() {

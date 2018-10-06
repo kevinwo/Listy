@@ -12,8 +12,13 @@ import UIKit
 class FakeListsListInteractor: ListsListInteractor {
 
     var didCallLoadDataSource: Bool = false
+    var didCallFetchData: Bool = false
 
     override func loadDataSource(for tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
         self.didCallLoadDataSource = true
+    }
+
+    override func fetchData() {
+        self.didCallFetchData = true
     }
 }
