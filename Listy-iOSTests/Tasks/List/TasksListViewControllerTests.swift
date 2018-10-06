@@ -8,11 +8,13 @@
 
 import XCTest
 @testable import Listy_iOS
+@testable import ListyKit
 
 class TasksListViewControllerTests: XCTestCase {
 
     var sut: TasksListViewController!
     var fakePresenter: FakeTasksListPresenter!
+    var list: List!
     var window: UIWindow!
 
     // MARK: - Test lifecycle
@@ -26,6 +28,11 @@ class TasksListViewControllerTests: XCTestCase {
 
         fakePresenter = FakeTasksListPresenter(view: sut)
         sut.presenter = fakePresenter
+
+        list = List()
+        list.title = "Cool Title"
+        sut.list = list
+
         _ = sut.view
     }
 
@@ -41,5 +48,12 @@ class TasksListViewControllerTests: XCTestCase {
 
     func testOutlets() {
         XCTAssertNotNil(sut.tableView)
+    }
+
+    // MARK: - viewDidLoad()
+
+    func testViewDidLoad() {
+        XCTAssertEqual(sut.title, list.title)
+        XCTAssertTrue(fakePresenter.didCallViewDidLoad)
     }
 }

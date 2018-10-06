@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Listy_iOS
+@testable import ListyKit
 
 class TasksListInteractorTests: XCTestCase {
 
@@ -24,6 +25,7 @@ class TasksListInteractorTests: XCTestCase {
 
         let storyboard = UIStoryboard(name: "TasksList", bundle: nil)
         controller = (storyboard.instantiateInitialViewController() as! TasksListViewController)
+        controller.list = List()
 
         fakePresenter = FakeTasksListPresenter(view: controller)
         controller.presenter = fakePresenter

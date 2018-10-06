@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import ListyKit
 
 class TasksListViewController: UITableViewController {
 
-    var presenter: TasksListPresenter! 
+    var presenter: TasksListPresenter!
+    var list: List!
 
     // MARK: Object lifecycle
 
@@ -25,6 +27,7 @@ class TasksListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = list.title
         self.presenter.viewDidLoad()
     }
 }

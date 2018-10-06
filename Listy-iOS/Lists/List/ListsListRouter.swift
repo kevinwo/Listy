@@ -37,6 +37,11 @@ class ListsListRouter: NSObject, Router {
     }
 
     func showTasks(for list: List) {
+        let storyboard = UIStoryboard(name: "TasksList", bundle: nil)
+        let controller = storyboard.instantiateInitialViewController() as! TasksListViewController
+        controller.list = list
+
+        self.view.navigationController!.pushViewController(controller, animated: true)
     }
 }
 
