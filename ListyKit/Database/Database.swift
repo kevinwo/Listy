@@ -66,6 +66,22 @@ public class Database {
         try data.write(to: url)
     }
 
+    public func delete(_ object: Object) throws {
+        let objectType = type(of: object)
+        let url = objectsUrl(for: objectType)
+        var existingObjects: [Object] = objects(ofType: objectType) ?? [Object]()
+
+        if let index = existingObjects.index(of: object) {
+            existingObjects.remove(at: index)
+        }
+
+        let encoder = PropertyListEncoder()
+        encoder.outputFormat = .xml
+
+        let data = try encoder.encode(existingObjects)
+        try data.write(to: url)
+    }
+
     // MARK: - Private interface
 
     private func objectsUrl(for type: AnyClass) -> URL {

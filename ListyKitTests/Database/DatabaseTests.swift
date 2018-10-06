@@ -92,4 +92,19 @@ class DatabaseTests: XCTestCase {
         let fetchedObject = sut.object(ofType: Object.self, with: object.id)
         XCTAssertEqual(existingObject, fetchedObject)
     }
+
+    // MARK: - delete(_:)
+
+    func testDelete() {
+        // given
+        let object = Object()
+        try! sut.save(object)
+
+        // when
+        try! sut.delete(object)
+
+        // then
+        let fetchedObject = sut.object(ofType: Object.self, with: object.id)
+        XCTAssertNil(fetchedObject)
+    }
 }
