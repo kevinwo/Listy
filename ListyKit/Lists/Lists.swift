@@ -22,7 +22,11 @@ public class Lists {
     // MARK: - Public interface
 
     public func all() -> [List] {
-        return self.database.objects(ofType: List.self) as? [List] ?? [List]()
+        if let lists = self.database.objects(ofType: List.self) as? [List] {
+            return lists.sorted(by: { $0.title < $1.title })
+        }
+
+        return [List]()
     }
 
     public func fetch(by id: String) -> List? {
