@@ -49,7 +49,7 @@
                             <outlet property="delegate" destination="TUm-gI-RPk" id="SLx-u0-j5B"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Edit List" id="5zR-vD-jSL">
+                    <navigationItem key="navigationItem" title="Add List" id="5zR-vD-jSL">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sud-iV-Gbw">
                             <connections>
                                 <action selector="cancelBarButtonItemTapped:" destination="TUm-gI-RPk" id="h8t-Oi-DlU"/>
