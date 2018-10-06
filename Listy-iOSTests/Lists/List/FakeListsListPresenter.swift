@@ -10,9 +10,14 @@ import UIKit
 
 class FakeListsListPresenter: ListsListPresenter {
 
+    var didCallReloadData: Bool = false
     var didCallAddList: Bool = false
     var didCallViewDidLoad: Bool = false
     var didCallUpdateView: Bool = false
+
+    override func reloadData() {
+        self.didCallReloadData = true
+    }
 
     override func addList() {
         self.didCallAddList = true

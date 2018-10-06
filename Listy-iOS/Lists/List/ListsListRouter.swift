@@ -43,6 +43,7 @@ extension ListsListRouter: EditListViewControllerDelegate {
     }
 
     func controller(_ controller: EditListViewController, didSaveList list: List) {
+        self.view.reloadData()
         self.view.dismiss(animated: true, completion: nil)
     }
 }

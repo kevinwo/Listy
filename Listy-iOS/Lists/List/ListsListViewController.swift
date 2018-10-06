@@ -32,6 +32,12 @@ class ListsListViewController: UITableViewController {
         self.presenter.viewDidLoad()
     }
 
+    // MARK: - Public interface
+
+    func reloadData() {
+        self.presenter.reloadData()
+    }
+
     // MARK: - Button actions
 
     @IBAction func addBarButtonItemTapped(_ sender: Any) {

@@ -48,6 +48,6 @@ class ListsListPresenter: Presenter {
     // MARK: - Interactor output
 
     func updateView() {
-        // Update the view
+        self.view.tableView.reloadData()
     }
 }
