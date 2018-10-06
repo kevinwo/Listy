@@ -79,6 +79,7 @@ class ListsListInteractorTests: XCTestCase {
 
         // then
         XCTAssertEqual(sut.dataSource.tableView, tableView)
+        XCTAssertNotNil(sut.dataSource.cellConfigurationBlock)
     }
 
     // MARK: - fetchData()

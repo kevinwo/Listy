@@ -58,4 +58,14 @@ class TasksListPresenterTests: XCTestCase {
         XCTAssertNotNil(presenter.view)
         XCTAssertNotNil(presenter.interactor)
     }
+
+    // MARK: - viewDidLoad()
+
+    func testViewDidLoad() {
+        // when
+        sut.viewDidLoad()
+
+        // then
+        XCTAssertTrue(fakeInteractor.didCallLoadDataSource)
+    }
 }

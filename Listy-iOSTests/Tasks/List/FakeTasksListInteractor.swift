@@ -7,7 +7,13 @@
 
 import UIKit
 @testable import Listy_iOS
+@testable import ListyUI
 
 class FakeTasksListInteractor: TasksListInteractor {
 
+    var didCallLoadDataSource: Bool = false
+
+    override func loadDataSource(for tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
+        self.didCallLoadDataSource = true
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import ListyUI
+import ListyKit
 
 class TasksListPresenter: Presenter {
 
@@ -26,7 +27,11 @@ class TasksListPresenter: Presenter {
     // MARK: - Public interface
 
     override func viewDidLoad() {
-        // Load cool stuff, generally with the interactor
+        self.interactor.loadDataSource(
+        for: self.view.tableView) { (cell, object) in
+            let task = (object as! Task)
+            cell.textLabel!.text = task.title
+        }
     }
 
     func updateView() {

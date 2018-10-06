@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Listy_iOS
+@testable import ListyUI
 @testable import ListyKit
 
 class TasksListInteractorTests: XCTestCase {
@@ -15,6 +16,7 @@ class TasksListInteractorTests: XCTestCase {
     var sut: TasksListInteractor!
     var fakePresenter: FakeTasksListPresenter!
     var controller: TasksListViewController!
+    var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock!
 
     // MARK: - Test lifecycle
 
@@ -32,6 +34,10 @@ class TasksListInteractorTests: XCTestCase {
 
         sut = TasksListInteractor(output: fakePresenter)
         fakePresenter.interactor = sut
+
+        cellConfigurationBlock = { (cell, object) in
+            cell.textLabel!.text = object.id
+        }
 
         _ = controller.view
     }
@@ -54,5 +60,19 @@ class TasksListInteractorTests: XCTestCase {
 
         // then
         XCTAssertNotNil(interactor.output)
+    }
+
+    // MARK: - loadDataSource(for:cellConfigurationBlock:)
+
+    func testLoadDataSource() {
+        // given
+        let tableView = controller.tableView!
+
+        // when
+        sut.loadDataSource(for: tableView, cellConfigurationBlock: cellConfigurationBlock)
+
+        // then
+        XCTAssertEqual(sut.dataSource.tableView, tableView)
+        XCTAssertNotNil(sut.dataSource.cellConfigurationBlock)
     }
 }

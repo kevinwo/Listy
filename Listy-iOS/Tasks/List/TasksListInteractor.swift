@@ -6,18 +6,22 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import UIKit
+import ListyUI
 
 class TasksListInteractor {
 
+    // MARK: - Properties
+
     var output: TasksListPresenter!
+    var dataSource: TableViewDataSource!
 
     init(output: TasksListPresenter) {
         self.output = output
     }
 
-    func loadData() {
-        // Load some cool data
-        self.output.updateView()
+    // MARK: - Public interface
+
+    func loadDataSource(for tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
+        self.dataSource = TableViewDataSource(tableView: tableView, cellConfigurationBlock: cellConfigurationBlock)
     }
 }
