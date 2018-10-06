@@ -6,9 +6,11 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import UIKit
+import ListyKit
 
 class ListsListInteractor {
+
+    // MARK: - Properties
 
     var output: ListsListPresenter!
 
@@ -16,8 +18,14 @@ class ListsListInteractor {
         self.output = output
     }
 
+    // MARK: - Public interface
+
     func loadData() {
         // Load some cool data
         self.output.updateView()
+    }
+
+    func newList() -> List {
+        return List()
     }
 }

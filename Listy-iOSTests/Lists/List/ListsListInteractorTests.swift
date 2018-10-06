@@ -47,4 +47,15 @@ class ListsListInteractorTests: XCTestCase {
     func testInit() {
         XCTAssertNotNil(sut.output)
     }
+
+    // MARK: - newList()
+
+    func testNewList() {
+        // when
+        let list = sut.newList()
+
+        // then
+        XCTAssertNotNil(list)
+        XCTAssertNil(list.title)
+    }
 }
