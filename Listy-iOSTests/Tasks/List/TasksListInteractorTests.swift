@@ -28,6 +28,7 @@ class TasksListInteractorTests: XCTestCase {
 
         let storyboard = UIStoryboard(name: "TasksList", bundle: nil)
         controller = (storyboard.instantiateInitialViewController() as! TasksListViewController)
+
         controller.list = List()
 
         fakePresenter = FakeTasksListPresenter(view: controller)
@@ -73,7 +74,10 @@ class TasksListInteractorTests: XCTestCase {
         let tableView = controller.tableView!
 
         // when
-        sut.loadDataSource(for: tableView, cellConfigurationBlock: cellConfigurationBlock)
+        sut.loadDataSource(
+            for: tableView,
+            with: controller.list,
+            cellConfigurationBlock: cellConfigurationBlock)
 
         // then
         XCTAssertEqual(sut.dataSource.tableView, tableView)
@@ -84,10 +88,16 @@ class TasksListInteractorTests: XCTestCase {
 
     func testFetchData() {
         // given
+        let list = List()
         let task = Task()
         task.title = "Important task"
+        task.listId = list.id
         try! tasks.add(task)
-        sut.loadDataSource(for: controller.tableView, cellConfigurationBlock: cellConfigurationBlock)
+
+        sut.loadDataSource(
+            for: controller.tableView,
+            with: controller.list,
+            cellConfigurationBlock: cellConfigurationBlock)
 
         // when
         sut.fetchData()
@@ -100,6 +110,12 @@ class TasksListInteractorTests: XCTestCase {
     // MARK: - newTask()
 
     func testNewTask() {
+        // given
+        sut.loadDataSource(
+            for: controller.tableView,
+            with: controller.list,
+            cellConfigurationBlock: cellConfigurationBlock)
+
         // when
         let task = sut.newTask()
 

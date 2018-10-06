@@ -34,4 +34,15 @@ class TaskTests: XCTestCase {
         // then
         XCTAssertEqual(title, sut.title)
     }
+
+    func testSetListId() {
+        // given
+        let listId = "list-id"
+
+        // when
+        sut.listId = listId
+
+        // then
+        XCTAssertEqual(listId, sut.listId)
+    }
 }

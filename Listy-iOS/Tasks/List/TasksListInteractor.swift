@@ -16,6 +16,7 @@ class TasksListInteractor {
     var output: TasksListPresenter!
     var dataSource: TableViewDataSource!
     var tasks: Tasks!
+    var list: List!
 
     init(output: TasksListPresenter) {
         self.output = output
@@ -24,7 +25,11 @@ class TasksListInteractor {
 
     // MARK: - Public interface
 
-    func loadDataSource(for tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
+    func loadDataSource(
+        for tableView: UITableView,
+        with list: List,
+        cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
+        self.list = list
         self.dataSource = TableViewDataSource(tableView: tableView, cellConfigurationBlock: cellConfigurationBlock)
     }
 
@@ -34,6 +39,9 @@ class TasksListInteractor {
     }
 
     func newTask() -> Task {
-        return Task()
+        let task = Task()
+        task.listId = list.id
+
+        return task
     }
 }

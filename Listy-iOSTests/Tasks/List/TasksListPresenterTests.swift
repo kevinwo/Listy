@@ -83,6 +83,9 @@ class TasksListPresenterTests: XCTestCase {
     // MARK: - addTask()
 
     func testAddTask() {
+        // given
+        fakeInteractor.list = List()
+
         // when
         sut.addTask()
 

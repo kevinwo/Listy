@@ -13,7 +13,7 @@ class EditTaskInteractor {
 
     var output: EditTaskPresenter!
     var tasks: Tasks
-    var task: Task?
+    var task: Task!
 
     init(output: EditTaskPresenter) {
         self.output = output

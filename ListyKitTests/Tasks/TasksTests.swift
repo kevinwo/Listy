@@ -36,12 +36,17 @@ class TasksTests: XCTestCase {
 
     func testAll() {
         // given
+        let list = List()
+
         let task1 = Task()
         task1.title = "Important task"
+        task1.listId = list.id
         try! sut.add(task1)
 
         let task2 = Task()
         task2.title = "Even more important task"
+        task2.listId = list.id
+
         try! sut.add(task2)
 
         // when
@@ -56,8 +61,11 @@ class TasksTests: XCTestCase {
 
     func testFetch_WhenTaskExists() {
         // given
+        let list = List()
         let task = Task()
         task.title = "Important task"
+        task.listId = list.id
+
         try! sut.add(task)
         let id = task.id
 
@@ -83,7 +91,9 @@ class TasksTests: XCTestCase {
 
     func testAdd_WhenSuccess() {
         // given
+        let list = List()
         let task = Task()
+        task.listId = list.id
         task.title = "Important task"
 
         // when

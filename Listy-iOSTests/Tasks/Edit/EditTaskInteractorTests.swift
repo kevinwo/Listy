@@ -60,6 +60,11 @@ class EditTaskInteractorTests: XCTestCase {
     
     func testSaveTask_WhenSuccess() {
         // given
+        let list = List()
+        let newTask = Task()
+        newTask.listId = list.id
+        sut.task = newTask
+
         let title = "Important task"
         let allTasksBeforeSave = tasks.all()
         XCTAssertNil(allTasksBeforeSave.filter({ $0.title == title }).first)

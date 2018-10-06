@@ -28,7 +28,7 @@ class TasksListPresenter: Presenter {
 
     override func viewDidLoad() {
         self.interactor.loadDataSource(
-        for: self.view.tableView) { (cell, object) in
+        for: self.view.tableView, with: self.view.list) { (cell, object) in
             let task = (object as! Task)
             cell.textLabel!.text = task.title
         }
