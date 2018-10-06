@@ -47,6 +47,14 @@
 		265EA988216857880009FF96 /* ListsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265EA987216857880009FF96 /* ListsList.storyboard */; };
 		265EA98A216858410009FF96 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA989216858410009FF96 /* Router.swift */; };
 		265EA98C216858880009FF96 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA98B216858880009FF96 /* Presenter.swift */; };
+		265EA99421685DE20009FF96 /* EditListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99121685DE20009FF96 /* EditListViewControllerTests.swift */; };
+		265EA99521685DE20009FF96 /* EditListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99221685DE20009FF96 /* EditListInteractorTests.swift */; };
+		265EA99621685DE20009FF96 /* EditListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99321685DE20009FF96 /* EditListPresenterTests.swift */; };
+		265EA99B21685E0B0009FF96 /* EditListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99721685E0B0009FF96 /* EditListPresenter.swift */; };
+		265EA99C21685E0B0009FF96 /* EditListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99821685E0B0009FF96 /* EditListRouter.swift */; };
+		265EA99D21685E0B0009FF96 /* EditListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99921685E0B0009FF96 /* EditListViewController.swift */; };
+		265EA99E21685E0B0009FF96 /* EditListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99A21685E0B0009FF96 /* EditListInteractor.swift */; };
+		265EA9A021685E240009FF96 /* EditList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265EA99F21685E240009FF96 /* EditList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +173,14 @@
 		265EA987216857880009FF96 /* ListsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListsList.storyboard; sourceTree = "<group>"; };
 		265EA989216858410009FF96 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		265EA98B216858880009FF96 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		265EA99121685DE20009FF96 /* EditListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListViewControllerTests.swift; sourceTree = "<group>"; };
+		265EA99221685DE20009FF96 /* EditListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListInteractorTests.swift; sourceTree = "<group>"; };
+		265EA99321685DE20009FF96 /* EditListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListPresenterTests.swift; sourceTree = "<group>"; };
+		265EA99721685E0B0009FF96 /* EditListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListPresenter.swift; sourceTree = "<group>"; };
+		265EA99821685E0B0009FF96 /* EditListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListRouter.swift; sourceTree = "<group>"; };
+		265EA99921685E0B0009FF96 /* EditListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListViewController.swift; sourceTree = "<group>"; };
+		265EA99A21685E0B0009FF96 /* EditListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListInteractor.swift; sourceTree = "<group>"; };
+		265EA99F21685E240009FF96 /* EditList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				265EA9762168570A0009FF96 /* List */,
+				265EA98F21685D940009FF96 /* Edit */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -438,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				265EA978216857170009FF96 /* List */,
+				265EA99021685DB30009FF96 /* Edit */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -450,6 +468,28 @@
 				265EA983216857480009FF96 /* ListsListPresenterTests.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		265EA98F21685D940009FF96 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				265EA99921685E0B0009FF96 /* EditListViewController.swift */,
+				265EA99721685E0B0009FF96 /* EditListPresenter.swift */,
+				265EA99821685E0B0009FF96 /* EditListRouter.swift */,
+				265EA99A21685E0B0009FF96 /* EditListInteractor.swift */,
+				265EA99F21685E240009FF96 /* EditList.storyboard */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		265EA99021685DB30009FF96 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				265EA99121685DE20009FF96 /* EditListViewControllerTests.swift */,
+				265EA99221685DE20009FF96 /* EditListInteractorTests.swift */,
+				265EA99321685DE20009FF96 /* EditListPresenterTests.swift */,
+			);
+			path = Edit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -674,6 +714,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265EA9A021685E240009FF96 /* EditList.storyboard in Resources */,
 				265EA959216856820009FF96 /* LaunchScreen.storyboard in Resources */,
 				265EA956216856820009FF96 /* Assets.xcassets in Resources */,
 				265EA988216857880009FF96 /* ListsList.storyboard in Resources */,
@@ -741,11 +782,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265EA99D21685E0B0009FF96 /* EditListViewController.swift in Sources */,
+				265EA99B21685E0B0009FF96 /* EditListPresenter.swift in Sources */,
 				265EA97F216857340009FF96 /* ListsListViewController.swift in Sources */,
+				265EA99E21685E0B0009FF96 /* EditListInteractor.swift in Sources */,
 				265EA97E216857340009FF96 /* ListsListRouter.swift in Sources */,
 				265EA980216857340009FF96 /* ListsListInteractor.swift in Sources */,
 				265EA97D216857340009FF96 /* ListsListPresenter.swift in Sources */,
 				265EA94F216856800009FF96 /* AppDelegate.swift in Sources */,
+				265EA99C21685E0B0009FF96 /* EditListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,7 +798,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265EA99621685DE20009FF96 /* EditListPresenterTests.swift in Sources */,
+				265EA99421685DE20009FF96 /* EditListViewControllerTests.swift in Sources */,
 				265EA984216857480009FF96 /* ListsListViewControllerTests.swift in Sources */,
+				265EA99521685DE20009FF96 /* EditListInteractorTests.swift in Sources */,
 				265EA985216857480009FF96 /* ListsListInteractorTests.swift in Sources */,
 				265EA986216857480009FF96 /* ListsListPresenterTests.swift in Sources */,
 			);
