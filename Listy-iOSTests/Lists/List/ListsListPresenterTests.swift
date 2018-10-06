@@ -13,18 +13,20 @@ class ListsListPresenterTests: XCTestCase {
 
     var sut: ListsListPresenter!
     var fakeRouter: FakeListsListRouter!
+    var fakeInteractor: FakeListsListInteractor!
     var controller: ListsListViewController!
-    var window: UIWindow!
 
     // MARK: - Test lifecycle
 
     override func setUp() {
         super.setUp()
 
-        window = UIWindow()
         let storyboard = UIStoryboard(name: "ListsList", bundle: nil)
         controller = (storyboard.instantiateViewController(withIdentifier: "ListsListViewController") as! ListsListViewController)
         sut = ListsListPresenter(view: controller)
+
+        fakeInteractor = FakeListsListInteractor(output: sut)
+        sut.interactor = fakeInteractor
 
         fakeRouter = FakeListsListRouter(view: controller)
         sut.router = fakeRouter
@@ -36,7 +38,8 @@ class ListsListPresenterTests: XCTestCase {
     override func tearDown() {
         sut = nil
         controller = nil
-        window = nil
+        fakeRouter = nil
+        fakeInteractor = nil
 
         super.tearDown()
     }
@@ -52,6 +55,16 @@ class ListsListPresenterTests: XCTestCase {
         // then
         XCTAssertNotNil(presenter.view)
         XCTAssertNotNil(presenter.interactor)
+    }
+
+    // MARK: - viewDidLoad()
+
+    func testViewDidLoad() {
+        // when
+        sut.viewDidLoad()
+
+        // then
+        XCTAssertTrue(fakeInteractor.didCallLoadDataSource)
     }
 
     // MARK: - addList()

@@ -40,6 +40,7 @@ class EditListPresenterTests: XCTestCase {
         sut = nil
         controller = nil
         fakeDelegate = nil
+        fakeInteractor = nil
 
         super.tearDown()
     }

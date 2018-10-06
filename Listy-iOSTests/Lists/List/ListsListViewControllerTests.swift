@@ -46,6 +46,12 @@ class ListsListViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.tableView)
     }
 
+    // MARK: - viewDidLoad()
+
+    func testViewDidLoad() {
+        XCTAssertTrue(fakePresenter.didCallViewDidLoad)
+    }
+
     // MARK: - Button actions
 
     func testAddBarButtonItemTapped() {
@@ -53,6 +59,6 @@ class ListsListViewControllerTests: XCTestCase {
         sut.addBarButtonItem.tap()
 
         // then
-        XCTAssertTrue(fakePresenter.didAddList)
+        XCTAssertTrue(fakePresenter.didCallAddList)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import ListyUI
+import ListyKit
 
 class ListsListPresenter: Presenter {
 
@@ -26,7 +27,11 @@ class ListsListPresenter: Presenter {
     // MARK: - Public interface
 
     override func viewDidLoad() {
-        // Load cool stuff, generally with the interactor
+        self.interactor.loadDataSource(
+        for: self.view.tableView) { (cell, object) in
+            let list = (object as! List)
+            cell.textLabel!.text = list.title
+        }
     }
 
     func addList() {

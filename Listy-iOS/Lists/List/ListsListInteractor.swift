@@ -6,6 +6,7 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
+import ListyUI
 import ListyKit
 
 class ListsListInteractor {
@@ -20,9 +21,8 @@ class ListsListInteractor {
 
     // MARK: - Public interface
 
-    func loadData() {
+    func loadDataSource(for tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
         // Load some cool data
-        self.output.updateView()
     }
 
     func newList() -> List {

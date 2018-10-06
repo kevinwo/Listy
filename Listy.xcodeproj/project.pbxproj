@@ -62,6 +62,7 @@
 		265EA9AB2168B7760009FF96 /* FakeEditListViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9AA2168B7760009FF96 /* FakeEditListViewControllerDelegate.swift */; };
 		265EA9AD2168BCC20009FF96 /* FakeEditListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9AC2168BCC20009FF96 /* FakeEditListInteractor.swift */; };
 		265EA9AF2168C6A30009FF96 /* FileManager+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9AE2168C6A30009FF96 /* FileManager+Tests.swift */; };
+		265EA9B12168C9B80009FF96 /* FakeListsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9B02168C9B80009FF96 /* FakeListsListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +196,7 @@
 		265EA9AA2168B7760009FF96 /* FakeEditListViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditListViewControllerDelegate.swift; sourceTree = "<group>"; };
 		265EA9AC2168BCC20009FF96 /* FakeEditListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditListInteractor.swift; sourceTree = "<group>"; };
 		265EA9AE2168C6A30009FF96 /* FileManager+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Tests.swift"; sourceTree = "<group>"; };
+		265EA9B02168C9B80009FF96 /* FakeListsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,6 +485,7 @@
 				265EA983216857480009FF96 /* ListsListPresenterTests.swift */,
 				265EA9A4216881B60009FF96 /* FakeListsListPresenter.swift */,
 				265EA9A6216885220009FF96 /* FakeListsListRouter.swift */,
+				265EA9B02168C9B80009FF96 /* FakeListsListInteractor.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				265EA99621685DE20009FF96 /* EditListPresenterTests.swift in Sources */,
+				265EA9B12168C9B80009FF96 /* FakeListsListInteractor.swift in Sources */,
 				265EA9A921688A4F0009FF96 /* FakeEditListPresenter.swift in Sources */,
 				265EA9A5216881B60009FF96 /* FakeListsListPresenter.swift in Sources */,
 				265EA99421685DE20009FF96 /* EditListViewControllerTests.swift in Sources */,
