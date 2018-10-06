@@ -7,6 +7,7 @@
 
 import UIKit
 @testable import Listy_iOS
+@testable import ListyKit
 
 class FakeEditListPresenter: EditListPresenter {
 
@@ -14,6 +15,7 @@ class FakeEditListPresenter: EditListPresenter {
     var didCancel: Bool = false
     var didSave: Bool = false
     var didCallUpdateView: Bool = false
+    var didCallFinish: Bool = false
 
     override func showErrorAlert(_ error: Error) {
         self.didCallShowErrorAlert = true
@@ -29,5 +31,9 @@ class FakeEditListPresenter: EditListPresenter {
 
     override func updateView() {
         self.didCallUpdateView = true
+    }
+
+    override func finish(with list: List) {
+        self.didCallFinish = true
     }
 }

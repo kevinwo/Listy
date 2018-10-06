@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Listy_iOS
+@testable import ListyKit
 
 class EditListPresenterTests: XCTestCase {
 
@@ -88,5 +89,19 @@ class EditListPresenterTests: XCTestCase {
 
         // then
         XCTAssertFalse(fakeInteractor.didCallSaveList)
+    }
+
+    // MARK: - finish(with:)
+
+    func testFinisWithList() {
+        // given
+        let list = List()
+        list.title = "Cool List"
+
+        // when
+        sut.finish(with: list)
+
+        // then
+        XCTAssertTrue(fakeDelegate.didCallControllerDidSaveList)
     }
 }

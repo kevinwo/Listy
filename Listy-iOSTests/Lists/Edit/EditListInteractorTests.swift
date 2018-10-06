@@ -22,6 +22,8 @@ class EditListInteractorTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
+        FileManager().clearTemporaryDirectory()
+
         let storyboard = UIStoryboard(name: "EditList", bundle: nil)
         controller = (storyboard.instantiateViewController(withIdentifier: "EditListViewController") as! EditListViewController)
 
@@ -72,6 +74,6 @@ class EditListInteractorTests: XCTestCase {
         // then
         let allListsAfterSave = lists.all()
         XCTAssertNotNil(allListsAfterSave.filter({ $0.title == title }).first)
-        XCTAssertTrue(fakePresenter.didCallUpdateView)
+        XCTAssertTrue(fakePresenter.didCallFinish)
     }
 }

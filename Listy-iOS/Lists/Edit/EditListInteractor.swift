@@ -31,7 +31,7 @@ class EditListInteractor {
 
         do {
             try lists.add(list)
-            self.output.updateView()
+            self.output.finish(with: list)
         } catch(let error) {
             self.output.showErrorAlert(error)
         }

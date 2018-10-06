@@ -7,6 +7,7 @@
 //
 
 import ListyUI
+import ListyKit
 
 class EditListPresenter: Presenter {
 
@@ -51,5 +52,9 @@ class EditListPresenter: Presenter {
 
     func updateView() {
         // Update the view
+    }
+
+    func finish(with list: List) {
+        self.view.delegate.controller(self.view, didSaveList: list)
     }
 }
