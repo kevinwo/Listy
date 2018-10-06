@@ -9,7 +9,7 @@ import Foundation
 
 open class SectionedDataSource: NSObject {
 
-    var sections: [[Object]]
+    open var sections: [[Object]]
     open var objects: [Object]? {
         get {
             let joined = self.sections
@@ -22,7 +22,7 @@ open class SectionedDataSource: NSObject {
         }
     }
 
-    init(objects: [Object]? = nil) {
+    public init(objects: [Object]? = nil) {
         self.sections = [[Object]]()
 
         if let objects = objects {
