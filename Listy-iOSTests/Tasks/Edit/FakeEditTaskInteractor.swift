@@ -10,4 +10,9 @@ import UIKit
 
 class FakeEditTaskInteractor: EditTaskInteractor {
 
+    var didCallSaveTask: Bool = false
+
+    override func saveTask(title: String) {
+        self.didCallSaveTask = true
+    }
 }

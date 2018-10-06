@@ -8,12 +8,14 @@
 
 import XCTest
 @testable import Listy_iOS
+@testable import ListyKit
 
 class EditTaskInteractorTests: XCTestCase {
 
     var sut: EditTaskInteractor!
     var fakePresenter: FakeEditTaskPresenter!
     var controller: EditTaskViewController!
+    var tasks: Tasks!
 
     // MARK: - Test lifecycle
 
@@ -29,6 +31,9 @@ class EditTaskInteractorTests: XCTestCase {
         sut = EditTaskInteractor(output: fakePresenter)
         fakePresenter.interactor = sut
 
+        tasks = Tasks(database: Database.newInstance(path: NSTemporaryDirectory()))
+        sut.tasks = tasks
+
         _ = controller.view
     }
 
@@ -36,6 +41,7 @@ class EditTaskInteractorTests: XCTestCase {
         sut = nil
         fakePresenter = nil
         controller = nil
+        tasks = nil
 
         super.tearDown()
     }
@@ -48,5 +54,22 @@ class EditTaskInteractorTests: XCTestCase {
 
         // then
         XCTAssertEqual(interactor.output, fakePresenter)
+    }
+
+    // MARK: - saveList(title:)
+    
+    func testSaveTask_WhenSuccess() {
+        // given
+        let title = "Important task"
+        let allTasksBeforeSave = tasks.all()
+        XCTAssertNil(allTasksBeforeSave.filter({ $0.title == title }).first)
+
+        // when
+        sut.saveTask(title: title)
+
+        // then
+        let allTasksAfterSave = tasks.all()
+        XCTAssertNotNil(allTasksAfterSave.filter({ $0.title == title }).first)
+        XCTAssertTrue(fakePresenter.didCallFinish)
     }
 }

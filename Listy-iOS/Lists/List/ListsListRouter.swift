@@ -55,4 +55,3 @@ extension ListsListRouter: EditListViewControllerDelegate {
         self.view.dismiss(animated: true, completion: nil)
     }
 }
-

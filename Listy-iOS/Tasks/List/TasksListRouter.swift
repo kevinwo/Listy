@@ -31,7 +31,19 @@ class TasksListRouter: NSObject, Router {
         let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
         let controller = (navigationController.topViewController as! EditTaskViewController)
         controller.task = task
+        controller.delegate = self
 
         self.view.present(navigationController, animated: true, completion: nil)
+    }
+}
+
+extension TasksListRouter: EditTaskViewControllerDelegate {
+    func didCancelWithController(_ controller: EditTaskViewController) {
+        self.view.dismiss(animated: true, completion: nil)
+    }
+ 
+    func controller(_ controller: EditTaskViewController, didSaveTask task: Task) {
+        self.view.reloadData()
+        self.view.dismiss(animated: true, completion: nil)
     }
 }

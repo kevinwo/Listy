@@ -13,6 +13,7 @@ class EditTaskPresenterTests: XCTestCase {
 
     var sut: EditTaskPresenter!
     var controller: EditTaskViewController!
+    var fakeDelegate: FakeEditTaskViewControllerDelegate!
     var fakeInteractor: FakeEditTaskInteractor!
 
     // MARK: - Test lifecycle
@@ -26,6 +27,9 @@ class EditTaskPresenterTests: XCTestCase {
 
         fakeInteractor = FakeEditTaskInteractor(output: sut)
         sut.interactor = fakeInteractor
+
+        fakeDelegate = FakeEditTaskViewControllerDelegate()
+        controller.delegate = fakeDelegate
 
         controller.presenter = sut
         _ = controller.view
@@ -50,5 +54,39 @@ class EditTaskPresenterTests: XCTestCase {
         // then
         XCTAssertNotNil(presenter.view)
         XCTAssertNotNil(presenter.interactor)
+    }
+
+    // MARK: - cancel()
+
+    func testCancel() {
+        // when
+        sut.cancel()
+
+        // then
+        XCTAssertTrue(fakeDelegate.didCallCancelWithController)
+    }
+
+    // MARK: - save()
+
+    func testSave_WhenTitleIsPresent() {
+        // given
+        controller.titleTextField.text = "Important task"
+
+        // when
+        sut.save()
+
+        // then
+        XCTAssertTrue(fakeInteractor.didCallSaveTask)
+    }
+
+    func testSave_WhenTitleIsNotPresent() {
+        // given
+        controller.titleTextField.text = nil
+
+        // when
+        sut.save()
+
+        // then
+        XCTAssertFalse(fakeInteractor.didCallSaveTask)
     }
 }

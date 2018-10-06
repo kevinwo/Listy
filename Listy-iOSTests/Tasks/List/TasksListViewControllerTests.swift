@@ -59,6 +59,16 @@ class TasksListViewControllerTests: XCTestCase {
         XCTAssertTrue(fakePresenter.didCallViewDidLoad)
     }
 
+    // MARK: - reloadData()
+
+    func testReloadData() {
+        // when
+        sut.reloadData()
+
+        // then
+        XCTAssertTrue(fakePresenter.didCallReloadData)
+    }
+
     // MARK: - Button actions
 
     func testAddBarButtonItemTapped() {

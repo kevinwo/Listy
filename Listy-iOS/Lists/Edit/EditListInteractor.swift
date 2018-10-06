@@ -20,11 +20,6 @@ class EditListInteractor {
         self.lists = Lists(database: Database.newInstance())
     }
 
-    func loadData() {
-        // Load some cool data
-        self.output.updateView()
-    }
-
     func saveList(title: String) {
         let list = self.list ?? List()
         list.title = title

@@ -14,7 +14,6 @@ class FakeEditListPresenter: EditListPresenter {
     var didCallShowErrorAlert: Bool = false
     var didCancel: Bool = false
     var didSave: Bool = false
-    var didCallUpdateView: Bool = false
     var didCallFinish: Bool = false
 
     override func showErrorAlert(_ error: Error) {
@@ -27,10 +26,6 @@ class FakeEditListPresenter: EditListPresenter {
 
     override func save() {
         self.didSave = true
-    }
-
-    override func updateView() {
-        self.didCallUpdateView = true
     }
 
     override func finish(with list: List) {

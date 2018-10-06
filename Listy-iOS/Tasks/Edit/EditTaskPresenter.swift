@@ -7,6 +7,7 @@
 //
 
 import ListyUI
+import ListyKit
 
 class EditTaskPresenter: Presenter {
 
@@ -29,15 +30,27 @@ class EditTaskPresenter: Presenter {
         // Load cool stuff, generally with the interactor
     }
 
+    override func showErrorAlert(_ error: Error) {
+        // Present error info to the user
+    }
+
     func cancel() {
+        self.view.delegate.didCancelWithController(self.view)
     }
 
     func save() {
+        guard let title = self.view.titleTextField.text, !title.isEmpty else {
+            let error = NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
+            showErrorAlert(error)
+            return
+        }
+
+        self.interactor.saveTask(title: title)
     }
 
     // MARK: - Interactor output
 
-    func updateView() {
-        // Update the view
+    func finish(with task: Task) {
+        self.view.delegate.controller(self.view, didSaveTask: task)
     }
 }

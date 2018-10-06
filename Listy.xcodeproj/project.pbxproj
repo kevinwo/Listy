@@ -84,6 +84,7 @@
 		265EA9DD2168D8070009FF96 /* FakeEditTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9DC2168D8070009FF96 /* FakeEditTaskPresenter.swift */; };
 		265EA9DF2168D82E0009FF96 /* FakeEditTaskInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9DE2168D82E0009FF96 /* FakeEditTaskInteractor.swift */; };
 		265EA9E12168DA640009FF96 /* EditTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265EA9E02168DA640009FF96 /* EditTask.storyboard */; };
+		269CDC352168FED7007CDAFB /* FakeEditTaskViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CDC342168FED7007CDAFB /* FakeEditTaskViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +240,7 @@
 		265EA9DC2168D8070009FF96 /* FakeEditTaskPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditTaskPresenter.swift; sourceTree = "<group>"; };
 		265EA9DE2168D82E0009FF96 /* FakeEditTaskInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditTaskInteractor.swift; sourceTree = "<group>"; };
 		265EA9E02168DA640009FF96 /* EditTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditTask.storyboard; sourceTree = "<group>"; };
+		269CDC342168FED7007CDAFB /* FakeEditTaskViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditTaskViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -630,6 +632,7 @@
 				265EA9D72168D7C70009FF96 /* EditTaskInteractorTests.swift */,
 				265EA9D82168D7C70009FF96 /* EditTaskPresenterTests.swift */,
 				265EA9DC2168D8070009FF96 /* FakeEditTaskPresenter.swift */,
+				269CDC342168FED7007CDAFB /* FakeEditTaskViewControllerDelegate.swift */,
 				265EA9DE2168D82E0009FF96 /* FakeEditTaskInteractor.swift */,
 			);
 			path = Edit;
@@ -974,6 +977,7 @@
 				265EA9DF2168D82E0009FF96 /* FakeEditTaskInteractor.swift in Sources */,
 				265EA9DA2168D7C70009FF96 /* EditTaskInteractorTests.swift in Sources */,
 				265EA9DB2168D7C70009FF96 /* EditTaskPresenterTests.swift in Sources */,
+				269CDC352168FED7007CDAFB /* FakeEditTaskViewControllerDelegate.swift in Sources */,
 				265EA986216857480009FF96 /* ListsListPresenterTests.swift in Sources */,
 				265EA9AD2168BCC20009FF96 /* FakeEditListInteractor.swift in Sources */,
 			);

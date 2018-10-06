@@ -16,7 +16,7 @@ class TasksListViewController: UITableViewController {
     var presenter: TasksListPresenter!
     var list: List!
 
-    // MARK: Object lifecycle
+    // MARK: - Object lifecycle
 
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
@@ -24,7 +24,7 @@ class TasksListViewController: UITableViewController {
         self.presenter = TasksListPresenter(view: self)
     }
 
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,12 @@ class TasksListViewController: UITableViewController {
 
         self.title = list.title
         self.presenter.viewDidLoad()
+    }
+
+    // MARK: - Public interface
+
+    func reloadData() {
+        self.presenter.reloadData()
     }
 
     // MARK: - Button actions

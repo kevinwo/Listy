@@ -9,6 +9,11 @@
 import UIKit
 import ListyKit
 
+protocol EditTaskViewControllerDelegate: NSObjectProtocol {
+    func didCancelWithController(_ controller: EditTaskViewController)
+    func controller(_ controller: EditTaskViewController, didSaveTask task: Task)
+}
+
 class EditTaskViewController: UITableViewController {
 
     // MARK: - Properties
@@ -19,6 +24,7 @@ class EditTaskViewController: UITableViewController {
 
     var presenter: EditTaskPresenter!
     var task: Task!
+    weak var delegate: EditTaskViewControllerDelegate!
 
     // MARK: - Object lifecycle
 
