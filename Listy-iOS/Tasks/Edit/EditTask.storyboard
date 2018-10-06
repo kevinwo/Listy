@@ -49,7 +49,23 @@
                             <outlet property="delegate" destination="OLS-CW-8qb" id="Qg1-rd-CVw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add Task" id="a8v-nl-Gjs"/>
+                    <navigationItem key="navigationItem" title="Add Task" id="a8v-nl-Gjs">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ck1-zh-sda">
+                            <connections>
+                                <action selector="cancelBarButtonItemTapped:" destination="OLS-CW-8qb" id="7od-5e-Yoz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="84s-Ma-djb">
+                            <connections>
+                                <action selector="saveBarButtonItemTapped:" destination="OLS-CW-8qb" id="AbY-YM-GFt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelBarButtonItem" destination="Ck1-zh-sda" id="2RZ-4v-8OG"/>
+                        <outlet property="saveBarButtonItem" destination="84s-Ma-djb" id="M3y-Hm-zke"/>
+                        <outlet property="titleTextField" destination="NJl-Md-3dK" id="3ty-Vs-Rhk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="plI-xJ-hnE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

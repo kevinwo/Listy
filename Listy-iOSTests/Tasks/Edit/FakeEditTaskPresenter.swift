@@ -10,4 +10,14 @@ import UIKit
 
 class FakeEditTaskPresenter: EditTaskPresenter {
 
+    var didCancel: Bool = false
+    var didSave: Bool = false
+
+    override func cancel() {
+        self.didCancel = true
+    }
+
+    override func save() {
+        self.didSave = true
+    }
 }

@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import ListyKit
 
 class EditTaskViewController: UITableViewController {
 
-    var presenter: EditTaskPresenter! 
+    // MARK: - Properties
 
-    // MARK: Object lifecycle
+    @IBOutlet weak var cancelBarButtonItem: UIBarButtonItem!
+    @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
+    @IBOutlet weak var titleTextField: UITextField!
+
+    var presenter: EditTaskPresenter!
+    var task: Task!
+
+    // MARK: - Object lifecycle
 
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
@@ -20,11 +28,21 @@ class EditTaskViewController: UITableViewController {
         self.presenter = EditTaskPresenter(view: self)
     }
 
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.presenter.viewDidLoad()
+    }
+
+    // MARK: - Button actions
+
+    @IBAction func cancelBarButtonItemTapped(_ sender: Any) {
+        self.presenter.cancel()
+    }
+
+    @IBAction func saveBarButtonItemTapped(_ sender: Any) {
+        self.presenter.save()
     }
 }

@@ -23,4 +23,15 @@ class TasksListRouter: NSObject, Router {
     required init(view: TasksListViewController) {
         self.view = view
     }
+
+    // MARK: - Public interface
+
+    func showEditTaskView(with task: Task) {
+        let storyboard = UIStoryboard(name: "EditTask", bundle: nil)
+        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+        let controller = (navigationController.topViewController as! EditTaskViewController)
+        controller.task = task
+
+        self.view.present(navigationController, animated: true, completion: nil)
+    }
 }

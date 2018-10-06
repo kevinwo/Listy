@@ -32,7 +32,7 @@ class EditTaskViewControllerTests: XCTestCase {
         _ = sut.view
     }
 
-    override func tearDown(){
+    override func tearDown() {
         sut = nil
         navigationController = nil
         window = nil
@@ -44,5 +44,26 @@ class EditTaskViewControllerTests: XCTestCase {
 
     func testOutlets() {
         XCTAssertNotNil(sut.tableView)
+        XCTAssertNotNil(sut.cancelBarButtonItem)
+        XCTAssertNotNil(sut.saveBarButtonItem)
+        XCTAssertNotNil(sut.titleTextField)
+    }
+
+    // MARK: - Button actions
+
+    func testCancelBarButtonItemTapped() {
+        // when
+        sut.cancelBarButtonItem.tap()
+
+        // then
+        XCTAssertTrue(fakePresenter.didCancel)
+    }
+
+    func testSaveBarButtonItemTapped() {
+        // when
+        sut.saveBarButtonItem.tap()
+
+        // then
+        XCTAssertTrue(fakePresenter.didSave)
     }
 }

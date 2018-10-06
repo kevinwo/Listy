@@ -29,6 +29,14 @@ class EditTaskPresenter: Presenter {
         // Load cool stuff, generally with the interactor
     }
 
+    func cancel() {
+    }
+
+    func save() {
+    }
+
+    // MARK: - Interactor output
+
     func updateView() {
         // Update the view
     }
