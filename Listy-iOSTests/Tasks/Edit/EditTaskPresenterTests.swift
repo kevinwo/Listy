@@ -58,6 +58,20 @@ class EditTaskPresenterTests: XCTestCase {
         XCTAssertNotNil(presenter.interactor)
     }
 
+    // MARK: - viewDidLoad()
+
+    func testViewDidLoad() {
+        // given
+        controller.task = Task()
+
+        // when
+        sut.viewDidLoad()
+
+        // then
+        XCTAssertTrue(fakeInteractor.didCallLoadTask)
+        XCTAssertEqual(fakeInteractor.loadedTask, controller.task)
+    }
+
     // MARK: - cancel()
 
     func testCancel() {

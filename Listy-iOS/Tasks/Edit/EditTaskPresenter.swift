@@ -11,11 +11,15 @@ import ListyKit
 
 class EditTaskPresenter: Presenter {
 
+    // MARK: - Properties
+
     weak var view: EditTaskViewController!
     var router: EditTaskRouter
     lazy var interactor: EditTaskInteractor = {
         return EditTaskInteractor(output: self)
     }()
+
+    // MARK: - Object lifecycle
 
     required init(view: EditTaskViewController) {
         self.view = view
@@ -23,6 +27,10 @@ class EditTaskPresenter: Presenter {
     }
 
     // MARK: - Public interface
+
+    func viewDidLoad() {
+        self.interactor.loadTask(self.view.task)
+    }
 
     func cancel() {
         self.view.delegate.didCancelWithController(self.view)
