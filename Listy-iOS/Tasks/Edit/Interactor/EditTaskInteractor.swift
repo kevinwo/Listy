@@ -9,13 +9,13 @@
 import UIKit
 import ListyKit
 
-class EditTaskInteractor {
+class EditTaskInteractor: EditTaskInteractorInput {
 
-    var output: EditTaskPresenter!
+    var output: EditTaskInteractorOutput
     var tasks: Tasks
     var task: Task!
 
-    init(output: EditTaskPresenter) {
+    required init(output: EditTaskInteractorOutput) {
         self.output = output
         self.tasks = Tasks(database: Database.newInstance())
     }

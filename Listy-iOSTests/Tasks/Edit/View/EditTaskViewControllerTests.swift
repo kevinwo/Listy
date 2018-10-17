@@ -58,7 +58,7 @@ class EditTaskViewControllerTests: XCTestCase {
         sut.cancelBarButtonItem.tap()
 
         // then
-        XCTAssertTrue(fakePresenter.didCancel)
+        XCTAssertTrue(fakePresenter.didCallCancel)
     }
 
     func testSaveBarButtonItemTapped() {
@@ -66,6 +66,6 @@ class EditTaskViewControllerTests: XCTestCase {
         sut.saveBarButtonItem.tap()
 
         // then
-        XCTAssertTrue(fakePresenter.didSave)
+        XCTAssertTrue(fakePresenter.didCallSave)
     }
 }

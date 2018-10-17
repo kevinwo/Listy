@@ -15,7 +15,7 @@ class EditTaskPresenterTests: XCTestCase {
     var sut: EditTaskPresenter!
     var controller: EditTaskViewController!
     var fakeDelegate: FakeEditTaskViewControllerDelegate!
-    var fakeInteractor: FakeEditTaskInteractor!
+    var fakeInteractorInput: FakeEditTaskInteractorInput!
 
     // MARK: - Test lifecycle
 
@@ -27,8 +27,8 @@ class EditTaskPresenterTests: XCTestCase {
         controller.task = Task()
         sut = EditTaskPresenter(view: controller)
 
-        fakeInteractor = FakeEditTaskInteractor(output: sut)
-        sut.interactor = fakeInteractor
+        fakeInteractorInput = FakeEditTaskInteractorInput(output: sut)
+        sut.interactor = fakeInteractorInput
 
         fakeDelegate = FakeEditTaskViewControllerDelegate()
         controller.delegate = fakeDelegate
@@ -40,7 +40,7 @@ class EditTaskPresenterTests: XCTestCase {
     override func tearDown() {
         sut = nil
         controller = nil
-        fakeInteractor = nil
+        fakeInteractorInput = nil
 
         super.tearDown()
     }
@@ -68,8 +68,8 @@ class EditTaskPresenterTests: XCTestCase {
         sut.viewDidLoad()
 
         // then
-        XCTAssertTrue(fakeInteractor.didCallLoadTask)
-        XCTAssertEqual(fakeInteractor.loadedTask, controller.task)
+        XCTAssertTrue(fakeInteractorInput.didCallLoadTask)
+        XCTAssertEqual(fakeInteractorInput.loadedTask, controller.task)
     }
 
     // MARK: - cancel()
@@ -92,7 +92,7 @@ class EditTaskPresenterTests: XCTestCase {
         sut.save()
 
         // then
-        XCTAssertTrue(fakeInteractor.didCallSaveTask)
+        XCTAssertTrue(fakeInteractorInput.didCallSaveTask)
     }
 
     func testSave_WhenTitleIsNotPresent() {
@@ -103,6 +103,6 @@ class EditTaskPresenterTests: XCTestCase {
         sut.save()
 
         // then
-        XCTAssertFalse(fakeInteractor.didCallSaveTask)
+        XCTAssertFalse(fakeInteractorInput.didCallSaveTask)
     }
 }

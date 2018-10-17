@@ -7,25 +7,19 @@
 
 import Foundation
 
-public protocol Presenter {
+public protocol Presenter: ErrorAlertable {
 
-    associatedtype T: UIViewController
-    var view: T! { get set }
+    associatedtype View: UIViewController
+    var view: View! { get set }
 
-    init(view: T)
+    init(view: View)
     func viewDidLoad()
-    func showErrorAlert(for error: Error)
 }
 
 extension Presenter {
 
     public func viewDidLoad() {
         fatalUnimplementedMethodError(#function, file: #file)
-    }
-
-    public func showErrorAlert(for error:
-        Error) {
-        // @TODO: Default implementation for showing error alert
     }
 
     // MARK: - Private interface

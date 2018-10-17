@@ -13,8 +13,7 @@ import XCTest
 class EditTaskInteractorTests: XCTestCase {
 
     var sut: EditTaskInteractor!
-    var fakePresenter: FakeEditTaskPresenter!
-    var controller: EditTaskViewController!
+    var fakeOutput: FakeEditTaskInteractorOutput!
     var tasks: Tasks!
 
     // MARK: - Test lifecycle
@@ -22,26 +21,16 @@ class EditTaskInteractorTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        let storyboard = UIStoryboard(name: "EditTask", bundle: nil)
-        controller = (storyboard.instantiateViewController(withIdentifier: "EditTaskViewController") as! EditTaskViewController)
-        controller.task = Task()
-
-        fakePresenter = FakeEditTaskPresenter(view: controller)
-        controller.presenter = fakePresenter
-
-        sut = EditTaskInteractor(output: fakePresenter)
-        fakePresenter.interactor = sut
+        fakeOutput = FakeEditTaskInteractorOutput()
+        sut = EditTaskInteractor(output: fakeOutput)
 
         tasks = Tasks(database: Database.newInstance(path: NSTemporaryDirectory()))
         sut.tasks = tasks
-
-        _ = controller.view
     }
 
-    override func tearDown(){
+    override func tearDown() {
         sut = nil
-        fakePresenter = nil
-        controller = nil
+        fakeOutput = nil
         tasks = nil
 
         super.tearDown()
@@ -51,10 +40,10 @@ class EditTaskInteractorTests: XCTestCase {
 
     func testInit() {
         // when
-        let interactor = EditTaskInteractor(output: fakePresenter)
+        let interactor = EditTaskInteractor(output: fakeOutput)
 
         // then
-        XCTAssert(interactor.output === fakePresenter)
+        XCTAssert(interactor.output === fakeOutput)
     }
 
     // MARK: - loadTask(_:)
@@ -89,6 +78,6 @@ class EditTaskInteractorTests: XCTestCase {
         // then
         let allTasksAfterSave = tasks.all()
         XCTAssertNotNil(allTasksAfterSave.filter({ $0.title == title }).first)
-        XCTAssertTrue(fakePresenter.didCallFinish)
+        XCTAssertTrue(fakeOutput.didCallFinish)
     }
 }
