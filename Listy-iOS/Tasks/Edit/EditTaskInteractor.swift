@@ -32,7 +32,7 @@ class EditTaskInteractor {
             try tasks.add(task)
             self.output.finish(with: task)
         } catch(let error) {
-            self.output.showErrorAlert(error)
+            self.output.showErrorAlert(for: error)
         }
     }
 }

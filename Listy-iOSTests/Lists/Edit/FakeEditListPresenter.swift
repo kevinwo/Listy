@@ -16,7 +16,7 @@ class FakeEditListPresenter: EditListPresenter {
     var didSave: Bool = false
     var didCallFinish: Bool = false
 
-    override func showErrorAlert(_ error: Error) {
+    func showErrorAlert(_ error: Error) {
         self.didCallShowErrorAlert = true
     }
 

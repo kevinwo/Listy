@@ -13,26 +13,16 @@ class EditTaskPresenter: Presenter {
 
     weak var view: EditTaskViewController!
     var router: EditTaskRouter
-    var interactor: EditTaskInteractor!
+    lazy var interactor: EditTaskInteractor = {
+        return EditTaskInteractor(output: self)
+    }()
 
-    init(view: EditTaskViewController) {
+    required init(view: EditTaskViewController) {
         self.view = view
         self.router = EditTaskRouter(view: view)
-
-        super.init()
-
-        self.interactor = EditTaskInteractor(output: self)
     }
 
     // MARK: - Public interface
-
-    override func viewDidLoad() {
-        self.interactor.loadTask(self.view.task)
-    }
-
-    override func showErrorAlert(_ error: Error) {
-        // Present error info to the user
-    }
 
     func cancel() {
         self.view.delegate.didCancelWithController(self.view)
@@ -41,7 +31,7 @@ class EditTaskPresenter: Presenter {
     func save() {
         guard let title = self.view.titleTextField.text, !title.isEmpty else {
             let error = NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
-            showErrorAlert(error)
+            showErrorAlert(for: error)
             return
         }
 

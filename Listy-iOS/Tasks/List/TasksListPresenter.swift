@@ -11,22 +11,22 @@ import ListyKit
 
 class TasksListPresenter: Presenter {
 
+    typealias T = TasksListViewController
+
     weak var view: TasksListViewController!
     var router: TasksListRouter
-    var interactor: TasksListInteractor!
+    lazy var interactor: TasksListInteractor = {
+        return TasksListInteractor(output: self)
+    }()
 
-    init(view: TasksListViewController) {
+    required init(view: TasksListViewController) {
         self.view = view
         self.router = TasksListRouter(view: view)
-
-        super.init()
-
-        self.interactor = TasksListInteractor(output: self)
     }
 
     // MARK: - Public interface
 
-    override func viewDidLoad() {
+    func viewDidLoad() {
         self.interactor.loadDataSource(
         for: self.view.tableView, with: self.view.list) { (cell, object) in
             let task = (object as! Task)

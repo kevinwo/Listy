@@ -29,6 +29,7 @@
 		260D694B216847FE003B7DD9 /* TableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D694A216847FE003B7DD9 /* TableViewDataSourceTests.swift */; };
 		260D694D21684852003B7DD9 /* ListyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; };
 		260D695021684964003B7DD9 /* Mirror+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D694F21684964003B7DD9 /* Mirror+LIST.swift */; };
+		2636563F2176D40300D54D75 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636563E2176D40300D54D75 /* Presenter.swift */; };
 		265EA91021684F8F0009FF96 /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		265EA94F216856800009FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA94E216856800009FF96 /* AppDelegate.swift */; };
 		265EA956216856820009FF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265EA955216856820009FF96 /* Assets.xcassets */; };
@@ -46,7 +47,6 @@
 		265EA986216857480009FF96 /* ListsListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA983216857480009FF96 /* ListsListPresenterTests.swift */; };
 		265EA988216857880009FF96 /* ListsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265EA987216857880009FF96 /* ListsList.storyboard */; };
 		265EA98A216858410009FF96 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA989216858410009FF96 /* Router.swift */; };
-		265EA98C216858880009FF96 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA98B216858880009FF96 /* Presenter.swift */; };
 		265EA99421685DE20009FF96 /* EditListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99121685DE20009FF96 /* EditListViewControllerTests.swift */; };
 		265EA99521685DE20009FF96 /* EditListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99221685DE20009FF96 /* EditListInteractorTests.swift */; };
 		265EA99621685DE20009FF96 /* EditListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99321685DE20009FF96 /* EditListPresenterTests.swift */; };
@@ -186,6 +186,7 @@
 		260D6948216847D4003B7DD9 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		260D694A216847FE003B7DD9 /* TableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		260D694F21684964003B7DD9 /* Mirror+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mirror+LIST.swift"; sourceTree = "<group>"; };
+		2636563E2176D40300D54D75 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		265EA94C216856800009FF96 /* Listy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Listy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265EA94E216856800009FF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		265EA955216856820009FF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,7 +203,6 @@
 		265EA983216857480009FF96 /* ListsListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsListPresenterTests.swift; sourceTree = "<group>"; };
 		265EA987216857880009FF96 /* ListsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListsList.storyboard; sourceTree = "<group>"; };
 		265EA989216858410009FF96 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		265EA98B216858880009FF96 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		265EA99121685DE20009FF96 /* EditListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListViewControllerTests.swift; sourceTree = "<group>"; };
 		265EA99221685DE20009FF96 /* EditListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListInteractorTests.swift; sourceTree = "<group>"; };
 		265EA99321685DE20009FF96 /* EditListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListPresenterTests.swift; sourceTree = "<group>"; };
@@ -407,8 +407,8 @@
 				260D6944216847AA003B7DD9 /* TableView */,
 				260D692E216846F9003B7DD9 /* ListyUI.h */,
 				260D692F216846F9003B7DD9 /* Info.plist */,
-				265EA98B216858880009FF96 /* Presenter.swift */,
 				265EA989216858410009FF96 /* Router.swift */,
+				2636563E2176D40300D54D75 /* Presenter.swift */,
 			);
 			path = ListyUI;
 			sourceTree = "<group>";
@@ -912,9 +912,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265EA98C216858880009FF96 /* Presenter.swift in Sources */,
 				265EA98A216858410009FF96 /* Router.swift in Sources */,
 				260D6949216847D4003B7DD9 /* TableViewDataSource.swift in Sources */,
+				2636563F2176D40300D54D75 /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

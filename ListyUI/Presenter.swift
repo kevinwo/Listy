@@ -5,28 +5,27 @@
 //  Created by Kevin Wolkober on 10/6/18.
 //
 
-import UIKit
+import Foundation
 
-open class Presenter: NSObject {
+public protocol Presenter {
 
-    open func viewDidLoad() {
+    associatedtype T: UIViewController
+    var view: T! { get set }
+
+    init(view: T)
+    func viewDidLoad()
+    func showErrorAlert(for error: Error)
+}
+
+extension Presenter {
+
+    public func viewDidLoad() {
         fatalUnimplementedMethodError(#function, file: #file)
     }
 
-    open func viewWillAppear() {
-        fatalUnimplementedMethodError(#function, file: #file)
-    }
-
-    open func viewWillDisappear() {
-        fatalUnimplementedMethodError(#function, file: #file)
-    }
-
-    open func viewDidAppear() {
-        fatalUnimplementedMethodError(#function, file: #file)
-    }
-
-    open func showErrorAlert(_ error: Error) {
-        fatalUnimplementedMethodError(#function, file: #file)
+    public func showErrorAlert(for error:
+        Error) {
+        // @TODO: Default implementation for showing error alert
     }
 
     // MARK: - Private interface

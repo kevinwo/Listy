@@ -34,14 +34,6 @@ class EditTaskViewController: UITableViewController {
         self.presenter = EditTaskPresenter(view: self)
     }
 
-    // MARK: - View lifecycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.presenter.viewDidLoad()
-    }
-
     // MARK: - Button actions
 
     @IBAction func cancelBarButtonItemTapped(_ sender: Any) {

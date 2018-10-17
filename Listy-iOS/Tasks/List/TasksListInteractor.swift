@@ -53,7 +53,7 @@ class TasksListInteractor {
             self.dataSource.sections[indexPath.section].remove(at: indexPath.row)
             self.output.deleteRow(at: indexPath)
         } catch(let error) {
-            self.output.showErrorAlert(error)
+            self.output.showErrorAlert(for: error)
         }
     }
 }

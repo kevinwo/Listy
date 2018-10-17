@@ -54,7 +54,7 @@ class EditTaskInteractorTests: XCTestCase {
         let interactor = EditTaskInteractor(output: fakePresenter)
 
         // then
-        XCTAssertEqual(interactor.output, fakePresenter)
+        XCTAssert(interactor.output === fakePresenter)
     }
 
     // MARK: - loadTask(_:)

@@ -57,7 +57,7 @@ class EditListInteractorTests: XCTestCase {
         let interactor = EditListInteractor(output: fakePresenter)
 
         // then
-        XCTAssertEqual(interactor.output, fakePresenter)
+        XCTAssert(interactor.output === fakePresenter)
         XCTAssertNotNil(interactor.lists)
     }
 
