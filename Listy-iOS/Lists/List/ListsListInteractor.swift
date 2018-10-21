@@ -33,7 +33,7 @@ class ListsListInteractor {
     }
 
     func fetchData() {
-        self.dataSource.objects = self.lists.all()
+        self.dataSource.sections = [self.lists.all()]
         self.output.updateView()
     }
 

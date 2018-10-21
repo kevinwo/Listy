@@ -78,7 +78,6 @@ class ListsListInteractorTests: XCTestCase {
         sut.loadDataSource(for: tableView, cellConfigurationBlock: cellConfigurationBlock)
 
         // then
-        XCTAssertEqual(sut.dataSource.tableView, tableView)
         XCTAssertNotNil(sut.dataSource.cellConfigurationBlock)
     }
 
@@ -95,7 +94,7 @@ class ListsListInteractorTests: XCTestCase {
         sut.fetchData()
 
         // then
-        XCTAssert(sut.dataSource.objects!.contains(list))
+        XCTAssert(sut.dataSource.objects.contains(list))
         XCTAssertTrue(fakePresenter.didCallUpdateView)
     }
 

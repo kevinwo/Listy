@@ -35,7 +35,6 @@ class TableViewDataSourceTests: XCTestCase {
     // MARK: - init(tableView:cellConfigurationBlock:cellReuseIdentifier:objects:)
 
     func testInit_WhenTableViewAndCellConfigurationBlockArePresent() {
-        XCTAssertEqual(sut.tableView, tableView)
         XCTAssertNotNil(sut.cellConfigurationBlock)
         XCTAssert(tableView.dataSource is TableViewDataSource)
     }
@@ -50,7 +49,6 @@ class TableViewDataSourceTests: XCTestCase {
         let dataSource = TableViewDataSource(tableView: tableView, cellConfigurationBlock: cellConfigurationBlock, objects: objects)
 
         // then
-        XCTAssertEqual(dataSource.tableView, tableView)
         XCTAssertNotNil(dataSource.cellConfigurationBlock)
         XCTAssert(tableView.dataSource is TableViewDataSource)
         XCTAssertNotNil(dataSource.sections.first)

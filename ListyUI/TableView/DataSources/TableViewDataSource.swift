@@ -8,22 +8,29 @@
 import UIKit
 import ListyKit
 
-open class TableViewDataSource: SectionedDataSource {
+open class TableViewDataSource: NSObject, SectionableDataSource {
 
     public typealias CellConfigurationBlock = (_ cell: UITableViewCell, _ object: Object) -> Void
 
-    open weak var tableView: UITableView!
+    public var sections: [[Object]]
     open var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock
     var cellReuseIdentifier: String?
 
     public init(tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock, cellReuseIdentifier: String? = nil, objects: [Object]? = nil) {
-        self.tableView = tableView
+        self.sections = { () -> [[Object]] in
+            if let objects = objects {
+                return [objects]
+            }
+            return [[Object]]()
+        }()
+        self.cellConfigurationBlock = cellConfigurationBlock
+
+        super.init()
+
         self.cellConfigurationBlock = cellConfigurationBlock
         self.cellReuseIdentifier = cellReuseIdentifier
 
-        super.init(objects: objects)
-
-        self.tableView.dataSource = self
+        tableView.dataSource = self
     }
 
     public func object(at indexPath: IndexPath) -> Object {

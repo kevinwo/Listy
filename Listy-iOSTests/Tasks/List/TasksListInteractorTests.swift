@@ -80,7 +80,6 @@ class TasksListInteractorTests: XCTestCase {
             cellConfigurationBlock: cellConfigurationBlock)
 
         // then
-        XCTAssertEqual(sut.dataSource.tableView, tableView)
         XCTAssertNotNil(sut.dataSource.cellConfigurationBlock)
     }
 
@@ -104,7 +103,7 @@ class TasksListInteractorTests: XCTestCase {
         sut.fetchData()
 
         // then
-        XCTAssert(sut.dataSource.objects!.contains(task))
+        XCTAssert(sut.dataSource.objects.contains(task))
         XCTAssertTrue(fakePresenter.didCallUpdateView)
     }
 

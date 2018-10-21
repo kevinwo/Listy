@@ -8,44 +8,23 @@
 import XCTest
 @testable import ListyKit
 
+class TestDataSource: SectionableDataSource {
+    var sections: [[Object]]
+
+    init(sections: [[Object]]) {
+        self.sections = sections
+    }
+}
+
 class SectionedDataSourceTests: XCTestCase {
 
-    var objects: [Object]!
-    var sut: SectionedDataSource!
-
     override func setUp() {
-        sut = SectionedDataSource()
     }
 
     override func tearDown() {
-        sut = nil
     }
 
     // MARK: - Tests
-
-    // MARK: - init(object:)
-
-    func testInit_WhenObjectsArePresent() {
-        // given
-        let object1 = Object()
-        let object2 = Object()
-
-        // when
-        let dataSource = SectionedDataSource(objects: [object1, object2])
-
-        // then
-        XCTAssertNotNil(dataSource.sections.first)
-        XCTAssertNotNil(dataSource.sections.first?.first)
-        XCTAssertEqual(dataSource.sections.first?.first, object1)
-    }
-
-    func testInit_WhenObjectsAreNotPresent() {
-        // when
-        let dataSource = SectionedDataSource()
-
-        // then
-        XCTAssertTrue(dataSource.sections.isEmpty)
-    }
 
     // MARK: - Properties
 
@@ -53,16 +32,15 @@ class SectionedDataSourceTests: XCTestCase {
         // given
         let object1 = Object()
         let object2 = Object()
-        let dataSource = SectionedDataSource(objects: [object1, object2])
+        let dataSource = TestDataSource(sections: [[object1], [object2]])
 
         // when
         let objects = dataSource.objects
 
         // then
-        XCTAssertNotNil(dataSource.sections.first)
-        XCTAssertNotNil(dataSource.sections.first?.first)
-        XCTAssertNotNil(objects)
-        XCTAssertNotNil(objects?.first)
-        XCTAssertEqual(dataSource.sections.first?.first, objects?.first)
+        XCTAssertNotNil(objects[0])
+        XCTAssertNotNil(objects[1])
+        XCTAssertEqual(objects[0], object1)
+        XCTAssertEqual(objects[1], object2)
     }
 }

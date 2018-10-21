@@ -22,7 +22,7 @@
 		260D69202167704F003B7DD9 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D691F2167704F003B7DD9 /* Task.swift */; };
 		260D69222167705C003B7DD9 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D69212167705C003B7DD9 /* TaskTests.swift */; };
 		260D6924216841B0003B7DD9 /* SectionedDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D6923216841B0003B7DD9 /* SectionedDataSourceTests.swift */; };
-		260D6926216841BB003B7DD9 /* SectionedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D6925216841BB003B7DD9 /* SectionedDataSource.swift */; };
+		260D6926216841BB003B7DD9 /* SectionableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D6925216841BB003B7DD9 /* SectionableDataSource.swift */; };
 		260D6935216846FA003B7DD9 /* ListyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D692C216846F9003B7DD9 /* ListyUI.framework */; };
 		260D693C216846FA003B7DD9 /* ListyUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 260D692E216846F9003B7DD9 /* ListyUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		260D6949216847D4003B7DD9 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D6948216847D4003B7DD9 /* TableViewDataSource.swift */; };
@@ -181,7 +181,7 @@
 		260D691F2167704F003B7DD9 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		260D69212167705C003B7DD9 /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
 		260D6923216841B0003B7DD9 /* SectionedDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedDataSourceTests.swift; sourceTree = "<group>"; };
-		260D6925216841BB003B7DD9 /* SectionedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedDataSource.swift; sourceTree = "<group>"; };
+		260D6925216841BB003B7DD9 /* SectionableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionableDataSource.swift; sourceTree = "<group>"; };
 		260D692C216846F9003B7DD9 /* ListyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ListyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		260D692E216846F9003B7DD9 /* ListyUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListyUI.h; sourceTree = "<group>"; };
 		260D692F216846F9003B7DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -358,7 +358,7 @@
 			children = (
 				260D68FF21670804003B7DD9 /* Database.swift */,
 				260D6904216709F0003B7DD9 /* Object.swift */,
-				260D6925216841BB003B7DD9 /* SectionedDataSource.swift */,
+				260D6925216841BB003B7DD9 /* SectionableDataSource.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -940,7 +940,7 @@
 				260D690021670804003B7DD9 /* Database.swift in Sources */,
 				260D691E2167703F003B7DD9 /* Tasks.swift in Sources */,
 				260D69202167704F003B7DD9 /* Task.swift in Sources */,
-				260D6926216841BB003B7DD9 /* SectionedDataSource.swift in Sources */,
+				260D6926216841BB003B7DD9 /* SectionableDataSource.swift in Sources */,
 				260D695021684964003B7DD9 /* Mirror+LIST.swift in Sources */,
 				260D691221672FE3003B7DD9 /* List.swift in Sources */,
 			);
