@@ -14,8 +14,7 @@ import XCTest
 class TasksListInteractorTests: XCTestCase {
 
     var sut: TasksListInteractor!
-    var fakePresenter: FakeTasksListPresenter!
-    var controller: TasksListViewController!
+    var fakeOutput: FakeTasksListInteractorOutput!
     var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock!
     var tasks: Tasks!
 
@@ -26,16 +25,8 @@ class TasksListInteractorTests: XCTestCase {
 
         FileManager().clearTemporaryDirectory()
 
-        let storyboard = UIStoryboard(name: "TasksList", bundle: nil)
-        controller = (storyboard.instantiateInitialViewController() as! TasksListViewController)
-
-        controller.list = List()
-
-        fakePresenter = FakeTasksListPresenter(view: controller)
-        controller.presenter = fakePresenter
-
-        sut = TasksListInteractor(output: fakePresenter)
-        fakePresenter.interactor = sut
+        fakeOutput = FakeTasksListInteractorOutput()
+        sut = TasksListInteractor(output: fakeOutput)
 
         tasks = Tasks(database: Database.newInstance(path: NSTemporaryDirectory()))
         sut.tasks = tasks
@@ -43,14 +34,12 @@ class TasksListInteractorTests: XCTestCase {
         cellConfigurationBlock = { (cell, object) in
             cell.textLabel!.text = object.id
         }
-
-        _ = controller.view
     }
 
     override func tearDown(){
         sut = nil
-        fakePresenter = nil
-        controller = nil
+        fakeOutput = nil
+        tasks = nil
 
         super.tearDown()
     }
@@ -61,7 +50,7 @@ class TasksListInteractorTests: XCTestCase {
 
     func testInit() {
         // when
-        let interactor = TasksListInteractor(output: fakePresenter)
+        let interactor = TasksListInteractor(output: fakeOutput)
 
         // then
         XCTAssertNotNil(interactor.output)
@@ -71,15 +60,17 @@ class TasksListInteractorTests: XCTestCase {
 
     func testLoadDataSource() {
         // given
-        let tableView = controller.tableView!
+        let tableView = UITableView(frame: .zero)
+        let list = List()
 
         // when
         sut.loadDataSource(
             for: tableView,
-            with: controller.list,
+            with: list,
             cellConfigurationBlock: cellConfigurationBlock)
 
         // then
+        XCTAssertEqual(sut.list, list)
         XCTAssertNotNil(sut.dataSource.cellConfigurationBlock)
     }
 
@@ -92,10 +83,11 @@ class TasksListInteractorTests: XCTestCase {
         task.title = "Important task"
         task.listId = list.id
         try! tasks.add(task)
+        let tableView = UITableView(frame: .zero)
 
         sut.list = list
         sut.loadDataSource(
-            for: controller.tableView,
+            for: tableView,
             with: list,
             cellConfigurationBlock: cellConfigurationBlock)
 
@@ -104,7 +96,7 @@ class TasksListInteractorTests: XCTestCase {
 
         // then
         XCTAssert(sut.dataSource.objects.contains(task))
-        XCTAssertTrue(fakePresenter.didCallUpdateView)
+        XCTAssertTrue(fakeOutput.didCallUpdateView)
     }
 
     // MARK: - newTask()
@@ -112,8 +104,8 @@ class TasksListInteractorTests: XCTestCase {
     func testNewTask() {
         // given
         sut.loadDataSource(
-            for: controller.tableView,
-            with: controller.list,
+            for: UITableView(frame: .zero),
+            with: List(),
             cellConfigurationBlock: cellConfigurationBlock)
 
         // when

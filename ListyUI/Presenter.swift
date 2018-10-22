@@ -9,10 +9,6 @@ import Foundation
 
 public protocol Presenter: ErrorAlertable {
 
-    associatedtype View: UIViewController
-    var view: View! { get set }
-
-    init(view: View)
     func viewDidLoad()
 }
 

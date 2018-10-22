@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import ListyUI
 import ListyKit
 
 class TasksListViewController: UITableViewController {
 
     var addBarButtonItem: UIBarButtonItem!
 
-    var presenter: TasksListPresenter!
+    var presenter: TasksListPresentable!
     var list: List!
 
     // MARK: - Object lifecycle
@@ -52,6 +53,7 @@ class TasksListViewController: UITableViewController {
 // MARK: - UITableViewDataSource
 
 extension TasksListViewController {
+
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
@@ -64,3 +66,5 @@ extension TasksListViewController {
         return [delete]
     }
 }
+
+extension TasksListViewController: TasksListViewable {}

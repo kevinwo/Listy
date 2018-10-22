@@ -9,18 +9,11 @@
 import ListyUI
 import ListyKit
 
-class TasksListRouter: NSObject, Router {
+class TasksListRouter: TasksListRouterInput {
 
-    typealias T = TasksListViewController
+    weak var view: TasksListViewable!
 
-    static var storyboard: UIStoryboard {
-        get {
-            return UIStoryboard(name: "TasksList", bundle: nil)
-        }
-    }
-    weak var view: TasksListViewController!
-
-    required init(view: TasksListViewController) {
+    init(view: TasksListViewable) {
         self.view = view
     }
 
@@ -33,11 +26,12 @@ class TasksListRouter: NSObject, Router {
         controller.task = task
         controller.delegate = self
 
-        self.view.present(navigationController, animated: true, completion: nil)
+        self.view.present(view: navigationController, animated: true, completion: nil)
     }
 }
 
 extension TasksListRouter: EditTaskViewControllerDelegate {
+
     func didCancelWithController(_ controller: EditTaskViewController) {
         self.view.dismiss(animated: true, completion: nil)
     }

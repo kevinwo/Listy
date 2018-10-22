@@ -8,26 +8,37 @@
 import UIKit
 @testable import Listy_iOS
 
-class FakeTasksListPresenter: TasksListPresenter {
+class FakeTasksListPresenter: TasksListPresentable {
+
+    var view: TasksListViewable!
+    var router: TasksListRouterInput
+    lazy var interactor: TasksListInteractorInput = {
+        return TasksListInteractor(output: self as! TasksListInteractorOutput)
+    }()
 
     var didCallViewDidLoad: Bool = false
-    var didCallAddTask: Bool = false
-    var didCallUpdateView: Bool = false
     var didCallReloadData: Bool = false
+    var didCallAddTask: Bool = false
+    var didCallDeleteTask: Bool = false
 
-    override func viewDidLoad() {
+    required init(view: TasksListViewable) {
+        self.view = view
+        self.router = TasksListRouter(view: view as! TasksListViewController)
+    }
+
+    func viewDidLoad() {
         self.didCallViewDidLoad = true
     }
 
-    override func reloadData() {
+    func reloadData() {
         self.didCallReloadData = true
     }
 
-    override func addTask() {
+    func addTask() {
         self.didCallAddTask = true
     }
 
-    override func updateView() {
-        self.didCallUpdateView = true
+    func deleteTask(at indexPath: IndexPath) {
+        self.didCallDeleteTask = true
     }
 }

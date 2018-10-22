@@ -15,33 +15,29 @@ class TasksListPresenterTests: XCTestCase {
     var sut: TasksListPresenter!
     var fakeRouter: FakeTasksListRouter!
     var fakeInteractor: FakeTasksListInteractor!
-    var controller: TasksListViewController!
+    var fakeView: FakeTasksListView!
 
     // MARK: - Test lifecycle
 
     override func setUp() {
         super.setUp()
 
-        let storyboard = UIStoryboard(name: "TasksList", bundle: nil)
-        controller = (storyboard.instantiateInitialViewController() as! TasksListViewController)
-        controller.list = List()
-        sut = TasksListPresenter(view: controller)
+        fakeView = FakeTasksListView()
+        fakeView.list = List()
+        sut = TasksListPresenter(view: fakeView)
 
         fakeInteractor = FakeTasksListInteractor(output: sut)
         sut.interactor = fakeInteractor
 
-        fakeRouter = FakeTasksListRouter(view: controller)
+        fakeRouter = FakeTasksListRouter(view: fakeView)
         sut.router = fakeRouter
-
-        controller.presenter = sut
-        _ = controller.view
     }
 
     override func tearDown() {
         sut = nil
-        controller = nil
         fakeRouter = nil
         fakeInteractor = nil
+        fakeView = nil
 
         super.tearDown()
     }
@@ -52,10 +48,10 @@ class TasksListPresenterTests: XCTestCase {
 
     func testInitWithView() {
         // when
-        let presenter = TasksListPresenter(view: controller)
+        let presenter = TasksListPresenter(view: fakeView)
 
         // then
-        XCTAssertNotNil(presenter.view)
+        XCTAssert(presenter.view === fakeView)
         XCTAssertNotNil(presenter.interactor)
     }
 

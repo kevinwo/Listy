@@ -9,16 +9,16 @@
 import ListyUI
 import ListyKit
 
-class TasksListInteractor {
+class TasksListInteractor: TasksListInteractorInput {
 
     // MARK: - Properties
 
-    var output: TasksListPresenter!
+    var output: TasksListInteractorOutput!
     var dataSource: TableViewDataSource!
     var tasks: Tasks!
     var list: List!
 
-    init(output: TasksListPresenter) {
+    required init(output: TasksListInteractorOutput) {
         self.output = output
         self.tasks = Tasks(database: Database.newInstance())
     }

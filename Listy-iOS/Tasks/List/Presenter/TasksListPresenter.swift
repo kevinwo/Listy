@@ -9,17 +9,15 @@
 import ListyUI
 import ListyKit
 
-class TasksListPresenter: Presenter {
+class TasksListPresenter: TasksListPresentable {
 
-    typealias T = TasksListViewController
-
-    weak var view: TasksListViewController!
-    var router: TasksListRouter
-    lazy var interactor: TasksListInteractor = {
+    weak var view: TasksListViewable!
+    var router: TasksListRouterInput
+    lazy var interactor: TasksListInteractorInput = {
         return TasksListInteractor(output: self)
     }()
 
-    required init(view: TasksListViewController) {
+    required init(view: TasksListViewable) {
         self.view = view
         self.router = TasksListRouter(view: view)
     }
@@ -48,8 +46,9 @@ class TasksListPresenter: Presenter {
     func deleteTask(at indexPath: IndexPath) {
         self.interactor.deleteTask(at: indexPath)
     }
+}
 
-    // MARK: - Interactor output
+extension TasksListPresenter: TasksListInteractorOutput {
 
     func updateView() {
         self.view.tableView.reloadData()
