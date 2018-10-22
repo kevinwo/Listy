@@ -50,7 +50,6 @@
 		265EA985216857480009FF96 /* ListsListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA982216857480009FF96 /* ListsListInteractorTests.swift */; };
 		265EA986216857480009FF96 /* ListsListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA983216857480009FF96 /* ListsListPresenterTests.swift */; };
 		265EA988216857880009FF96 /* ListsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265EA987216857880009FF96 /* ListsList.storyboard */; };
-		265EA98A216858410009FF96 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA989216858410009FF96 /* Router.swift */; };
 		265EA99421685DE20009FF96 /* EditListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99121685DE20009FF96 /* EditListViewControllerTests.swift */; };
 		265EA99521685DE20009FF96 /* EditListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99221685DE20009FF96 /* EditListInteractorTests.swift */; };
 		265EA99621685DE20009FF96 /* EditListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99321685DE20009FF96 /* EditListPresenterTests.swift */; };
@@ -219,7 +218,6 @@
 		265EA982216857480009FF96 /* ListsListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsListInteractorTests.swift; sourceTree = "<group>"; };
 		265EA983216857480009FF96 /* ListsListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsListPresenterTests.swift; sourceTree = "<group>"; };
 		265EA987216857880009FF96 /* ListsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListsList.storyboard; sourceTree = "<group>"; };
-		265EA989216858410009FF96 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		265EA99121685DE20009FF96 /* EditListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListViewControllerTests.swift; sourceTree = "<group>"; };
 		265EA99221685DE20009FF96 /* EditListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListInteractorTests.swift; sourceTree = "<group>"; };
 		265EA99321685DE20009FF96 /* EditListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListPresenterTests.swift; sourceTree = "<group>"; };
@@ -433,7 +431,6 @@
 				260D6944216847AA003B7DD9 /* TableView */,
 				260D692E216846F9003B7DD9 /* ListyUI.h */,
 				260D692F216846F9003B7DD9 /* Info.plist */,
-				265EA989216858410009FF96 /* Router.swift */,
 				26B52C1A217DA6250011375F /* ViewRoutable.swift */,
 				264E746F2176F446000799F2 /* ErrorAlertable.swift */,
 			);
@@ -1055,7 +1052,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265EA98A216858410009FF96 /* Router.swift in Sources */,
 				264E74702176F446000799F2 /* ErrorAlertable.swift in Sources */,
 				26B52C1B217DA6250011375F /* ViewRoutable.swift in Sources */,
 				260D6949216847D4003B7DD9 /* TableViewDataSource.swift in Sources */,

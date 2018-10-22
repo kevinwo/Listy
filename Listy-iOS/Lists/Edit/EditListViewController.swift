@@ -9,7 +9,7 @@
 import UIKit
 import ListyKit
 
-protocol EditListViewControllerDelegate: NSObjectProtocol {
+protocol EditListViewControllerDelegate: class {
     func didCancelWithController(_ controller: EditListViewController)
     func controller(_ controller: EditListViewController, didSaveList list: List)
 }

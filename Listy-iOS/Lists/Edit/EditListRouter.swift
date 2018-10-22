@@ -8,15 +8,8 @@
 
 import ListyUI
 
-class EditListRouter: NSObject, Router {
+class EditListRouter {
 
-    typealias T = EditListViewController
-
-    static var storyboard: UIStoryboard {
-        get {
-            return UIStoryboard(name: "EditList", bundle: nil)
-        }
-    }
     weak var view: EditListViewController!
 
     required init(view: EditListViewController) {

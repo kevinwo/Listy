@@ -9,18 +9,11 @@
 import ListyUI
 import ListyKit
 
-class ListsListRouter: NSObject, Router {
+class ListsListRouter {
 
-    typealias T = ListsListViewController
-
-    static var storyboard: UIStoryboard {
-        get {
-            return UIStoryboard(name: "ListsList", bundle: nil)
-        }
-    }
     weak var view: ListsListViewController!
 
-    required init(view: ListsListViewController) {
+    init(view: ListsListViewController) {
         self.view = view
     }
 
