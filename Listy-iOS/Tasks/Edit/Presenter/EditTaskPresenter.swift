@@ -11,12 +11,10 @@ import ListyKit
 
 class EditTaskPresenter: Presenter, EditTaskInteractorOutput {
 
-    typealias View = EditTaskViewController
-
     // MARK: - Properties
 
     weak var view: EditTaskViewController!
-    var router: EditTaskRouter
+    var router: EditTaskRouterInput
     lazy var interactor: EditTaskInteractorInput = {
         return EditTaskInteractor(output: self)
     }()
@@ -35,7 +33,7 @@ class EditTaskPresenter: Presenter, EditTaskInteractorOutput {
     }
 
     func cancel() {
-        self.view.delegate.didCancelWithController(self.view)
+        self.router.finishWithCancel()
     }
 
     func save() {
@@ -51,6 +49,6 @@ class EditTaskPresenter: Presenter, EditTaskInteractorOutput {
     // MARK: - EditTaskInteractorOutput
 
     func finish(with task: Task) {
-        self.view.delegate.controller(self.view, didSaveTask: task)
+        self.router.finishWithSaving(task)
     }
 }

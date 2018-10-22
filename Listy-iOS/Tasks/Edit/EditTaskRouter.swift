@@ -7,19 +7,23 @@
 //
 
 import ListyUI
+import ListyKit
 
-class EditTaskRouter: NSObject, Router {
+struct EditTaskRouter: EditTaskRouterInput {
 
-    typealias T = EditTaskViewController
-
-    static var storyboard: UIStoryboard {
-        get {
-            return UIStoryboard(name: "EditTask", bundle: nil)
-        }
-    }
     weak var view: EditTaskViewController!
 
-    required init(view: EditTaskViewController) {
+    init(view: EditTaskViewController) {
         self.view = view
+    }
+
+    // MARK: - Public interface
+
+    func finishWithCancel() {
+        self.view.delegate.didCancelWithController(self.view)
+    }
+
+    func finishWithSaving(_ task: Task) {
+        self.view.delegate.controller(self.view, didSaveTask: task)
     }
 }

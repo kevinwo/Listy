@@ -9,7 +9,7 @@
 import UIKit
 import ListyKit
 
-protocol EditTaskViewControllerDelegate: NSObjectProtocol {
+protocol EditTaskViewControllerDelegate: class {
     func didCancelWithController(_ controller: EditTaskViewController)
     func controller(_ controller: EditTaskViewController, didSaveTask task: Task)
 }

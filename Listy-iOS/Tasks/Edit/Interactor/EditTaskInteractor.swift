@@ -11,6 +11,8 @@ import ListyKit
 
 class EditTaskInteractor: EditTaskInteractorInput {
 
+    // MARK: - Properties
+
     var output: EditTaskInteractorOutput
     var tasks: Tasks
     var task: Task!
