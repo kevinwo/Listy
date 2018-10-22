@@ -9,7 +9,7 @@
 import ListyUI
 import ListyKit
 
-class EditTaskPresenter: Presenter, EditTaskInteractorOutput {
+class EditTaskPresenter {
 
     // MARK: - Properties
 
@@ -45,8 +45,9 @@ class EditTaskPresenter: Presenter, EditTaskInteractorOutput {
 
         self.interactor.saveTask(title: title)
     }
+}
 
-    // MARK: - EditTaskInteractorOutput
+extension EditTaskPresenter: EditTaskInteractorOutput {
 
     func finish(with task: Task) {
         self.router.finishWithSaving(task)

@@ -9,7 +9,7 @@
 import ListyUI
 import ListyKit
 
-class EditListPresenter: Presenter {
+class EditListPresenter {
 
     weak var view: EditListViewController!
     var router: EditListRouter
@@ -44,3 +44,5 @@ class EditListPresenter: Presenter {
         self.view.delegate.controller(self.view, didSaveList: list)
     }
 }
+
+extension EditListPresenter: ErrorAlertable {}

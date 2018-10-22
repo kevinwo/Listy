@@ -9,7 +9,7 @@
 import ListyUI
 import ListyKit
 
-class ListsListPresenter: Presenter {
+class ListsListPresenter {
 
     typealias T = ListsListViewController
 
@@ -64,3 +64,5 @@ class ListsListPresenter: Presenter {
         self.view.tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }
+
+extension ListsListPresenter: ErrorAlertable {}

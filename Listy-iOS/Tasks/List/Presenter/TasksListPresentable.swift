@@ -7,12 +7,13 @@
 
 import ListyUI
 
-protocol TasksListPresentable: Presenter {
+protocol TasksListPresentable {
 
     var view: TasksListViewable! { get }
     var router: TasksListRouterInput { get }
     var interactor: TasksListInteractorInput { get }
 
+    func viewDidLoad()
     func reloadData()
     func addTask()
     func deleteTask(at indexPath: IndexPath)

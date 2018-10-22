@@ -30,7 +30,6 @@
 		260D694D21684852003B7DD9 /* ListyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; };
 		260D695021684964003B7DD9 /* Mirror+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D694F21684964003B7DD9 /* Mirror+LIST.swift */; };
 		26351638217DAA7600731CE4 /* FakeTasksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26351637217DAA7600731CE4 /* FakeTasksListView.swift */; };
-		2636563F2176D40300D54D75 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636563E2176D40300D54D75 /* Presenter.swift */; };
 		264E746C2176EC61000799F2 /* EditTaskInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746B2176EC61000799F2 /* EditTaskInteractorInput.swift */; };
 		264E746E2176F1C9000799F2 /* EditTaskInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746D2176F1C9000799F2 /* EditTaskInteractorOutput.swift */; };
 		264E74702176F446000799F2 /* ErrorAlertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746F2176F446000799F2 /* ErrorAlertable.swift */; };
@@ -201,7 +200,6 @@
 		260D694A216847FE003B7DD9 /* TableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		260D694F21684964003B7DD9 /* Mirror+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mirror+LIST.swift"; sourceTree = "<group>"; };
 		26351637217DAA7600731CE4 /* FakeTasksListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeTasksListView.swift; sourceTree = "<group>"; };
-		2636563E2176D40300D54D75 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		264E746B2176EC61000799F2 /* EditTaskInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskInteractorInput.swift; sourceTree = "<group>"; };
 		264E746D2176F1C9000799F2 /* EditTaskInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskInteractorOutput.swift; sourceTree = "<group>"; };
 		264E746F2176F446000799F2 /* ErrorAlertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertable.swift; sourceTree = "<group>"; };
@@ -437,7 +435,6 @@
 				260D692F216846F9003B7DD9 /* Info.plist */,
 				265EA989216858410009FF96 /* Router.swift */,
 				26B52C1A217DA6250011375F /* ViewRoutable.swift */,
-				2636563E2176D40300D54D75 /* Presenter.swift */,
 				264E746F2176F446000799F2 /* ErrorAlertable.swift */,
 			);
 			path = ListyUI;
@@ -1062,7 +1059,6 @@
 				264E74702176F446000799F2 /* ErrorAlertable.swift in Sources */,
 				26B52C1B217DA6250011375F /* ViewRoutable.swift in Sources */,
 				260D6949216847D4003B7DD9 /* TableViewDataSource.swift in Sources */,
-				2636563F2176D40300D54D75 /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
