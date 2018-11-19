@@ -17,6 +17,7 @@ class FakeTasksListView: TasksListViewable {
     var didCallReloadData: Bool = false
     var didCallPresentView: Bool = false
     var didCallDismissView: Bool = false
+    var presentedView: UIViewController!
 
     func reloadData() {
         self.didCallReloadData = true
@@ -24,6 +25,7 @@ class FakeTasksListView: TasksListViewable {
 
     func present(view: ViewRoutable, animated flag: Bool, completion: (() -> Void)?) {
         self.didCallPresentView = true
+        self.presentedView = (view as! UINavigationController).topViewController
     }
 
     func dismiss(animated flag: Bool, completion: (() -> Void)?) {

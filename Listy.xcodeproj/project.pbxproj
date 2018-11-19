@@ -97,6 +97,7 @@
 		26B52C19217DA5E10011375F /* TasksListRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B52C18217DA5E10011375F /* TasksListRouterOutput.swift */; };
 		26B52C1B217DA6250011375F /* ViewRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B52C1A217DA6250011375F /* ViewRoutable.swift */; };
 		26B52C1D217DA7730011375F /* TasksListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B52C1C217DA7730011375F /* TasksListRouterInput.swift */; };
+		A5394EDA21A2FB0C001DF0A7 /* TasksListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5394ED921A2FB0C001DF0A7 /* TasksListRouterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,6 +266,7 @@
 		26B52C18217DA5E10011375F /* TasksListRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListRouterOutput.swift; sourceTree = "<group>"; };
 		26B52C1A217DA6250011375F /* ViewRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRoutable.swift; sourceTree = "<group>"; };
 		26B52C1C217DA7730011375F /* TasksListRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListRouterInput.swift; sourceTree = "<group>"; };
+		A5394ED921A2FB0C001DF0A7 /* TasksListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListRouterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -674,6 +676,8 @@
 		265EA9BD2168D44E0009FF96 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				A5394EDB21A2FB4C001DF0A7 /* Helpers */,
+				A5394ED821A2FAE1001DF0A7 /* Router */,
 				26B52C04217C6F520011375F /* View */,
 				26B031D6217DAE030065F450 /* Interactor */,
 				265EA9C02168D45F0009FF96 /* TasksListPresenterTests.swift */,
@@ -729,7 +733,6 @@
 			isa = PBXGroup;
 			children = (
 				265EA9BE2168D45F0009FF96 /* TasksListViewControllerTests.swift */,
-				26351637217DAA7600731CE4 /* FakeTasksListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -776,6 +779,22 @@
 				26B52C1C217DA7730011375F /* TasksListRouterInput.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		A5394ED821A2FAE1001DF0A7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A5394ED921A2FB0C001DF0A7 /* TasksListRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A5394EDB21A2FB4C001DF0A7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				26351637217DAA7600731CE4 /* FakeTasksListView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -919,7 +938,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1010;
 				TargetAttributes = {
 					260D68D92166FD2C003B7DD9 = {
 						CreatedOnToolsVersion = 10.0;
@@ -1104,6 +1123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				265EA99621685DE20009FF96 /* EditListPresenterTests.swift in Sources */,
+				A5394EDA21A2FB0C001DF0A7 /* TasksListRouterTests.swift in Sources */,
 				265EA9B12168C9B80009FF96 /* FakeListsListInteractor.swift in Sources */,
 				265EA9C72168D5260009FF96 /* FakeTasksListPresenter.swift in Sources */,
 				265EA9A921688A4F0009FF96 /* FakeEditListPresenter.swift in Sources */,
@@ -1185,12 +1205,64 @@
 		260D68D32166FAD0003B7DD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
 		260D68D42166FAD0003B7DD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 			};
 			name = Release;
 		};
@@ -1227,7 +1299,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1311,7 +1383,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1532,7 +1604,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1614,7 +1686,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
