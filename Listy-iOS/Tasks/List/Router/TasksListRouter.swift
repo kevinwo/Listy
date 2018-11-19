@@ -19,14 +19,15 @@ class TasksListRouter: TasksListRouterInput {
 
     // MARK: - Public interface
 
-    func showEditTaskView(with task: Task) {
-        let storyboard = UIStoryboard(name: "EditTask", bundle: nil)
-        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
-        let controller = (navigationController.topViewController as! EditTaskViewController)
-        controller.task = task
-        controller.delegate = self
+    class func scene() -> TasksListViewController {
+        let storyboard = UIStoryboard(name: "TasksList", bundle: nil)
 
-        self.view.present(view: navigationController, animated: true, completion: nil)
+        return storyboard.instantiateInitialViewController() as! TasksListViewController
+    }
+
+    func showEditTaskView(with task: Task) {
+        let controller = EditTaskRouter.scene(task: task, delegate: self)
+        self.view.present(view: controller, animated: true, completion: nil)
     }
 }
 
