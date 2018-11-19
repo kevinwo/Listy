@@ -10,9 +10,9 @@ import ListyKit
 
 protocol EditTaskRouterInput {
 
-    var view: EditTaskViewController! { get }
+    var view: EditTaskRouterOutput! { get }
 
-    init(view: EditTaskViewController)
+    init(view: EditTaskRouterOutput)
     func finishWithCancel()
     func finishWithSaving(_ task: Task)
 }

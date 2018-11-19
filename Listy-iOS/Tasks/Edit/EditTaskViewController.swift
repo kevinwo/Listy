@@ -52,3 +52,13 @@ class EditTaskViewController: UITableViewController {
         self.presenter.save()
     }
 }
+
+extension EditTaskViewController: EditTaskRouterOutput {
+    func finishWithCancel() {
+        self.delegate.didCancelWithController(self)
+    }
+
+    func finishWithSaving(_ task: Task) {
+        self.delegate.controller(self, didSaveTask: task)
+    }
+}
