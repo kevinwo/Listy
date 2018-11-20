@@ -12,10 +12,9 @@ protocol TasksListInteractorInput {
 
     var output: TasksListInteractorOutput! { get set }
 
-    init(output: TasksListInteractorOutput)
+    init(list: List)
     func loadDataSource(
         for tableView: UITableView,
-        with list: List,
         cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock)
     func fetchData()
     func newTask() -> Task

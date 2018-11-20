@@ -13,8 +13,7 @@ import XCTest
 class TasksListViewControllerTests: XCTestCase {
 
     var sut: TasksListViewController!
-    var fakePresenter: FakeTasksListPresenter!
-    var list: List!
+    var fakePresenter: FakeTasksListPresenterInput!
     var window: UIWindow!
 
     // MARK: - Test lifecycle
@@ -26,12 +25,8 @@ class TasksListViewControllerTests: XCTestCase {
         let storyboard = UIStoryboard(name: "TasksList", bundle: nil)
         sut = (storyboard.instantiateInitialViewController() as! TasksListViewController)
 
-        fakePresenter = FakeTasksListPresenter(view: sut)
+        fakePresenter = FakeTasksListPresenterInput()
         sut.presenter = fakePresenter
-
-        list = List()
-        list.title = "Cool Title"
-        sut.list = list
 
         _ = sut.view
     }
@@ -55,8 +50,8 @@ class TasksListViewControllerTests: XCTestCase {
     // MARK: - viewDidLoad()
 
     func testViewDidLoad() {
-        XCTAssertEqual(sut.title, list.title)
-        XCTAssertTrue(fakePresenter.didCallViewDidLoad)
+        XCTAssertTrue(fakePresenter.didCallLoadData)
+        XCTAssertEqual(fakePresenter.tableViewWithLoadedData, sut.tableView)
     }
 
     // MARK: - reloadData()

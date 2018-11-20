@@ -15,11 +15,11 @@ class TasksListInteractor: TasksListInteractorInput {
 
     var output: TasksListInteractorOutput!
     var dataSource: TableViewDataSource!
-    var tasks: Tasks!
-    var list: List!
+    var tasks: Tasks
+    var list: List
 
-    required init(output: TasksListInteractorOutput) {
-        self.output = output
+    required init(list: List) {
+        self.list = list
         self.tasks = Tasks(database: Database.newInstance())
     }
 
@@ -27,15 +27,13 @@ class TasksListInteractor: TasksListInteractorInput {
 
     func loadDataSource(
         for tableView: UITableView,
-        with list: List,
         cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
-        self.list = list
         self.dataSource = TableViewDataSource(tableView: tableView, cellConfigurationBlock: cellConfigurationBlock)
     }
 
     func fetchData() {
         self.dataSource.sections = [self.tasks.inList(self.list)]
-        self.output.updateView()
+        self.output.updateView(list: self.list)
     }
 
     func newTask() -> Task {

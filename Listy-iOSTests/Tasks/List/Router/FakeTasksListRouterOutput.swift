@@ -1,23 +1,20 @@
 //
-//  FakeTasksListView.swift
+//  FakeTasksListRouterOutput.swift
 //  Listy-iOSTests
 //
-//  Created by Kevin Wolkober on 10/21/18.
+//  Created by Kevin Wolkober on 11/20/18.
 //
 
-import UIKit
+import Foundation
 @testable import Listy_iOS
 @testable import ListyUI
-@testable import ListyKit
 
-class FakeTasksListView: TasksListViewable {
+class FakeTasksListRouterOutput: TasksListRouterOutput {
 
-    var tableView: UITableView! = UITableView(frame: .zero)
-    var list: List! = List()
     var didCallReloadData: Bool = false
     var didCallPresentView: Bool = false
     var didCallDismissView: Bool = false
-    var presentedView: ViewRoutable!
+    var presentedView: ViewRoutable?
 
     func reloadData() {
         self.didCallReloadData = true

@@ -30,14 +30,14 @@ class ListsListRouter {
     }
 
     func showTasks(for list: List) {
-        let controller = TasksListRouter.scene()
-        controller.list = list
+        let controller = TasksListRouter.scene(list: list)
 
         self.view.navigationController!.pushViewController(controller, animated: true)
     }
 }
 
 extension ListsListRouter: EditListViewControllerDelegate {
+
     func didCancelWithController(_ controller: EditListViewController) {
         self.view.dismiss(animated: true, completion: nil)
     }

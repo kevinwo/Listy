@@ -17,6 +17,7 @@ class TasksListInteractorTests: XCTestCase {
     var fakeOutput: FakeTasksListInteractorOutput!
     var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock!
     var tasks: Tasks!
+    var list: List!
 
     // MARK: - Test lifecycle
 
@@ -26,9 +27,11 @@ class TasksListInteractorTests: XCTestCase {
         FileManager().clearTemporaryDirectory()
 
         fakeOutput = FakeTasksListInteractorOutput()
-        sut = TasksListInteractor(output: fakeOutput)
-
+        list = List()
         tasks = Tasks(database: Database.newInstance(path: NSTemporaryDirectory()))
+        sut = TasksListInteractor(list: list)
+
+        sut.output = fakeOutput
         sut.tasks = tasks
 
         cellConfigurationBlock = { (cell, object) in
@@ -39,6 +42,7 @@ class TasksListInteractorTests: XCTestCase {
     override func tearDown(){
         sut = nil
         fakeOutput = nil
+        list = nil
         tasks = nil
 
         super.tearDown()
@@ -50,10 +54,10 @@ class TasksListInteractorTests: XCTestCase {
 
     func testInit() {
         // when
-        let interactor = TasksListInteractor(output: fakeOutput)
+        let interactor = TasksListInteractor(list: list)
 
         // then
-        XCTAssertNotNil(interactor.output)
+        XCTAssertEqual(interactor.list, list)
     }
 
     // MARK: - loadDataSource(for:cellConfigurationBlock:)
@@ -61,16 +65,13 @@ class TasksListInteractorTests: XCTestCase {
     func testLoadDataSource() {
         // given
         let tableView = UITableView(frame: .zero)
-        let list = List()
 
         // when
         sut.loadDataSource(
             for: tableView,
-            with: list,
             cellConfigurationBlock: cellConfigurationBlock)
 
         // then
-        XCTAssertEqual(sut.list, list)
         XCTAssertNotNil(sut.dataSource.cellConfigurationBlock)
     }
 
@@ -78,17 +79,14 @@ class TasksListInteractorTests: XCTestCase {
 
     func testFetchData() {
         // given
-        let list = List()
         let task = Task()
         task.title = "Important task"
         task.listId = list.id
         try! tasks.add(task)
         let tableView = UITableView(frame: .zero)
 
-        sut.list = list
         sut.loadDataSource(
             for: tableView,
-            with: list,
             cellConfigurationBlock: cellConfigurationBlock)
 
         // when
@@ -105,7 +103,6 @@ class TasksListInteractorTests: XCTestCase {
         // given
         sut.loadDataSource(
             for: UITableView(frame: .zero),
-            with: List(),
             cellConfigurationBlock: cellConfigurationBlock)
 
         // when

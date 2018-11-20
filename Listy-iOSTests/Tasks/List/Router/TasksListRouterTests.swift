@@ -12,19 +12,91 @@ import XCTest
 class TasksListRouterTests: XCTestCase {
 
     var sut: TasksListRouter!
-    var fakeView: FakeTasksListView!
+    var fakeOutput: FakeTasksListRouterOutput!
 
     override func setUp() {
-        fakeView = FakeTasksListView()
-        sut = TasksListRouter(view: fakeView)
+        fakeOutput = FakeTasksListRouterOutput()
+        sut = TasksListRouter()
+        sut.output = fakeOutput
     }
 
     override func tearDown() {
         sut = nil
-        fakeView = nil
+        fakeOutput = nil
     }
 
     // MARK: - Tests
+
+    // MARK: - Scene
+
+    func testSceneView() {
+        // given
+        let list = List()
+
+        // when
+        let controller = TasksListRouter.scene(list: list)
+
+        // then
+        XCTAssert(controller.presenter is TasksListPresenter)
+    }
+
+    func testScenePresenter() {
+        // given
+        let list = List()
+
+        // when
+        let controller = TasksListRouter.scene(list: list)
+
+        // then
+        guard controller.presenter != nil else {
+            XCTFail("Presenter should not be nil")
+            return
+        }
+
+        // assert presenter and its components
+        let presenter = controller.presenter as! TasksListPresenter
+        XCTAssert(presenter.output is TasksListViewController)
+
+        let presenterOutput = presenter.output as! TasksListViewController
+        XCTAssertEqual(presenterOutput, controller)
+        XCTAssert(presenter.router is TasksListRouter)
+        XCTAssert(presenter.interactor is TasksListInteractor)
+    }
+
+    func testSceneRouter() {
+        // given
+        let list = List()
+
+        // when
+        let controller = TasksListRouter.scene(list: list)
+
+        // then
+        guard let router = controller.presenter.router as? TasksListRouter else {
+            XCTFail("TasksListRouter should be present")
+            return
+        }
+
+        XCTAssert(router.output is TasksListViewController)
+
+        let routerOutput = router.output as! TasksListViewController
+        XCTAssertEqual(routerOutput, controller)
+    }
+
+    func testSceneInteractor() {
+        // given
+        let list = List()
+
+        // when
+        let controller = TasksListRouter.scene(list: list)
+
+        // then
+        guard let interactor = controller.presenter.interactor as? TasksListInteractor else {
+            XCTFail("TasksListInteractor should be present")
+            return
+        }
+
+        XCTAssert(interactor.output is TasksListPresenter)
+    }
 
     // MARK: - showEditTaskView(with:)
 
@@ -36,10 +108,10 @@ class TasksListRouterTests: XCTestCase {
         sut.showEditTaskView(with: task)
 
         // then
-        XCTAssertTrue(fakeView.didCallPresentView)
-        XCTAssert(fakeView.presentedView is UINavigationController)
+        XCTAssertTrue(fakeOutput.didCallPresentView)
+        XCTAssert(fakeOutput.presentedView is UINavigationController)
 
-        let navigationController = fakeView.presentedView as! UINavigationController
+        let navigationController = fakeOutput.presentedView as! UINavigationController
         XCTAssert(navigationController.topViewController is EditTaskViewController)
 
         let controller = navigationController.topViewController as! EditTaskViewController

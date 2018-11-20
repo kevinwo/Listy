@@ -10,20 +10,11 @@ import UIKit
 import ListyUI
 import ListyKit
 
-class TasksListViewController: UITableViewController {
+class TasksListViewController: UITableViewController, TasksListViewInput {
 
     var addBarButtonItem: UIBarButtonItem!
 
-    var presenter: TasksListPresentable!
-    var list: List!
-
-    // MARK: - Object lifecycle
-
-    required init?(coder decoder: NSCoder) {
-        super.init(coder: decoder)
-
-        self.presenter = TasksListPresenter(view: self)
-    }
+    var presenter: TasksListPresenterInput!
 
     // MARK: - View lifecycle
 
@@ -33,14 +24,7 @@ class TasksListViewController: UITableViewController {
         self.addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonItemTapped(_:)))
         self.navigationItem.rightBarButtonItem = self.addBarButtonItem
 
-        self.title = list.title
-        self.presenter.viewDidLoad()
-    }
-
-    // MARK: - Public interface
-
-    func reloadData() {
-        self.presenter.reloadData()
+        self.presenter.loadData(into: self.tableView)
     }
 
     // MARK: - Button actions
@@ -53,7 +37,6 @@ class TasksListViewController: UITableViewController {
 // MARK: - UITableViewDataSource
 
 extension TasksListViewController {
-
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
@@ -67,4 +50,19 @@ extension TasksListViewController {
     }
 }
 
-extension TasksListViewController: TasksListViewable {}
+extension TasksListViewController: TasksListPresenterOutput {
+    func updateView(title: String) {
+        self.title = title
+        self.tableView.reloadData()
+    }
+
+    func deleteRow(at indexPath: IndexPath) {
+        self.tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+}
+
+extension TasksListViewController: TasksListRouterOutput {
+    func reloadData() {
+        self.presenter.reloadData()
+    }
+}

@@ -13,53 +13,48 @@ import XCTest
 class TasksListPresenterTests: XCTestCase {
 
     var sut: TasksListPresenter!
-    var fakeRouter: FakeTasksListRouter!
-    var fakeInteractor: FakeTasksListInteractor!
-    var fakeView: FakeTasksListView!
+    var fakeRouter: FakeTasksListRouterInput!
+    var fakeInteractor: FakeTasksListInteractorInput!
+    var fakeOutput: FakeTasksListPresenterOutput!
+    var list: List!
 
     // MARK: - Test lifecycle
 
     override func setUp() {
         super.setUp()
 
-        fakeView = FakeTasksListView()
-        fakeView.list = List()
-        sut = TasksListPresenter(view: fakeView)
+        list = List()
+        let presenter = TasksListPresenter()
 
-        fakeInteractor = FakeTasksListInteractor(output: sut)
-        sut.interactor = fakeInteractor
+        fakeOutput = FakeTasksListPresenterOutput()
+        fakeRouter = FakeTasksListRouterInput()
+        fakeInteractor = FakeTasksListInteractorInput(list: list)
 
-        fakeRouter = FakeTasksListRouter(view: fakeView)
-        sut.router = fakeRouter
+        presenter.output = fakeOutput
+        presenter.interactor = fakeInteractor
+        presenter.router = fakeRouter
+        sut = presenter
     }
 
     override func tearDown() {
         sut = nil
-        fakeRouter = nil
         fakeInteractor = nil
-        fakeView = nil
+        fakeRouter = nil
+        fakeOutput = nil
 
         super.tearDown()
     }
 
     // MARK: - Tests
 
-    // MARK: - init(view:)
+    // MARK: - loadData(into:)
 
-    func testInitWithView() {
+    func testLoadDataIntoTableView() {
+        // given
+        let tableView = UITableView()
+
         // when
-        let presenter = TasksListPresenter(view: fakeView)
-
-        // then
-        XCTAssert(presenter.view === fakeView)
-        XCTAssertNotNil(presenter.interactor)
-    }
-
-    // MARK: - viewDidLoad()
-
-    func testViewDidLoad() {
-        // when
-        sut.viewDidLoad()
+        sut.loadData(into: tableView)
 
         // then
         XCTAssertTrue(fakeInteractor.didCallLoadDataSource)
@@ -81,11 +76,13 @@ class TasksListPresenterTests: XCTestCase {
     func testAddTask() {
         // given
         fakeInteractor.list = List()
+        XCTAssertNil(fakeRouter.taskForShowEditTaskView)
 
         // when
         sut.addTask()
 
         // then
         XCTAssertTrue(fakeRouter.didShowEditTaskView)
+        XCTAssertNotNil(fakeRouter.taskForShowEditTaskView)
     }
 }

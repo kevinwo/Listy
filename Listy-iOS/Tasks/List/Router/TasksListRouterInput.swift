@@ -9,7 +9,8 @@ import ListyKit
 
 protocol TasksListRouterInput: class {
 
-    var view: TasksListViewable! { get }
+    var output: TasksListRouterOutput! { get set }
 
+    static func scene(list: List) -> TasksListViewController
     func showEditTaskView(with task: Task)
 }

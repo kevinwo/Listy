@@ -8,6 +8,5 @@
 import ListyUI
 
 protocol TasksListRouterOutput: ViewRoutable {
-
     func reloadData()
 }
