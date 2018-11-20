@@ -9,7 +9,7 @@ import UIKit
 @testable import Listy_iOS
 @testable import ListyKit
 
-class FakeListsListRouter: ListsListRouter {
+class FakeListsListRouter: ListsRouter {
 
     var didShowEditListView: Bool = false
     var didShowTasks: Bool = false

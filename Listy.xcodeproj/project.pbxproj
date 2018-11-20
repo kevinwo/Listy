@@ -43,7 +43,7 @@
 		265EA970216856AC0009FF96 /* ListyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D692C216846F9003B7DD9 /* ListyUI.framework */; };
 		265EA971216856AC0009FF96 /* ListyUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260D692C216846F9003B7DD9 /* ListyUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		265EA97D216857340009FF96 /* ListsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA979216857340009FF96 /* ListsPresenter.swift */; };
-		265EA97E216857340009FF96 /* ListsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA97A216857340009FF96 /* ListsListRouter.swift */; };
+		265EA97E216857340009FF96 /* ListsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA97A216857340009FF96 /* ListsRouter.swift */; };
 		265EA97F216857340009FF96 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA97B216857340009FF96 /* ListsViewController.swift */; };
 		265EA980216857340009FF96 /* ListsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA97C216857340009FF96 /* ListsInteractor.swift */; };
 		265EA984216857480009FF96 /* ListsListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA981216857480009FF96 /* ListsListViewControllerTests.swift */; };
@@ -218,7 +218,7 @@
 		265EA95F216856820009FF96 /* Listy-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Listy-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265EA965216856830009FF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		265EA979216857340009FF96 /* ListsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsPresenter.swift; sourceTree = "<group>"; };
-		265EA97A216857340009FF96 /* ListsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsListRouter.swift; sourceTree = "<group>"; };
+		265EA97A216857340009FF96 /* ListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouter.swift; sourceTree = "<group>"; };
 		265EA97B216857340009FF96 /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		265EA97C216857340009FF96 /* ListsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsInteractor.swift; sourceTree = "<group>"; };
 		265EA981216857480009FF96 /* ListsListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsListViewControllerTests.swift; sourceTree = "<group>"; };
@@ -592,7 +592,7 @@
 				265EA97B216857340009FF96 /* ListsViewController.swift */,
 				265EA979216857340009FF96 /* ListsPresenter.swift */,
 				265EA97C216857340009FF96 /* ListsInteractor.swift */,
-				265EA97A216857340009FF96 /* ListsListRouter.swift */,
+				265EA97A216857340009FF96 /* ListsRouter.swift */,
 				265EA987216857880009FF96 /* ListsList.storyboard */,
 			);
 			path = List;
@@ -1147,7 +1147,7 @@
 				265EA99E21685E0B0009FF96 /* EditListInteractor.swift in Sources */,
 				265EA9B92168D3FF0009FF96 /* TasksListRouter.swift in Sources */,
 				26B52C11217DA3910011375F /* TasksListPresenterInput.swift in Sources */,
-				265EA97E216857340009FF96 /* ListsListRouter.swift in Sources */,
+				265EA97E216857340009FF96 /* ListsRouter.swift in Sources */,
 				26B031DA217DAF150065F450 /* TasksListInteractorInput.swift in Sources */,
 				265EA9D22168D7A30009FF96 /* EditTaskRouter.swift in Sources */,
 				26B52C16217DA4C00011375F /* TasksListInteractorOutput.swift in Sources */,

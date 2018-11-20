@@ -9,7 +9,7 @@
 import ListyUI
 import ListyKit
 
-class ListsListRouter {
+class ListsRouter {
 
     weak var view: ListsViewController!
 
@@ -36,7 +36,7 @@ class ListsListRouter {
     }
 }
 
-extension ListsListRouter: EditListViewControllerDelegate {
+extension ListsRouter: EditListViewControllerDelegate {
 
     func didCancelWithController(_ controller: EditListViewController) {
         self.view.dismiss(animated: true, completion: nil)

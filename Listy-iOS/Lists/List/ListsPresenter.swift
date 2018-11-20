@@ -14,14 +14,14 @@ class ListsPresenter {
     typealias T = ListsViewController
 
     weak var view: ListsViewController!
-    var router: ListsListRouter
+    var router: ListsRouter
     lazy var interactor = {
         ListsInteractor(output: self)
     }()
 
     required init(view: ListsViewController) {
         self.view = view
-        self.router = ListsListRouter(view: view)
+        self.router = ListsRouter(view: view)
     }
 
     // MARK: - Public interface
