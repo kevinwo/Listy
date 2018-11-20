@@ -1,5 +1,5 @@
 //
-//  FakeListsListRouter.swift
+//  FakeListsRouter.swift
 //  Listy-iOSTests
 //
 //  Created by Kevin Wolkober on 10/6/18.
@@ -9,7 +9,7 @@ import UIKit
 @testable import Listy_iOS
 @testable import ListyKit
 
-class FakeListsListRouter: ListsRouter {
+class FakeListsRouter: ListsRouter {
 
     var didShowEditListView: Bool = false
     var didShowTasks: Bool = false

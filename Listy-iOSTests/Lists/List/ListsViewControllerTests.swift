@@ -1,5 +1,5 @@
 //
-//  ListsListViewControllerTests.swift
+//  ListsViewControllerTests.swift
 //  Listy
 //
 //  Created by Kevin Wolkober on 10/6/18.
@@ -9,10 +9,10 @@
 import XCTest
 @testable import Listy_iOS
 
-class ListsListViewControllerTests: XCTestCase {
+class ListsViewControllerTests: XCTestCase {
 
     var sut: ListsViewController!
-    var fakePresenter: FakeListsListPresenter!
+    var fakePresenter: FakeListsPresenter!
     var navigationController: UINavigationController!
     var window: UIWindow!
 
@@ -22,11 +22,11 @@ class ListsListViewControllerTests: XCTestCase {
         super.setUp()
 
         window = UIWindow()
-        let storyboard = UIStoryboard(name: "ListsList", bundle: nil)
+        let storyboard = UIStoryboard(name: "Lists", bundle: nil)
         navigationController = (storyboard.instantiateInitialViewController() as! UINavigationController)
         sut = (navigationController.topViewController as! ListsViewController)
 
-        fakePresenter = FakeListsListPresenter(view: sut)
+        fakePresenter = FakeListsPresenter(view: sut)
         sut.presenter = fakePresenter
         _ = sut.view
     }

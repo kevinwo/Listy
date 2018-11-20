@@ -1,5 +1,5 @@
 //
-//  ListsListPresenterTests.swift
+//  ListsPresenterTests.swift
 //  Listy
 //
 //  Created by Kevin Wolkober on 10/6/18.
@@ -9,11 +9,11 @@
 import XCTest
 @testable import Listy_iOS
 
-class ListsListPresenterTests: XCTestCase {
+class ListsPresenterTests: XCTestCase {
 
     var sut: ListsPresenter!
-    var fakeRouter: FakeListsListRouter!
-    var fakeInteractor: FakeListsListInteractor!
+    var fakeRouter: FakeListsRouter!
+    var fakeInteractor: FakeListsInteractor!
     var controller: ListsViewController!
 
     // MARK: - Test lifecycle
@@ -21,14 +21,14 @@ class ListsListPresenterTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        let storyboard = UIStoryboard(name: "ListsList", bundle: nil)
-        controller = (storyboard.instantiateViewController(withIdentifier: "ListsListViewController") as! ListsViewController)
+        let storyboard = UIStoryboard(name: "Lists", bundle: nil)
+        controller = (storyboard.instantiateViewController(withIdentifier: "ListsViewController") as! ListsViewController)
         sut = ListsPresenter(view: controller)
 
-        fakeInteractor = FakeListsListInteractor(output: sut)
+        fakeInteractor = FakeListsInteractor(output: sut)
         sut.interactor = fakeInteractor
 
-        fakeRouter = FakeListsListRouter(view: controller)
+        fakeRouter = FakeListsRouter(view: controller)
         sut.router = fakeRouter
 
         controller.presenter = sut

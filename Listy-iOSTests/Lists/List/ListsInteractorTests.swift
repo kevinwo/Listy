@@ -1,5 +1,5 @@
 //
-//  ListsListInteractorTests.swift
+//  ListsInteractorTests.swift
 //  Listy
 //
 //  Created by Kevin Wolkober on 10/6/18.
@@ -11,10 +11,10 @@ import XCTest
 @testable import ListyUI
 @testable import ListyKit
 
-class ListsListInteractorTests: XCTestCase {
+class ListsInteractorTests: XCTestCase {
 
     var sut: ListsInteractor!
-    var fakePresenter: FakeListsListPresenter!
+    var fakePresenter: FakeListsPresenter!
     var controller: ListsViewController!
     var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock!
     var lists: Lists!
@@ -26,10 +26,10 @@ class ListsListInteractorTests: XCTestCase {
 
         FileManager().clearTemporaryDirectory()
 
-        let storyboard = UIStoryboard(name: "ListsList", bundle: nil)
-        controller = (storyboard.instantiateViewController(withIdentifier: "ListsListViewController") as! ListsViewController)
+        let storyboard = UIStoryboard(name: "Lists", bundle: nil)
+        controller = (storyboard.instantiateViewController(withIdentifier: "ListsViewController") as! ListsViewController)
 
-        fakePresenter = FakeListsListPresenter(view: controller)
+        fakePresenter = FakeListsPresenter(view: controller)
         controller.presenter = fakePresenter
 
         sut = ListsInteractor(output: fakePresenter)

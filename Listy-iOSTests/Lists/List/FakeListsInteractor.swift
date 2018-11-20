@@ -1,5 +1,5 @@
 //
-//  FakeListsListInteractor.swift
+//  FakeListsInteractor.swift
 //  Listy-iOSTests
 //
 //  Created by Kevin Wolkober on 10/6/18.
@@ -10,7 +10,7 @@ import UIKit
 @testable import ListyUI
 @testable import ListyKit
 
-class FakeListsListInteractor: ListsInteractor {
+class FakeListsInteractor: ListsInteractor {
 
     var didCallLoadDataSource: Bool = false
     var didCallFetchData: Bool = false

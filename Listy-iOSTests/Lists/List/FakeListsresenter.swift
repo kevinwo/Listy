@@ -1,5 +1,5 @@
 //
-//  FakeListsListPresenter.swift
+//  FakeListsPresenter.swift
 //  Listy-iOSTests
 //
 //  Created by Kevin Wolkober on 10/6/18.
@@ -8,7 +8,7 @@
 import UIKit
 @testable import Listy_iOS
 
-class FakeListsListPresenter: ListsPresenter {
+class FakeListsPresenter: ListsPresenter {
 
     var didCallReloadData: Bool = false
     var didCallAddList: Bool = false
