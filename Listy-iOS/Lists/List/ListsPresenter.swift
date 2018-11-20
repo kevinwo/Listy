@@ -21,7 +21,7 @@ class ListsPresenter {
 
     required init(view: ListsViewController) {
         self.view = view
-        self.router = ListsRouter(view: view)
+        self.router = ListsRouter(output: view)
     }
 
     // MARK: - Public interface

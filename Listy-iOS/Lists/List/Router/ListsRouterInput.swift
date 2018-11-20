@@ -9,7 +9,7 @@ import ListyKit
 
 protocol ListsRouterInput: class {
 
-    var view: ListsViewController! { get set }
+    var output: ListsRouterOutput! { get set }
 
     func showEditListView(with list: List)
     func showTasks(for list: List)

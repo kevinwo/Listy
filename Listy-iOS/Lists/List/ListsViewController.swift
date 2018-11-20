@@ -32,12 +32,6 @@ class ListsViewController: UITableViewController {
         self.presenter.viewDidLoad()
     }
 
-    // MARK: - Public interface
-
-    func reloadData() {
-        self.presenter.reloadData()
-    }
-
     // MARK: - Button actions
 
     @IBAction func addBarButtonItemTapped(_ sender: Any) {
@@ -62,5 +56,16 @@ extension ListsViewController {
         }
 
         return [delete]
+    }
+}
+
+extension ListsViewController: ListsRouterOutput {
+
+    func pushTasksListView(_ controller: TasksListViewController) {
+        self.navigationController!.pushViewController(controller, animated: true)
+    }
+
+    func reloadData() {
+        self.presenter.reloadData()
     }
 }

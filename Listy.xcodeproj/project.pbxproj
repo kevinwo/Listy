@@ -102,6 +102,7 @@
 		A51D45A121A408FD00788423 /* FakeTasksListRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D45A021A408FD00788423 /* FakeTasksListRouterOutput.swift */; };
 		A51D45A321A40CC000788423 /* FakeTasksListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D45A221A40CC000788423 /* FakeTasksListPresenterOutput.swift */; };
 		A51D45A721A4131300788423 /* ListsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D45A621A4131300788423 /* ListsRouterInput.swift */; };
+		A51D45A921A413EB00788423 /* ListsRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D45A821A413EB00788423 /* ListsRouterOutput.swift */; };
 		A5394EDA21A2FB0C001DF0A7 /* TasksListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5394ED921A2FB0C001DF0A7 /* TasksListRouterTests.swift */; };
 		A5394EDE21A3007D001DF0A7 /* EditTaskRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5394EDD21A3007D001DF0A7 /* EditTaskRouterTests.swift */; };
 		A5394EE121A30104001DF0A7 /* FakeEditTaskRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5394EE021A30104001DF0A7 /* FakeEditTaskRouterOutput.swift */; };
@@ -278,6 +279,7 @@
 		A51D45A021A408FD00788423 /* FakeTasksListRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTasksListRouterOutput.swift; sourceTree = "<group>"; };
 		A51D45A221A40CC000788423 /* FakeTasksListPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTasksListPresenterOutput.swift; sourceTree = "<group>"; };
 		A51D45A621A4131300788423 /* ListsRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouterInput.swift; sourceTree = "<group>"; };
+		A51D45A821A413EB00788423 /* ListsRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouterOutput.swift; sourceTree = "<group>"; };
 		A5394ED921A2FB0C001DF0A7 /* TasksListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListRouterTests.swift; sourceTree = "<group>"; };
 		A5394EDD21A3007D001DF0A7 /* EditTaskRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskRouterTests.swift; sourceTree = "<group>"; };
 		A5394EE021A30104001DF0A7 /* FakeEditTaskRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditTaskRouterOutput.swift; sourceTree = "<group>"; };
@@ -820,6 +822,7 @@
 			children = (
 				265EA97A216857340009FF96 /* ListsRouter.swift */,
 				A51D45A621A4131300788423 /* ListsRouterInput.swift */,
+				A51D45A821A413EB00788423 /* ListsRouterOutput.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1145,6 +1148,7 @@
 				264E746C2176EC61000799F2 /* EditTaskInteractorInput.swift in Sources */,
 				265EA99D21685E0B0009FF96 /* EditListViewController.swift in Sources */,
 				26B52C19217DA5E10011375F /* TasksListRouterOutput.swift in Sources */,
+				A51D45A921A413EB00788423 /* ListsRouterOutput.swift in Sources */,
 				265EA9D42168D7A30009FF96 /* EditTaskInteractor.swift in Sources */,
 				264E746E2176F1C9000799F2 /* EditTaskInteractorOutput.swift in Sources */,
 				26B52C1D217DA7730011375F /* TasksListRouterInput.swift in Sources */,

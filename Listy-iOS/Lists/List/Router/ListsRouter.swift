@@ -11,10 +11,10 @@ import ListyKit
 
 class ListsRouter: ListsRouterInput {
 
-    weak var view: ListsViewController!
+    weak var output: ListsRouterOutput!
 
-    init(view: ListsViewController) {
-        self.view = view
+    init(output: ListsRouterOutput) {
+        self.output = output
     }
 
     // MARK: - Public interface
@@ -26,24 +26,24 @@ class ListsRouter: ListsRouterInput {
         controller.list = list
         controller.delegate = self
 
-        self.view.present(navigationController, animated: true, completion: nil)
+        self.output.present(view: navigationController, animated: true, completion: nil)
     }
 
     func showTasks(for list: List) {
         let controller = TasksListRouter.scene(list: list)
 
-        self.view.navigationController!.pushViewController(controller, animated: true)
+        self.output.pushTasksListView(controller)
     }
 }
 
 extension ListsRouter: EditListViewControllerDelegate {
 
     func didCancelWithController(_ controller: EditListViewController) {
-        self.view.dismiss(animated: true, completion: nil)
+        self.output.dismiss(animated: true, completion: nil)
     }
 
     func controller(_ controller: EditListViewController, didSaveList list: List) {
-        self.view.reloadData()
-        self.view.dismiss(animated: true, completion: nil)
+        self.output.reloadData()
+        self.output.dismiss(animated: true, completion: nil)
     }
 }

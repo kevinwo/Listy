@@ -28,7 +28,7 @@ class ListsPresenterTests: XCTestCase {
         fakeInteractor = FakeListsInteractor(output: sut)
         sut.interactor = fakeInteractor
 
-        fakeRouter = FakeListsRouter(view: controller)
+        fakeRouter = FakeListsRouter(output: controller)
         sut.router = fakeRouter
 
         controller.presenter = sut
