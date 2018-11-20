@@ -9,7 +9,7 @@
 import ListyUI
 import ListyKit
 
-class ListsRouter {
+class ListsRouter: ListsRouterInput {
 
     weak var view: ListsViewController!
 
