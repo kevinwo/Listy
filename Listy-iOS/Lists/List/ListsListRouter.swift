@@ -11,9 +11,9 @@ import ListyKit
 
 class ListsListRouter {
 
-    weak var view: ListsListViewController!
+    weak var view: ListsViewController!
 
-    init(view: ListsListViewController) {
+    init(view: ListsViewController) {
         self.view = view
     }
 

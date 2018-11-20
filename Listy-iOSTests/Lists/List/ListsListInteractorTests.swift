@@ -15,7 +15,7 @@ class ListsListInteractorTests: XCTestCase {
 
     var sut: ListsListInteractor!
     var fakePresenter: FakeListsListPresenter!
-    var controller: ListsListViewController!
+    var controller: ListsViewController!
     var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock!
     var lists: Lists!
 
@@ -27,7 +27,7 @@ class ListsListInteractorTests: XCTestCase {
         FileManager().clearTemporaryDirectory()
 
         let storyboard = UIStoryboard(name: "ListsList", bundle: nil)
-        controller = (storyboard.instantiateViewController(withIdentifier: "ListsListViewController") as! ListsListViewController)
+        controller = (storyboard.instantiateViewController(withIdentifier: "ListsListViewController") as! ListsViewController)
 
         fakePresenter = FakeListsListPresenter(view: controller)
         controller.presenter = fakePresenter

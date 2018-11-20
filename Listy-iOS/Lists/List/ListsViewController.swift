@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListsListViewController: UITableViewController {
+class ListsViewController: UITableViewController {
 
     // MARK: - Properties
 
@@ -47,7 +47,7 @@ class ListsListViewController: UITableViewController {
 
 // MARK: - UITableViewDelegate
 
-extension ListsListViewController {
+extension ListsViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.presenter.handleActionForSelectedRow(at: indexPath)
     }

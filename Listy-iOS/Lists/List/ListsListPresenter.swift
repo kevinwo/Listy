@@ -11,15 +11,15 @@ import ListyKit
 
 class ListsListPresenter {
 
-    typealias T = ListsListViewController
+    typealias T = ListsViewController
 
-    weak var view: ListsListViewController!
+    weak var view: ListsViewController!
     var router: ListsListRouter
     lazy var interactor = {
         ListsListInteractor(output: self)
     }()
 
-    required init(view: ListsListViewController) {
+    required init(view: ListsViewController) {
         self.view = view
         self.router = ListsListRouter(view: view)
     }

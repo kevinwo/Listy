@@ -14,7 +14,7 @@ class ListsListPresenterTests: XCTestCase {
     var sut: ListsListPresenter!
     var fakeRouter: FakeListsListRouter!
     var fakeInteractor: FakeListsListInteractor!
-    var controller: ListsListViewController!
+    var controller: ListsViewController!
 
     // MARK: - Test lifecycle
 
@@ -22,7 +22,7 @@ class ListsListPresenterTests: XCTestCase {
         super.setUp()
 
         let storyboard = UIStoryboard(name: "ListsList", bundle: nil)
-        controller = (storyboard.instantiateViewController(withIdentifier: "ListsListViewController") as! ListsListViewController)
+        controller = (storyboard.instantiateViewController(withIdentifier: "ListsListViewController") as! ListsViewController)
         sut = ListsListPresenter(view: controller)
 
         fakeInteractor = FakeListsListInteractor(output: sut)
