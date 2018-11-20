@@ -8,7 +8,7 @@
 import UIKit
 @testable import Listy_iOS
 
-class FakeListsListPresenter: ListsListPresenter {
+class FakeListsListPresenter: ListsPresenter {
 
     var didCallReloadData: Bool = false
     var didCallAddList: Bool = false

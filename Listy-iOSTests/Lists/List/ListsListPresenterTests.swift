@@ -11,7 +11,7 @@ import XCTest
 
 class ListsListPresenterTests: XCTestCase {
 
-    var sut: ListsListPresenter!
+    var sut: ListsPresenter!
     var fakeRouter: FakeListsListRouter!
     var fakeInteractor: FakeListsListInteractor!
     var controller: ListsViewController!
@@ -23,7 +23,7 @@ class ListsListPresenterTests: XCTestCase {
 
         let storyboard = UIStoryboard(name: "ListsList", bundle: nil)
         controller = (storyboard.instantiateViewController(withIdentifier: "ListsListViewController") as! ListsViewController)
-        sut = ListsListPresenter(view: controller)
+        sut = ListsPresenter(view: controller)
 
         fakeInteractor = FakeListsListInteractor(output: sut)
         sut.interactor = fakeInteractor
@@ -50,7 +50,7 @@ class ListsListPresenterTests: XCTestCase {
 
     func testInitWithView() {
         // when
-        let presenter = ListsListPresenter(view: controller)
+        let presenter = ListsPresenter(view: controller)
 
         // then
         XCTAssertNotNil(presenter.view)

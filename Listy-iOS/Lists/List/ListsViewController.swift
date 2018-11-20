@@ -14,14 +14,14 @@ class ListsViewController: UITableViewController {
 
     @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
 
-    var presenter: ListsListPresenter!
+    var presenter: ListsPresenter!
 
     // MARK: - Object lifecycle
 
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
 
-        self.presenter = ListsListPresenter(view: self)
+        self.presenter = ListsPresenter(view: self)
     }
 
     // MARK: - View lifecycle

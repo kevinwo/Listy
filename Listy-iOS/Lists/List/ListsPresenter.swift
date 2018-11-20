@@ -9,7 +9,7 @@
 import ListyUI
 import ListyKit
 
-class ListsListPresenter {
+class ListsPresenter {
 
     typealias T = ListsViewController
 
@@ -65,4 +65,4 @@ class ListsListPresenter {
     }
 }
 
-extension ListsListPresenter: ErrorAlertable {}
+extension ListsPresenter: ErrorAlertable {}

@@ -13,12 +13,12 @@ class ListsListInteractor {
 
     // MARK: - Properties
 
-    var output: ListsListPresenter!
+    var output: ListsPresenter!
     var dataSource: TableViewDataSource!
     var lists: Lists
     var tasks: Tasks
 
-    init(output: ListsListPresenter) {
+    init(output: ListsPresenter) {
         self.output = output
 
         let database = Database.newInstance()
