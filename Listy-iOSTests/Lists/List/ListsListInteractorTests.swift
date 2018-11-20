@@ -13,7 +13,7 @@ import XCTest
 
 class ListsListInteractorTests: XCTestCase {
 
-    var sut: ListsListInteractor!
+    var sut: ListsInteractor!
     var fakePresenter: FakeListsListPresenter!
     var controller: ListsViewController!
     var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock!
@@ -32,7 +32,7 @@ class ListsListInteractorTests: XCTestCase {
         fakePresenter = FakeListsListPresenter(view: controller)
         controller.presenter = fakePresenter
 
-        sut = ListsListInteractor(output: fakePresenter)
+        sut = ListsInteractor(output: fakePresenter)
         fakePresenter.interactor = sut
 
         lists = Lists(database: Database.newInstance(path: NSTemporaryDirectory()))
@@ -61,7 +61,7 @@ class ListsListInteractorTests: XCTestCase {
 
     func testInit() {
         // when
-        let interactor = ListsListInteractor(output: fakePresenter)
+        let interactor = ListsInteractor(output: fakePresenter)
 
         // then
         XCTAssertNotNil(interactor.output)

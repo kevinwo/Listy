@@ -9,7 +9,7 @@
 import ListyUI
 import ListyKit
 
-class ListsListInteractor {
+class ListsInteractor {
 
     // MARK: - Properties
 

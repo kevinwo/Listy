@@ -10,7 +10,7 @@ import UIKit
 @testable import ListyUI
 @testable import ListyKit
 
-class FakeListsListInteractor: ListsListInteractor {
+class FakeListsListInteractor: ListsInteractor {
 
     var didCallLoadDataSource: Bool = false
     var didCallFetchData: Bool = false
