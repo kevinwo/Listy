@@ -6,25 +6,15 @@
 //
 
 import UIKit
-import ListyKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var router: AppRouterInput! = AppRouter()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let database = Database.newInstance()
-        let lists = Lists(database: database)
-        let tasks = Tasks(database: database)
-
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = ListsRouter.scene(lists: lists, tasks: tasks)
-        window.backgroundColor = UIColor.black
-        window.makeKeyAndVisible()
-
-        self.window = window
+        self.router.configureInitialRoute(for: self)
 
         return true
     }

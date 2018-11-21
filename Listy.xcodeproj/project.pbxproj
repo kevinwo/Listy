@@ -115,6 +115,11 @@
 		A5AC8BEC21A5469800CA030D /* ListsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BEB21A5469800CA030D /* ListsRouterTests.swift */; };
 		A5AC8BEE21A549B200CA030D /* FakeListsRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BED21A549B200CA030D /* FakeListsRouterOutput.swift */; };
 		A5AC8BF021A54B0B00CA030D /* FakeListsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BEF21A54B0B00CA030D /* FakeListsRouterInput.swift */; };
+		A5AC8BF321A56AAC00CA030D /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BF221A56AAC00CA030D /* AppRouter.swift */; };
+		A5AC8BF521A56AC100CA030D /* AppRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BF421A56AC100CA030D /* AppRouterInput.swift */; };
+		A5AC8BF821A56BAE00CA030D /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BF721A56BAE00CA030D /* AppRouterTests.swift */; };
+		A5AC8BFA21A56D3C00CA030D /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BF921A56D3C00CA030D /* AppDelegateTests.swift */; };
+		A5AC8BFE21A56DF800CA030D /* FakeAppRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BFD21A56DF800CA030D /* FakeAppRouterInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -301,6 +306,11 @@
 		A5AC8BEB21A5469800CA030D /* ListsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouterTests.swift; sourceTree = "<group>"; };
 		A5AC8BED21A549B200CA030D /* FakeListsRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsRouterOutput.swift; sourceTree = "<group>"; };
 		A5AC8BEF21A54B0B00CA030D /* FakeListsRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsRouterInput.swift; sourceTree = "<group>"; };
+		A5AC8BF221A56AAC00CA030D /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		A5AC8BF421A56AC100CA030D /* AppRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterInput.swift; sourceTree = "<group>"; };
+		A5AC8BF721A56BAE00CA030D /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
+		A5AC8BF921A56D3C00CA030D /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		A5AC8BFD21A56DF800CA030D /* FakeAppRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAppRouterInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -578,9 +588,9 @@
 		265EA94D216856800009FF96 /* Listy-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A5AC8BF121A56A8B00CA030D /* AppDelegate */,
 				265EA975216857050009FF96 /* Lists */,
 				265EA9B22168D3AD0009FF96 /* Tasks */,
-				265EA94E216856800009FF96 /* AppDelegate.swift */,
 				265EA955216856820009FF96 /* Assets.xcassets */,
 				265EA957216856820009FF96 /* LaunchScreen.storyboard */,
 				265EA95A216856820009FF96 /* Info.plist */,
@@ -591,6 +601,7 @@
 		265EA962216856830009FF96 /* Listy-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				A5AC8BF621A56B8C00CA030D /* AppDelegate */,
 				265EA9A1216880E20009FF96 /* Helpers */,
 				265EA977216857130009FF96 /* Lists */,
 				265EA9BC2168D4330009FF96 /* Tasks */,
@@ -936,6 +947,26 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		A5AC8BF121A56A8B00CA030D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				265EA94E216856800009FF96 /* AppDelegate.swift */,
+				A5AC8BF221A56AAC00CA030D /* AppRouter.swift */,
+				A5AC8BF421A56AC100CA030D /* AppRouterInput.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A5AC8BF621A56B8C00CA030D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC8BF921A56D3C00CA030D /* AppDelegateTests.swift */,
+				A5AC8BF721A56BAE00CA030D /* AppRouterTests.swift */,
+				A5AC8BFD21A56DF800CA030D /* FakeAppRouterInput.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1241,11 +1272,13 @@
 				26B52C13217DA4200011375F /* TasksListPresenterOutput.swift in Sources */,
 				26B52C0E217D90EB0011375F /* EditTaskRouterInput.swift in Sources */,
 				265EA99B21685E0B0009FF96 /* EditListPresenter.swift in Sources */,
+				A5AC8BF521A56AC100CA030D /* AppRouterInput.swift in Sources */,
 				265EA9D12168D7A30009FF96 /* EditTaskPresenter.swift in Sources */,
 				265EA97F216857340009FF96 /* ListsViewController.swift in Sources */,
 				A51D45A721A4131300788423 /* ListsRouterInput.swift in Sources */,
 				26E547A021A50E5C00EA4EEA /* ListsInteractorInput.swift in Sources */,
 				A51D459C21A3C70B00788423 /* TasksListViewInput.swift in Sources */,
+				A5AC8BF321A56AAC00CA030D /* AppRouter.swift in Sources */,
 				265EA99E21685E0B0009FF96 /* EditListInteractor.swift in Sources */,
 				265EA9B92168D3FF0009FF96 /* TasksListRouter.swift in Sources */,
 				26B52C11217DA3910011375F /* TasksListPresenterInput.swift in Sources */,
@@ -1289,6 +1322,8 @@
 				265EA9C92168D5330009FF96 /* FakeTasksListInteractorInput.swift in Sources */,
 				265EA9A7216885220009FF96 /* FakeListsRouter.swift in Sources */,
 				A51D45A321A40CC000788423 /* FakeTasksListPresenterOutput.swift in Sources */,
+				A5AC8BF821A56BAE00CA030D /* AppRouterTests.swift in Sources */,
+				A5AC8BFA21A56D3C00CA030D /* AppDelegateTests.swift in Sources */,
 				265EA9CB2168D5400009FF96 /* FakeTasksListRouterInput.swift in Sources */,
 				265EA99521685DE20009FF96 /* EditListInteractorTests.swift in Sources */,
 				A5AC8BF021A54B0B00CA030D /* FakeListsRouterInput.swift in Sources */,
@@ -1297,6 +1332,7 @@
 				A5AC8BEE21A549B200CA030D /* FakeListsRouterOutput.swift in Sources */,
 				265EA985216857480009FF96 /* ListsInteractorTests.swift in Sources */,
 				26E547AC21A5181100EA4EEA /* FakeListsPresenterOutput.swift in Sources */,
+				A5AC8BFE21A56DF800CA030D /* FakeAppRouterInput.swift in Sources */,
 				265EA9DF2168D82E0009FF96 /* FakeEditTaskInteractorInput.swift in Sources */,
 				265EA9DA2168D7C70009FF96 /* EditTaskInteractorTests.swift in Sources */,
 				265EA9DB2168D7C70009FF96 /* EditTaskPresenterTests.swift in Sources */,
