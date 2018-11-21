@@ -15,6 +15,7 @@ class ListsInteractorTests: XCTestCase {
 
     var sut: ListsInteractor!
     var fakePresenter: FakeListsPresenter!
+    var fakeOutput: FakeListsInteractorOutput!
     var controller: ListsViewController!
     var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock!
     var lists: Lists!
@@ -32,7 +33,8 @@ class ListsInteractorTests: XCTestCase {
         fakePresenter = FakeListsPresenter(view: controller)
         controller.presenter = fakePresenter
 
-        sut = ListsInteractor(output: fakePresenter)
+        fakeOutput = FakeListsInteractorOutput()
+        sut = ListsInteractor(output: fakeOutput)
         fakePresenter.interactor = sut
 
         lists = Lists(database: Database.newInstance(path: NSTemporaryDirectory()))
@@ -95,7 +97,7 @@ class ListsInteractorTests: XCTestCase {
 
         // then
         XCTAssert(sut.dataSource.objects.contains(list))
-        XCTAssertTrue(fakePresenter.didCallUpdateView)
+        XCTAssertTrue(fakeOutput.didCallUpdateView)
     }
 
     // MARK: - newList()

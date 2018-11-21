@@ -53,8 +53,9 @@ class ListsPresenter {
     func deleteList(at indexPath: IndexPath) {
         self.interactor.deleteList(at: indexPath)
     }
+}
 
-    // MARK: - Interactor output
+extension ListsPresenter: ListsInteractorOutput {
 
     func updateView() {
         self.view.tableView.reloadData()
@@ -64,5 +65,3 @@ class ListsPresenter {
         self.view.tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }
-
-extension ListsPresenter: ErrorAlertable {}

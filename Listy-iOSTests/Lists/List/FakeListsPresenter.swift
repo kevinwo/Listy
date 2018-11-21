@@ -13,7 +13,6 @@ class FakeListsPresenter: ListsPresenter {
     var didCallReloadData: Bool = false
     var didCallAddList: Bool = false
     var didCallViewDidLoad: Bool = false
-    var didCallUpdateView: Bool = false
     var didCallHandleActionForSelectedRow: Bool = false
 
     override func reloadData() {
@@ -26,10 +25,6 @@ class FakeListsPresenter: ListsPresenter {
 
     override func viewDidLoad() {
         self.didCallViewDidLoad = true
-    }
-
-    override func updateView() {
-        self.didCallUpdateView = true
     }
 
     override func handleActionForSelectedRow(at indexPath: IndexPath) {
