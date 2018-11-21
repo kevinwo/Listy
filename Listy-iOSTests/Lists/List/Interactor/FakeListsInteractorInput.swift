@@ -13,6 +13,8 @@ import UIKit
 class FakeListsInteractorInput: ListsInteractorInput {
 
     weak var output: ListsInteractorOutput!
+    var lists: Lists!
+    var tasks: Tasks!
 
     var didCallLoadDataSource: Bool = false
     var didCallFetchData: Bool = false
@@ -24,8 +26,9 @@ class FakeListsInteractorInput: ListsInteractorInput {
     var didCallDeleteList: Bool = false
     var deletedListIndexPath: IndexPath?
 
-    init(output: ListsInteractorOutput) {
-        self.output = output
+    init(lists: Lists, tasks: Tasks) {
+        self.lists = lists
+        self.tasks = tasks
     }
 
     func loadDataSource(for tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {

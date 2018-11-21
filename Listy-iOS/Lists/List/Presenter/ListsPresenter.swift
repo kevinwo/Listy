@@ -12,15 +12,8 @@ import ListyKit
 final class ListsPresenter: ListsPresenterInput {
 
     weak var output: ListsPresenterOutput!
-    var router: ListsRouter
-    lazy var interactor: ListsInteractorInput = {
-        ListsInteractor(output: self)
-    }()
-
-    init(output: ListsPresenterOutput, view: ListsViewController) {
-        self.output = output
-        self.router = ListsRouter(output: view)
-    }
+    var router: ListsRouterInput!
+    var interactor: ListsInteractorInput!
 
     // MARK: - ListsPresenterInput
 

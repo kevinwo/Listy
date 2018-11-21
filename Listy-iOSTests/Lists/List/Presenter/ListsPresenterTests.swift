@@ -8,41 +8,44 @@
 
 import XCTest
 @testable import Listy_iOS
+@testable import ListyKit
 
 class ListsPresenterTests: XCTestCase {
 
     var sut: ListsPresenter!
     var fakeOutput: FakeListsPresenterOutput!
-    var fakeRouter: FakeListsRouter!
+    var fakeRouter: FakeListsRouterInput!
     var fakeInteractor: FakeListsInteractorInput!
-    var controller: ListsViewController!
+    var lists: Lists!
+    var tasks: Tasks!
 
     // MARK: - Test lifecycle
 
     override func setUp() {
         super.setUp()
 
-        let storyboard = UIStoryboard(name: "Lists", bundle: nil)
-        controller = (storyboard.instantiateViewController(withIdentifier: "ListsViewController") as! ListsViewController)
+        let database = Database.newInstance(path: NSTemporaryDirectory())
+        lists = Lists(database: database)
+        tasks = Tasks(database: database)
+        let presenter = ListsPresenter()
 
         fakeOutput = FakeListsPresenterOutput()
-        sut = ListsPresenter(output: fakeOutput, view: controller)
+        fakeRouter = FakeListsRouterInput()
+        fakeInteractor = FakeListsInteractorInput(lists: lists, tasks: tasks)
 
-        fakeInteractor = FakeListsInteractorInput(output: sut)
-        sut.interactor = fakeInteractor
-
-        fakeRouter = FakeListsRouter(output: controller)
-        sut.router = fakeRouter
-
-        controller.presenter = sut
-        _ = controller.view
+        presenter.output = fakeOutput
+        presenter.interactor = fakeInteractor
+        presenter.router = fakeRouter
+        sut = presenter
     }
 
     override func tearDown() {
         sut = nil
-        controller = nil
-        fakeRouter = nil
         fakeInteractor = nil
+        fakeRouter = nil
+        fakeOutput = nil
+        lists = nil
+        tasks = nil
 
         super.tearDown()
     }
@@ -80,7 +83,8 @@ class ListsPresenterTests: XCTestCase {
         sut.addList()
 
         // then
-        XCTAssertTrue(fakeRouter.didShowEditListView)
+        XCTAssertTrue(fakeRouter.didCallShowEditListView)
+        XCTAssertNotNil(fakeRouter.listForShowEditListView)
     }
 
     // MARK: handleActionForSelectedRow(at:)
@@ -94,7 +98,7 @@ class ListsPresenterTests: XCTestCase {
         sut.handleActionForSelectedRow(at: indexPath)
 
         // then
-        XCTAssertTrue(fakeRouter.didShowTasks)
-        XCTAssertEqual(fakeRouter.didShowTasksList, list)
+        XCTAssertTrue(fakeRouter.didCallShowTasks)
+        XCTAssertEqual(fakeRouter.listForShowTasks, list)
     }
 }

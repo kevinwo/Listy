@@ -17,19 +17,20 @@ class ListsInteractorTests: XCTestCase {
     var fakeOutput: FakeListsInteractorOutput!
     var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock!
     var lists: Lists!
+    var tasks: Tasks!
 
     // MARK: - Test lifecycle
 
     override func setUp() {
         super.setUp()
 
-        FileManager().clearTemporaryDirectory()
-
+        let database = Database.newInstance(path: NSTemporaryDirectory())
+        lists = Lists(database: database)
+        tasks = Tasks(database: database)
         fakeOutput = FakeListsInteractorOutput()
-        sut = ListsInteractor(output: fakeOutput)
 
-        lists = Lists(database: Database.newInstance(path: NSTemporaryDirectory()))
-        sut.lists = lists
+        sut = ListsInteractor(lists: lists, tasks: tasks)
+        sut.output = fakeOutput
 
         cellConfigurationBlock = { (cell, object) in
             cell.textLabel!.text = object.id
@@ -40,6 +41,7 @@ class ListsInteractorTests: XCTestCase {
         sut = nil
         lists = nil
         cellConfigurationBlock = nil
+        FileManager().clearTemporaryDirectory()
 
         super.tearDown()
     }
@@ -50,11 +52,11 @@ class ListsInteractorTests: XCTestCase {
 
     func testInit() {
         // when
-        let interactor = ListsInteractor(output: fakeOutput)
+        let interactor = ListsInteractor(lists: lists, tasks: tasks)
 
         // then
-        XCTAssertNotNil(interactor.output)
         XCTAssertNotNil(interactor.lists)
+        XCTAssertNotNil(interactor.tasks)
     }
 
     // MARK: - loadDataSource(for:cellConfigurationBlock:)

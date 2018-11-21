@@ -41,6 +41,7 @@ class TasksListPresenterTests: XCTestCase {
         fakeInteractor = nil
         fakeRouter = nil
         fakeOutput = nil
+        list = nil
 
         super.tearDown()
     }

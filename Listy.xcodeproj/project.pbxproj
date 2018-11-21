@@ -112,6 +112,9 @@
 		A5394EDA21A2FB0C001DF0A7 /* TasksListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5394ED921A2FB0C001DF0A7 /* TasksListRouterTests.swift */; };
 		A5394EDE21A3007D001DF0A7 /* EditTaskRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5394EDD21A3007D001DF0A7 /* EditTaskRouterTests.swift */; };
 		A5394EE121A30104001DF0A7 /* FakeEditTaskRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5394EE021A30104001DF0A7 /* FakeEditTaskRouterOutput.swift */; };
+		A5AC8BEC21A5469800CA030D /* ListsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BEB21A5469800CA030D /* ListsRouterTests.swift */; };
+		A5AC8BEE21A549B200CA030D /* FakeListsRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BED21A549B200CA030D /* FakeListsRouterOutput.swift */; };
+		A5AC8BF021A54B0B00CA030D /* FakeListsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BEF21A54B0B00CA030D /* FakeListsRouterInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -295,6 +298,9 @@
 		A5394ED921A2FB0C001DF0A7 /* TasksListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListRouterTests.swift; sourceTree = "<group>"; };
 		A5394EDD21A3007D001DF0A7 /* EditTaskRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskRouterTests.swift; sourceTree = "<group>"; };
 		A5394EE021A30104001DF0A7 /* FakeEditTaskRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditTaskRouterOutput.swift; sourceTree = "<group>"; };
+		A5AC8BEB21A5469800CA030D /* ListsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouterTests.swift; sourceTree = "<group>"; };
+		A5AC8BED21A549B200CA030D /* FakeListsRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsRouterOutput.swift; sourceTree = "<group>"; };
+		A5AC8BEF21A54B0B00CA030D /* FakeListsRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsRouterInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -605,8 +611,8 @@
 		265EA9762168570A0009FF96 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				26E547A621A5155100EA4EEA /* View */,
 				A51D45A521A4130100788423 /* Router */,
+				26E547A621A5155100EA4EEA /* View */,
 				26E547A121A5124000EA4EEA /* Presenter */,
 				26E5479921A50AD700EA4EEA /* Interactor */,
 				265EA987216857880009FF96 /* Lists.storyboard */,
@@ -626,6 +632,7 @@
 		265EA978216857170009FF96 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				A5AC8BEA21A5467400CA030D /* Router */,
 				26E547A521A5154200EA4EEA /* View */,
 				26E547A421A512B300EA4EEA /* Presenter */,
 				26E5479C21A50B8500EA4EEA /* Interactor */,
@@ -917,6 +924,16 @@
 				A5394EE021A30104001DF0A7 /* FakeEditTaskRouterOutput.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A5AC8BEA21A5467400CA030D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC8BEB21A5469800CA030D /* ListsRouterTests.swift */,
+				A5AC8BED21A549B200CA030D /* FakeListsRouterOutput.swift */,
+				A5AC8BEF21A54B0B00CA030D /* FakeListsRouterInput.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1274,7 +1291,10 @@
 				A51D45A321A40CC000788423 /* FakeTasksListPresenterOutput.swift in Sources */,
 				265EA9CB2168D5400009FF96 /* FakeTasksListRouterInput.swift in Sources */,
 				265EA99521685DE20009FF96 /* EditListInteractorTests.swift in Sources */,
+				A5AC8BF021A54B0B00CA030D /* FakeListsRouterInput.swift in Sources */,
+				A5AC8BEC21A5469800CA030D /* ListsRouterTests.swift in Sources */,
 				265EA9AF2168C6A30009FF96 /* FileManager+Tests.swift in Sources */,
+				A5AC8BEE21A549B200CA030D /* FakeListsRouterOutput.swift in Sources */,
 				265EA985216857480009FF96 /* ListsInteractorTests.swift in Sources */,
 				26E547AC21A5181100EA4EEA /* FakeListsPresenterOutput.swift in Sources */,
 				265EA9DF2168D82E0009FF96 /* FakeEditTaskInteractorInput.swift in Sources */,

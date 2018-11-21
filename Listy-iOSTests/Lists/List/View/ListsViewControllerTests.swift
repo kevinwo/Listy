@@ -26,8 +26,9 @@ class ListsViewControllerTests: XCTestCase {
         navigationController = (storyboard.instantiateInitialViewController() as! UINavigationController)
         sut = (navigationController.topViewController as! ListsViewController)
 
-        fakePresenter = FakeListsPresenterInput(view: sut)
+        fakePresenter = FakeListsPresenterInput()
         sut.presenter = fakePresenter
+
         _ = sut.view
     }
 
@@ -45,12 +46,14 @@ class ListsViewControllerTests: XCTestCase {
     func testOutlets() {
         XCTAssertNotNil(sut.addBarButtonItem)
         XCTAssertNotNil(sut.tableView)
+        XCTAssertEqual(sut.navigationItem.rightBarButtonItem, sut.addBarButtonItem)
     }
 
     // MARK: - viewDidLoad()
 
     func testViewDidLoad() {
         XCTAssertTrue(fakePresenter.didCallLoadData)
+        XCTAssertEqual(fakePresenter.tableViewWithLoadedData, sut.tableView)
     }
 
     // MARK: - reloadData()

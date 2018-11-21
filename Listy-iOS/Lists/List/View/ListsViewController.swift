@@ -16,14 +16,6 @@ class ListsViewController: UITableViewController {
 
     var presenter: ListsPresenterInput!
 
-    // MARK: - Object lifecycle
-
-    required init?(coder decoder: NSCoder) {
-        super.init(coder: decoder)
-
-        self.presenter = ListsPresenter(output: self, view: self)
-    }
-
     // MARK: - View lifecycle
 
     override func viewDidLoad() {

@@ -10,7 +10,9 @@ import UIKit
 
 final class FakeListsPresenterInput: ListsPresenterInput {
 
-    weak var view: ListsViewController!
+    weak var output: ListsPresenterOutput!
+    var router: ListsRouterInput!
+    var interactor: ListsInteractorInput!
 
     var didCallReloadData: Bool = false
     var didCallAddList: Bool = false
@@ -19,10 +21,6 @@ final class FakeListsPresenterInput: ListsPresenterInput {
     var didDeleteList: Bool = false
     var deletedListIndexPath: IndexPath?
     var tableViewWithLoadedData: UITableView?
-
-    init(view: ListsViewController) {
-        self.view = view
-    }
 
     func reloadData() {
         self.didCallReloadData = true

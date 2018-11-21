@@ -9,6 +9,10 @@ import UIKit
 
 protocol ListsPresenterInput: class {
 
+    var output: ListsPresenterOutput! { get set }
+    var router: ListsRouterInput! { get set }
+    var interactor: ListsInteractorInput! { get set }
+
     func loadData(into tableView: UITableView)
     func reloadData()
     func addList()

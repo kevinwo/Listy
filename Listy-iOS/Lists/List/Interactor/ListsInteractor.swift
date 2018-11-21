@@ -18,12 +18,9 @@ class ListsInteractor: ListsInteractorInput {
     var lists: Lists
     var tasks: Tasks
 
-    init(output: ListsInteractorOutput) {
-        self.output = output
-
-        let database = Database.newInstance()
-        self.lists = Lists(database: database)
-        self.tasks = Tasks(database: database)
+    init(lists: Lists, tasks: Tasks) {
+        self.lists = lists
+        self.tasks = tasks
     }
 
     // MARK: - ListsInteractorInput
