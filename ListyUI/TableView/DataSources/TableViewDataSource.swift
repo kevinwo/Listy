@@ -16,7 +16,7 @@ open class TableViewDataSource: NSObject, SectionableDataSource {
     open var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock
     var cellReuseIdentifier: String?
 
-    public init(tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock, cellReuseIdentifier: String? = nil, objects: [Object]? = nil) {
+    public init(cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock, cellReuseIdentifier: String? = nil, objects: [Object]? = nil) {
         self.sections = { () -> [[Object]] in
             if let objects = objects {
                 return [objects]
@@ -27,8 +27,11 @@ open class TableViewDataSource: NSObject, SectionableDataSource {
 
         super.init()
 
-        self.cellConfigurationBlock = cellConfigurationBlock
         self.cellReuseIdentifier = cellReuseIdentifier
+    }
+
+    public convenience init(tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock, cellReuseIdentifier: String? = nil, objects: [Object]? = nil) {
+        self.init(cellConfigurationBlock: cellConfigurationBlock, cellReuseIdentifier: cellReuseIdentifier, objects: objects)
 
         tableView.dataSource = self
     }
