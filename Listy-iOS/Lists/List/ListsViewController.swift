@@ -14,7 +14,7 @@ class ListsViewController: UITableViewController {
 
     @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
 
-    var presenter: ListsPresenter!
+    var presenter: ListsPresenterInput!
 
     // MARK: - Object lifecycle
 

@@ -12,7 +12,7 @@ import XCTest
 class ListsViewControllerTests: XCTestCase {
 
     var sut: ListsViewController!
-    var fakePresenter: FakeListsPresenter!
+    var fakePresenter: FakeListsPresenterInput!
     var navigationController: UINavigationController!
     var window: UIWindow!
 
@@ -26,7 +26,7 @@ class ListsViewControllerTests: XCTestCase {
         navigationController = (storyboard.instantiateInitialViewController() as! UINavigationController)
         sut = (navigationController.topViewController as! ListsViewController)
 
-        fakePresenter = FakeListsPresenter(view: sut)
+        fakePresenter = FakeListsPresenterInput(view: sut)
         sut.presenter = fakePresenter
         _ = sut.view
     }

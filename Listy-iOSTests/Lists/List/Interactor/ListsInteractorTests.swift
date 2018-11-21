@@ -14,9 +14,7 @@ import XCTest
 class ListsInteractorTests: XCTestCase {
 
     var sut: ListsInteractor!
-    var fakePresenter: FakeListsPresenter!
     var fakeOutput: FakeListsInteractorOutput!
-    var controller: ListsViewController!
     var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock!
     var lists: Lists!
 
@@ -27,15 +25,8 @@ class ListsInteractorTests: XCTestCase {
 
         FileManager().clearTemporaryDirectory()
 
-        let storyboard = UIStoryboard(name: "Lists", bundle: nil)
-        controller = (storyboard.instantiateViewController(withIdentifier: "ListsViewController") as! ListsViewController)
-
-        fakePresenter = FakeListsPresenter(view: controller)
-        controller.presenter = fakePresenter
-
         fakeOutput = FakeListsInteractorOutput()
         sut = ListsInteractor(output: fakeOutput)
-        fakePresenter.interactor = sut
 
         lists = Lists(database: Database.newInstance(path: NSTemporaryDirectory()))
         sut.lists = lists
@@ -43,14 +34,10 @@ class ListsInteractorTests: XCTestCase {
         cellConfigurationBlock = { (cell, object) in
             cell.textLabel!.text = object.id
         }
-
-        _ = controller.view
     }
 
     override func tearDown() {
         sut = nil
-        fakePresenter = nil
-        controller = nil
         lists = nil
         cellConfigurationBlock = nil
 
@@ -63,7 +50,7 @@ class ListsInteractorTests: XCTestCase {
 
     func testInit() {
         // when
-        let interactor = ListsInteractor(output: fakePresenter)
+        let interactor = ListsInteractor(output: fakeOutput)
 
         // then
         XCTAssertNotNil(interactor.output)
@@ -74,7 +61,7 @@ class ListsInteractorTests: XCTestCase {
 
     func testLoadDataSource() {
         // given
-        let tableView = controller.tableView!
+        let tableView = UITableView()
 
         // when
         sut.loadDataSource(for: tableView, cellConfigurationBlock: cellConfigurationBlock)
@@ -87,10 +74,11 @@ class ListsInteractorTests: XCTestCase {
 
     func testFetchData() {
         // given
+        let tableView = UITableView()
         let list = List()
         list.title = "Cool List"
         try! lists.add(list)
-        sut.loadDataSource(for: controller.tableView, cellConfigurationBlock: cellConfigurationBlock)
+        sut.loadDataSource(for: tableView, cellConfigurationBlock: cellConfigurationBlock)
 
         // when
         sut.fetchData()
@@ -115,11 +103,12 @@ class ListsInteractorTests: XCTestCase {
 
     func testListAtIndexPath() {
         // given
+        let tableView = UITableView()
         let indexPath = IndexPath(row: 0, section: 0)
         let list = List()
         list.title = "Cool List"
         try! lists.add(list)
-        sut.loadDataSource(for: controller.tableView, cellConfigurationBlock: cellConfigurationBlock)
+        sut.loadDataSource(for: tableView, cellConfigurationBlock: cellConfigurationBlock)
         sut.fetchData()
 
         // when

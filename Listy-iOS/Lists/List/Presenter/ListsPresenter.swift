@@ -9,7 +9,7 @@
 import ListyUI
 import ListyKit
 
-class ListsPresenter {
+final class ListsPresenter: ListsPresenterInput {
 
     typealias T = ListsViewController
 
@@ -19,12 +19,12 @@ class ListsPresenter {
         ListsInteractor(output: self)
     }()
 
-    required init(view: ListsViewController) {
+    init(view: ListsViewController) {
         self.view = view
         self.router = ListsRouter(output: view)
     }
 
-    // MARK: - Public interface
+    // MARK: - ListsPresenterInput
 
     func viewDidLoad() {
         self.interactor.loadDataSource(
