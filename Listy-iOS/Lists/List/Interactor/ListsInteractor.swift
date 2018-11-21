@@ -9,11 +9,11 @@
 import ListyUI
 import ListyKit
 
-class ListsInteractor {
+class ListsInteractor: ListsInteractorInput {
 
     // MARK: - Properties
 
-    var output: ListsInteractorOutput!
+    weak var output: ListsInteractorOutput!
     var dataSource: TableViewDataSource!
     var lists: Lists
     var tasks: Tasks
@@ -26,7 +26,7 @@ class ListsInteractor {
         self.tasks = Tasks(database: database)
     }
 
-    // MARK: - Public interface
+    // MARK: - ListsInteractorInput
 
     func loadDataSource(for tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
         self.dataSource = TableViewDataSource(tableView: tableView, cellConfigurationBlock: cellConfigurationBlock)

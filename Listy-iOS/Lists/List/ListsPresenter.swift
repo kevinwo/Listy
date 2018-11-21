@@ -15,7 +15,7 @@ class ListsPresenter {
 
     weak var view: ListsViewController!
     var router: ListsRouter
-    lazy var interactor = {
+    lazy var interactor: ListsInteractorInput = {
         ListsInteractor(output: self)
     }()
 
