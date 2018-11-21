@@ -21,7 +21,7 @@ class ListsViewController: UITableViewController {
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
 
-        self.presenter = ListsPresenter(view: self)
+        self.presenter = ListsPresenter(output: self, view: self)
     }
 
     // MARK: - View lifecycle
@@ -29,7 +29,7 @@ class ListsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.presenter.viewDidLoad()
+        self.presenter.loadData(into: self.tableView)
     }
 
     // MARK: - Button actions
@@ -42,6 +42,7 @@ class ListsViewController: UITableViewController {
 // MARK: - UITableViewDelegate
 
 extension ListsViewController {
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.presenter.handleActionForSelectedRow(at: indexPath)
     }
@@ -56,6 +57,16 @@ extension ListsViewController {
         }
 
         return [delete]
+    }
+}
+
+extension ListsViewController: ListsPresenterOutput {
+    func updateView() {
+        self.tableView.reloadData()
+    }
+
+    func deleteRow(at indexPath: IndexPath) {
+        self.tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }
 

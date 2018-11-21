@@ -14,10 +14,11 @@ final class FakeListsPresenterInput: ListsPresenterInput {
 
     var didCallReloadData: Bool = false
     var didCallAddList: Bool = false
-    var didCallViewDidLoad: Bool = false
+    var didCallLoadData: Bool = false
     var didCallHandleActionForSelectedRow: Bool = false
     var didDeleteList: Bool = false
     var deletedListIndexPath: IndexPath?
+    var tableViewWithLoadedData: UITableView?
 
     init(view: ListsViewController) {
         self.view = view
@@ -31,8 +32,9 @@ final class FakeListsPresenterInput: ListsPresenterInput {
         self.didCallAddList = true
     }
 
-    func viewDidLoad() {
-        self.didCallViewDidLoad = true
+    func loadData(into tableView: UITableView) {
+        self.didCallLoadData = true
+        self.tableViewWithLoadedData = tableView
     }
 
     func handleActionForSelectedRow(at indexPath: IndexPath) {

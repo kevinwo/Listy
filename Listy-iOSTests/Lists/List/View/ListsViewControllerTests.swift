@@ -50,7 +50,7 @@ class ListsViewControllerTests: XCTestCase {
     // MARK: - viewDidLoad()
 
     func testViewDidLoad() {
-        XCTAssertTrue(fakePresenter.didCallViewDidLoad)
+        XCTAssertTrue(fakePresenter.didCallLoadData)
     }
 
     // MARK: - reloadData()

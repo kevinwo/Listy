@@ -11,24 +11,22 @@ import ListyKit
 
 final class ListsPresenter: ListsPresenterInput {
 
-    typealias T = ListsViewController
-
-    weak var view: ListsViewController!
+    weak var output: ListsPresenterOutput!
     var router: ListsRouter
     lazy var interactor: ListsInteractorInput = {
         ListsInteractor(output: self)
     }()
 
-    init(view: ListsViewController) {
-        self.view = view
+    init(output: ListsPresenterOutput, view: ListsViewController) {
+        self.output = output
         self.router = ListsRouter(output: view)
     }
 
     // MARK: - ListsPresenterInput
 
-    func viewDidLoad() {
+    func loadData(into tableView: UITableView) {
         self.interactor.loadDataSource(
-        for: self.view.tableView) { (cell, object) in
+        for: tableView) { (cell, object) in
             let list = (object as! List)
             cell.textLabel!.text = list.title
         }
@@ -58,10 +56,10 @@ final class ListsPresenter: ListsPresenterInput {
 extension ListsPresenter: ListsInteractorOutput {
 
     func updateView() {
-        self.view.tableView.reloadData()
+        self.output.updateView()
     }
 
     func deleteRow(at indexPath: IndexPath) {
-        self.view.tableView.deleteRows(at: [indexPath], with: .automatic)
+        self.output.deleteRow(at: indexPath)
     }
 }

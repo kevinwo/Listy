@@ -12,6 +12,7 @@ import XCTest
 class ListsPresenterTests: XCTestCase {
 
     var sut: ListsPresenter!
+    var fakeOutput: FakeListsPresenterOutput!
     var fakeRouter: FakeListsRouter!
     var fakeInteractor: FakeListsInteractorInput!
     var controller: ListsViewController!
@@ -23,7 +24,9 @@ class ListsPresenterTests: XCTestCase {
 
         let storyboard = UIStoryboard(name: "Lists", bundle: nil)
         controller = (storyboard.instantiateViewController(withIdentifier: "ListsViewController") as! ListsViewController)
-        sut = ListsPresenter(view: controller)
+
+        fakeOutput = FakeListsPresenterOutput()
+        sut = ListsPresenter(output: fakeOutput, view: controller)
 
         fakeInteractor = FakeListsInteractorInput(output: sut)
         sut.interactor = fakeInteractor
@@ -46,22 +49,14 @@ class ListsPresenterTests: XCTestCase {
 
     // MARK: - Tests
 
-    // MARK: - init(view:)
+    // MARK: - loadData(into:)
 
-    func testInitWithView() {
+    func testLoadData() {
+        // given
+        let tableView = UITableView()
+
         // when
-        let presenter = ListsPresenter(view: controller)
-
-        // then
-        XCTAssertNotNil(presenter.view)
-        XCTAssertNotNil(presenter.interactor)
-    }
-
-    // MARK: - viewDidLoad()
-
-    func testViewDidLoad() {
-        // when
-        sut.viewDidLoad()
+        sut.loadData(into: tableView)
 
         // then
         XCTAssertTrue(fakeInteractor.didCallLoadDataSource)

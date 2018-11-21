@@ -5,12 +5,11 @@
 //  Created by Kevin Wolkober on 11/21/18.
 //
 
-import Foundation
+import UIKit
 
 protocol ListsPresenterInput: class {
 
-    init(view: ListsViewController)
-    func viewDidLoad()
+    func loadData(into tableView: UITableView)
     func reloadData()
     func addList()
     func handleActionForSelectedRow(at indexPath: IndexPath)
