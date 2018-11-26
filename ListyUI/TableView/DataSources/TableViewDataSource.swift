@@ -13,27 +13,30 @@ open class TableViewDataSource: NSObject, SectionableDataSource {
     public typealias CellConfigurationBlock = (_ cell: UITableViewCell, _ object: Object) -> Void
 
     public var sections: [[Object]]
-    open var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock
+    open var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock?
     var cellReuseIdentifier: String?
 
-    public init(cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock, cellReuseIdentifier: String? = nil, objects: [Object]? = nil) {
+    public init(objects: [Object]? = nil) {
         self.sections = { () -> [[Object]] in
             if let objects = objects {
                 return [objects]
             }
             return [[Object]]()
         }()
-        self.cellConfigurationBlock = cellConfigurationBlock
 
         super.init()
+    }
 
-        self.cellReuseIdentifier = cellReuseIdentifier
+    public convenience override init() {
+        self.init(objects: nil)
     }
 
     public convenience init(tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock, cellReuseIdentifier: String? = nil, objects: [Object]? = nil) {
-        self.init(cellConfigurationBlock: cellConfigurationBlock, cellReuseIdentifier: cellReuseIdentifier, objects: objects)
+        self.init(objects: objects)
 
         tableView.dataSource = self
+        self.cellConfigurationBlock = cellConfigurationBlock
+        self.cellReuseIdentifier = cellReuseIdentifier
     }
 
     public func object(at indexPath: IndexPath) -> Object {
@@ -55,7 +58,7 @@ extension TableViewDataSource: UITableViewDataSource {
         let reuseIdentifier = self.cellReuseIdentifier ?? Mirror.classNameForObject(object)
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
 
-        self.cellConfigurationBlock(cell, object)
+        self.cellConfigurationBlock?(cell, object)
 
         return cell
     }

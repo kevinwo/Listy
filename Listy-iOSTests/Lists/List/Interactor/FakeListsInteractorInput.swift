@@ -16,7 +16,6 @@ class FakeListsInteractorInput: ListsInteractorInput {
     var lists: Lists!
     var tasks: Tasks!
 
-    var didCallLoadDataSource: Bool = false
     var didCallFetchData: Bool = false
     lazy var testList: List = {
         let list = List()
@@ -24,6 +23,7 @@ class FakeListsInteractorInput: ListsInteractorInput {
         return list
     }()
     var didCallDeleteList: Bool = false
+    var deletedList: List?
     var deletedListIndexPath: IndexPath?
 
     init(lists: Lists, tasks: Tasks) {
@@ -31,24 +31,17 @@ class FakeListsInteractorInput: ListsInteractorInput {
         self.tasks = tasks
     }
 
-    func loadDataSource(for tableView: UITableView, cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
-        self.didCallLoadDataSource = true
-    }
-
     func fetchData() {
         self.didCallFetchData = true
-    }
-
-    func list(at indexPath: IndexPath) -> List {
-        return self.testList
     }
 
     func newList() -> List {
         return List()
     }
 
-    func deleteList(at indexPath: IndexPath) {
+    func deleteList(_ list: List, at indexPath: IndexPath) {
         self.didCallDeleteList = true
-        deletedListIndexPath = indexPath
+        self.deletedList = list
+        self.deletedListIndexPath = indexPath
     }
 }

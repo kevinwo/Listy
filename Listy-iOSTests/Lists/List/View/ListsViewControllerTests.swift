@@ -52,17 +52,6 @@ class ListsViewControllerTests: XCTestCase {
     // MARK: - viewDidLoad()
 
     func testViewDidLoad() {
-        XCTAssertTrue(fakePresenter.didCallLoadData)
-        XCTAssertEqual(fakePresenter.tableViewWithLoadedData, sut.tableView)
-    }
-
-    // MARK: - reloadData()
-
-    func testReloadData() {
-        // when
-        sut.reloadData()
-
-        // then
         XCTAssertTrue(fakePresenter.didCallReloadData)
     }
 
@@ -76,19 +65,15 @@ class ListsViewControllerTests: XCTestCase {
         XCTAssertTrue(fakePresenter.didCallAddList)
     }
 
-    // MARK: - UITableViewDelegate
+    // MARK: - ListRouterOutput
 
-    // MARK: - tableView(_:didSelectRowAt:)
+    // MARK: - reloadData()
 
-    func testTableViewDidSelectRowAtIndexPath() {
-        // given
-        let tableView = sut.tableView!
-        let indexPath = IndexPath(row: 0, section: 0)
-
+    func testReloadData() {
         // when
-        sut.tableView(tableView, didSelectRowAt: indexPath)
+        sut.reloadData()
 
         // then
-        XCTAssertTrue(fakePresenter.didCallHandleActionForSelectedRow)
+        XCTAssertTrue(fakePresenter.didCallReloadData)
     }
 }

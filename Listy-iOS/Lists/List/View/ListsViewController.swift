@@ -6,7 +6,8 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import UIKit
+import ListyUI
+import ListyKit
 
 class ListsViewController: UITableViewController {
 
@@ -14,6 +15,7 @@ class ListsViewController: UITableViewController {
 
     @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
 
+    var dataSource: TableViewDataSource!
     var presenter: ListsPresenterInput!
 
     // MARK: - View lifecycle
@@ -21,7 +23,10 @@ class ListsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.presenter.loadData(into: self.tableView)
+        self.dataSource = TableViewDataSource()
+        self.tableView.dataSource = self.dataSource
+
+        self.presenter.reloadData()
     }
 
     // MARK: - Button actions
@@ -36,7 +41,9 @@ class ListsViewController: UITableViewController {
 extension ListsViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.presenter.handleActionForSelectedRow(at: indexPath)
+        if let list = self.dataSource.object(at: indexPath) as? List {
+            self.presenter.showTasks(for: list)
+        }
     }
 
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -45,7 +52,9 @@ extension ListsViewController {
 
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
-            self.presenter.deleteList(at: indexPath)
+            if let list = self.dataSource.object(at: indexPath) as? List {
+                self.presenter.deleteList(list, at: indexPath)
+            }
         }
 
         return [delete]
@@ -53,11 +62,18 @@ extension ListsViewController {
 }
 
 extension ListsViewController: ListsPresenterOutput {
-    func updateView() {
+
+    func updateView(lists: [List]) {
+        self.dataSource.sections = [lists]
+        self.dataSource.cellConfigurationBlock = { (cell, object) in
+            let list = (object as! List)
+            cell.textLabel!.text = list.title
+        }
         self.tableView.reloadData()
     }
 
     func deleteRow(at indexPath: IndexPath) {
+        self.dataSource.sections[indexPath.section].remove(at: indexPath.row)
         self.tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }

@@ -59,34 +59,19 @@ class ListsInteractorTests: XCTestCase {
         XCTAssertNotNil(interactor.tasks)
     }
 
-    // MARK: - loadDataSource(for:cellConfigurationBlock:)
-
-    func testLoadDataSource() {
-        // given
-        let tableView = UITableView()
-
-        // when
-        sut.loadDataSource(for: tableView, cellConfigurationBlock: cellConfigurationBlock)
-
-        // then
-        XCTAssertNotNil(sut.dataSource.cellConfigurationBlock)
-    }
-
     // MARK: - fetchData()
 
     func testFetchData() {
         // given
-        let tableView = UITableView()
         let list = List()
         list.title = "Cool List"
         try! lists.add(list)
-        sut.loadDataSource(for: tableView, cellConfigurationBlock: cellConfigurationBlock)
 
         // when
         sut.fetchData()
 
         // then
-        XCTAssert(sut.dataSource.objects.contains(list))
+        XCTAssert(fakeOutput.lists?.contains(list) ?? false)
         XCTAssertTrue(fakeOutput.didCallUpdateView)
     }
 
@@ -99,24 +84,5 @@ class ListsInteractorTests: XCTestCase {
         // then
         XCTAssertNotNil(list)
         XCTAssertNil(list.title)
-    }
-
-    // MARK: - list(at:)
-
-    func testListAtIndexPath() {
-        // given
-        let tableView = UITableView()
-        let indexPath = IndexPath(row: 0, section: 0)
-        let list = List()
-        list.title = "Cool List"
-        try! lists.add(list)
-        sut.loadDataSource(for: tableView, cellConfigurationBlock: cellConfigurationBlock)
-        sut.fetchData()
-
-        // when
-        let fetchedList = sut.list(at: indexPath)
-
-        // then
-        XCTAssertEqual(fetchedList, list)
     }
 }

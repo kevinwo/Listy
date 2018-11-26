@@ -7,15 +7,18 @@
 
 import UIKit
 @testable import Listy_iOS
+@testable import ListyKit
 
 class FakeListsPresenterOutput: ListsPresenterOutput {
 
     var didCallUpdateView: Bool = false
     var didCallDeleteRow: Bool = false
     var deletedRowIndexPath: IndexPath?
+    var lists: [List]?
 
-    func updateView() {
+    func updateView(lists: [List]) {
         self.didCallUpdateView = true
+        self.lists = lists
     }
 
     func deleteRow(at indexPath: IndexPath) {

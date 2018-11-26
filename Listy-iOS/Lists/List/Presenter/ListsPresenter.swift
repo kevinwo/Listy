@@ -6,7 +6,6 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import ListyUI
 import ListyKit
 
 final class ListsPresenter: ListsPresenterInput {
@@ -17,16 +16,6 @@ final class ListsPresenter: ListsPresenterInput {
 
     // MARK: - ListsPresenterInput
 
-    func loadData(into tableView: UITableView) {
-        self.interactor.loadDataSource(
-        for: tableView) { (cell, object) in
-            let list = (object as! List)
-            cell.textLabel!.text = list.title
-        }
-
-        reloadData()
-    }
-
     func reloadData() {
         self.interactor.fetchData()
     }
@@ -36,20 +25,19 @@ final class ListsPresenter: ListsPresenterInput {
         self.router.showEditListView(with: list)
     }
 
-    func handleActionForSelectedRow(at indexPath: IndexPath) {
-        let list = self.interactor.list(at: indexPath)
+    func showTasks(for list: List) {
         self.router.showTasks(for: list)
     }
 
-    func deleteList(at indexPath: IndexPath) {
-        self.interactor.deleteList(at: indexPath)
+    func deleteList(_ list: List, at indexPath: IndexPath) {
+        self.interactor.deleteList(list, at: indexPath)
     }
 }
 
 extension ListsPresenter: ListsInteractorOutput {
 
-    func updateView() {
-        self.output.updateView()
+    func updateView(lists: [List]) {
+        self.output.updateView(lists: lists)
     }
 
     func deleteRow(at indexPath: IndexPath) {

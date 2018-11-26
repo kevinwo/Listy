@@ -7,6 +7,7 @@
 
 import UIKit
 @testable import Listy_iOS
+@testable import ListyKit
 
 final class FakeListsPresenterInput: ListsPresenterInput {
 
@@ -16,11 +17,12 @@ final class FakeListsPresenterInput: ListsPresenterInput {
 
     var didCallReloadData: Bool = false
     var didCallAddList: Bool = false
-    var didCallLoadData: Bool = false
-    var didCallHandleActionForSelectedRow: Bool = false
+    var didCallShowTasks: Bool = false
     var didDeleteList: Bool = false
+
+    var deletedList: List?
     var deletedListIndexPath: IndexPath?
-    var tableViewWithLoadedData: UITableView?
+    var listWithTasksToShow: List?
 
     func reloadData() {
         self.didCallReloadData = true
@@ -30,17 +32,14 @@ final class FakeListsPresenterInput: ListsPresenterInput {
         self.didCallAddList = true
     }
 
-    func loadData(into tableView: UITableView) {
-        self.didCallLoadData = true
-        self.tableViewWithLoadedData = tableView
+    func showTasks(for list: List) {
+        self.didCallShowTasks = true
+        self.listWithTasksToShow =  list
     }
 
-    func handleActionForSelectedRow(at indexPath: IndexPath) {
-        self.didCallHandleActionForSelectedRow = true
-    }
-
-    func deleteList(at indexPath: IndexPath) {
+    func deleteList(_ list: List, at indexPath: IndexPath) {
         self.didDeleteList = true
+        self.deletedList = list
         self.deletedListIndexPath = indexPath
     }
 }

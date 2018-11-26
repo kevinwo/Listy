@@ -6,9 +6,10 @@
 //
 
 import ListyUI
+import ListyKit
 
 protocol ListsInteractorOutput: class, ErrorAlertable {
 
-    func updateView()
+    func updateView(lists: [List])
     func deleteRow(at indexPath: IndexPath)
 }

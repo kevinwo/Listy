@@ -52,20 +52,6 @@ class ListsPresenterTests: XCTestCase {
 
     // MARK: - Tests
 
-    // MARK: - loadData(into:)
-
-    func testLoadData() {
-        // given
-        let tableView = UITableView()
-
-        // when
-        sut.loadData(into: tableView)
-
-        // then
-        XCTAssertTrue(fakeInteractor.didCallLoadDataSource)
-        XCTAssertTrue(fakeInteractor.didCallFetchData)
-    }
-
     // MARK: - reloadData()
 
     func testReloadData() {
@@ -87,18 +73,33 @@ class ListsPresenterTests: XCTestCase {
         XCTAssertNotNil(fakeRouter.listForShowEditListView)
     }
 
-    // MARK: handleActionForSelectedRow(at:)
+    // MARK: - showTasks(for:)
 
-    func testHandleActionForSelectedRow() {
+    func testShowTasksForList() {
         // given
-        let indexPath = IndexPath(row: 0, section: 0)
         let list = fakeInteractor.testList
 
         // when
-        sut.handleActionForSelectedRow(at: indexPath)
+        sut.showTasks(for: list)
 
         // then
         XCTAssertTrue(fakeRouter.didCallShowTasks)
         XCTAssertEqual(fakeRouter.listForShowTasks, list)
+    }
+
+    // MARK: - deleteList(_:at:)
+
+    func testDeleteListAtIndexPath() {
+        // given
+        let list = fakeInteractor.testList
+        let indexPath = IndexPath(row: 0, section: 0)
+
+        // when
+        sut.deleteList(list, at: indexPath)
+
+        // then
+        XCTAssertTrue(fakeInteractor.didCallDeleteList)
+        XCTAssertEqual(fakeInteractor.deletedList, list)
+        XCTAssertEqual(fakeInteractor.deletedListIndexPath, indexPath)
     }
 }

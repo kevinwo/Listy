@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ListyKit
 
 protocol ListsPresenterInput: class {
 
@@ -13,9 +14,8 @@ protocol ListsPresenterInput: class {
     var router: ListsRouterInput! { get set }
     var interactor: ListsInteractorInput! { get set }
 
-    func loadData(into tableView: UITableView)
     func reloadData()
     func addList()
-    func handleActionForSelectedRow(at indexPath: IndexPath)
-    func deleteList(at indexPath: IndexPath)
+    func showTasks(for list: List)
+    func deleteList(_ list: List, at indexPath: IndexPath)
 }

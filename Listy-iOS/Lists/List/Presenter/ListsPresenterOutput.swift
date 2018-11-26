@@ -5,10 +5,10 @@
 //  Created by Kevin Wolkober on 11/21/18.
 //
 
-import UIKit
+import ListyKit
 
 protocol ListsPresenterOutput: class {
 
-    func updateView()
+    func updateView(lists: [List])
     func deleteRow(at indexPath: IndexPath)
 }

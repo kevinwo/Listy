@@ -486,7 +486,6 @@
 		260D6938216846FA003B7DD9 /* ListyUITests */ = {
 			isa = PBXGroup;
 			children = (
-				26B52C09217D6A000011375F /* Helpers */,
 				260D6945216847B9003B7DD9 /* TableView */,
 				260D693B216846FA003B7DD9 /* Info.plist */,
 			);
@@ -778,13 +777,6 @@
 				26351637217DAA7600731CE4 /* FakeTasksListViewInput.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		26B52C09217D6A000011375F /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		26B52C0C217D90BF0011375F /* Router */ = {
