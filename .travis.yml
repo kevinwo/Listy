@@ -1,0 +1,12 @@
+language: objective-c
+osx_image: xcode10.1
+xcode_project: Listy.xcodeproj
+xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
+xcode_scheme:
+  - Listy-iOS
+  - ListyUI
+  - ListyKit
+xcode_sdk:
+  - iphonesimulator12.1
+  - iphonesimulator12.1
+  - iphonesimulator12.1
