@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kevinwo/Listy.svg?branch=master)](https://travis-ci.org/kevinwo/Listy)
+
 # Listy
 
 Listy is yet another to-do list app, and it does the most amazing things, like let you add lists and tasks – even delete them – and see what an app with multiple layers might look like. Enjoy!
