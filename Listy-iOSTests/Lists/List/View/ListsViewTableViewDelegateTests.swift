@@ -7,21 +7,17 @@
 
 import XCTest
 @testable import Listy_iOS
-@testable import ListyUI
 
 class ListsViewTableViewDelegateTests: XCTestCase {
 
-    var dataSource: TableViewDataSource!
     var sut: ListsViewTableViewDelegate!
 
     override func setUp() {
-        dataSource = TableViewDataSource()
         sut = ListsViewTableViewDelegate()
     }
 
     override func tearDown() {
         sut = nil
-        dataSource = nil
     }
 
     // MARK: - Tests
