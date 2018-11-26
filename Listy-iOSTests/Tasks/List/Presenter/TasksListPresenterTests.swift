@@ -48,20 +48,6 @@ class TasksListPresenterTests: XCTestCase {
 
     // MARK: - Tests
 
-    // MARK: - loadData(into:)
-
-    func testLoadDataIntoTableView() {
-        // given
-        let tableView = UITableView()
-
-        // when
-        sut.loadData(into: tableView)
-
-        // then
-        XCTAssertTrue(fakeInteractor.didCallLoadDataSource)
-        XCTAssertTrue(fakeInteractor.didCallFetchData)
-    }
-
     // MARK: - reloadData()
 
     func testReloadData() {

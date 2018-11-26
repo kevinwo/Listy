@@ -8,14 +8,12 @@
 
 import XCTest
 @testable import Listy_iOS
-@testable import ListyUI
 @testable import ListyKit
 
 class TasksListInteractorTests: XCTestCase {
 
     var sut: TasksListInteractor!
     var fakeOutput: FakeTasksListInteractorOutput!
-    var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock!
     var tasks: Tasks!
     var list: List!
 
@@ -33,13 +31,9 @@ class TasksListInteractorTests: XCTestCase {
 
         sut.output = fakeOutput
         sut.tasks = tasks
-
-        cellConfigurationBlock = { (cell, object) in
-            cell.textLabel!.text = object.id
-        }
     }
 
-    override func tearDown(){
+    override func tearDown() {
         sut = nil
         fakeOutput = nil
         list = nil
@@ -60,21 +54,6 @@ class TasksListInteractorTests: XCTestCase {
         XCTAssertEqual(interactor.list, list)
     }
 
-    // MARK: - loadDataSource(for:cellConfigurationBlock:)
-
-    func testLoadDataSource() {
-        // given
-        let tableView = UITableView(frame: .zero)
-
-        // when
-        sut.loadDataSource(
-            for: tableView,
-            cellConfigurationBlock: cellConfigurationBlock)
-
-        // then
-        XCTAssertNotNil(sut.dataSource.cellConfigurationBlock)
-    }
-
     // MARK: - fetchData()
 
     func testFetchData() {
@@ -83,28 +62,19 @@ class TasksListInteractorTests: XCTestCase {
         task.title = "Important task"
         task.listId = list.id
         try! tasks.add(task)
-        let tableView = UITableView(frame: .zero)
-
-        sut.loadDataSource(
-            for: tableView,
-            cellConfigurationBlock: cellConfigurationBlock)
 
         // when
         sut.fetchData()
 
         // then
-        XCTAssert(sut.dataSource.objects.contains(task))
         XCTAssertTrue(fakeOutput.didCallUpdateView)
+        XCTAssert(fakeOutput.updateViewTasks?.contains(task) ?? false)
+        XCTAssertEqual(fakeOutput.updateViewList, list)
     }
 
     // MARK: - newTask()
 
     func testNewTask() {
-        // given
-        sut.loadDataSource(
-            for: UITableView(frame: .zero),
-            cellConfigurationBlock: cellConfigurationBlock)
-
         // when
         let task = sut.newTask()
 

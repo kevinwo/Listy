@@ -13,10 +13,7 @@ protocol TasksListInteractorInput {
     var output: TasksListInteractorOutput! { get set }
 
     init(list: List)
-    func loadDataSource(
-        for tableView: UITableView,
-        cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock)
     func fetchData()
     func newTask() -> Task
-    func deleteTask(at indexPath: IndexPath)
+    func deleteTask(_ task: Task, at indexPath: IndexPath)
 }

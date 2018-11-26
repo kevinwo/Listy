@@ -11,6 +11,5 @@ protocol TasksListRouterInput: class {
 
     var output: TasksListRouterOutput! { get set }
 
-    static func scene(list: List) -> TasksListViewController
     func showEditTaskView(with task: Task)
 }

@@ -12,6 +12,6 @@ protocol TasksListPresenterOutput: class {
 
     var presenter: TasksListPresenterInput! { get set }
 
-    func updateView(title: String)
+    func updateView(title: String, tasks: [Task])
     func deleteRow(at indexPath: IndexPath)
 }

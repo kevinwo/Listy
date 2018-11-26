@@ -6,28 +6,15 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import ListyUI
 import ListyKit
 
-class TasksListPresenter: TasksListPresenterInput {
+final class TasksListPresenter: TasksListPresenterInput {
 
     weak var output: TasksListPresenterOutput!
     var router: TasksListRouterInput!
     var interactor: TasksListInteractorInput!
 
-    required init() {}
-
     // MARK: - Public interface
-
-    func loadData(into tableView: UITableView) {
-        self.interactor.loadDataSource(
-        for: tableView) { (cell, object) in
-            let task = (object as! Task)
-            cell.textLabel!.text = task.title
-        }
-
-        reloadData()
-    }
 
     func reloadData() {
         self.interactor.fetchData()
@@ -38,14 +25,15 @@ class TasksListPresenter: TasksListPresenterInput {
         self.router.showEditTaskView(with: task)
     }
 
-    func deleteTask(at indexPath: IndexPath) {
-        self.interactor.deleteTask(at: indexPath)
+    func deleteTask(_ task: Task, at indexPath: IndexPath) {
+        self.interactor.deleteTask(task, at: indexPath)
     }
 }
 
 extension TasksListPresenter: TasksListInteractorOutput {
-    func updateView(list: List) {
-        self.output.updateView(title: list.title)
+
+    func updateView(tasks: [Task], list: List) {
+        self.output.updateView(title: list.title, tasks: tasks)
     }
 
     func deleteRow(at indexPath: IndexPath) {

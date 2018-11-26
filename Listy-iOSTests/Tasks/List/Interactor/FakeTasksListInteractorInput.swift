@@ -16,6 +16,7 @@ class FakeTasksListInteractorInput: TasksListInteractorInput {
     var list: List
 
     var didCallDeleteTaskAtIndexPath: Bool = false
+    var deletedTask: Task?
     var deletedTaskAtIndexPath: IndexPath?
     var didCallLoadDataSource: Bool = false
     var didCallFetchData: Bool = false
@@ -28,8 +29,9 @@ class FakeTasksListInteractorInput: TasksListInteractorInput {
         return Task()
     }
 
-    func deleteTask(at indexPath: IndexPath) {
+    func deleteTask(_ task: Task, at indexPath: IndexPath) {
         self.didCallDeleteTaskAtIndexPath = true
+        self.deletedTask = task
         self.deletedTaskAtIndexPath = indexPath
     }
 

@@ -14,10 +14,12 @@ class FakeTasksListInteractorOutput: TasksListInteractorOutput {
     var didCallUpdateView: Bool = false
     var didCallDeleteRow: Bool = false
     var updateViewList: List?
+    var updateViewTasks: [Task]?
     var deletedRowIndexPath: IndexPath?
 
-    func updateView(list: List) {
+    func updateView(tasks: [Task], list: List) {
         self.didCallUpdateView = true
+        self.updateViewTasks = tasks
         self.updateViewList = list
     }
 

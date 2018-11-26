@@ -10,6 +10,6 @@ import ListyKit
 
 protocol TasksListInteractorOutput: ErrorAlertable {
 
-    func updateView(list: List)
+    func updateView(tasks: [Task], list: List)
     func deleteRow(at indexPath: IndexPath)
 }

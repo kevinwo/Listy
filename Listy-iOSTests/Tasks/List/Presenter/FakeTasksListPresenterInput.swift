@@ -15,18 +15,14 @@ class FakeTasksListPresenterInput: TasksListPresenterInput {
     var router: TasksListRouterInput!
     var interactor: TasksListInteractorInput!
 
-    var didCallLoadData: Bool = false
     var didCallReloadData: Bool = false
     var didCallAddTask: Bool = false
     var didCallDeleteTask: Bool = false
-    var tableViewWithLoadedData: UITableView?
+
+    var deletedTask: Task?
+    var deletedTaskAtIndexPath: IndexPath?
 
     required init() {}
-
-    func loadData(into tableView: UITableView) {
-        self.didCallLoadData = true
-        self.tableViewWithLoadedData = tableView
-    }
 
     func reloadData() {
         self.didCallReloadData = true
@@ -36,7 +32,9 @@ class FakeTasksListPresenterInput: TasksListPresenterInput {
         self.didCallAddTask = true
     }
 
-    func deleteTask(at indexPath: IndexPath) {
+    func deleteTask(_ task: Task, at indexPath: IndexPath) {
         self.didCallDeleteTask = true
+        self.deletedTask = task
+        self.deletedTaskAtIndexPath = indexPath
     }
 }

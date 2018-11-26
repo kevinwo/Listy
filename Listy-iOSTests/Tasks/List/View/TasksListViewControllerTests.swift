@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Listy_iOS
+@testable import ListyUI
 @testable import ListyKit
 
 class TasksListViewControllerTests: XCTestCase {
@@ -41,6 +42,8 @@ class TasksListViewControllerTests: XCTestCase {
 
     // MARK: - Tests
 
+    // MARK: - Outlets
+
     func testOutlets() {
         XCTAssertNotNil(sut.tableView)
         XCTAssertNotNil(sut.addBarButtonItem)
@@ -50,17 +53,7 @@ class TasksListViewControllerTests: XCTestCase {
     // MARK: - viewDidLoad()
 
     func testViewDidLoad() {
-        XCTAssertTrue(fakePresenter.didCallLoadData)
-        XCTAssertEqual(fakePresenter.tableViewWithLoadedData, sut.tableView)
-    }
-
-    // MARK: - reloadData()
-
-    func testReloadData() {
-        // when
-        sut.reloadData()
-
-        // then
+        XCTAssert(sut.tableView.dataSource is TableViewDataSource)
         XCTAssertTrue(fakePresenter.didCallReloadData)
     }
 
@@ -72,5 +65,55 @@ class TasksListViewControllerTests: XCTestCase {
 
         // then
         XCTAssertTrue(fakePresenter.didCallAddTask)
+    }
+}
+
+// MARK: - TasksListPresenterOutput
+
+extension TasksListViewControllerTests {
+
+    // MARK: - deleteRow(at:)
+
+    func testDeleteRowAtIndexPath() {
+        // given
+        let indexPath = IndexPath(row: 0, section: 0)
+
+        let list = List()
+        list.title = "Cool List"
+
+        let task = Task()
+        task.title = "Cool Task"
+        task.listId = list.id
+
+        let tasks = [task]
+        sut.updateView(title: list.title, tasks: tasks)
+
+        XCTAssert((sut.tableViewDataSource.sections[indexPath.section] as? [Task])?.contains(task) ?? false)
+        let beforeCell = sut.tableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssertEqual(beforeCell?.textLabel?.text, task.title)
+
+        // when
+        sut.deleteRow(at: IndexPath(row: 0, section: 0))
+
+        // then
+        let section = sut.tableViewDataSource.sections[indexPath.section]
+        XCTAssertFalse((section as? [Task])?.contains(task) ?? false)
+        let afterCell = sut.tableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssertNil(afterCell)
+    }
+}
+
+// MARK: - TasksListRouterOutput
+
+extension TasksListViewControllerTests {
+
+    // MARK: - reloadData()
+
+    func testReloadData() {
+        // when
+        sut.reloadData()
+
+        // then
+        XCTAssertTrue(fakePresenter.didCallReloadData)
     }
 }

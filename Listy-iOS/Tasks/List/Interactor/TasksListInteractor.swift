@@ -6,7 +6,6 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import ListyUI
 import ListyKit
 
 class TasksListInteractor: TasksListInteractorInput {
@@ -14,7 +13,6 @@ class TasksListInteractor: TasksListInteractorInput {
     // MARK: - Properties
 
     var output: TasksListInteractorOutput!
-    var dataSource: TableViewDataSource!
     var tasks: Tasks
     var list: List
 
@@ -23,17 +21,9 @@ class TasksListInteractor: TasksListInteractorInput {
         self.tasks = Tasks(database: Database.newInstance())
     }
 
-    // MARK: - Public interface
-
-    func loadDataSource(
-        for tableView: UITableView,
-        cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
-        self.dataSource = TableViewDataSource(tableView: tableView, cellConfigurationBlock: cellConfigurationBlock)
-    }
-
     func fetchData() {
-        self.dataSource.sections = [self.tasks.inList(self.list)]
-        self.output.updateView(list: self.list)
+        let fetchedTasks = self.tasks.inList(self.list)
+        self.output.updateView(tasks: fetchedTasks, list: self.list)
     }
 
     func newTask() -> Task {
@@ -43,12 +33,9 @@ class TasksListInteractor: TasksListInteractorInput {
         return task
     }
 
-    func deleteTask(at indexPath: IndexPath) {
-        let task = self.dataSource.object(at: indexPath) as! Task
-
+    func deleteTask(_ task: Task, at indexPath: IndexPath) {
         do {
             try self.tasks.delete(task)
-            self.dataSource.sections[indexPath.section].remove(at: indexPath.row)
             self.output.deleteRow(at: indexPath)
         } catch(let error) {
             self.output.showErrorAlert(for: error)
