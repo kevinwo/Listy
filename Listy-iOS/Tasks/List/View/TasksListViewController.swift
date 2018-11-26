@@ -14,12 +14,14 @@ final class TasksListViewController: UITableViewController {
 
     var addBarButtonItem: UIBarButtonItem!
     var tableViewDataSource: TableViewDataSource
+    var tableViewDelegate: TasksListViewTableViewDelegate
     var presenter: TasksListPresenterInput!
 
     // MARK: - Object life cycle
 
     required init?(coder decoder: NSCoder) {
         self.tableViewDataSource = TableViewDataSource()
+        self.tableViewDelegate = TasksListViewTableViewDelegate()
 
         super.init(coder: decoder)
     }
@@ -33,6 +35,7 @@ final class TasksListViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = self.addBarButtonItem
 
         self.tableView.dataSource = self.tableViewDataSource
+        self.tableView.delegate = self.tableViewDelegate
 
         self.presenter.reloadData()
     }
@@ -44,25 +47,6 @@ final class TasksListViewController: UITableViewController {
     }
 }
 
-// MARK: - UITableViewDelegate
-
-extension TasksListViewController {
-
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
-    }
-
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
-            if let task = self.tableViewDataSource.object(at: indexPath) as? Task {
-                self.presenter.deleteTask(task, at: indexPath)
-            }
-        }
-
-        return [delete]
-    }
-}
-
 extension TasksListViewController: TasksListPresenterOutput {
 
     func updateView(title: String, tasks: [Task]) {
@@ -71,6 +55,11 @@ extension TasksListViewController: TasksListPresenterOutput {
         self.tableViewDataSource.cellConfigurationBlock = { (cell, object) in
             let task = (object as! Task)
             cell.textLabel!.text = task.title
+        }
+        self.tableViewDelegate.deleteRowHandler = { [unowned self] (indexPath) in
+            if let task = self.tableViewDataSource.object(at: indexPath) as? Task {
+                self.presenter.deleteTask(task, at: indexPath)
+            }
         }
         self.tableView.reloadData()
     }

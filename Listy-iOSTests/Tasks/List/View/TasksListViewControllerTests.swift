@@ -54,6 +54,7 @@ class TasksListViewControllerTests: XCTestCase {
 
     func testViewDidLoad() {
         XCTAssert(sut.tableView.dataSource is TableViewDataSource)
+        XCTAssert(sut.tableView.delegate is TasksListViewTableViewDelegate)
         XCTAssertTrue(fakePresenter.didCallReloadData)
     }
 
@@ -71,6 +72,31 @@ class TasksListViewControllerTests: XCTestCase {
 // MARK: - TasksListPresenterOutput
 
 extension TasksListViewControllerTests {
+
+    // MARK: - updateView(title:tasks)
+
+    func testUpdateView() {
+        // given
+        let list = List()
+        list.title = "Cool List"
+
+        let task = Task()
+        task.title = "Cool Task"
+        task.listId = list.id
+
+        let tasks = [task]
+
+        // when
+        sut.updateView(title: list.title, tasks: tasks)
+
+        // then
+        XCTAssertEqual(sut.tableViewDataSource.sections.first, tasks)
+        XCTAssertNotNil(sut.tableViewDataSource.cellConfigurationBlock)
+        XCTAssertNotNil(sut.tableViewDelegate.deleteRowHandler)
+
+        let cell = sut.tableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssertEqual(cell?.textLabel?.text, task.title)
+    }
 
     // MARK: - deleteRow(at:)
 
