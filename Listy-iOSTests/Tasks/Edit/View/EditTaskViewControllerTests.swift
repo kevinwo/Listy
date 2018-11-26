@@ -28,7 +28,7 @@ class EditTaskViewControllerTests: XCTestCase {
         sut = (navigationController.topViewController as! EditTaskViewController)
         sut.task = Task()
 
-        fakePresenter = FakeEditTaskPresenter(view: sut)
+        fakePresenter = FakeEditTaskPresenter()
         sut.presenter = fakePresenter
 
         _ = sut.view

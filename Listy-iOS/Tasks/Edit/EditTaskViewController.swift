@@ -22,7 +22,7 @@ class EditTaskViewController: UITableViewController {
     @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var titleTextField: UITextField!
 
-    var presenter: EditTaskPresenter!
+    var presenter: EditTaskPresenterInput!
     var task: Task!
     weak var delegate: EditTaskViewControllerDelegate!
 
@@ -49,7 +49,7 @@ class EditTaskViewController: UITableViewController {
     }
 
     @IBAction func saveBarButtonItemTapped(_ sender: Any) {
-        self.presenter.save()
+        self.presenter.save(title: self.titleTextField.text)
     }
 }
 

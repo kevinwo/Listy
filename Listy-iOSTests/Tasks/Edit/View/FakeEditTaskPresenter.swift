@@ -7,16 +7,21 @@
 
 @testable import Listy_iOS
 
-class FakeEditTaskPresenter: EditTaskPresenter {
+class FakeEditTaskPresenter: EditTaskPresenterInput {
 
+    var didCallViewDidLoad: Bool = false
     var didCallCancel: Bool = false
     var didCallSave: Bool = false
 
-    override func cancel() {
+    func viewDidLoad() {
+        self.didCallViewDidLoad = true
+    }
+
+    func cancel() {
         self.didCallCancel = true
     }
 
-    override func save() {
+    func save(title: String?) {
         self.didCallSave = true
     }
 }

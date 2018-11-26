@@ -9,7 +9,7 @@
 import ListyUI
 import ListyKit
 
-class EditTaskPresenter {
+class EditTaskPresenter: EditTaskPresenterInput {
 
     // MARK: - Properties
 
@@ -26,7 +26,7 @@ class EditTaskPresenter {
         self.router = EditTaskRouter(view: view)
     }
 
-    // MARK: - Public interface
+    // MARK: - EditTaskPresenterInput
 
     func viewDidLoad() {
         self.interactor.loadTask(self.view.task)
@@ -36,8 +36,8 @@ class EditTaskPresenter {
         self.router.finishWithCancel()
     }
 
-    func save() {
-        guard let title = self.view.titleTextField.text, !title.isEmpty else {
+    func save(title: String?) {
+        guard let title = title, !title.isEmpty else {
             let error = NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
             showErrorAlert(for: error)
             return

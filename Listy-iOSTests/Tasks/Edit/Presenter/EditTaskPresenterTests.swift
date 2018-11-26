@@ -86,10 +86,10 @@ class EditTaskPresenterTests: XCTestCase {
 
     func testSave_WhenTitleIsPresent() {
         // given
-        controller.titleTextField.text = "Important task"
+        let title = "Important task"
 
         // when
-        sut.save()
+        sut.save(title: title)
 
         // then
         XCTAssertTrue(fakeInteractorInput.didCallSaveTask)
@@ -97,10 +97,10 @@ class EditTaskPresenterTests: XCTestCase {
 
     func testSave_WhenTitleIsNotPresent() {
         // given
-        controller.titleTextField.text = nil
+        let title: String? = nil
 
         // when
-        sut.save()
+        sut.save(title: title)
 
         // then
         XCTAssertFalse(fakeInteractorInput.didCallSaveTask)
