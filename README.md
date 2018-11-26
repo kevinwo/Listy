@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/kevinwo/Listy.svg?branch=master)](https://travis-ci.org/kevinwo/Listy)
+[![codecov](https://codecov.io/gh/kevinwo/Listy/branch/master/graph/badge.svg)](https://codecov.io/gh/kevinwo/Listy)
 
 # Listy
 

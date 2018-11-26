@@ -1,0 +1,6 @@
+codecov:
+  ignore:
+    - "Listy-iOSTests/*"
+    - "ListyUITests/*"
+    - "ListyKitTests/*"
+
