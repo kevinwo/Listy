@@ -37,18 +37,12 @@ class ListsRouter: ListsRouterInput {
     }
 
     func showEditListView(with list: List) {
-        let storyboard = UIStoryboard(name: "EditList", bundle: nil)
-        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
-        let controller = (navigationController.topViewController as! EditListViewController)
-        controller.list = list
-        controller.delegate = self
-
-        self.output.present(view: navigationController, animated: true, completion: nil)
+        let controller = EditListRouter.scene(list: list, delegate: self)
+        self.output.present(view: controller, animated: true, completion: nil)
     }
 
     func showTasks(for list: List) {
         let controller = TasksListRouter.scene(list: list)
-
         self.output.pushTasksListView(controller)
     }
 }
