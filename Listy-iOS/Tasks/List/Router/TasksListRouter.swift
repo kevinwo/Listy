@@ -36,7 +36,8 @@ class TasksListRouter: TasksListRouterInput {
     }
 
     func showEditTaskView(with task: Task) {
-        let controller = EditTaskRouter.scene(task: task, delegate: self)
+        let tasks = Tasks(database: Database.newInstance())
+        let controller = EditTaskRouter.scene(task: task, delegate: self, tasks: tasks)
         self.output.present(view: controller, animated: true, completion: nil)
     }
 }

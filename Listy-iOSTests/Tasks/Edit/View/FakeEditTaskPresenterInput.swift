@@ -7,7 +7,7 @@
 
 @testable import Listy_iOS
 
-class FakeEditTaskPresenter: EditTaskPresenterInput {
+class FakeEditTaskPresenterInput: EditTaskPresenterInput {
 
     var router: EditTaskRouterInput!
     var interactor: EditTaskInteractorInput!

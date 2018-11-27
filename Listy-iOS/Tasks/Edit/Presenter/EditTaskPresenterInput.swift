@@ -12,7 +12,6 @@ protocol EditTaskPresenterInput: class {
     var router: EditTaskRouterInput! { get set }
     var interactor: EditTaskInteractorInput! { get set }
 
-    func viewDidLoad()
     func cancel()
     func save(title: String?)
 }

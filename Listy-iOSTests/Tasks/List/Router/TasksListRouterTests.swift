@@ -113,8 +113,5 @@ class TasksListRouterTests: XCTestCase {
 
         let navigationController = fakeOutput.presentedView as! UINavigationController
         XCTAssert(navigationController.topViewController is EditTaskViewController)
-
-        let controller = navigationController.topViewController as! EditTaskViewController
-        XCTAssertEqual(controller.task, task)
     }
 }

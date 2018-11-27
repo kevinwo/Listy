@@ -9,25 +9,20 @@
 import UIKit
 import ListyKit
 
-class EditTaskInteractor: EditTaskInteractorInput {
+final class EditTaskInteractor: EditTaskInteractorInput {
 
     // MARK: - Properties
 
-    var output: EditTaskInteractorOutput
-    var tasks: Tasks
-    var task: Task!
+    weak var output: EditTaskInteractorOutput!
+    let tasks: Tasks
+    var task: Task
 
-    required init(output: EditTaskInteractorOutput) {
-        self.output = output
-        self.tasks = Tasks(database: Database.newInstance())
-    }
-
-    func loadTask(_ task: Task) {
+    required init(task: Task, tasks: Tasks) {
         self.task = task
+        self.tasks = tasks
     }
 
     func saveTask(title: String) {
-        let task = self.task!
         task.title = title
 
         do {

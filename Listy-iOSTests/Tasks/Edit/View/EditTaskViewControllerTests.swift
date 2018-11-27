@@ -13,7 +13,7 @@ import XCTest
 class EditTaskViewControllerTests: XCTestCase {
 
     var sut: EditTaskViewController!
-    var fakePresenter: FakeEditTaskPresenter!
+    var fakePresenter: FakeEditTaskPresenterInput!
     var navigationController: UINavigationController!
     var window: UIWindow!
 
@@ -26,9 +26,8 @@ class EditTaskViewControllerTests: XCTestCase {
         let storyboard = UIStoryboard(name: "EditTask", bundle: nil)
         navigationController = (storyboard.instantiateInitialViewController() as! UINavigationController)
         sut = (navigationController.topViewController as! EditTaskViewController)
-        sut.task = Task()
 
-        fakePresenter = FakeEditTaskPresenter()
+        fakePresenter = FakeEditTaskPresenterInput()
         sut.presenter = fakePresenter
 
         _ = sut.view

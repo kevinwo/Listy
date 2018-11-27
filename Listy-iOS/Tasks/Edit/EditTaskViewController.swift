@@ -23,24 +23,7 @@ class EditTaskViewController: UITableViewController {
     @IBOutlet weak var titleTextField: UITextField!
 
     var presenter: EditTaskPresenterInput!
-    var task: Task!
     weak var delegate: EditTaskViewControllerDelegate!
-
-    // MARK: - Object lifecycle
-
-    required init?(coder decoder: NSCoder) {
-        super.init(coder: decoder)
-
-        self.presenter = EditTaskPresenter(view: self)
-    }
-
-    // MARK: - View lifecycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.presenter.viewDidLoad()
-    }
 
     // MARK: - Button actions
 

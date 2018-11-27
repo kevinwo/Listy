@@ -9,28 +9,15 @@
 import ListyUI
 import ListyKit
 
-class EditTaskPresenter: EditTaskPresenterInput {
+final class EditTaskPresenter: EditTaskPresenterInput {
 
     // MARK: - Properties
 
     weak var view: EditTaskViewController!
     var router: EditTaskRouterInput!
-    lazy var interactor: EditTaskInteractorInput! = {
-        return EditTaskInteractor(output: self)
-    }()
-
-    // MARK: - Object lifecycle
-
-    required init(view: EditTaskViewController) {
-        self.view = view
-        self.router = EditTaskRouter(view: view)
-    }
+    var interactor: EditTaskInteractorInput!
 
     // MARK: - EditTaskPresenterInput
-
-    func viewDidLoad() {
-        self.interactor.loadTask(self.view.task)
-    }
 
     func cancel() {
         self.router.finishWithCancel()

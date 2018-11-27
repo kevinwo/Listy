@@ -16,7 +16,8 @@ class EditTaskRouterTests: XCTestCase {
 
     override func setUp() {
         fakeView = FakeEditTaskRouterOutput()
-        sut = EditTaskRouter(view: fakeView)
+        sut = EditTaskRouter()
+        sut.view = fakeView
     }
 
     override func tearDown() {
@@ -30,25 +31,24 @@ class EditTaskRouterTests: XCTestCase {
 
     func testSceneView() {
         // given
-        let (task, delegate) = taskAndDelegate()
+        let (task, delegate, tasks) = sceneInitArguments()
 
         // when
-        let navigationController = EditTaskRouter.scene(task: task, delegate: delegate)
+        let navigationController = EditTaskRouter.scene(task: task, delegate: delegate, tasks: tasks)
 
         // then
         let controller = assertSceneView(navigationController)
 
-        XCTAssertEqual(controller.task, task)
         XCTAssert(controller.presenter is EditTaskPresenter)
         XCTAssert(controller.delegate is FakeEditTaskViewControllerDelegate)
     }
 
     func testScenePresenter() {
         // given
-        let (task, delegate) = taskAndDelegate()
+        let (task, delegate, tasks) = sceneInitArguments()
 
         // when
-        let navigationController = EditTaskRouter.scene(task: task, delegate: delegate)
+        let navigationController = EditTaskRouter.scene(task: task, delegate: delegate, tasks: tasks)
 
         // then
         let controller = assertSceneView(navigationController)
@@ -70,10 +70,10 @@ class EditTaskRouterTests: XCTestCase {
 
     func testSceneRouter() {
         // given
-        let (task, delegate) = taskAndDelegate()
+        let (task, delegate, tasks) = sceneInitArguments()
 
         // when
-        let navigationController = EditTaskRouter.scene(task: task, delegate: delegate)
+        let navigationController = EditTaskRouter.scene(task: task, delegate: delegate, tasks: tasks)
 
         // then
         let controller = assertSceneView(navigationController)
@@ -89,11 +89,10 @@ class EditTaskRouterTests: XCTestCase {
     }
 
     func testSceneInteractor() {
-        // given
-        let (task, delegate) = taskAndDelegate()
+        let (task, delegate, tasks) = sceneInitArguments()
 
         // when
-        let navigationController = EditTaskRouter.scene(task: task, delegate: delegate)
+        let navigationController = EditTaskRouter.scene(task: task, delegate: delegate, tasks: tasks)
 
         // then
         let controller = assertSceneView(navigationController)
@@ -132,8 +131,11 @@ class EditTaskRouterTests: XCTestCase {
 
     // MARK: - Private interface
 
-    func taskAndDelegate() -> (Task, FakeEditTaskViewControllerDelegate) {
-        return (Task(), FakeEditTaskViewControllerDelegate())
+    func sceneInitArguments() -> (Task, FakeEditTaskViewControllerDelegate, Tasks) {
+        let database = Database.newInstance(path: NSTemporaryDirectory())
+        let tasks = Tasks(database: database)
+
+        return (Task(), FakeEditTaskViewControllerDelegate(), tasks)
     }
 
     func assertSceneView(_ navigationController: UINavigationController) -> EditTaskViewController {

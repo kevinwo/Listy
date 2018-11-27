@@ -14,6 +14,7 @@ class EditTaskInteractorTests: XCTestCase {
 
     var sut: EditTaskInteractor!
     var fakeOutput: FakeEditTaskInteractorOutput!
+    var task: Task!
     var tasks: Tasks!
 
     // MARK: - Test lifecycle
@@ -22,16 +23,18 @@ class EditTaskInteractorTests: XCTestCase {
         super.setUp()
 
         fakeOutput = FakeEditTaskInteractorOutput()
-        sut = EditTaskInteractor(output: fakeOutput)
-
+        task = Task()
         tasks = Tasks(database: Database.newInstance(path: NSTemporaryDirectory()))
-        sut.tasks = tasks
+
+        sut = EditTaskInteractor(task: task, tasks: tasks)
+        sut.output = fakeOutput
     }
 
     override func tearDown() {
         sut = nil
         fakeOutput = nil
         tasks = nil
+        task = nil
 
         super.tearDown()
     }
@@ -39,24 +42,8 @@ class EditTaskInteractorTests: XCTestCase {
     // MARK: - Tests
 
     func testInit() {
-        // when
-        let interactor = EditTaskInteractor(output: fakeOutput)
-
-        // then
-        XCTAssert(interactor.output === fakeOutput)
-    }
-
-    // MARK: - loadTask(_:)
-
-    func testLoadTask() {
-        // given
-        let task = Task()
-
-        // when
-        sut.loadTask(task)
-
-        // then
         XCTAssertEqual(sut.task, task)
+        XCTAssertEqual(sut.tasks, tasks)
     }
 
     // MARK: - saveList(title:)

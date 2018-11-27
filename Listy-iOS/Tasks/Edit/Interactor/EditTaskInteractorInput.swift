@@ -9,9 +9,8 @@ import ListyKit
 
 protocol EditTaskInteractorInput {
 
-    var output: EditTaskInteractorOutput { get set }
+    var output: EditTaskInteractorOutput! { get set }
 
-    init(output: EditTaskInteractorOutput)
-    func loadTask(_ task: Task)
+    init(task: Task, tasks: Tasks)
     func saveTask(title: String)
 }

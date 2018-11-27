@@ -12,7 +12,6 @@ protocol EditTaskRouterInput {
 
     var view: EditTaskRouterOutput! { get }
 
-    init(view: EditTaskRouterOutput)
     func finishWithCancel()
     func finishWithSaving(_ task: Task)
 }
