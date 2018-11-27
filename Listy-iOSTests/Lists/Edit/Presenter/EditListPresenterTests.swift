@@ -15,6 +15,7 @@ class EditListPresenterTests: XCTestCase {
     var sut: EditListPresenter!
     var controller: EditListViewController!
     var fakeDelegate: FakeEditListViewControllerDelegate!
+    var fakeRouter: FakeEditListRouterInput!
     var fakeInteractor: FakeEditListInteractor!
 
     // MARK: - Test lifecycle
@@ -25,6 +26,9 @@ class EditListPresenterTests: XCTestCase {
         let storyboard = UIStoryboard(name: "EditList", bundle: nil)
         controller = (storyboard.instantiateViewController(withIdentifier: "EditListViewController") as! EditListViewController)
         sut = EditListPresenter(view: controller)
+
+        fakeRouter = FakeEditListRouterInput()
+        sut.router = fakeRouter
 
         fakeInteractor = FakeEditListInteractor(output: sut)
         sut.interactor = fakeInteractor
@@ -94,7 +98,7 @@ class EditListPresenterTests: XCTestCase {
 
     // MARK: - finish(with:)
 
-    func testFinisWithList() {
+    func testFinishWithList() {
         // given
         let list = List()
         list.title = "Cool List"
@@ -103,6 +107,7 @@ class EditListPresenterTests: XCTestCase {
         sut.finish(with: list)
 
         // then
-        XCTAssertTrue(fakeDelegate.didCallControllerDidSaveList)
+        XCTAssertTrue(fakeRouter.didCallFinishWithSaving)
+        XCTAssertEqual(fakeRouter.listDidFinishWithSaving, list)
     }
 }

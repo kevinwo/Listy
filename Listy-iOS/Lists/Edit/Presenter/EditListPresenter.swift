@@ -12,12 +12,12 @@ import ListyKit
 class EditListPresenter {
 
     weak var view: EditListViewController!
-    var router: EditListRouter
+    var router: EditListRouterInput!
     lazy var interactor: EditListInteractor = {
         return EditListInteractor(output: self)
     }()
 
-    required init(view: EditListViewController) {
+    init(view: EditListViewController) {
         self.view = view
         self.router = EditListRouter(view: view)
     }
@@ -41,7 +41,7 @@ class EditListPresenter {
     // MARK: - Interactor output
 
     func finish(with list: List) {
-        self.view.delegate.controller(self.view, didSaveList: list)
+        self.router.finishWithSaving(list)
     }
 
     func failedToSaveList(with error: NSError) {
