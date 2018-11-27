@@ -25,4 +25,6 @@ class FakeListsInteractorOutput: ListsInteractorOutput {
         self.didCallDeleteRow = true
         self.deletedRowIndexPath = indexPath
     }
+
+    func failedToDeleteList(with error: NSError) {}
 }

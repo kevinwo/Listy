@@ -29,7 +29,7 @@ final class EditTaskInteractor: EditTaskInteractorInput {
             try tasks.add(task)
             self.output.finish(with: task)
         } catch(let error) {
-            self.output.showErrorAlert(for: error)
+            self.output.failedToSaveTask(with: error as NSError)
         }
     }
 }

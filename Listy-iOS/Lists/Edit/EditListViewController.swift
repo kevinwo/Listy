@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ListyUI
 import ListyKit
 
 protocol EditListViewControllerDelegate: class {
@@ -44,3 +45,5 @@ class EditListViewController: UITableViewController {
         self.presenter.save()
     }
 }
+
+extension EditListViewController: ErrorAlertable {}

@@ -27,4 +27,6 @@ class FakeTasksListInteractorOutput: TasksListInteractorOutput {
         self.didCallDeleteRow = true
         self.deletedRowIndexPath = indexPath
     }
+
+    func failedToDeleteTask(with error: NSError) {}
 }

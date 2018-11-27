@@ -8,8 +8,9 @@
 import ListyUI
 import ListyKit
 
-protocol ListsInteractorOutput: class, ErrorAlertable {
+protocol ListsInteractorOutput: class {
 
     func updateView(lists: [List])
     func deleteRow(at indexPath: IndexPath)
+    func failedToDeleteList(with error: NSError)
 }

@@ -13,6 +13,7 @@ final class EditTaskPresenter: EditTaskPresenterInput {
 
     // MARK: - Properties
 
+    var output: EditTaskPresenterOutput!
     var router: EditTaskRouterInput!
     var interactor: EditTaskInteractorInput!
 
@@ -25,7 +26,7 @@ final class EditTaskPresenter: EditTaskPresenterInput {
     func save(title: String?) {
         guard let title = title, !title.isEmpty else {
             let error = NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
-            showErrorAlert(for: error)
+            self.output.showErrorAlert(for: error)
             return
         }
 
@@ -37,5 +38,9 @@ extension EditTaskPresenter: EditTaskInteractorOutput {
 
     func finish(with task: Task) {
         self.router.finishWithSaving(task)
+    }
+
+    func failedToSaveTask(with error: NSError) {
+        self.output.showErrorAlert(for: error)
     }
 }

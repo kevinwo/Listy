@@ -28,4 +28,6 @@ class FakeTasksListPresenterOutput: TasksListPresenterOutput {
     func deleteRow(at indexPath: IndexPath) {
         self.didCallDeleteRow = true
     }
+
+    func showErrorAlert(for error: NSError) {}
 }

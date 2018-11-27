@@ -13,6 +13,7 @@ import XCTest
 class EditTaskPresenterTests: XCTestCase {
 
     var sut: EditTaskPresenter!
+    var fakeOutput: FakeEditTaskPresenterOutput!
     var fakeRouter: FakeEditTaskRouterInput!
     var fakeInteractor: FakeEditTaskInteractorInput!
 
@@ -23,9 +24,11 @@ class EditTaskPresenterTests: XCTestCase {
 
         let presenter = EditTaskPresenter()
 
+        fakeOutput = FakeEditTaskPresenterOutput()
         fakeRouter = FakeEditTaskRouterInput()
         fakeInteractor = FakeEditTaskInteractorInput(task: Task(), tasks: Tasks(database: Database.newInstance(path: NSTemporaryDirectory())))
 
+        presenter.output = fakeOutput
         presenter.router = fakeRouter
         presenter.interactor = fakeInteractor
 

@@ -28,7 +28,7 @@ class EditListInteractor {
             try lists.add(list)
             self.output.finish(with: list)
         } catch(let error) {
-            self.output.showErrorAlert(for: error)
+            self.output.failedToSaveList(with: error as NSError)
         }
     }
 }

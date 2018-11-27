@@ -8,7 +8,7 @@
 import ListyUI
 import ListyKit
 
-protocol TasksListPresenterOutput: class {
+protocol TasksListPresenterOutput: class, ErrorAlertable {
 
     var presenter: TasksListPresenterInput! { get set }
 

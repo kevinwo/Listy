@@ -38,7 +38,7 @@ class TasksListInteractor: TasksListInteractorInput {
             try self.tasks.delete(task)
             self.output.deleteRow(at: indexPath)
         } catch(let error) {
-            self.output.showErrorAlert(for: error)
+            self.output.failedToDeleteTask(with: error as NSError)
         }
     }
 }

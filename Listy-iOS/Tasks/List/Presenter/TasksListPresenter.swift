@@ -39,4 +39,8 @@ extension TasksListPresenter: TasksListInteractorOutput {
     func deleteRow(at indexPath: IndexPath) {
         self.output.deleteRow(at: indexPath)
     }
+
+    func failedToDeleteTask(with error: NSError) {
+        self.output.showErrorAlert(for: error)
+    }
 }

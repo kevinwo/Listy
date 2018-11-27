@@ -43,4 +43,8 @@ extension ListsPresenter: ListsInteractorOutput {
     func deleteRow(at indexPath: IndexPath) {
         self.output.deleteRow(at: indexPath)
     }
+
+    func failedToDeleteList(with error: NSError) {
+        self.output.showErrorAlert(for: error)
+    }
 }

@@ -21,4 +21,6 @@ class FakeEditTaskInteractorOutput: EditTaskInteractorOutput {
     func finish(with task: Task) {
         self.didCallFinish = true
     }
+
+    func failedToSaveTask(with error: NSError) {}
 }

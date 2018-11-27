@@ -43,7 +43,7 @@ class ListsInteractor: ListsInteractorInput {
             try self.lists.delete(list)
             self.output.deleteRow(at: indexPath)
         } catch(let error) {
-            self.output.showErrorAlert(for: error)
+            self.output.failedToDeleteList(with: error as NSError)
         }
     }
 }

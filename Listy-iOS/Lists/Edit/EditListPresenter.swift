@@ -31,7 +31,7 @@ class EditListPresenter {
     func save() {
         guard let title = self.view.titleTextField.text, !title.isEmpty else {
             let error = NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
-            showErrorAlert(for: error)
+            self.view.showErrorAlert(for: error)
             return
         }
 
@@ -43,6 +43,8 @@ class EditListPresenter {
     func finish(with list: List) {
         self.view.delegate.controller(self.view, didSaveList: list)
     }
-}
 
-extension EditListPresenter: ErrorAlertable {}
+    func failedToSaveList(with error: NSError) {
+        self.view.showErrorAlert(for: error)
+    }
+}

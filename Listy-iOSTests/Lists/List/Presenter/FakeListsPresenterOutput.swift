@@ -25,4 +25,6 @@ class FakeListsPresenterOutput: ListsPresenterOutput {
         self.didCallDeleteRow = true
         self.deletedRowIndexPath = indexPath
     }
+
+    func showErrorAlert(for error: NSError) {}
 }

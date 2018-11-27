@@ -8,7 +8,7 @@
 import ListyUI
 import ListyKit
 
-protocol ListsPresenterOutput: class {
+protocol ListsPresenterOutput: class, ErrorAlertable {
 
     func updateView(lists: [List])
     func deleteRow(at indexPath: IndexPath)
