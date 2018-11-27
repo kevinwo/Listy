@@ -71,7 +71,7 @@ class ListsInteractorTests: XCTestCase {
         sut.fetchData()
 
         // then
-        XCTAssert(fakeOutput.lists?.contains(list) ?? false)
+        XCTAssert(fakeOutput.listsFromUpdateView?.contains(list) ?? false)
         XCTAssertTrue(fakeOutput.didCallUpdateView)
     }
 

@@ -103,3 +103,50 @@ class ListsPresenterTests: XCTestCase {
         XCTAssertEqual(fakeInteractor.deletedListIndexPath, indexPath)
     }
 }
+
+// MARK: - ListsInteractorOutput
+
+extension ListsPresenterTests {
+
+    // MARK: - updateView(lists:)
+
+    func testUpdateView() {
+        // given
+        let lists = [List()]
+
+        // when
+        sut.updateView(lists: lists)
+
+        // then
+        XCTAssertTrue(fakeOutput.didCallUpdateView)
+        XCTAssertEqual(fakeOutput.listsFromUpdateView, lists)
+    }
+
+    // MARK: - deleteRow(at:)
+
+    func testDeleteRow() {
+        // given
+        let indexPath = IndexPath(row: 0, section: 0)
+
+        // when
+        sut.deleteRow(at: indexPath)
+
+        // then
+        XCTAssertTrue(fakeOutput.didCallDeleteRow)
+        XCTAssertEqual(fakeOutput.deletedRowIndexPath, indexPath)
+    }
+
+    // MARK: - failedToDeleteList(with:)
+
+    func testFailedToDeleteList() {
+        // given
+        let error = NSError()
+
+        // when
+        sut.failedToDeleteList(with: error)
+
+        // then
+        XCTAssertTrue(fakeOutput.didCallShowErrorAlert)
+        XCTAssertEqual(fakeOutput.errorToShowInAlert, error)
+    }
+}

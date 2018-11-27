@@ -13,12 +13,15 @@ class FakeListsPresenterOutput: ListsPresenterOutput {
 
     var didCallUpdateView: Bool = false
     var didCallDeleteRow: Bool = false
+    var didCallShowErrorAlert: Bool = false
+
     var deletedRowIndexPath: IndexPath?
-    var lists: [List]?
+    var listsFromUpdateView: [List]?
+    var errorToShowInAlert: NSError?
 
     func updateView(lists: [List]) {
         self.didCallUpdateView = true
-        self.lists = lists
+        self.listsFromUpdateView = lists
     }
 
     func deleteRow(at indexPath: IndexPath) {
@@ -26,5 +29,8 @@ class FakeListsPresenterOutput: ListsPresenterOutput {
         self.deletedRowIndexPath = indexPath
     }
 
-    func showErrorAlert(for error: NSError) {}
+    func showErrorAlert(for error: NSError) {
+        self.didCallShowErrorAlert = true
+        self.errorToShowInAlert = error
+    }
 }

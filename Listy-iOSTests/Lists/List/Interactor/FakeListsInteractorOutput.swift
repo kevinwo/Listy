@@ -14,11 +14,11 @@ class FakeListsInteractorOutput: ListsInteractorOutput {
     var didCallUpdateView: Bool = false
     var didCallDeleteRow: Bool = false
     var deletedRowIndexPath: IndexPath?
-    var lists: [List]?
+    var listsFromUpdateView: [List]?
 
     func updateView(lists: [List]) {
         self.didCallUpdateView = true
-        self.lists = lists
+        self.listsFromUpdateView = lists
     }
 
     func deleteRow(at indexPath: IndexPath) {
