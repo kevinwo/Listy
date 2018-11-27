@@ -670,11 +670,10 @@
 		265EA98F21685D940009FF96 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
-				265EA99921685E0B0009FF96 /* EditListViewController.swift */,
-				265EA99721685E0B0009FF96 /* EditListPresenter.swift */,
-				265EA99821685E0B0009FF96 /* EditListRouter.swift */,
-				265EA99A21685E0B0009FF96 /* EditListInteractor.swift */,
-				265EA99F21685E240009FF96 /* EditList.storyboard */,
+				A595637621AD3AAB0045D85D /* View */,
+				A595637821AD3AB80045D85D /* Router */,
+				A595637721AD3AB30045D85D /* Presenter */,
+				A595637921AD3ABD0045D85D /* Interactor */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -986,6 +985,39 @@
 			children = (
 				265EA9AC2168BCC20009FF96 /* FakeEditListInteractor.swift */,
 				265EA99221685DE20009FF96 /* EditListInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A595637621AD3AAB0045D85D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				265EA99921685E0B0009FF96 /* EditListViewController.swift */,
+				265EA99F21685E240009FF96 /* EditList.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A595637721AD3AB30045D85D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				265EA99721685E0B0009FF96 /* EditListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A595637821AD3AB80045D85D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				265EA99821685E0B0009FF96 /* EditListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A595637921AD3ABD0045D85D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				265EA99A21685E0B0009FF96 /* EditListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
