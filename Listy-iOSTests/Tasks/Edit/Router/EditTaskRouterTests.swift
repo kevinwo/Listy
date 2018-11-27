@@ -59,11 +59,7 @@ class EditTaskRouterTests: XCTestCase {
         guard let presenter = controller.presenter as? EditTaskPresenter else {
             XCTFail("Presenter should be edit task presenter"); return
         }
-        guard let presenterOutput = presenter.view as? EditTaskViewController else {
-            XCTFail("Presenter's output should be edit task view"); return
-        }
 
-        XCTAssertEqual(presenterOutput, controller)
         XCTAssert(presenter.router is EditTaskRouter)
         XCTAssert(presenter.interactor is EditTaskInteractor)
     }

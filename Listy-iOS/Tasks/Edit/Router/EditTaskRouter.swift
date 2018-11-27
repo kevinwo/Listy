@@ -22,12 +22,11 @@ class EditTaskRouter: EditTaskRouterInput {
         controller.delegate = delegate
 
         let presenter = EditTaskPresenter()
-        var router = EditTaskRouter()
+        let router = EditTaskRouter()
         let interactor = EditTaskInteractor(task: task, tasks: tasks)
 
         controller.presenter = presenter
 
-        presenter.view = controller
         presenter.router = router
         presenter.interactor = interactor
 

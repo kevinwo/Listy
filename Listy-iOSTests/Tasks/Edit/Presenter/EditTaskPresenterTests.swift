@@ -13,8 +13,6 @@ import XCTest
 class EditTaskPresenterTests: XCTestCase {
 
     var sut: EditTaskPresenter!
-    var controller: EditTaskViewController!
-    var fakeDelegate: FakeEditTaskViewControllerDelegate!
     var fakeRouter: FakeEditTaskRouterInput!
     var fakeInteractor: FakeEditTaskInteractorInput!
 
@@ -23,28 +21,20 @@ class EditTaskPresenterTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        let storyboard = UIStoryboard(name: "EditTask", bundle: nil)
-        controller = (storyboard.instantiateViewController(withIdentifier: "EditTaskViewController") as! EditTaskViewController)
-        sut = EditTaskPresenter()
-        sut.view = controller
-
-        fakeInteractor = FakeEditTaskInteractorInput(task: Task(), tasks: Tasks(database: Database.newInstance(path: NSTemporaryDirectory())))
-        fakeInteractor.output = sut
-        sut.interactor = fakeInteractor
+        let presenter = EditTaskPresenter()
 
         fakeRouter = FakeEditTaskRouterInput()
-        sut.router = fakeRouter
+        fakeInteractor = FakeEditTaskInteractorInput(task: Task(), tasks: Tasks(database: Database.newInstance(path: NSTemporaryDirectory())))
 
-        fakeDelegate = FakeEditTaskViewControllerDelegate()
-        controller.delegate = fakeDelegate
+        presenter.router = fakeRouter
+        presenter.interactor = fakeInteractor
 
-        controller.presenter = sut
-        _ = controller.view
+        sut = presenter
     }
 
     override func tearDown() {
         sut = nil
-        controller = nil
+        fakeRouter = nil
         fakeInteractor = nil
 
         super.tearDown()

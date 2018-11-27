@@ -13,7 +13,6 @@ final class EditTaskPresenter: EditTaskPresenterInput {
 
     // MARK: - Properties
 
-    weak var view: EditTaskViewController!
     var router: EditTaskRouterInput!
     var interactor: EditTaskInteractorInput!
 
