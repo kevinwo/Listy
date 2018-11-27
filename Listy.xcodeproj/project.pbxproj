@@ -636,11 +636,10 @@
 		265EA9762168570A0009FF96 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				A51D45A521A4130100788423 /* Router */,
 				26E547A621A5155100EA4EEA /* View */,
+				A51D45A521A4130100788423 /* Router */,
 				26E547A121A5124000EA4EEA /* Presenter */,
 				26E5479921A50AD700EA4EEA /* Interactor */,
-				265EA987216857880009FF96 /* Lists.storyboard */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -712,11 +711,10 @@
 		265EA9B32168D3BF0009FF96 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				26B52C17217DA5CD0011375F /* Router */,
 				26B52C03217C6E7E0011375F /* View */,
+				26B52C17217DA5CD0011375F /* Router */,
 				26B52C0F217DA35A0011375F /* Presenter */,
 				26B52C14217DA4A80011375F /* Interactor */,
-				265EA9C42168D4AF0009FF96 /* TasksList.storyboard */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -745,11 +743,10 @@
 		265EA9CC2168D7810009FF96 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
+				A595636D21AD2D480045D85D /* View */,
 				26B52C0C217D90BF0011375F /* Router */,
 				264E74712176F52C000799F2 /* Presenter */,
 				264E746A2176EC41000799F2 /* Interactor */,
-				265EA9CF2168D7A30009FF96 /* EditTaskViewController.swift */,
-				265EA9E02168DA640009FF96 /* EditTask.storyboard */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -781,6 +778,7 @@
 			children = (
 				265EA9B62168D3FF0009FF96 /* TasksListViewController.swift */,
 				26EB60DE21AC038B007B638F /* TasksListViewTableViewDelegate.swift */,
+				265EA9C42168D4AF0009FF96 /* TasksList.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -888,6 +886,7 @@
 			children = (
 				265EA97B216857340009FF96 /* ListsViewController.swift */,
 				26C8F05821ABC3FE0013E3B8 /* ListsViewTableViewDelegate.swift */,
+				265EA987216857880009FF96 /* Lists.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -945,6 +944,15 @@
 				A5394EE021A30104001DF0A7 /* FakeEditTaskRouterOutput.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A595636D21AD2D480045D85D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				265EA9CF2168D7A30009FF96 /* EditTaskViewController.swift */,
+				265EA9E02168DA640009FF96 /* EditTask.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A5AC8BEA21A5467400CA030D /* Router */ = {
