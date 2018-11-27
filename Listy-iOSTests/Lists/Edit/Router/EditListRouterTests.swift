@@ -11,6 +11,7 @@ import XCTest
 
 class EditListRouterTests: XCTestCase {
 
+    var fakeDelegate: FakeEditListViewControllerDelegate!
     var view: EditListViewController!
     var sut: EditListRouter!
 
@@ -18,6 +19,9 @@ class EditListRouterTests: XCTestCase {
         let storyboard = UIStoryboard(name: "EditList", bundle: nil)
         let navigationController = (storyboard.instantiateInitialViewController() as! UINavigationController)
         view = (navigationController.topViewController as! EditListViewController)
+        fakeDelegate = FakeEditListViewControllerDelegate()
+        view.delegate = fakeDelegate
+
         sut = EditListRouter(view: view)
     }
 
@@ -100,6 +104,21 @@ class EditListRouterTests: XCTestCase {
         }
 
         XCTAssert(interactor.output is EditListPresenter)
+    }
+
+    // MARK: - finishWithSaving()
+
+    func testFinishWithSaving() {
+        // given
+        let list = List()
+
+        // when
+        sut.finishWithSaving(list)
+
+        // then
+        XCTAssertTrue(fakeDelegate.didCallControllerDidSaveList);
+        XCTAssertEqual(fakeDelegate.didSaveListController, view)
+        XCTAssertEqual(fakeDelegate.savedList, list)
     }
 
     // MARK: - Private interface

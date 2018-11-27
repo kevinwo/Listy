@@ -8,7 +8,7 @@
 
 import ListyKit
 
-class EditListRouter {
+class EditListRouter: EditListRouterInput {
 
     weak var view: EditListViewController!
 
@@ -25,5 +25,9 @@ class EditListRouter {
         controller.delegate = delegate
 
         return navigationController
+    }
+
+    func finishWithSaving(_ list: List) {
+        self.view.delegate.controller(self.view, didSaveList: list)
     }
 }

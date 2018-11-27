@@ -14,11 +14,16 @@ class FakeEditListViewControllerDelegate: NSObject, EditListViewControllerDelega
     var didCallCancelWithController: Bool = false
     var didCallControllerDidSaveList: Bool = false
 
+    var didSaveListController: EditListViewController?
+    var savedList: List?
+
     func didCancelWithController(_ controller: EditListViewController) {
         self.didCallCancelWithController = true
     }
 
     func controller(_ controller: EditListViewController, didSaveList list: List) {
         self.didCallControllerDidSaveList = true
+        self.didSaveListController = controller
+        self.savedList = list
     }
 }
