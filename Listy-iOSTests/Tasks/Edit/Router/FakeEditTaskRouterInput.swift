@@ -22,5 +22,6 @@ class FakeEditTaskRouterInput: EditTaskRouterInput {
 
     func finishWithSaving(_ task: Task) {
         self.didCallFinishWithSaving = true
+        self.taskDidFinishWithSaving = task
     }
 }

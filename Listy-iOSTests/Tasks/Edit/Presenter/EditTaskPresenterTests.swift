@@ -79,3 +79,36 @@ class EditTaskPresenterTests: XCTestCase {
         XCTAssertFalse(fakeInteractor.didCallSaveTask)
     }
 }
+
+// MARK: - EditTaskPresenterOutput
+
+extension EditTaskPresenterTests {
+
+    // MARK: - finish(with:)
+
+    func testFinish() {
+        // given
+        let task = Task()
+
+        // when
+        sut.finish(with: task)
+
+        // then
+        XCTAssertTrue(fakeRouter.didCallFinishWithSaving)
+        XCTAssertEqual(fakeRouter.taskDidFinishWithSaving, task)
+    }
+
+    // MARK: - failedToSaveTask(with:)
+
+    func testFailedToSaveTask() {
+        // given
+        let error = NSError()
+
+        // when
+        sut.failedToSaveTask(with: error)
+
+        // then
+        XCTAssertTrue(fakeOutput.didCallShowErrorAlert)
+        XCTAssertEqual(fakeOutput.errorToShowInAlert, error)
+    }
+}

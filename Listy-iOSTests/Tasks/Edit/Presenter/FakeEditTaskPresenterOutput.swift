@@ -10,5 +10,11 @@ import Foundation
 
 class FakeEditTaskPresenterOutput: EditTaskPresenterOutput {
 
-    func showErrorAlert(for error: NSError) {}
+    var didCallShowErrorAlert: Bool = false
+    var errorToShowInAlert: NSError?
+
+    func showErrorAlert(for error: NSError) {
+        self.didCallShowErrorAlert = true
+        self.errorToShowInAlert = error
+    }
 }
