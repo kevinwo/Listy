@@ -23,7 +23,6 @@ class EditListRouter {
         let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
         let controller = navigationController.topViewController as! EditListViewController
         controller.delegate = delegate
-        controller.list = list
 
         return navigationController
     }
