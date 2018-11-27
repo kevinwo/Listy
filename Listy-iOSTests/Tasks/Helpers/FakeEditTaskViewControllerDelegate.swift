@@ -9,7 +9,7 @@ import UIKit
 @testable import Listy_iOS
 @testable import ListyKit
 
-class FakeEditTaskViewControllerDelegate: NSObject, EditTaskViewControllerDelegate {
+class FakeEditTaskViewControllerDelegate: EditTaskViewControllerDelegate {
 
     var didCallCancelWithController: Bool = false
     var didCallControllerDidSaveTask: Bool = false

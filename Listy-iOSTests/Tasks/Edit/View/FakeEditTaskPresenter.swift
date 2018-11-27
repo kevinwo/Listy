@@ -9,6 +9,9 @@
 
 class FakeEditTaskPresenter: EditTaskPresenterInput {
 
+    var router: EditTaskRouterInput!
+    var interactor: EditTaskInteractorInput!
+
     var didCallViewDidLoad: Bool = false
     var didCallCancel: Bool = false
     var didCallSave: Bool = false

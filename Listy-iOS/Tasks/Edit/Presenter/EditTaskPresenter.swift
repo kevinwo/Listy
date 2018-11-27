@@ -14,8 +14,8 @@ class EditTaskPresenter: EditTaskPresenterInput {
     // MARK: - Properties
 
     weak var view: EditTaskViewController!
-    var router: EditTaskRouterInput
-    lazy var interactor: EditTaskInteractorInput = {
+    var router: EditTaskRouterInput!
+    lazy var interactor: EditTaskInteractorInput! = {
         return EditTaskInteractor(output: self)
     }()
 
