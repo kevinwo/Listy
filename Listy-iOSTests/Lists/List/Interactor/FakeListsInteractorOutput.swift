@@ -13,8 +13,11 @@ class FakeListsInteractorOutput: ListsInteractorOutput {
 
     var didCallUpdateView: Bool = false
     var didCallDeleteRow: Bool = false
+    var didCallShowErrorAlert: Bool = false
+
     var deletedRowIndexPath: IndexPath?
     var listsFromUpdateView: [List]?
+    var errorToShowInAlert: NSError?
 
     func updateView(lists: [List]) {
         self.didCallUpdateView = true
@@ -26,5 +29,8 @@ class FakeListsInteractorOutput: ListsInteractorOutput {
         self.deletedRowIndexPath = indexPath
     }
 
-    func failedToDeleteList(with error: NSError) {}
+    func failedToDeleteList(with error: NSError) {
+        self.didCallShowErrorAlert = true
+        self.errorToShowInAlert = error
+    }
 }

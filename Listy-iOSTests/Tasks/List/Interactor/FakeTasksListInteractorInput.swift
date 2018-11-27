@@ -5,9 +5,8 @@
 //  Created by Kevin Wolkober on 10/6/18.
 //
 
-import UIKit
+import Foundation
 @testable import Listy_iOS
-@testable import ListyUI
 @testable import ListyKit
 
 class FakeTasksListInteractorInput: TasksListInteractorInput {
@@ -15,11 +14,12 @@ class FakeTasksListInteractorInput: TasksListInteractorInput {
     var output: TasksListInteractorOutput!
     var list: List
 
-    var didCallDeleteTaskAtIndexPath: Bool = false
-    var deletedTask: Task?
-    var deletedTaskAtIndexPath: IndexPath?
     var didCallLoadDataSource: Bool = false
     var didCallFetchData: Bool = false
+    var didCallDeleteTaskAtIndexPath: Bool = false
+
+    var taskToDelete: Task?
+    var deletedTaskAtIndexPath: IndexPath?
 
     required init(list: List) {
         self.list = list
@@ -31,14 +31,8 @@ class FakeTasksListInteractorInput: TasksListInteractorInput {
 
     func deleteTask(_ task: Task, at indexPath: IndexPath) {
         self.didCallDeleteTaskAtIndexPath = true
-        self.deletedTask = task
+        self.taskToDelete = task
         self.deletedTaskAtIndexPath = indexPath
-    }
-
-    func loadDataSource(
-        for tableView: UITableView,
-        cellConfigurationBlock: @escaping TableViewDataSource.CellConfigurationBlock) {
-        self.didCallLoadDataSource = true
     }
 
     func fetchData() {

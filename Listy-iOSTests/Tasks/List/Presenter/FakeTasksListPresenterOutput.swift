@@ -15,9 +15,12 @@ class FakeTasksListPresenterOutput: TasksListPresenterOutput {
 
     var didCallUpdateView: Bool = false
     var didCallDeleteRow: Bool = false
+    var didCallShowErrorAlert: Bool = false
+
     var updateViewTitle: String?
     var updateViewTasks: [Task]?
     var deletedRowIndexPath: IndexPath?
+    var errorToShowInAlert: NSError?
 
     func updateView(title: String, tasks: [Task]) {
         self.didCallUpdateView = true
@@ -27,7 +30,11 @@ class FakeTasksListPresenterOutput: TasksListPresenterOutput {
 
     func deleteRow(at indexPath: IndexPath) {
         self.didCallDeleteRow = true
+        self.deletedRowIndexPath = indexPath
     }
 
-    func showErrorAlert(for error: NSError) {}
+    func showErrorAlert(for error: NSError) {
+        self.didCallShowErrorAlert = true
+        self.errorToShowInAlert = error
+    }
 }
