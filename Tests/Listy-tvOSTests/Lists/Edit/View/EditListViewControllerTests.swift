@@ -50,6 +50,23 @@ class EditListViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.titleTextField)
     }
 
+    // MARK: - tableView(didSelectRowAt:)
+
+    func testTableDidSelectRow() {
+        // given
+        let tableView = UITableView()
+        let indexPath = IndexPath(row: 0, section: 0)
+
+        // when
+        sut.tableView(tableView, didSelectRowAt: indexPath)
+
+        // then
+        // @TODO Use synchronous testing approach
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            XCTAssertTrue(self.sut.titleTextField.isFirstResponder)
+        }
+    }
+
     // MARK: - Button actions
 
     func testCancelBarButtonItemTapped() {
