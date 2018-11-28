@@ -8,6 +8,8 @@
 
 import XCTest
 @testable import Listy_iOS
+@testable import ListyUI
+@testable import ListyKit
 
 class EditListViewControllerTests: XCTestCase {
 

@@ -7,16 +7,15 @@
 //
 
 import UIKit
-import ListyUI
 import ListyKit
 
-protocol EditListViewControllerDelegate: class {
+public protocol EditListViewControllerDelegate: class {
 
     func didCancelWithController(_ controller: EditListViewController)
     func controller(_ controller: EditListViewController, didSaveList list: List)
 }
 
-class EditListViewController: UITableViewController {
+public class EditListViewController: UITableViewController {
 
     // MARK: - Properties
 
@@ -24,8 +23,8 @@ class EditListViewController: UITableViewController {
     @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var titleTextField: UITextField!
 
-    var presenter: EditListPresenterInput!
-    weak var delegate: EditListViewControllerDelegate!
+    public var presenter: EditListPresenterInput!
+    public weak var delegate: EditListViewControllerDelegate!
 
     // MARK: - Button actions
 
@@ -39,11 +38,12 @@ class EditListViewController: UITableViewController {
 }
 
 extension EditListViewController: EditListRouterOutput {
-    func finishWithCancel() {
+
+    public func finishWithCancel() {
         self.delegate.didCancelWithController(self)
     }
 
-    func finishWithSaving(_ list: List) {
+    public func finishWithSaving(_ list: List) {
         self.delegate.controller(self, didSaveList: list)
     }
 }

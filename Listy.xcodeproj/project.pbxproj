@@ -44,7 +44,6 @@
 		265EA988216857880009FF96 /* Lists.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265EA987216857880009FF96 /* Lists.storyboard */; };
 		265EA99421685DE20009FF96 /* EditListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99121685DE20009FF96 /* EditListViewControllerTests.swift */; };
 		265EA99C21685E0B0009FF96 /* EditListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99821685E0B0009FF96 /* EditListRouter.swift */; };
-		265EA99D21685E0B0009FF96 /* EditListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99921685E0B0009FF96 /* EditListViewController.swift */; };
 		265EA9A021685E240009FF96 /* EditList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265EA99F21685E240009FF96 /* EditList.storyboard */; };
 		265EA9A3216881200009FF96 /* UIBarButtonItem+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9A2216881200009FF96 /* UIBarButtonItem+Tests.swift */; };
 		265EA9AB2168B7760009FF96 /* FakeEditListViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9AA2168B7760009FF96 /* FakeEditListViewControllerDelegate.swift */; };
@@ -173,6 +172,8 @@
 		A5088A8F21AEBD9500DCBC7B /* EditListRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595638C21AE2FB50045D85D /* EditListRouterOutput.swift */; };
 		A5088A9021AEBE1C00DCBC7B /* FakeEditListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595637E21AD3E7F0045D85D /* FakeEditListRouterInput.swift */; };
 		A5088A9121AEBF0C00DCBC7B /* FakeEditListPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9A821688A4F0009FF96 /* FakeEditListPresenterInput.swift */; };
+		A5088A9321AEC08900DCBC7B /* EditListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99921685E0B0009FF96 /* EditListViewController.swift */; };
+		A5088A9421AEC08900DCBC7B /* EditListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99921685E0B0009FF96 /* EditListViewController.swift */; };
 		A51D459A21A304E800788423 /* EditTaskRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D459921A304E800788423 /* EditTaskRouterOutput.swift */; };
 		A51D459F21A4026700788423 /* FakeTasksListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D459E21A4026700788423 /* FakeTasksListInteractorOutput.swift */; };
 		A51D45A121A408FD00788423 /* FakeTasksListRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D45A021A408FD00788423 /* FakeTasksListRouterOutput.swift */; };
@@ -1181,6 +1182,7 @@
 			isa = PBXGroup;
 			children = (
 				A5088A4521AE938300DCBC7B /* List */,
+				A5088A9221AEC04600DCBC7B /* Edit */,
 			);
 			path = SceneComponents;
 			sourceTree = "<group>";
@@ -1325,6 +1327,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		A5088A9221AEC04600DCBC7B /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				265EA99921685E0B0009FF96 /* EditListViewController.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
 		A51D459821A3036600788423 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1429,7 +1439,6 @@
 		A595637621AD3AAB0045D85D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				265EA99921685E0B0009FF96 /* EditListViewController.swift */,
 				265EA99F21685E240009FF96 /* EditList.storyboard */,
 			);
 			path = View;
@@ -1941,6 +1950,7 @@
 				A5088A3A21AE92B400DCBC7B /* ListsViewController.swift in Sources */,
 				260D6949216847D4003B7DD9 /* TableViewDataSource.swift in Sources */,
 				A5088A5421AE964000DCBC7B /* UIViewController+LIST.swift in Sources */,
+				A5088A9321AEC08900DCBC7B /* EditListViewController.swift in Sources */,
 				A5088A3B21AE92B400DCBC7B /* ListsViewTableViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1961,7 +1971,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				264E746C2176EC61000799F2 /* EditTaskInteractorInput.swift in Sources */,
-				265EA99D21685E0B0009FF96 /* EditListViewController.swift in Sources */,
 				26B52C19217DA5E10011375F /* TasksListRouterOutput.swift in Sources */,
 				265EA9D42168D7A30009FF96 /* EditTaskInteractor.swift in Sources */,
 				264E746E2176F1C9000799F2 /* EditTaskInteractorOutput.swift in Sources */,
@@ -2097,6 +2106,7 @@
 				A5088A5321AE964000DCBC7B /* UIViewController+LIST.swift in Sources */,
 				A5088A5621AE964400DCBC7B /* ViewRoutable+LIST.swift in Sources */,
 				A5088A5821AE964800DCBC7B /* ErrorAlertable+LIST.swift in Sources */,
+				A5088A9421AEC08900DCBC7B /* EditListViewController.swift in Sources */,
 				A5088A3C21AE92B500DCBC7B /* ListsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

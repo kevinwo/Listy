@@ -6,7 +6,7 @@
 //
 
 import UIKit
-@testable import Listy_iOS
+@testable import ListyUI
 @testable import ListyKit
 
 class FakeEditListViewControllerDelegate: NSObject, EditListViewControllerDelegate {
