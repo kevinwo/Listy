@@ -5,9 +5,7 @@
 //  Created by Kevin Wolkober on 11/20/18.
 //
 
-import ListyKit
-
-protocol ListsRouterOutput: ViewRoutable {
+public protocol ListsRouterOutput: ViewRoutable {
 
     func reloadData()
 }

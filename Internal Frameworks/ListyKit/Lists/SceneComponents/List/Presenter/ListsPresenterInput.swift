@@ -5,9 +5,7 @@
 //  Created by Kevin Wolkober on 11/21/18.
 //
 
-import ListyKit
-
-protocol ListsPresenterInput: class {
+public protocol ListsPresenterInput: class {
 
     var output: ListsPresenterOutput! { get set }
     var router: ListsRouterInput! { get set }

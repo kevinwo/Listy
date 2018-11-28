@@ -6,45 +6,45 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import ListyKit
+public final class ListsPresenter: ListsPresenterInput {
 
-final class ListsPresenter: ListsPresenterInput {
+    public weak var output: ListsPresenterOutput!
+    public var router: ListsRouterInput!
+    public var interactor: ListsInteractorInput!
 
-    weak var output: ListsPresenterOutput!
-    var router: ListsRouterInput!
-    var interactor: ListsInteractorInput!
+    public init() {}
 
     // MARK: - ListsPresenterInput
 
-    func reloadData() {
+    public func reloadData() {
         self.interactor.fetchData()
     }
 
-    func addList() {
+    public func addList() {
         let list = self.interactor.newList()
         self.router.showEditListView(with: list)
     }
 
-    func showTasks(for list: List) {
+    public func showTasks(for list: List) {
         self.router.showTasks(for: list)
     }
 
-    func deleteList(_ list: List, at indexPath: IndexPath) {
+    public func deleteList(_ list: List, at indexPath: IndexPath) {
         self.interactor.deleteList(list, at: indexPath)
     }
 }
 
 extension ListsPresenter: ListsInteractorOutput {
 
-    func updateView(lists: [List]) {
+    public func updateView(lists: [List]) {
         self.output.updateView(lists: lists)
     }
 
-    func deleteRow(at indexPath: IndexPath) {
+    public func deleteRow(at indexPath: IndexPath) {
         self.output.deleteRow(at: indexPath)
     }
 
-    func failedToDeleteList(with error: NSError) {
+    public func failedToDeleteList(with error: NSError) {
         self.output.showErrorAlert(for: error)
     }
 }
