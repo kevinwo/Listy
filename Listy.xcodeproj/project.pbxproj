@@ -106,6 +106,11 @@
 		26EB60DD21AC037C007B638F /* TasksListViewTableViewDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EB60DC21AC037C007B638F /* TasksListViewTableViewDelegateTests.swift */; };
 		26EB60DF21AC038B007B638F /* TasksListViewTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EB60DE21AC038B007B638F /* TasksListViewTableViewDelegate.swift */; };
 		26EB60E121AC36C7007B638F /* EditTaskPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EB60E021AC36C7007B638F /* EditTaskPresenterInput.swift */; };
+		A50888F221AE372B00DCBC7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50888F121AE372B00DCBC7B /* AppDelegate.swift */; };
+		A50888F421AE372B00DCBC7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50888F321AE372B00DCBC7B /* ViewController.swift */; };
+		A50888F721AE372B00DCBC7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50888F521AE372B00DCBC7B /* Main.storyboard */; };
+		A50888F921AE372D00DCBC7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50888F821AE372D00DCBC7B /* Assets.xcassets */; };
+		A508890421AE372D00DCBC7B /* Listy_tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508890321AE372D00DCBC7B /* Listy_tvOSTests.swift */; };
 		A51D459A21A304E800788423 /* EditTaskRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D459921A304E800788423 /* EditTaskRouterOutput.swift */; };
 		A51D459F21A4026700788423 /* FakeTasksListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D459E21A4026700788423 /* FakeTasksListInteractorOutput.swift */; };
 		A51D45A121A408FD00788423 /* FakeTasksListRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D45A021A408FD00788423 /* FakeTasksListRouterOutput.swift */; };
@@ -181,6 +186,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 260D692B216846F9003B7DD9;
 			remoteInfo = ListyUI;
+		};
+		A508890021AE372D00DCBC7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 260D68CF2166FAD0003B7DD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50888EE21AE372A00DCBC7B;
+			remoteInfo = "Listy-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -314,6 +326,15 @@
 		26EB60DC21AC037C007B638F /* TasksListViewTableViewDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListViewTableViewDelegateTests.swift; sourceTree = "<group>"; };
 		26EB60DE21AC038B007B638F /* TasksListViewTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListViewTableViewDelegate.swift; sourceTree = "<group>"; };
 		26EB60E021AC36C7007B638F /* EditTaskPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskPresenterInput.swift; sourceTree = "<group>"; };
+		A50888EF21AE372A00DCBC7B /* Listy-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Listy-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50888F121AE372B00DCBC7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A50888F321AE372B00DCBC7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A50888F621AE372B00DCBC7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A50888F821AE372D00DCBC7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A50888FA21AE372D00DCBC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A50888FF21AE372D00DCBC7B /* Listy-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Listy-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A508890321AE372D00DCBC7B /* Listy_tvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listy_tvOSTests.swift; sourceTree = "<group>"; };
+		A508890521AE372D00DCBC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A51D459921A304E800788423 /* EditTaskRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskRouterOutput.swift; sourceTree = "<group>"; };
 		A51D459E21A4026700788423 /* FakeTasksListInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTasksListInteractorOutput.swift; sourceTree = "<group>"; };
 		A51D45A021A408FD00788423 /* FakeTasksListRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTasksListRouterOutput.swift; sourceTree = "<group>"; };
@@ -395,6 +416,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A50888EC21AE372A00DCBC7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50888FC21AE372D00DCBC7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -418,6 +453,8 @@
 				260D6934216846F9003B7DD9 /* ListyUITests.xctest */,
 				265EA94C216856800009FF96 /* Listy-iOS.app */,
 				265EA95F216856820009FF96 /* Listy-iOSTests.xctest */,
+				A50888EF21AE372A00DCBC7B /* Listy-tvOS.app */,
+				A50888FF21AE372D00DCBC7B /* Listy-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -911,6 +948,7 @@
 			isa = PBXGroup;
 			children = (
 				265EA94D216856800009FF96 /* Listy-iOS */,
+				A50888F021AE372B00DCBC7B /* Listy-tvOS */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -928,10 +966,32 @@
 			isa = PBXGroup;
 			children = (
 				265EA962216856830009FF96 /* Listy-iOSTests */,
+				A508890221AE372D00DCBC7B /* Listy-tvOSTests */,
 				260D6938216846FA003B7DD9 /* ListyUITests */,
 				260D68E72166FD2C003B7DD9 /* ListyKitTests */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		A50888F021AE372B00DCBC7B /* Listy-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				A50888F121AE372B00DCBC7B /* AppDelegate.swift */,
+				A50888F321AE372B00DCBC7B /* ViewController.swift */,
+				A50888F521AE372B00DCBC7B /* Main.storyboard */,
+				A50888F821AE372D00DCBC7B /* Assets.xcassets */,
+				A50888FA21AE372D00DCBC7B /* Info.plist */,
+			);
+			path = "Listy-tvOS";
+			sourceTree = "<group>";
+		};
+		A508890221AE372D00DCBC7B /* Listy-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				A508890321AE372D00DCBC7B /* Listy_tvOSTests.swift */,
+				A508890521AE372D00DCBC7B /* Info.plist */,
+			);
+			path = "Listy-tvOSTests";
 			sourceTree = "<group>";
 		};
 		A51D459821A3036600788423 /* Helpers */ = {
@@ -1240,13 +1300,48 @@
 			productReference = 265EA95F216856820009FF96 /* Listy-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A50888EE21AE372A00DCBC7B /* Listy-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A508890621AE372D00DCBC7B /* Build configuration list for PBXNativeTarget "Listy-tvOS" */;
+			buildPhases = (
+				A50888EB21AE372A00DCBC7B /* Sources */,
+				A50888EC21AE372A00DCBC7B /* Frameworks */,
+				A50888ED21AE372A00DCBC7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Listy-tvOS";
+			productName = "Listy-tvOS";
+			productReference = A50888EF21AE372A00DCBC7B /* Listy-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A50888FE21AE372D00DCBC7B /* Listy-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A508890921AE372D00DCBC7B /* Build configuration list for PBXNativeTarget "Listy-tvOSTests" */;
+			buildPhases = (
+				A50888FB21AE372D00DCBC7B /* Sources */,
+				A50888FC21AE372D00DCBC7B /* Frameworks */,
+				A50888FD21AE372D00DCBC7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A508890121AE372D00DCBC7B /* PBXTargetDependency */,
+			);
+			name = "Listy-tvOSTests";
+			productName = "Listy-tvOSTests";
+			productReference = A50888FF21AE372D00DCBC7B /* Listy-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		260D68CF2166FAD0003B7DD9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				TargetAttributes = {
 					260D68D92166FD2C003B7DD9 = {
@@ -1270,6 +1365,13 @@
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = 265EA94B216856800009FF96;
 					};
+					A50888EE21AE372A00DCBC7B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					A50888FE21AE372D00DCBC7B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A50888EE21AE372A00DCBC7B;
+					};
 				};
 			};
 			buildConfigurationList = 260D68D22166FAD0003B7DD9 /* Build configuration list for PBXProject "Listy" */;
@@ -1291,6 +1393,8 @@
 				260D68E22166FD2C003B7DD9 /* ListyKitTests */,
 				260D692B216846F9003B7DD9 /* ListyUI */,
 				260D6933216846F9003B7DD9 /* ListyUITests */,
+				A50888EE21AE372A00DCBC7B /* Listy-tvOS */,
+				A50888FE21AE372D00DCBC7B /* Listy-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1338,6 +1442,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		265EA95D216856820009FF96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50888ED21AE372A00DCBC7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50888F921AE372D00DCBC7B /* Assets.xcassets in Resources */,
+				A50888F721AE372B00DCBC7B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50888FD21AE372D00DCBC7B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1503,6 +1623,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A50888EB21AE372A00DCBC7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50888F421AE372B00DCBC7B /* ViewController.swift in Sources */,
+				A50888F221AE372B00DCBC7B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50888FB21AE372D00DCBC7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A508890421AE372D00DCBC7B /* Listy_tvOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1536,6 +1673,11 @@
 			target = 260D692B216846F9003B7DD9 /* ListyUI */;
 			targetProxy = 265EA972216856AC0009FF96 /* PBXContainerItemProxy */;
 		};
+		A508890121AE372D00DCBC7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50888EE21AE372A00DCBC7B /* Listy-tvOS */;
+			targetProxy = A508890021AE372D00DCBC7B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1545,6 +1687,14 @@
 				265EA958216856820009FF96 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A50888F521AE372B00DCBC7B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A50888F621AE372B00DCBC7B /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -2512,6 +2662,194 @@
 			};
 			name = Release;
 		};
+		A508890721AE372D00DCBC7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Apps/Listy-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Debug;
+		};
+		A508890821AE372D00DCBC7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Apps/Listy-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A508890A21AE372D00DCBC7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Tests/Listy-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Listy-tvOS.app/Listy-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Debug;
+		};
+		A508890B21AE372D00DCBC7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Tests/Listy-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Listy-tvOS.app/Listy-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2574,6 +2912,24 @@
 			buildConfigurations = (
 				265EA968216856830009FF96 /* Debug */,
 				265EA969216856830009FF96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A508890621AE372D00DCBC7B /* Build configuration list for PBXNativeTarget "Listy-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A508890721AE372D00DCBC7B /* Debug */,
+				A508890821AE372D00DCBC7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A508890921AE372D00DCBC7B /* Build configuration list for PBXNativeTarget "Listy-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A508890A21AE372D00DCBC7B /* Debug */,
+				A508890B21AE372D00DCBC7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
