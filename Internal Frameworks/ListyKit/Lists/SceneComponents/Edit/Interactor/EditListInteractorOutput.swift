@@ -5,10 +5,7 @@
 //  Created by Kevin Wolkober on 11/27/18.
 //
 
-import Foundation
-@testable import ListyKit
-
-protocol EditListInteractorOutput: class {
+public protocol EditListInteractorOutput: class {
 
     func finish(with list: List)
     func failedToSaveList(with error: NSError)

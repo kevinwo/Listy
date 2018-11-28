@@ -6,6 +6,7 @@
 //
 
 @testable import Listy_iOS
+@testable import ListyKit
 
 class FakeEditListPresenterInput: EditListPresenterInput {
 

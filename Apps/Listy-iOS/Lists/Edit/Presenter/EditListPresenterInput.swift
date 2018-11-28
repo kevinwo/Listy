@@ -5,7 +5,7 @@
 //  Created by Kevin Wolkober on 11/27/18.
 //
 
-import Foundation
+import ListyKit
 
 protocol EditListPresenterInput: class {
 
