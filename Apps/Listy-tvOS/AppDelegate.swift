@@ -6,15 +6,24 @@
 //
 
 import UIKit
+import ListyKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let database = Database.newInstance()
+        let lists = Lists(database: database)
+        let tasks = Tasks(database: database)
+
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = ListsRouter.scene(lists: lists, tasks: tasks)
+        window.makeKeyAndVisible()
+
+        self.window = window
+
         return true
     }
 

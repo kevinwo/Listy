@@ -89,7 +89,6 @@
 		26EB60E121AC36C7007B638F /* EditTaskPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EB60E021AC36C7007B638F /* EditTaskPresenterInput.swift */; };
 		A50888F221AE372B00DCBC7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50888F121AE372B00DCBC7B /* AppDelegate.swift */; };
 		A50888F921AE372D00DCBC7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50888F821AE372D00DCBC7B /* Assets.xcassets */; };
-		A508890421AE372D00DCBC7B /* Listy_tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508890321AE372D00DCBC7B /* Listy_tvOSTests.swift */; };
 		A50889D521AE6E6C00DCBC7B /* ListyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50889CE21AE6E6C00DCBC7B /* ListyKit.framework */; };
 		A50889D621AE6E6C00DCBC7B /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A50889CE21AE6E6C00DCBC7B /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A50889DA21AE6F0100DCBC7B /* ListyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 260D68DD2166FD2C003B7DD9 /* ListyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -154,6 +153,9 @@
 		A5088A6521AE98AA00DCBC7B /* ListyUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 260D692E216846F9003B7DD9 /* ListyUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5088A6621AE98F500DCBC7B /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D6948216847D4003B7DD9 /* TableViewDataSource.swift */; };
 		A5088A6B21AE9AEA00DCBC7B /* FakeListsPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A6921AE9AE400DCBC7B /* FakeListsPresenterInput.swift */; };
+		A5088A6E21AEB69400DCBC7B /* ListsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A6D21AEB69400DCBC7B /* ListsRouter.swift */; };
+		A5088A7121AEB71000DCBC7B /* ListsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A7021AEB71000DCBC7B /* ListsRouterTests.swift */; };
+		A5088A7421AEB77E00DCBC7B /* FakeListsRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A7221AEB75000DCBC7B /* FakeListsRouterOutput.swift */; };
 		A51D459A21A304E800788423 /* EditTaskRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D459921A304E800788423 /* EditTaskRouterOutput.swift */; };
 		A51D459F21A4026700788423 /* FakeTasksListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D459E21A4026700788423 /* FakeTasksListInteractorOutput.swift */; };
 		A51D45A121A408FD00788423 /* FakeTasksListRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D45A021A408FD00788423 /* FakeTasksListRouterOutput.swift */; };
@@ -414,7 +416,6 @@
 		A50888F821AE372D00DCBC7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A50888FA21AE372D00DCBC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A50888FF21AE372D00DCBC7B /* Listy-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Listy-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A508890321AE372D00DCBC7B /* Listy_tvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listy_tvOSTests.swift; sourceTree = "<group>"; };
 		A508890521AE372D00DCBC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A50889CE21AE6E6C00DCBC7B /* ListyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ListyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5088A0D21AE8B3100DCBC7B /* ViewRoutable+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewRoutable+LIST.swift"; sourceTree = "<group>"; };
@@ -424,6 +425,9 @@
 		A5088A5A21AE96FF00DCBC7B /* Lists.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lists.storyboard; sourceTree = "<group>"; };
 		A5088A5E21AE973800DCBC7B /* ListsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewControllerTests.swift; sourceTree = "<group>"; };
 		A5088A6921AE9AE400DCBC7B /* FakeListsPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsPresenterInput.swift; sourceTree = "<group>"; };
+		A5088A6D21AEB69400DCBC7B /* ListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouter.swift; sourceTree = "<group>"; };
+		A5088A7021AEB71000DCBC7B /* ListsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouterTests.swift; sourceTree = "<group>"; };
+		A5088A7221AEB75000DCBC7B /* FakeListsRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsRouterOutput.swift; sourceTree = "<group>"; };
 		A51D459921A304E800788423 /* EditTaskRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskRouterOutput.swift; sourceTree = "<group>"; };
 		A51D459E21A4026700788423 /* FakeTasksListInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTasksListInteractorOutput.swift; sourceTree = "<group>"; };
 		A51D45A021A408FD00788423 /* FakeTasksListRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTasksListRouterOutput.swift; sourceTree = "<group>"; };
@@ -1072,7 +1076,6 @@
 			isa = PBXGroup;
 			children = (
 				A5088A5C21AE971000DCBC7B /* Lists */,
-				A508890321AE372D00DCBC7B /* Listy_tvOSTests.swift */,
 				A508890521AE372D00DCBC7B /* Info.plist */,
 			);
 			path = "Listy-tvOSTests";
@@ -1240,6 +1243,7 @@
 			isa = PBXGroup;
 			children = (
 				A5088A6721AE992A00DCBC7B /* View */,
+				A5088A6C21AEB67C00DCBC7B /* Router */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -1273,8 +1277,26 @@
 			isa = PBXGroup;
 			children = (
 				A5088A5D21AE971500DCBC7B /* View */,
+				A5088A6F21AEB6FB00DCBC7B /* Router */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		A5088A6C21AEB67C00DCBC7B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A5088A6D21AEB69400DCBC7B /* ListsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A5088A6F21AEB6FB00DCBC7B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A5088A7021AEB71000DCBC7B /* ListsRouterTests.swift */,
+				A5088A7221AEB75000DCBC7B /* FakeListsRouterOutput.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		A51D459821A3036600788423 /* Helpers */ = {
@@ -1991,6 +2013,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5088A6E21AEB69400DCBC7B /* ListsRouter.swift in Sources */,
 				A50888F221AE372B00DCBC7B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2000,9 +2023,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5088A4B21AE93E200DCBC7B /* UIBarButtonItem+Tests.swift in Sources */,
-				A508890421AE372D00DCBC7B /* Listy_tvOSTests.swift in Sources */,
+				A5088A7421AEB77E00DCBC7B /* FakeListsRouterOutput.swift in Sources */,
 				A5088A5F21AE973800DCBC7B /* ListsViewControllerTests.swift in Sources */,
 				A5088A6B21AE9AEA00DCBC7B /* FakeListsPresenterInput.swift in Sources */,
+				A5088A7121AEB71000DCBC7B /* ListsRouterTests.swift in Sources */,
 				A50889F421AE80F700DCBC7B /* FileManager+Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
