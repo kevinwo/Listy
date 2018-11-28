@@ -401,12 +401,9 @@
 		260D68CE2166FAD0003B7DD9 = {
 			isa = PBXGroup;
 			children = (
-				265EA94D216856800009FF96 /* Listy-iOS */,
-				265EA962216856830009FF96 /* Listy-iOSTests */,
-				260D692D216846F9003B7DD9 /* ListyUI */,
-				260D6938216846FA003B7DD9 /* ListyUITests */,
-				260D68DC2166FD2C003B7DD9 /* ListyKit */,
-				260D68E72166FD2C003B7DD9 /* ListyKitTests */,
+				A50888E821AE352C00DCBC7B /* Apps */,
+				A50888E921AE357B00DCBC7B /* Internal Frameworks */,
+				A50888EA21AE35A600DCBC7B /* Tests */,
 				260D68DB2166FD2C003B7DD9 /* Products */,
 				260D694C21684852003B7DD9 /* Frameworks */,
 			);
@@ -908,6 +905,33 @@
 				265EA987216857880009FF96 /* Lists.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A50888E821AE352C00DCBC7B /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				265EA94D216856800009FF96 /* Listy-iOS */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		A50888E921AE357B00DCBC7B /* Internal Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				260D692D216846F9003B7DD9 /* ListyUI */,
+				260D68DC2166FD2C003B7DD9 /* ListyKit */,
+			);
+			path = "Internal Frameworks";
+			sourceTree = "<group>";
+		};
+		A50888EA21AE35A600DCBC7B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				265EA962216856830009FF96 /* Listy-iOSTests */,
+				260D6938216846FA003B7DD9 /* ListyUITests */,
+				260D68E72166FD2C003B7DD9 /* ListyKitTests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		A51D459821A3036600788423 /* Helpers */ = {
@@ -1649,7 +1673,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ListyKit/Info.plist;
+				INFOPLIST_FILE = "Internal Frameworks/ListyKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1727,7 +1751,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ListyKit/Info.plist;
+				INFOPLIST_FILE = "Internal Frameworks/ListyKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1806,7 +1830,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ListyKitTests/Info.plist;
+				INFOPLIST_FILE = Tests/ListyKitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1875,7 +1899,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ListyKitTests/Info.plist;
+				INFOPLIST_FILE = Tests/ListyKitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1954,7 +1978,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ListyUI/Info.plist;
+				INFOPLIST_FILE = "Internal Frameworks/ListyUI/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2030,7 +2054,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ListyUI/Info.plist;
+				INFOPLIST_FILE = "Internal Frameworks/ListyUI/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2108,7 +2132,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ListyUITests/Info.plist;
+				INFOPLIST_FILE = Tests/ListyUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2177,7 +2201,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ListyUITests/Info.plist;
+				INFOPLIST_FILE = Tests/ListyUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2253,7 +2277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Listy-iOS/Info.plist";
+				INFOPLIST_FILE = "Apps/Listy-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2322,7 +2346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Listy-iOS/Info.plist";
+				INFOPLIST_FILE = "Apps/Listy-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2397,7 +2421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Listy-iOSTests/Info.plist";
+				INFOPLIST_FILE = "Tests/Listy-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2467,7 +2491,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Listy-iOSTests/Info.plist";
+				INFOPLIST_FILE = "Tests/Listy-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
