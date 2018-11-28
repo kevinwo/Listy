@@ -365,7 +365,7 @@
 		265EA965216856830009FF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		265EA979216857340009FF96 /* ListsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsPresenter.swift; sourceTree = "<group>"; };
 		265EA97A216857340009FF96 /* ListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouter.swift; sourceTree = "<group>"; };
-		265EA97B216857340009FF96 /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
+		265EA97B216857340009FF96 /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListsViewController.swift; path = ../../../Lists/SceneComponents/List/ListsViewController.swift; sourceTree = "<group>"; };
 		265EA97C216857340009FF96 /* ListsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsInteractor.swift; sourceTree = "<group>"; };
 		265EA981216857480009FF96 /* ListsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewControllerTests.swift; sourceTree = "<group>"; };
 		265EA982216857480009FF96 /* ListsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsInteractorTests.swift; sourceTree = "<group>"; };
@@ -376,7 +376,7 @@
 		265EA99321685DE20009FF96 /* EditListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListPresenterTests.swift; sourceTree = "<group>"; };
 		265EA99721685E0B0009FF96 /* EditListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListPresenter.swift; sourceTree = "<group>"; };
 		265EA99821685E0B0009FF96 /* EditListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListRouter.swift; sourceTree = "<group>"; };
-		265EA99921685E0B0009FF96 /* EditListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListViewController.swift; sourceTree = "<group>"; };
+		265EA99921685E0B0009FF96 /* EditListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditListViewController.swift; path = ../../../Lists/SceneComponents/Edit/EditListViewController.swift; sourceTree = "<group>"; };
 		265EA99A21685E0B0009FF96 /* EditListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListInteractor.swift; sourceTree = "<group>"; };
 		265EA99F21685E240009FF96 /* EditList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditList.storyboard; sourceTree = "<group>"; };
 		265EA9A2216881200009FF96 /* UIBarButtonItem+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Tests.swift"; sourceTree = "<group>"; };
@@ -416,7 +416,7 @@
 		26B52C18217DA5E10011375F /* TasksListRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListRouterOutput.swift; sourceTree = "<group>"; };
 		26B52C1A217DA6250011375F /* ViewRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRoutable.swift; sourceTree = "<group>"; };
 		26B52C1C217DA7730011375F /* TasksListRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListRouterInput.swift; sourceTree = "<group>"; };
-		26C8F05821ABC3FE0013E3B8 /* ListsViewTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewTableViewDelegate.swift; sourceTree = "<group>"; };
+		26C8F05821ABC3FE0013E3B8 /* ListsViewTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListsViewTableViewDelegate.swift; path = ../../../Lists/SceneComponents/List/ListsViewTableViewDelegate.swift; sourceTree = "<group>"; };
 		26C8F05A21ABC4210013E3B8 /* ListsViewTableViewDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewTableViewDelegateTests.swift; sourceTree = "<group>"; };
 		26E5479A21A50AF900EA4EEA /* ListsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsInteractorOutput.swift; sourceTree = "<group>"; };
 		26E5479D21A50BC900EA4EEA /* FakeListsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsInteractorOutput.swift; sourceTree = "<group>"; };
@@ -1188,8 +1188,7 @@
 			children = (
 				A5088A3921AE92A000DCBC7B /* SceneComponents */,
 			);
-			name = Lists;
-			path = "New Group";
+			path = Lists;
 			sourceTree = "<group>";
 		};
 		A5088A3921AE92A000DCBC7B /* SceneComponents */ = {
