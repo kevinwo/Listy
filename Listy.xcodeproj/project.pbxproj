@@ -31,7 +31,6 @@
 		260D695021684964003B7DD9 /* Mirror+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D694F21684964003B7DD9 /* Mirror+LIST.swift */; };
 		264E746C2176EC61000799F2 /* EditTaskInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746B2176EC61000799F2 /* EditTaskInteractorInput.swift */; };
 		264E746E2176F1C9000799F2 /* EditTaskInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746D2176F1C9000799F2 /* EditTaskInteractorOutput.swift */; };
-		264E74702176F446000799F2 /* ErrorAlertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746F2176F446000799F2 /* ErrorAlertable.swift */; };
 		264E7477217703E8000799F2 /* FakeEditTaskPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E7476217703E8000799F2 /* FakeEditTaskPresenterInput.swift */; };
 		265EA91021684F8F0009FF96 /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		265EA94F216856800009FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA94E216856800009FF96 /* AppDelegate.swift */; };
@@ -128,6 +127,8 @@
 		A50889F421AE80F700DCBC7B /* FileManager+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9AE2168C6A30009FF96 /* FileManager+Tests.swift */; };
 		A50889F521AE80F800DCBC7B /* FileManager+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9AE2168C6A30009FF96 /* FileManager+Tests.swift */; };
 		A50889F621AE80F800DCBC7B /* FileManager+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9AE2168C6A30009FF96 /* FileManager+Tests.swift */; };
+		A5088A0221AE870D00DCBC7B /* ErrorAlertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746F2176F446000799F2 /* ErrorAlertable.swift */; };
+		A5088A0321AE870D00DCBC7B /* ErrorAlertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746F2176F446000799F2 /* ErrorAlertable.swift */; };
 		A51D459A21A304E800788423 /* EditTaskRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D459921A304E800788423 /* EditTaskRouterOutput.swift */; };
 		A51D459F21A4026700788423 /* FakeTasksListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D459E21A4026700788423 /* FakeTasksListInteractorOutput.swift */; };
 		A51D45A121A408FD00788423 /* FakeTasksListRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D45A021A408FD00788423 /* FakeTasksListRouterOutput.swift */; };
@@ -513,6 +514,7 @@
 				260D68FD216707DF003B7DD9 /* Database */,
 				260D68DD2166FD2C003B7DD9 /* ListyKit.h */,
 				260D68DE2166FD2C003B7DD9 /* Info.plist */,
+				264E746F2176F446000799F2 /* ErrorAlertable.swift */,
 			);
 			path = ListyKit;
 			sourceTree = "<group>";
@@ -593,7 +595,6 @@
 				260D692E216846F9003B7DD9 /* ListyUI.h */,
 				260D692F216846F9003B7DD9 /* Info.plist */,
 				26B52C1A217DA6250011375F /* ViewRoutable.swift */,
-				264E746F2176F446000799F2 /* ErrorAlertable.swift */,
 			);
 			path = ListyUI;
 			sourceTree = "<group>";
@@ -1604,6 +1605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50889E921AE7B9000DCBC7B /* ListsInteractorInput.swift in Sources */,
+				A5088A0321AE870D00DCBC7B /* ErrorAlertable.swift in Sources */,
 				A50889E621AE7B8A00DCBC7B /* ListsInteractor.swift in Sources */,
 				260D6905216709F0003B7DD9 /* Object.swift in Sources */,
 				260D691821674F87003B7DD9 /* Lists.swift in Sources */,
@@ -1638,7 +1640,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				264E74702176F446000799F2 /* ErrorAlertable.swift in Sources */,
 				26B52C1B217DA6250011375F /* ViewRoutable.swift in Sources */,
 				260D6949216847D4003B7DD9 /* TableViewDataSource.swift in Sources */,
 			);
@@ -1780,6 +1781,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50889EB21AE7B9100DCBC7B /* ListsInteractorInput.swift in Sources */,
+				A5088A0221AE870D00DCBC7B /* ErrorAlertable.swift in Sources */,
 				A50889E721AE7B8A00DCBC7B /* ListsInteractor.swift in Sources */,
 				A50889E021AE6F7200DCBC7B /* Database.swift in Sources */,
 				A50889DE21AE6F6C00DCBC7B /* Task.swift in Sources */,
