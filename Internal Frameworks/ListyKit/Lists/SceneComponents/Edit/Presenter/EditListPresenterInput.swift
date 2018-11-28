@@ -5,10 +5,9 @@
 //  Created by Kevin Wolkober on 11/27/18.
 //
 
-import ListyKit
+public protocol EditListPresenterInput: class {
 
-protocol EditListPresenterInput: class {
-
+    var output: EditListPresenterOutput! { get set }
     var router: EditListRouterInput! { get set }
     var interactor: EditListInteractorInput! { get set }
 

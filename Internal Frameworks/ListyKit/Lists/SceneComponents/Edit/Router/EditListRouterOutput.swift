@@ -5,10 +5,8 @@
 //  Created by Kevin Wolkober on 11/28/18.
 //
 
-import ListyUI
-import ListyKit
+public protocol EditListRouterOutput: ViewRoutable {
 
-protocol EditListRouterOutput: ViewRoutable {
     func finishWithCancel()
     func finishWithSaving(_ list: List)
 }

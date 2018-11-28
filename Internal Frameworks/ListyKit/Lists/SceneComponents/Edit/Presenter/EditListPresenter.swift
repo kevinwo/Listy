@@ -6,24 +6,23 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import ListyUI
-import ListyKit
-
-class EditListPresenter: EditListPresenterInput {
+public final class EditListPresenter: EditListPresenterInput {
 
     // MARK: - Properties
 
-    weak var output: EditListPresenterOutput!
-    var router: EditListRouterInput!
-    var interactor: EditListInteractorInput!
+    public weak var output: EditListPresenterOutput!
+    public var router: EditListRouterInput!
+    public var interactor: EditListInteractorInput!
+
+    public init() {}
 
     // MARK: - EditListPresenterInput
 
-    func cancel() {
+    public func cancel() {
         self.router.finishWithCancel()
     }
 
-    func save(title: String?) {
+    public func save(title: String?) {
         guard let title = title, !title.isEmpty else {
             let error = NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
             self.output.showErrorAlert(for: error)
@@ -36,11 +35,11 @@ class EditListPresenter: EditListPresenterInput {
 
 extension EditListPresenter: EditListInteractorOutput {
 
-    func finish(with list: List) {
+    public func finish(with list: List) {
         self.router.finishWithSaving(list)
     }
 
-    func failedToSaveList(with error: NSError) {
+    public func failedToSaveList(with error: NSError) {
         self.output.showErrorAlert(for: error)
     }
 }

@@ -5,6 +5,4 @@
 //  Created by Kevin Wolkober on 11/27/18.
 //
 
-import ListyKit
-
-protocol EditListPresenterOutput: class, ErrorAlertable {}
+public protocol EditListPresenterOutput: class, ErrorAlertable {}
