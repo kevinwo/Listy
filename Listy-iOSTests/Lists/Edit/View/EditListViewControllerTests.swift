@@ -12,7 +12,7 @@ import XCTest
 class EditListViewControllerTests: XCTestCase {
 
     var sut: EditListViewController!
-    var fakePresenter: FakeEditListPresenter!
+    var fakePresenter: FakeEditListPresenterInput!
     var navigationController: UINavigationController!
     var window: UIWindow!
 
@@ -26,8 +26,9 @@ class EditListViewControllerTests: XCTestCase {
         navigationController = (storyboard.instantiateInitialViewController() as! UINavigationController)
         sut = (navigationController.topViewController as! EditListViewController)
 
-        fakePresenter = FakeEditListPresenter(view: sut)
+        fakePresenter = FakeEditListPresenterInput()
         sut.presenter = fakePresenter
+
         _ = sut.view
     }
 

@@ -13,54 +13,37 @@ import XCTest
 class EditListPresenterTests: XCTestCase {
 
     var sut: EditListPresenter!
-    var controller: EditListViewController!
-    var fakeDelegate: FakeEditListViewControllerDelegate!
+    var fakeOutput: FakeEditListPresenterOutput!
     var fakeRouter: FakeEditListRouterInput!
-    var fakeInteractor: FakeEditListInteractor!
+    var fakeInteractor: FakeEditListInteractorInput!
 
     // MARK: - Test lifecycle
 
     override func setUp() {
         super.setUp()
 
-        let storyboard = UIStoryboard(name: "EditList", bundle: nil)
-        controller = (storyboard.instantiateViewController(withIdentifier: "EditListViewController") as! EditListViewController)
-        sut = EditListPresenter(view: controller)
+        let presenter = EditListPresenter()
 
+        fakeOutput = FakeEditListPresenterOutput()
         fakeRouter = FakeEditListRouterInput()
-        sut.router = fakeRouter
+        fakeInteractor = FakeEditListInteractorInput(list: List(), lists: Lists(database: Database.newInstance(path: NSTemporaryDirectory())))
 
-        fakeInteractor = FakeEditListInteractor(output: sut)
-        sut.interactor = fakeInteractor
+        presenter.output = fakeOutput
+        presenter.router = fakeRouter
+        presenter.interactor = fakeInteractor
 
-        fakeDelegate = FakeEditListViewControllerDelegate()
-        controller.delegate = fakeDelegate
-
-        controller.presenter = sut
-        _ = controller.view
+        sut = presenter
     }
 
     override func tearDown() {
         sut = nil
-        controller = nil
-        fakeDelegate = nil
+        fakeRouter = nil
         fakeInteractor = nil
 
         super.tearDown()
     }
 
     // MARK: - Tests
-
-    // MARK: - init(view:)
-
-    func testInitWithView() {
-        // when
-        let presenter = EditListPresenter(view: controller)
-
-        // then
-        XCTAssertNotNil(presenter.view)
-        XCTAssertNotNil(presenter.interactor)
-    }
 
     // MARK: - cancel()
 
@@ -69,17 +52,17 @@ class EditListPresenterTests: XCTestCase {
         sut.cancel()
 
         // then
-        XCTAssertTrue(fakeDelegate.didCallCancelWithController)
+        XCTAssertTrue(fakeRouter.didCallFinishWithCancel)
     }
 
     // MARK: - save()
 
     func testSave_WhenTitleIsPresent() {
         // given
-        controller.titleTextField.text = "Cool List"
+        let title = "Cool List"
 
         // when
-        sut.save()
+        sut.save(title: title)
 
         // then
         XCTAssertTrue(fakeInteractor.didCallSaveList)
@@ -87,18 +70,23 @@ class EditListPresenterTests: XCTestCase {
 
     func testSave_WhenTitleIsNotPresent() {
         // given
-        controller.titleTextField.text = nil
+        let title: String? = nil
 
         // when
-        sut.save()
+        sut.save(title: title)
 
         // then
         XCTAssertFalse(fakeInteractor.didCallSaveList)
     }
+}
+
+// MARK: - EditListPresenterOutput
+
+extension EditListPresenterTests {
 
     // MARK: - finish(with:)
 
-    func testFinishWithList() {
+    func testFinish() {
         // given
         let list = List()
         list.title = "Cool List"
@@ -109,5 +97,19 @@ class EditListPresenterTests: XCTestCase {
         // then
         XCTAssertTrue(fakeRouter.didCallFinishWithSaving)
         XCTAssertEqual(fakeRouter.listDidFinishWithSaving, list)
+    }
+
+    // MARK: - failedToSaveList(with:)
+
+    func testFailedToSaveList() {
+        // given
+        let error = NSError()
+
+        // when
+        sut.failedToSaveList(with: error)
+
+        // then
+        XCTAssertTrue(fakeOutput.didCallShowErrorAlert)
+        XCTAssertEqual(fakeOutput.errorToShowInAlert, error)
     }
 }

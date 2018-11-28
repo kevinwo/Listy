@@ -9,42 +9,38 @@
 import ListyUI
 import ListyKit
 
-class EditListPresenter {
+class EditListPresenter: EditListPresenterInput {
 
-    weak var view: EditListViewController!
+    // MARK: - Properties
+
+    weak var output: EditListPresenterOutput!
     var router: EditListRouterInput!
-    lazy var interactor: EditListInteractor = {
-        return EditListInteractor(output: self)
-    }()
+    var interactor: EditListInteractorInput!
 
-    init(view: EditListViewController) {
-        self.view = view
-        self.router = EditListRouter(view: view)
-    }
-
-    // MARK: - Public interface
+    // MARK: - EditListPresenterInput
 
     func cancel() {
-        self.view.delegate.didCancelWithController(self.view)
+        self.router.finishWithCancel()
     }
 
-    func save() {
-        guard let title = self.view.titleTextField.text, !title.isEmpty else {
+    func save(title: String?) {
+        guard let title = title, !title.isEmpty else {
             let error = NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
-            self.view.showErrorAlert(for: error)
+            self.output.showErrorAlert(for: error)
             return
         }
 
         self.interactor.saveList(title: title)
     }
+}
 
-    // MARK: - Interactor output
+extension EditListPresenter: EditListInteractorOutput {
 
     func finish(with list: List) {
         self.router.finishWithSaving(list)
     }
 
     func failedToSaveList(with error: NSError) {
-        self.view.showErrorAlert(for: error)
+        self.output.showErrorAlert(for: error)
     }
 }

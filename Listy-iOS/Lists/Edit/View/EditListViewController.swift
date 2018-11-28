@@ -23,17 +23,8 @@ class EditListViewController: UITableViewController {
     @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var titleTextField: UITextField!
 
-    var presenter: EditListPresenter!
-    var list: List!
+    var presenter: EditListPresenterInput!
     weak var delegate: EditListViewControllerDelegate!
-
-    // MARK: - Object lifecycle
-
-    required init?(coder decoder: NSCoder) {
-        super.init(coder: decoder)
-
-        self.presenter = EditListPresenter(view: self)
-    }
 
     // MARK: - Button actions
 
@@ -42,8 +33,8 @@ class EditListViewController: UITableViewController {
     }
 
     @IBAction func saveBarButtonItemTapped(_ sender: Any) {
-        self.presenter.save()
+        self.presenter.save(title: self.titleTextField.text)
     }
 }
 
-extension EditListViewController: ErrorAlertable {}
+extension EditListViewController: EditListPresenterOutput {}

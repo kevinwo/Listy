@@ -13,8 +13,8 @@ import XCTest
 class EditListInteractorTests: XCTestCase {
 
     var sut: EditListInteractor!
-    var fakePresenter: FakeEditListPresenter!
-    var controller: EditListViewController!
+    var fakeOutput: FakeEditListInteractorOutput!
+    var list: List!
     var lists: Lists!
 
     // MARK: - Test lifecycle
@@ -22,43 +22,30 @@ class EditListInteractorTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        FileManager().clearTemporaryDirectory()
-
-        let storyboard = UIStoryboard(name: "EditList", bundle: nil)
-        controller = (storyboard.instantiateViewController(withIdentifier: "EditListViewController") as! EditListViewController)
-
-        fakePresenter = FakeEditListPresenter(view: controller)
-        controller.presenter = fakePresenter
-
-        sut = EditListInteractor(output: fakePresenter)
-        fakePresenter.interactor = sut
-
+        fakeOutput = FakeEditListInteractorOutput()
+        list = List()
         lists = Lists(database: Database.newInstance(path: NSTemporaryDirectory()))
-        sut.lists = lists
 
-        _ = controller.view
+        sut = EditListInteractor(list: list, lists: lists)
+        sut.output = fakeOutput
     }
 
     override func tearDown() {
         sut = nil
-        fakePresenter = nil
-        controller = nil
+        fakeOutput = nil
+        list = nil
         lists = nil
+
+        FileManager().clearTemporaryDirectory()
 
         super.tearDown()
     }
 
     // MARK: - Tests
 
-    // MARK: - init(output:)
-
     func testInit() {
-        // when
-        let interactor = EditListInteractor(output: fakePresenter)
-
-        // then
-        XCTAssert(interactor.output === fakePresenter)
-        XCTAssertNotNil(interactor.lists)
+        XCTAssertEqual(sut.list, list)
+        XCTAssert(sut.lists === lists)
     }
 
     // MARK: - saveList(title:)
@@ -75,6 +62,6 @@ class EditListInteractorTests: XCTestCase {
         // then
         let allListsAfterSave = lists.all()
         XCTAssertNotNil(allListsAfterSave.filter({ $0.title == title }).first)
-        XCTAssertTrue(fakePresenter.didCallFinish)
+        XCTAssertTrue(fakeOutput.didCallFinish)
     }
 }

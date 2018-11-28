@@ -37,7 +37,8 @@ class ListsRouter: ListsRouterInput {
     }
 
     func showEditListView(with list: List) {
-        let controller = EditListRouter.scene(list: list, delegate: self)
+        let lists = Lists(database: Database.newInstance())
+        let controller = EditListRouter.scene(list: list, delegate: self, lists: lists)
         self.output.present(view: controller, animated: true, completion: nil)
     }
 

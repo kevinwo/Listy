@@ -9,19 +9,22 @@
 import UIKit
 import ListyKit
 
-class EditListInteractor {
+class EditListInteractor: EditListInteractorInput {
 
-    var output: EditListPresenter!
-    var lists: Lists
-    var list: List?
+    // MARK: - Properties
 
-    init(output: EditListPresenter) {
-        self.output = output
-        self.lists = Lists(database: Database.newInstance())
+    var output: EditListInteractorOutput!
+    let lists: Lists
+    var list: List
+
+    // MARK: - EditListInteractorInput
+
+    required init(list: List, lists: Lists) {
+        self.list = list
+        self.lists = lists
     }
 
     func saveList(title: String) {
-        let list = self.list ?? List()
         list.title = title
 
         do {

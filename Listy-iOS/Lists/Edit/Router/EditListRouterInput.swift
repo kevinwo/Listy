@@ -9,5 +9,6 @@ import ListyKit
 
 protocol EditListRouterInput: class {
 
+    func finishWithCancel()
     func finishWithSaving(_ list: List)
 }

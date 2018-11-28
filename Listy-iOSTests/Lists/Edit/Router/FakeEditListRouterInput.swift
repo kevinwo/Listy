@@ -11,8 +11,13 @@ import Foundation
 
 class FakeEditListRouterInput: EditListRouterInput {
 
+    var didCallFinishWithCancel: Bool = false
     var didCallFinishWithSaving: Bool = false
     var listDidFinishWithSaving: List?
+
+    func finishWithCancel() {
+        self.didCallFinishWithCancel = true
+    }
 
     func finishWithSaving(_ list: List) {
         self.didCallFinishWithSaving = true

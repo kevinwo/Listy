@@ -22,7 +22,8 @@ class EditListRouterTests: XCTestCase {
         fakeDelegate = FakeEditListViewControllerDelegate()
         view.delegate = fakeDelegate
 
-        sut = EditListRouter(view: view)
+        sut = EditListRouter()
+        sut.view = view
     }
 
     override func tearDown() {
@@ -36,10 +37,10 @@ class EditListRouterTests: XCTestCase {
 
     func testSceneView() {
         // given
-        let (list, delegate) = sceneInitArguments()
+        let (list, delegate, lists) = sceneInitArguments()
 
         // when
-        let navigationController = EditListRouter.scene(list: list, delegate: delegate)
+        let navigationController = EditListRouter.scene(list: list, delegate: delegate, lists: lists)
 
         // then
         let controller = assertSceneView(navigationController)
@@ -50,10 +51,10 @@ class EditListRouterTests: XCTestCase {
 
     func testScenePresenter() {
         // given
-        let (list, delegate) = sceneInitArguments()
+        let (list, delegate, lists) = sceneInitArguments()
 
         // when
-        let navigationController = EditListRouter.scene(list: list, delegate: delegate)
+        let navigationController = EditListRouter.scene(list: list, delegate: delegate, lists: lists)
 
         // then
         let controller = assertSceneView(navigationController)
@@ -71,10 +72,10 @@ class EditListRouterTests: XCTestCase {
     
     func testSceneRouter() {
         // given
-        let (list, delegate) = sceneInitArguments()
+        let (list, delegate, lists) = sceneInitArguments()
 
         // when
-        let navigationController = EditListRouter.scene(list: list, delegate: delegate)
+        let navigationController = EditListRouter.scene(list: list, delegate: delegate, lists: lists)
 
         // then
         let controller = assertSceneView(navigationController)
@@ -90,10 +91,10 @@ class EditListRouterTests: XCTestCase {
     }
     
     func testSceneInteractor() {
-        let (list, delegate) = sceneInitArguments()
+        let (list, delegate, lists) = sceneInitArguments()
 
         // when
-        let navigationController = EditListRouter.scene(list: list, delegate: delegate)
+        let navigationController = EditListRouter.scene(list: list, delegate: delegate, lists: lists)
 
         // then
         let controller = assertSceneView(navigationController)
@@ -123,11 +124,11 @@ class EditListRouterTests: XCTestCase {
 
     // MARK: - Private interface
 
-    func sceneInitArguments() -> (List, FakeEditListViewControllerDelegate) {
-        let lists = List()
-        let delegate = FakeEditListViewControllerDelegate()
+    func sceneInitArguments() -> (List, FakeEditListViewControllerDelegate, Lists) {
+        let database = Database.newInstance(path: NSTemporaryDirectory())
+        let lists = Lists(database: database)
 
-        return (lists, delegate)
+        return (List(), FakeEditListViewControllerDelegate(), lists)
     }
 
     func assertSceneView(_ navigationController: UINavigationController) -> EditListViewController {
