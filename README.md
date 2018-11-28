@@ -3,13 +3,19 @@
 
 # Listy
 
-Listy is yet another to-do list app, and it does the most amazing things, like let you add lists and tasks – even delete them – and see what an app with multiple layers might look like. Enjoy!
+Listy is yet another multiplatform to-do list app, and it does the most amazing things, like let you add lists and tasks – even delete them – and see what an app with multiple layers might look like. Enjoy!
 
-## The Layers
+## Apps
 
-### Listy-iOS
+### Listy iOS
 
 This is the main iOS app target, consisting of list and edit views for lists and tasks.
+
+### Listy tvOS
+
+This is the main tvOS app target, consisting of list and edit views for lists and tasks.
+
+## Internal Frameworks
 
 ### ListyUI
 
@@ -17,7 +23,7 @@ This framework provides most of the UIKit-driven functionality, with fun things 
 
 ### ListyKit
 
-This framework provides Foundation-driven functionality, and should be usable on iOS, macOS, watchOS, anywhere!
+This framework provides Foundation-driven functionality, and should be usable on iOS, tvOS, watchOS, macOS, anywhere!
 
 ## Install
 
