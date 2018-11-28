@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A50889CD21AE6E6C00DCBC7B"
-               BuildableName = "ListyKit_tvOS.framework"
+               BuildableName = "ListyKit.framework"
                BlueprintName = "ListyKit tvOS"
                ReferencedContainer = "container:Listy.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A50889CD21AE6E6C00DCBC7B"
-            BuildableName = "ListyKit_tvOS.framework"
+            BuildableName = "ListyKit.framework"
             BlueprintName = "ListyKit tvOS"
             ReferencedContainer = "container:Listy.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A50889CD21AE6E6C00DCBC7B"
-            BuildableName = "ListyKit_tvOS.framework"
+            BuildableName = "ListyKit.framework"
             BlueprintName = "ListyKit tvOS"
             ReferencedContainer = "container:Listy.xcodeproj">
          </BuildableReference>
