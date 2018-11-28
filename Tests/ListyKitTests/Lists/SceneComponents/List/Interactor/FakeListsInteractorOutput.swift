@@ -1,12 +1,11 @@
 //
 //  FakeListsInteractorOutput.swift
-//  Listy-iOSTests
+//  ListyKitTests
 //
 //  Created by Kevin Wolkober on 11/21/18.
 //
 
 import UIKit
-@testable import Listy_iOS
 @testable import ListyKit
 
 class FakeListsInteractorOutput: ListsInteractorOutput {

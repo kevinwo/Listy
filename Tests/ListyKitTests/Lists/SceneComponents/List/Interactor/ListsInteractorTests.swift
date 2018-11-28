@@ -1,21 +1,18 @@
 //
 //  ListsInteractorTests.swift
-//  Listy
+//  ListyKitTests
 //
 //  Created by Kevin Wolkober on 10/6/18.
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
 import XCTest
-@testable import Listy_iOS
-@testable import ListyUI
 @testable import ListyKit
 
 class ListsInteractorTests: XCTestCase {
 
     var sut: ListsInteractor!
     var fakeOutput: FakeListsInteractorOutput!
-    var cellConfigurationBlock: TableViewDataSource.CellConfigurationBlock!
     var lists: Lists!
     var tasks: Tasks!
 
@@ -31,16 +28,12 @@ class ListsInteractorTests: XCTestCase {
 
         sut = ListsInteractor(lists: lists, tasks: tasks)
         sut.output = fakeOutput
-
-        cellConfigurationBlock = { (cell, object) in
-            cell.textLabel!.text = object.id
-        }
     }
 
     override func tearDown() {
         sut = nil
         lists = nil
-        cellConfigurationBlock = nil
+
         FileManager().clearTemporaryDirectory()
 
         super.tearDown()

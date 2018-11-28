@@ -1,38 +1,36 @@
 //
 //  ListsInteractor.swift
-//  Listy
+//  ListyKit
 //
 //  Created by Kevin Wolkober on 10/6/18.
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import ListyKit
-
-class ListsInteractor: ListsInteractorInput {
+public class ListsInteractor: ListsInteractorInput {
 
     // MARK: - Properties
 
-    weak var output: ListsInteractorOutput!
-    var lists: Lists
-    var tasks: Tasks
+    public weak var output: ListsInteractorOutput!
+    internal var lists: Lists
+    internal var tasks: Tasks
 
-    init(lists: Lists, tasks: Tasks) {
+    public init(lists: Lists, tasks: Tasks) {
         self.lists = lists
         self.tasks = tasks
     }
 
     // MARK: - ListsInteractorInput
 
-    func fetchData() {
+    public func fetchData() {
         let fetchedLists = self.lists.all()
         self.output.updateView(lists: fetchedLists)
     }
 
-    func newList() -> List {
+    public func newList() -> List {
         return List()
     }
 
-    func deleteList(_ list: List, at indexPath: IndexPath) {
+    public func deleteList(_ list: List, at indexPath: IndexPath) {
         let tasksInList = self.tasks.inList(list)
 
         do {

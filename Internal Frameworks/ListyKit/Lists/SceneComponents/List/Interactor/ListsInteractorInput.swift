@@ -1,13 +1,11 @@
 //
 //  ListsInteractorInput.swift
-//  Listy-iOS
+//  ListyKit
 //
 //  Created by Kevin Wolkober on 11/21/18.
 //
 
-import ListyKit
-
-protocol ListsInteractorInput: class {
+public protocol ListsInteractorInput: class {
 
     func fetchData()
     func newList() -> List

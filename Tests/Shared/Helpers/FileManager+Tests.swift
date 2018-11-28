@@ -8,6 +8,7 @@
 import Foundation
 
 extension FileManager {
+
     func clearTemporaryDirectory() {
         let tmpDirURL = FileManager.default.temporaryDirectory
         let tmpDirectory = try! contentsOfDirectory(atPath: tmpDirURL.path)
