@@ -9,6 +9,5 @@ import ListyUI
 
 protocol ListsRouterOutput: ViewRoutable {
 
-    func pushTasksListView(_ controller: TasksListViewController)
     func reloadData()
 }

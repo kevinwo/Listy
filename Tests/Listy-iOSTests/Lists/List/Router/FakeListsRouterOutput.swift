@@ -11,17 +11,13 @@ import Foundation
 
 class FakeListsRouterOutput: ListsRouterOutput {
 
-    var didCallPushTasksListView: Bool = false
     var didCallReloadData: Bool = false
     var didCallPresentView: Bool = false
+    var didCallPushView: Bool = false
     var didCallDismissView: Bool = false
-    var pushedTasksListView: TasksListViewController?
-    var presentedView: ViewRoutable?
 
-    func pushTasksListView(_ controller: TasksListViewController) {
-        self.pushedTasksListView = controller
-        self.didCallPushTasksListView = true
-    }
+    var presentedView: ViewRoutable?
+    var pushedView: ViewRoutable?
 
     func reloadData() {
         self.didCallReloadData = true
@@ -30,6 +26,11 @@ class FakeListsRouterOutput: ListsRouterOutput {
     func present(view: ViewRoutable, animated flag: Bool, completion: (() -> Void)?) {
         self.didCallPresentView = true
         self.presentedView = view
+    }
+
+    func push(view: ViewRoutable, animated flag: Bool) {
+        self.didCallPushView = true
+        self.pushedView = view
     }
 
     func dismiss(animated flag: Bool, completion: (() -> Void)?) {

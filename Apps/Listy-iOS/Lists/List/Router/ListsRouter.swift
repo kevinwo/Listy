@@ -43,7 +43,7 @@ class ListsRouter: ListsRouterInput {
 
     func showTasks(for list: List) {
         let controller = TasksListRouter.scene(list: list)
-        self.output.pushTasksListView(controller)
+        self.output.push(view: controller, animated: true)
     }
 }
 

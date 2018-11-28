@@ -73,10 +73,6 @@ extension ListsViewController: ListsPresenterOutput {
 
 extension ListsViewController: ListsRouterOutput {
 
-    func pushTasksListView(_ controller: TasksListViewController) {
-        self.navigationController!.pushViewController(controller, animated: true)
-    }
-
     func reloadData() {
         self.presenter.reloadData()
     }

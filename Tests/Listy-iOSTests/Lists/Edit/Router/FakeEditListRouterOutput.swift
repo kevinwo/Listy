@@ -14,8 +14,11 @@ class FakeEditListRouterOutput: EditListRouterOutput {
     var didFinishWithCancel: Bool = false
     var didFinishWithSave: Bool = false
     var didCallPresentView: Bool = false
+    var didCallPushView: Bool = false
     var didCallDismissView: Bool = false
-    var presentedView: ViewRoutable!
+
+    var presentedView: ViewRoutable?
+    var pushedView: ViewRoutable?
     var savedList: List!
 
     func finishWithCancel() {
@@ -32,6 +35,11 @@ class FakeEditListRouterOutput: EditListRouterOutput {
     func present(view: ViewRoutable, animated flag: Bool, completion: (() -> Void)?) {
         self.didCallPresentView = true
         self.presentedView = view
+    }
+
+    func push(view: ViewRoutable, animated flag: Bool) {
+        self.didCallPushView = true
+        self.pushedView = view
     }
 
     func dismiss(animated flag: Bool, completion: (() -> Void)?) {
