@@ -174,6 +174,13 @@
 		A5088A9121AEBF0C00DCBC7B /* FakeEditListPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9A821688A4F0009FF96 /* FakeEditListPresenterInput.swift */; };
 		A5088A9321AEC08900DCBC7B /* EditListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99921685E0B0009FF96 /* EditListViewController.swift */; };
 		A5088A9421AEC08900DCBC7B /* EditListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99921685E0B0009FF96 /* EditListViewController.swift */; };
+		A5088A9821AEC1F600DCBC7B /* EditList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5088A9721AEC1F600DCBC7B /* EditList.storyboard */; };
+		A5088A9C21AEC4C100DCBC7B /* EditListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A9B21AEC4C100DCBC7B /* EditListRouter.swift */; };
+		A5088A9F21AEC53F00DCBC7B /* EditListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A9E21AEC53F00DCBC7B /* EditListRouterTests.swift */; };
+		A5088AA321AED2E800DCBC7B /* FakeEditListRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088AA121AED2C400DCBC7B /* FakeEditListRouterOutput.swift */; };
+		A5088AA621AED36100DCBC7B /* EditListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088AA521AED36100DCBC7B /* EditListViewControllerTests.swift */; };
+		A5088AA821AED3C300DCBC7B /* FakeEditListPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088AA721AED3C300DCBC7B /* FakeEditListPresenterInput.swift */; };
+		A5088AAA21AED40B00DCBC7B /* FakeEditListViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088AA921AED40B00DCBC7B /* FakeEditListViewControllerDelegate.swift */; };
 		A51D459A21A304E800788423 /* EditTaskRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D459921A304E800788423 /* EditTaskRouterOutput.swift */; };
 		A51D459F21A4026700788423 /* FakeTasksListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D459E21A4026700788423 /* FakeTasksListInteractorOutput.swift */; };
 		A51D45A121A408FD00788423 /* FakeTasksListRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D45A021A408FD00788423 /* FakeTasksListRouterOutput.swift */; };
@@ -437,6 +444,13 @@
 		A5088A6D21AEB69400DCBC7B /* ListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouter.swift; sourceTree = "<group>"; };
 		A5088A7021AEB71000DCBC7B /* ListsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouterTests.swift; sourceTree = "<group>"; };
 		A5088A7221AEB75000DCBC7B /* FakeListsRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsRouterOutput.swift; sourceTree = "<group>"; };
+		A5088A9721AEC1F600DCBC7B /* EditList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditList.storyboard; sourceTree = "<group>"; };
+		A5088A9B21AEC4C100DCBC7B /* EditListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListRouter.swift; sourceTree = "<group>"; };
+		A5088A9E21AEC53F00DCBC7B /* EditListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListRouterTests.swift; sourceTree = "<group>"; };
+		A5088AA121AED2C400DCBC7B /* FakeEditListRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditListRouterOutput.swift; sourceTree = "<group>"; };
+		A5088AA521AED36100DCBC7B /* EditListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListViewControllerTests.swift; sourceTree = "<group>"; };
+		A5088AA721AED3C300DCBC7B /* FakeEditListPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditListPresenterInput.swift; sourceTree = "<group>"; };
+		A5088AA921AED40B00DCBC7B /* FakeEditListViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditListViewControllerDelegate.swift; sourceTree = "<group>"; };
 		A51D459921A304E800788423 /* EditTaskRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskRouterOutput.swift; sourceTree = "<group>"; };
 		A51D459E21A4026700788423 /* FakeTasksListInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTasksListInteractorOutput.swift; sourceTree = "<group>"; };
 		A51D45A021A408FD00788423 /* FakeTasksListRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTasksListRouterOutput.swift; sourceTree = "<group>"; };
@@ -1242,8 +1256,8 @@
 		A5088A5921AE96EE00DCBC7B /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				A5088A6721AE992A00DCBC7B /* View */,
-				A5088A6C21AEB67C00DCBC7B /* Router */,
+				A5088A9621AEC1E600DCBC7B /* List */,
+				A5088A9521AEC1D700DCBC7B /* Edit */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -1252,6 +1266,7 @@
 			isa = PBXGroup;
 			children = (
 				A5088A6821AE9AD000DCBC7B /* List */,
+				A5088AA021AEC99000DCBC7B /* Edit */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -1333,6 +1348,68 @@
 				265EA99921685E0B0009FF96 /* EditListViewController.swift */,
 			);
 			path = Edit;
+			sourceTree = "<group>";
+		};
+		A5088A9521AEC1D700DCBC7B /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				A5088A9921AEC4A800DCBC7B /* View */,
+				A5088A9A21AEC4AE00DCBC7B /* Router */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		A5088A9621AEC1E600DCBC7B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				A5088A6721AE992A00DCBC7B /* View */,
+				A5088A6C21AEB67C00DCBC7B /* Router */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		A5088A9921AEC4A800DCBC7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5088A9721AEC1F600DCBC7B /* EditList.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5088A9A21AEC4AE00DCBC7B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A5088A9B21AEC4C100DCBC7B /* EditListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A5088A9D21AEC50500DCBC7B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A5088A9E21AEC53F00DCBC7B /* EditListRouterTests.swift */,
+				A5088AA121AED2C400DCBC7B /* FakeEditListRouterOutput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A5088AA021AEC99000DCBC7B /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				A5088AA421AED32800DCBC7B /* View */,
+				A5088A9D21AEC50500DCBC7B /* Router */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		A5088AA421AED32800DCBC7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5088AA521AED36100DCBC7B /* EditListViewControllerTests.swift */,
+				A5088AA721AED3C300DCBC7B /* FakeEditListPresenterInput.swift */,
+				A5088AA921AED40B00DCBC7B /* FakeEditListViewControllerDelegate.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A51D459821A3036600788423 /* Helpers */ = {
@@ -1854,6 +1931,7 @@
 			files = (
 				A5088A5B21AE96FF00DCBC7B /* Lists.storyboard in Resources */,
 				A50888F921AE372D00DCBC7B /* Assets.xcassets in Resources */,
+				A5088A9821AEC1F600DCBC7B /* EditList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2047,6 +2125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5088A6E21AEB69400DCBC7B /* ListsRouter.swift in Sources */,
+				A5088A9C21AEC4C100DCBC7B /* EditListRouter.swift in Sources */,
 				A50888F221AE372B00DCBC7B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2059,8 +2138,13 @@
 				A5088A7421AEB77E00DCBC7B /* FakeListsRouterOutput.swift in Sources */,
 				A5088A5F21AE973800DCBC7B /* ListsViewControllerTests.swift in Sources */,
 				A5088A6B21AE9AEA00DCBC7B /* FakeListsPresenterInput.swift in Sources */,
+				A5088AAA21AED40B00DCBC7B /* FakeEditListViewControllerDelegate.swift in Sources */,
+				A5088AA321AED2E800DCBC7B /* FakeEditListRouterOutput.swift in Sources */,
 				A5088A7121AEB71000DCBC7B /* ListsRouterTests.swift in Sources */,
+				A5088AA821AED3C300DCBC7B /* FakeEditListPresenterInput.swift in Sources */,
+				A5088A9F21AEC53F00DCBC7B /* EditListRouterTests.swift in Sources */,
 				A50889F421AE80F700DCBC7B /* FileManager+Tests.swift in Sources */,
+				A5088AA621AED36100DCBC7B /* EditListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

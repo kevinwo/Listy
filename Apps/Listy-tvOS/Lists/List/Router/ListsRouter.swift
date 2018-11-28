@@ -35,7 +35,23 @@ class ListsRouter: ListsRouterInput {
         return navigationController
     }
 
-    func showEditListView(with list: List) {}
+    func showEditListView(with list: List) {
+        let lists = Lists(database: Database.newInstance())
+        let controller = EditListRouter.scene(list: list, delegate: self, lists: lists)
+        self.output.present(view: controller, animated: true, completion: nil)
+    }
 
     func showTasks(for list: List) {}
+}
+
+extension ListsRouter: EditListViewControllerDelegate {
+
+    func didCancelWithController(_ controller: EditListViewController) {
+        self.output.dismiss(animated: true, completion: nil)
+    }
+
+    func controller(_ controller: EditListViewController, didSaveList list: List) {
+        self.output.reloadData()
+        self.output.dismiss(animated: true, completion: nil)
+    }
 }
