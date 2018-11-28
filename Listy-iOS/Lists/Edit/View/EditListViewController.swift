@@ -38,4 +38,14 @@ class EditListViewController: UITableViewController {
     }
 }
 
+extension EditListViewController: EditListRouterOutput {
+    func finishWithCancel() {
+        self.delegate.didCancelWithController(self)
+    }
+
+    func finishWithSaving(_ list: List) {
+        self.delegate.controller(self, didSaveList: list)
+    }
+}
+
 extension EditListViewController: EditListPresenterOutput {}

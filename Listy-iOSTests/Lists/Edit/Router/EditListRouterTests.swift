@@ -11,24 +11,18 @@ import XCTest
 
 class EditListRouterTests: XCTestCase {
 
-    var fakeDelegate: FakeEditListViewControllerDelegate!
-    var view: EditListViewController!
     var sut: EditListRouter!
+    var fakeOutput: FakeEditListRouterOutput!
 
     override func setUp() {
-        let storyboard = UIStoryboard(name: "EditList", bundle: nil)
-        let navigationController = (storyboard.instantiateInitialViewController() as! UINavigationController)
-        view = (navigationController.topViewController as! EditListViewController)
-        fakeDelegate = FakeEditListViewControllerDelegate()
-        view.delegate = fakeDelegate
-
+        fakeOutput = FakeEditListRouterOutput()
         sut = EditListRouter()
-        sut.view = view
+        sut.output = fakeOutput
     }
 
     override func tearDown() {
         sut = nil
-        view = nil
+        fakeOutput = nil
     }
 
     // MARK: - Tests
@@ -84,7 +78,7 @@ class EditListRouterTests: XCTestCase {
         guard let router = controller.presenter.router as? EditListRouter else {
             XCTFail("Edit list router should be present"); return
         }
-        guard let routerOutput = router.view as? EditListViewController else {
+        guard let routerOutput = router.output as? EditListViewController else {
             XCTFail("Router output should be present"); return
         }
 
@@ -108,6 +102,16 @@ class EditListRouterTests: XCTestCase {
         XCTAssert(interactor.output is EditListPresenter)
     }
 
+    // MARK: - finishWithCancel()
+
+    func testFinishWithCancel() {
+        // when
+        sut.finishWithCancel()
+
+        // then
+        XCTAssertTrue(fakeOutput.didFinishWithCancel);
+    }
+
     // MARK: - finishWithSaving()
 
     func testFinishWithSaving() {
@@ -118,9 +122,8 @@ class EditListRouterTests: XCTestCase {
         sut.finishWithSaving(list)
 
         // then
-        XCTAssertTrue(fakeDelegate.didCallControllerDidSaveList);
-        XCTAssertEqual(fakeDelegate.didSaveListController, view)
-        XCTAssertEqual(fakeDelegate.savedList, list)
+        XCTAssertTrue(fakeOutput.didFinishWithSave);
+        XCTAssertEqual(fakeOutput.savedList, list)
     }
 
     // MARK: - Private interface

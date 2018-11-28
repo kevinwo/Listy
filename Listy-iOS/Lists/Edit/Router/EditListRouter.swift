@@ -12,7 +12,7 @@ class EditListRouter: EditListRouterInput {
 
     // MARK: - Properties
 
-    weak var view: EditListViewController!
+    weak var output: EditListRouterOutput!
 
     // MARK: - Public interface
 
@@ -34,16 +34,16 @@ class EditListRouter: EditListRouterInput {
 
         interactor.output = presenter
 
-        router.view = controller
+        router.output = controller
 
         return navigationController
     }
 
     func finishWithCancel() {
-        self.view.delegate.didCancelWithController(self.view)
+        self.output.finishWithCancel()
     }
 
     func finishWithSaving(_ list: List) {
-        self.view.delegate.controller(self.view, didSaveList: list)
+        self.output.finishWithSaving(list)
     }
 }
