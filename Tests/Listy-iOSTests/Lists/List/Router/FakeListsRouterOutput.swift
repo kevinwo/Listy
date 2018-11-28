@@ -7,7 +7,7 @@
 
 import Foundation
 @testable import Listy_iOS
-@testable import ListyUI
+@testable import ListyKit
 
 class FakeListsRouterOutput: ListsRouterOutput {
 
