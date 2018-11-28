@@ -60,6 +60,7 @@ class EditTaskRouterTests: XCTestCase {
             XCTFail("Presenter should be edit task presenter"); return
         }
 
+        XCTAssert(presenter.output === controller)
         XCTAssert(presenter.router is EditTaskRouter)
         XCTAssert(presenter.interactor is EditTaskInteractor)
     }

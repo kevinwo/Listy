@@ -10,6 +10,7 @@ import UIKit
 import ListyKit
 
 protocol EditTaskViewControllerDelegate: class {
+
     func didCancelWithController(_ controller: EditTaskViewController)
     func controller(_ controller: EditTaskViewController, didSaveTask task: Task)
 }
@@ -45,3 +46,5 @@ extension EditTaskViewController: EditTaskRouterOutput {
         self.delegate.controller(self, didSaveTask: task)
     }
 }
+
+extension EditTaskViewController: EditTaskPresenterOutput {}

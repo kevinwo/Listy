@@ -11,6 +11,8 @@ import ListyKit
 
 class EditTaskRouter: EditTaskRouterInput {
 
+    // MARK: - Properties
+
     weak var view: EditTaskRouterOutput!
 
     // MARK: - Public interface
@@ -27,6 +29,7 @@ class EditTaskRouter: EditTaskRouterInput {
 
         controller.presenter = presenter
 
+        presenter.output = controller
         presenter.router = router
         presenter.interactor = interactor
 

@@ -11,6 +11,7 @@ import ListyUI
 import ListyKit
 
 protocol EditListViewControllerDelegate: class {
+
     func didCancelWithController(_ controller: EditListViewController)
     func controller(_ controller: EditListViewController, didSaveList list: List)
 }

@@ -65,7 +65,8 @@ class EditListRouterTests: XCTestCase {
         guard let presenter = controller.presenter as? EditListPresenter else {
             XCTFail("Presenter should be Edit list presenter"); return
         }
-        
+
+        XCTAssert(presenter.output === controller)
         XCTAssert(presenter.router is EditListRouter)
         XCTAssert(presenter.interactor is EditListInteractor)
     }

@@ -10,6 +10,8 @@ import ListyKit
 
 class EditListRouter: EditListRouterInput {
 
+    // MARK: - Properties
+
     weak var view: EditListViewController!
 
     // MARK: - Public interface
@@ -26,6 +28,7 @@ class EditListRouter: EditListRouterInput {
 
         controller.presenter = presenter
 
+        presenter.output = controller
         presenter.router = router
         presenter.interactor = interactor
 
