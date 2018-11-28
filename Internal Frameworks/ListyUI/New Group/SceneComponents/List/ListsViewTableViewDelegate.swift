@@ -21,6 +21,7 @@ extension ListsViewTableViewDelegate: UITableViewDelegate {
         return .delete
     }
 
+    #if os(iOS)
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (_, indexPath) in
             self.deleteRowHandler?(indexPath)
@@ -28,4 +29,5 @@ extension ListsViewTableViewDelegate: UITableViewDelegate {
 
         return [delete]
     }
+    #endif
 }

@@ -88,8 +88,6 @@
 		26EB60DF21AC038B007B638F /* TasksListViewTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EB60DE21AC038B007B638F /* TasksListViewTableViewDelegate.swift */; };
 		26EB60E121AC36C7007B638F /* EditTaskPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EB60E021AC36C7007B638F /* EditTaskPresenterInput.swift */; };
 		A50888F221AE372B00DCBC7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50888F121AE372B00DCBC7B /* AppDelegate.swift */; };
-		A50888F421AE372B00DCBC7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50888F321AE372B00DCBC7B /* ViewController.swift */; };
-		A50888F721AE372B00DCBC7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50888F521AE372B00DCBC7B /* Main.storyboard */; };
 		A50888F921AE372D00DCBC7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50888F821AE372D00DCBC7B /* Assets.xcassets */; };
 		A508890421AE372D00DCBC7B /* Listy_tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508890321AE372D00DCBC7B /* Listy_tvOSTests.swift */; };
 		A50889D521AE6E6C00DCBC7B /* ListyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50889CE21AE6E6C00DCBC7B /* ListyKit.framework */; };
@@ -149,6 +147,13 @@
 		A5088A5621AE964400DCBC7B /* ViewRoutable+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A0D21AE8B3100DCBC7B /* ViewRoutable+LIST.swift */; };
 		A5088A5721AE964800DCBC7B /* ErrorAlertable+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A1021AE8B4E00DCBC7B /* ErrorAlertable+LIST.swift */; };
 		A5088A5821AE964800DCBC7B /* ErrorAlertable+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A1021AE8B4E00DCBC7B /* ErrorAlertable+LIST.swift */; };
+		A5088A5B21AE96FF00DCBC7B /* Lists.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5088A5A21AE96FF00DCBC7B /* Lists.storyboard */; };
+		A5088A5F21AE973800DCBC7B /* ListsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A5E21AE973800DCBC7B /* ListsViewControllerTests.swift */; };
+		A5088A6121AE97FA00DCBC7B /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A50889CE21AE6E6C00DCBC7B /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5088A6421AE987D00DCBC7B /* ListyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50889CE21AE6E6C00DCBC7B /* ListyKit.framework */; };
+		A5088A6521AE98AA00DCBC7B /* ListyUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 260D692E216846F9003B7DD9 /* ListyUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5088A6621AE98F500DCBC7B /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D6948216847D4003B7DD9 /* TableViewDataSource.swift */; };
+		A5088A6B21AE9AEA00DCBC7B /* FakeListsPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A6921AE9AE400DCBC7B /* FakeListsPresenterInput.swift */; };
 		A51D459A21A304E800788423 /* EditTaskRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D459921A304E800788423 /* EditTaskRouterOutput.swift */; };
 		A51D459F21A4026700788423 /* FakeTasksListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D459E21A4026700788423 /* FakeTasksListInteractorOutput.swift */; };
 		A51D45A121A408FD00788423 /* FakeTasksListRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D45A021A408FD00788423 /* FakeTasksListRouterOutput.swift */; };
@@ -243,6 +248,13 @@
 			remoteGlobalIDString = A5088A2B21AE917200DCBC7B;
 			remoteInfo = "ListyUI tvOS";
 		};
+		A5088A6221AE980700DCBC7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 260D68CF2166FAD0003B7DD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50889CD21AE6E6C00DCBC7B;
+			remoteInfo = "ListyKit tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -277,6 +289,17 @@
 			files = (
 				A5088A3421AE917200DCBC7B /* ListyUI.framework in Embed Frameworks */,
 				A50889D621AE6E6C00DCBC7B /* ListyKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5088A6021AE97E800DCBC7B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A5088A6121AE97FA00DCBC7B /* ListyKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,8 +411,6 @@
 		26EB60E021AC36C7007B638F /* EditTaskPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskPresenterInput.swift; sourceTree = "<group>"; };
 		A50888EF21AE372A00DCBC7B /* Listy-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Listy-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50888F121AE372B00DCBC7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A50888F321AE372B00DCBC7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A50888F621AE372B00DCBC7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A50888F821AE372D00DCBC7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A50888FA21AE372D00DCBC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A50888FF21AE372D00DCBC7B /* Listy-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Listy-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -400,6 +421,9 @@
 		A5088A1021AE8B4E00DCBC7B /* ErrorAlertable+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorAlertable+LIST.swift"; sourceTree = "<group>"; };
 		A5088A2C21AE917200DCBC7B /* ListyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ListyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5088A5021AE961100DCBC7B /* UIViewController+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LIST.swift"; sourceTree = "<group>"; };
+		A5088A5A21AE96FF00DCBC7B /* Lists.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lists.storyboard; sourceTree = "<group>"; };
+		A5088A5E21AE973800DCBC7B /* ListsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewControllerTests.swift; sourceTree = "<group>"; };
+		A5088A6921AE9AE400DCBC7B /* FakeListsPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsPresenterInput.swift; sourceTree = "<group>"; };
 		A51D459921A304E800788423 /* EditTaskRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskRouterOutput.swift; sourceTree = "<group>"; };
 		A51D459E21A4026700788423 /* FakeTasksListInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTasksListInteractorOutput.swift; sourceTree = "<group>"; };
 		A51D45A021A408FD00788423 /* FakeTasksListRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTasksListRouterOutput.swift; sourceTree = "<group>"; };
@@ -508,6 +532,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5088A6421AE987D00DCBC7B /* ListyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1035,9 +1060,8 @@
 		A50888F021AE372B00DCBC7B /* Listy-tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				A5088A5921AE96EE00DCBC7B /* Lists */,
 				A50888F121AE372B00DCBC7B /* AppDelegate.swift */,
-				A50888F321AE372B00DCBC7B /* ViewController.swift */,
-				A50888F521AE372B00DCBC7B /* Main.storyboard */,
 				A50888F821AE372D00DCBC7B /* Assets.xcassets */,
 				A50888FA21AE372D00DCBC7B /* Info.plist */,
 			);
@@ -1047,6 +1071,7 @@
 		A508890221AE372D00DCBC7B /* Listy-tvOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				A5088A5C21AE971000DCBC7B /* Lists */,
 				A508890321AE372D00DCBC7B /* Listy_tvOSTests.swift */,
 				A508890521AE372D00DCBC7B /* Info.plist */,
 			);
@@ -1209,6 +1234,47 @@
 				A5088A0D21AE8B3100DCBC7B /* ViewRoutable+LIST.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A5088A5921AE96EE00DCBC7B /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				A5088A6721AE992A00DCBC7B /* View */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		A5088A5C21AE971000DCBC7B /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				A5088A6821AE9AD000DCBC7B /* List */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		A5088A5D21AE971500DCBC7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5088A5E21AE973800DCBC7B /* ListsViewControllerTests.swift */,
+				A5088A6921AE9AE400DCBC7B /* FakeListsPresenterInput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5088A6721AE992A00DCBC7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5088A5A21AE96FF00DCBC7B /* Lists.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5088A6821AE9AD000DCBC7B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				A5088A5D21AE971500DCBC7B /* View */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		A51D459821A3036600788423 /* Helpers */ = {
@@ -1411,6 +1477,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5088A6521AE98AA00DCBC7B /* ListyUI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1593,10 +1660,12 @@
 				A5088A2821AE917200DCBC7B /* Sources */,
 				A5088A2921AE917200DCBC7B /* Frameworks */,
 				A5088A2A21AE917200DCBC7B /* Resources */,
+				A5088A6021AE97E800DCBC7B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A5088A6321AE980700DCBC7B /* PBXTargetDependency */,
 			);
 			name = "ListyUI tvOS";
 			productName = "ListyUI tvOS";
@@ -1728,8 +1797,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5088A5B21AE96FF00DCBC7B /* Lists.storyboard in Resources */,
 				A50888F921AE372D00DCBC7B /* Assets.xcassets in Resources */,
-				A50888F721AE372B00DCBC7B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1922,7 +1991,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A50888F421AE372B00DCBC7B /* ViewController.swift in Sources */,
 				A50888F221AE372B00DCBC7B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1933,6 +2001,8 @@
 			files = (
 				A5088A4B21AE93E200DCBC7B /* UIBarButtonItem+Tests.swift in Sources */,
 				A508890421AE372D00DCBC7B /* Listy_tvOSTests.swift in Sources */,
+				A5088A5F21AE973800DCBC7B /* ListsViewControllerTests.swift in Sources */,
+				A5088A6B21AE9AEA00DCBC7B /* FakeListsPresenterInput.swift in Sources */,
 				A50889F421AE80F700DCBC7B /* FileManager+Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1966,6 +2036,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5088A6621AE98F500DCBC7B /* TableViewDataSource.swift in Sources */,
 				A5088A3D21AE92B500DCBC7B /* ListsViewTableViewDelegate.swift in Sources */,
 				A5088A5321AE964000DCBC7B /* UIViewController+LIST.swift in Sources */,
 				A5088A5621AE964400DCBC7B /* ViewRoutable+LIST.swift in Sources */,
@@ -2022,6 +2093,11 @@
 			target = A5088A2B21AE917200DCBC7B /* ListyUI tvOS */;
 			targetProxy = A5088A3121AE917200DCBC7B /* PBXContainerItemProxy */;
 		};
+		A5088A6321AE980700DCBC7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50889CD21AE6E6C00DCBC7B /* ListyKit tvOS */;
+			targetProxy = A5088A6221AE980700DCBC7B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -2031,14 +2107,6 @@
 				265EA958216856820009FF96 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		A50888F521AE372B00DCBC7B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A50888F621AE372B00DCBC7B /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -3053,7 +3121,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.1;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
 		};
@@ -3097,7 +3165,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.1;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -3202,6 +3270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -3214,12 +3283,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3244,13 +3313,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.ListyKit-tvOS";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = ListyKit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.1;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -3260,6 +3330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -3272,12 +3343,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3297,13 +3368,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.ListyKit-tvOS";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = ListyKit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.1;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -3326,12 +3398,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3355,13 +3427,14 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.ListyUI-tvOS";
 				PRODUCT_NAME = ListyUI;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.1;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -3383,12 +3456,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3407,13 +3480,14 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.ListyUI-tvOS";
 				PRODUCT_NAME = ListyUI;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.1;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
