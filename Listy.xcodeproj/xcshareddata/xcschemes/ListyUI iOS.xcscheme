@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "260D692B216846F9003B7DD9"
-               BuildableName = "ListyUI.framework"
-               BlueprintName = "ListyUI"
+               BuildableName = "ListyUI_iOS.framework"
+               BlueprintName = "ListyUI iOS"
                ReferencedContainer = "container:Listy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "260D692B216846F9003B7DD9"
-            BuildableName = "ListyUI.framework"
-            BlueprintName = "ListyUI"
+            BuildableName = "ListyUI_iOS.framework"
+            BlueprintName = "ListyUI iOS"
             ReferencedContainer = "container:Listy.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "260D692B216846F9003B7DD9"
-            BuildableName = "ListyUI.framework"
-            BlueprintName = "ListyUI"
+            BuildableName = "ListyUI_iOS.framework"
+            BlueprintName = "ListyUI iOS"
             ReferencedContainer = "container:Listy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -94,8 +94,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "260D692B216846F9003B7DD9"
-            BuildableName = "ListyUI.framework"
-            BlueprintName = "ListyUI"
+            BuildableName = "ListyUI_iOS.framework"
+            BlueprintName = "ListyUI iOS"
             ReferencedContainer = "container:Listy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
