@@ -19,5 +19,3 @@ extension ViewRoutable where Self: UIViewController {
         self.navigationController?.pushViewController(view, animated: true)
     }
 }
-
-extension UIViewController: ViewRoutable {}

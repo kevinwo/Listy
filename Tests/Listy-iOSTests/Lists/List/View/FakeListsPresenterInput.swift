@@ -6,7 +6,6 @@
 //
 
 import UIKit
-@testable import Listy_iOS
 @testable import ListyKit
 
 final class FakeListsPresenterInput: ListsPresenterInput {

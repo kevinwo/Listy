@@ -6,20 +6,19 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import ListyUI
 import ListyKit
 
-class ListsViewController: UITableViewController {
+public class ListsViewController: UITableViewController {
 
     // MARK: - Properties
 
-    @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
+    @IBOutlet public weak var addBarButtonItem: UIBarButtonItem!
 
-    var tableViewDataSource: TableViewDataSource
-    var tableViewDelegate: ListsViewTableViewDelegate
-    var presenter: ListsPresenterInput!
+    public var presenter: ListsPresenterInput!
+    internal var tableViewDataSource: TableViewDataSource
+    internal var tableViewDelegate: ListsViewTableViewDelegate
 
-    required init?(coder decoder: NSCoder) {
+    public required init?(coder decoder: NSCoder) {
         self.tableViewDataSource = TableViewDataSource()
         self.tableViewDelegate = ListsViewTableViewDelegate()
 
@@ -28,7 +27,7 @@ class ListsViewController: UITableViewController {
 
     // MARK: - View lifecycle
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.dataSource = self.tableViewDataSource
@@ -46,7 +45,7 @@ class ListsViewController: UITableViewController {
 
 extension ListsViewController: ListsPresenterOutput {
 
-    func updateView(lists: [List]) {
+    public func updateView(lists: [List]) {
         self.tableViewDataSource.sections = [lists]
         self.tableViewDataSource.cellConfigurationBlock = { (cell, object) in
             let list = (object as! List)
@@ -65,7 +64,7 @@ extension ListsViewController: ListsPresenterOutput {
         self.tableView.reloadData()
     }
 
-    func deleteRow(at indexPath: IndexPath) {
+    public func deleteRow(at indexPath: IndexPath) {
         self.tableViewDataSource.sections[indexPath.section].remove(at: indexPath.row)
         self.tableView.deleteRows(at: [indexPath], with: .automatic)
     }
@@ -73,7 +72,7 @@ extension ListsViewController: ListsPresenterOutput {
 
 extension ListsViewController: ListsRouterOutput {
 
-    func reloadData() {
+    public func reloadData() {
         self.presenter.reloadData()
     }
 }

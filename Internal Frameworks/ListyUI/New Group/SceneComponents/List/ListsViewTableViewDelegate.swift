@@ -5,8 +5,6 @@
 //  Created by Kevin Wolkober on 11/26/18.
 //
 
-import ListyUI
-
 class ListsViewTableViewDelegate: NSObject {
 
     var didSelectRowHandler: ((IndexPath) -> Void)?

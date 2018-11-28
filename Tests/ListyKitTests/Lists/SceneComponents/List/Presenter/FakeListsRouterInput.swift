@@ -5,7 +5,6 @@
 //  Created by Kevin Wolkober on 11/21/18.
 //
 
-@testable import Listy_iOS
 @testable import ListyKit
 
 class FakeListsRouterInput: ListsRouterInput {
