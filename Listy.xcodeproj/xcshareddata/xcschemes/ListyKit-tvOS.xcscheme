@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "260D68D92166FD2C003B7DD9"
-               BuildableName = "ListyKit.framework"
-               BlueprintName = "ListyKit"
+               BlueprintIdentifier = "A50889CD21AE6E6C00DCBC7B"
+               BuildableName = "ListyKit_tvOS.framework"
+               BlueprintName = "ListyKit tvOS"
                ReferencedContainer = "container:Listy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,39 +26,9 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "260D68D92166FD2C003B7DD9"
-            BuildableName = "ListyKit.framework"
-            BlueprintName = "ListyKit"
-            ReferencedContainer = "container:Listy.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "260D68E22166FD2C003B7DD9"
-               BuildableName = "ListyKitTests.xctest"
-               BlueprintName = "ListyKitTests"
-               ReferencedContainer = "container:Listy.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "260D68D92166FD2C003B7DD9"
-            BuildableName = "ListyKit.framework"
-            BlueprintName = "ListyKit"
-            ReferencedContainer = "container:Listy.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -75,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "260D68D92166FD2C003B7DD9"
-            BuildableName = "ListyKit.framework"
-            BlueprintName = "ListyKit"
+            BlueprintIdentifier = "A50889CD21AE6E6C00DCBC7B"
+            BuildableName = "ListyKit_tvOS.framework"
+            BlueprintName = "ListyKit tvOS"
             ReferencedContainer = "container:Listy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "260D68D92166FD2C003B7DD9"
-            BuildableName = "ListyKit.framework"
-            BlueprintName = "ListyKit"
+            BlueprintIdentifier = "A50889CD21AE6E6C00DCBC7B"
+            BuildableName = "ListyKit_tvOS.framework"
+            BlueprintName = "ListyKit tvOS"
             ReferencedContainer = "container:Listy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
