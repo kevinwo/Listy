@@ -3,9 +3,8 @@ osx_image: xcode10.1
 xcode_project: Listy.xcodeproj
 xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
 xcode_scheme:
-  - "Listy-iOS"
-  - "Listy-tvOS"
-  - "ListyUI"
+  - "Listy iOS"
+  - "ListyUI iOS"
   - "ListyKit iOS"
 xcode_sdk:
   - iphonesimulator12.1
