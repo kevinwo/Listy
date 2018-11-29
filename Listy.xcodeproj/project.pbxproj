@@ -29,6 +29,13 @@
 		260D694B216847FE003B7DD9 /* TableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D694A216847FE003B7DD9 /* TableViewDataSourceTests.swift */; };
 		260D694D21684852003B7DD9 /* ListyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; };
 		260D695021684964003B7DD9 /* Mirror+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D694F21684964003B7DD9 /* Mirror+LIST.swift */; };
+		263CC89F21AF7DE300853396 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263CC89D21AF7DE300853396 /* Interface.storyboard */; };
+		263CC8A121AF7DE400853396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263CC8A021AF7DE400853396 /* Assets.xcassets */; };
+		263CC8A821AF7DE500853396 /* Listy watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 263CC8A721AF7DE400853396 /* Listy watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		263CC8AD21AF7DE500853396 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263CC8AC21AF7DE500853396 /* InterfaceController.swift */; };
+		263CC8AF21AF7DE500853396 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263CC8AE21AF7DE500853396 /* ExtensionDelegate.swift */; };
+		263CC8B121AF7DE500853396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263CC8B021AF7DE500853396 /* Assets.xcassets */; };
+		263CC8B521AF7DE600853396 /* Listy watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 263CC89B21AF7DE200853396 /* Listy watchOS.app */; };
 		264E746C2176EC61000799F2 /* EditTaskInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746B2176EC61000799F2 /* EditTaskInteractorInput.swift */; };
 		264E746E2176F1C9000799F2 /* EditTaskInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746D2176F1C9000799F2 /* EditTaskInteractorOutput.swift */; };
 		264E7477217703E8000799F2 /* FakeEditTaskPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E7476217703E8000799F2 /* FakeEditTaskPresenterInput.swift */; };
@@ -217,6 +224,20 @@
 			remoteGlobalIDString = 260D692B216846F9003B7DD9;
 			remoteInfo = ListyUI;
 		};
+		263CC8A921AF7DE500853396 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 260D68CF2166FAD0003B7DD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 263CC8A621AF7DE400853396;
+			remoteInfo = "Listy watchOS Extension";
+		};
+		263CC8B321AF7DE600853396 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 260D68CF2166FAD0003B7DD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 263CC89A21AF7DE200853396;
+			remoteInfo = "Listy watchOS";
+		};
 		265EA90D21684F460009FF96 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 260D68CF2166FAD0003B7DD9 /* Project object */;
@@ -276,6 +297,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		263CC8BB21AF7DE600853396 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				263CC8A821AF7DE500853396 /* Listy watchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		263CC8BD21AF7DE600853396 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				263CC8B521AF7DE600853396 /* Listy watchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		265EA90F21684F710009FF96 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,6 +395,15 @@
 		260D6948216847D4003B7DD9 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		260D694A216847FE003B7DD9 /* TableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		260D694F21684964003B7DD9 /* Mirror+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mirror+LIST.swift"; sourceTree = "<group>"; };
+		263CC89B21AF7DE200853396 /* Listy watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Listy watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		263CC89E21AF7DE300853396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		263CC8A021AF7DE400853396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		263CC8A221AF7DE400853396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		263CC8A721AF7DE400853396 /* Listy watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Listy watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		263CC8AC21AF7DE500853396 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		263CC8AE21AF7DE500853396 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		263CC8B021AF7DE500853396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		263CC8B221AF7DE500853396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		264E746B2176EC61000799F2 /* EditTaskInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskInteractorInput.swift; sourceTree = "<group>"; };
 		264E746D2176F1C9000799F2 /* EditTaskInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskInteractorOutput.swift; sourceTree = "<group>"; };
 		264E746F2176F446000799F2 /* ErrorAlertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertable.swift; sourceTree = "<group>"; };
@@ -516,6 +568,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		263CC8A421AF7DE400853396 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		265EA949216856800009FF96 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -590,6 +649,8 @@
 				A50888FF21AE372D00DCBC7B /* Listy-tvOSTests.xctest */,
 				A50889CE21AE6E6C00DCBC7B /* ListyKit.framework */,
 				A5088A2C21AE917200DCBC7B /* ListyUI.framework */,
+				263CC89B21AF7DE200853396 /* Listy watchOS.app */,
+				263CC8A721AF7DE400853396 /* Listy watchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -745,6 +806,27 @@
 				260D694F21684964003B7DD9 /* Mirror+LIST.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		263CC89C21AF7DE300853396 /* Listy watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				263CC89D21AF7DE300853396 /* Interface.storyboard */,
+				263CC8A021AF7DE400853396 /* Assets.xcassets */,
+				263CC8A221AF7DE400853396 /* Info.plist */,
+			);
+			path = "Listy watchOS";
+			sourceTree = "<group>";
+		};
+		263CC8AB21AF7DE500853396 /* Listy watchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				263CC8AC21AF7DE500853396 /* InterfaceController.swift */,
+				263CC8AE21AF7DE500853396 /* ExtensionDelegate.swift */,
+				263CC8B021AF7DE500853396 /* Assets.xcassets */,
+				263CC8B221AF7DE500853396 /* Info.plist */,
+			);
+			path = "Listy watchOS Extension";
 			sourceTree = "<group>";
 		};
 		264E746A2176EC41000799F2 /* Interactor */ = {
@@ -1055,6 +1137,8 @@
 			children = (
 				265EA94D216856800009FF96 /* Listy-iOS */,
 				A50888F021AE372B00DCBC7B /* Listy-tvOS */,
+				263CC89C21AF7DE300853396 /* Listy watchOS */,
+				263CC8AB21AF7DE500853396 /* Listy watchOS Extension */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -1689,6 +1773,40 @@
 			productReference = 260D6934216846F9003B7DD9 /* ListyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		263CC89A21AF7DE200853396 /* Listy watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 263CC8BC21AF7DE600853396 /* Build configuration list for PBXNativeTarget "Listy watchOS" */;
+			buildPhases = (
+				263CC89921AF7DE200853396 /* Resources */,
+				263CC8BB21AF7DE600853396 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				263CC8AA21AF7DE500853396 /* PBXTargetDependency */,
+			);
+			name = "Listy watchOS";
+			productName = "Listy watchOS";
+			productReference = 263CC89B21AF7DE200853396 /* Listy watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		263CC8A621AF7DE400853396 /* Listy watchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 263CC8BA21AF7DE600853396 /* Build configuration list for PBXNativeTarget "Listy watchOS Extension" */;
+			buildPhases = (
+				263CC8A321AF7DE400853396 /* Sources */,
+				263CC8A421AF7DE400853396 /* Frameworks */,
+				263CC8A521AF7DE400853396 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Listy watchOS Extension";
+			productName = "Listy watchOS Extension";
+			productReference = 263CC8A721AF7DE400853396 /* Listy watchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		265EA94B216856800009FF96 /* Listy-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 265EA96A216856830009FF96 /* Build configuration list for PBXNativeTarget "Listy-iOS" */;
@@ -1697,12 +1815,14 @@
 				265EA949216856800009FF96 /* Frameworks */,
 				265EA94A216856800009FF96 /* Resources */,
 				265EA974216856AC0009FF96 /* Embed Frameworks */,
+				263CC8BD21AF7DE600853396 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				265EA96F216856AC0009FF96 /* PBXTargetDependency */,
 				265EA973216856AC0009FF96 /* PBXTargetDependency */,
+				263CC8B421AF7DE600853396 /* PBXTargetDependency */,
 			);
 			name = "Listy-iOS";
 			productName = "Listy-iOS";
@@ -1826,6 +1946,12 @@
 					260D6933216846F9003B7DD9 = {
 						CreatedOnToolsVersion = 10.0;
 					};
+					263CC89A21AF7DE200853396 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					263CC8A621AF7DE400853396 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					265EA94B216856800009FF96 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -1863,6 +1989,8 @@
 			targets = (
 				265EA94B216856800009FF96 /* Listy-iOS */,
 				A50888EE21AE372A00DCBC7B /* Listy-tvOS */,
+				263CC89A21AF7DE200853396 /* Listy watchOS */,
+				263CC8A621AF7DE400853396 /* Listy watchOS Extension */,
 				260D692B216846F9003B7DD9 /* ListyUI iOS */,
 				A5088A2B21AE917200DCBC7B /* ListyUI tvOS */,
 				260D68D92166FD2C003B7DD9 /* ListyKit iOS */,
@@ -1901,6 +2029,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		263CC89921AF7DE200853396 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				263CC8A121AF7DE400853396 /* Assets.xcassets in Resources */,
+				263CC89F21AF7DE300853396 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		263CC8A521AF7DE400853396 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				263CC8B121AF7DE500853396 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2040,6 +2185,15 @@
 				260D694B216847FE003B7DD9 /* TableViewDataSourceTests.swift in Sources */,
 				A50889F521AE80F800DCBC7B /* FileManager+Tests.swift in Sources */,
 				A5088A4721AE93AE00DCBC7B /* ListsViewTableViewDelegateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		263CC8A321AF7DE400853396 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				263CC8AF21AF7DE500853396 /* ExtensionDelegate.swift in Sources */,
+				263CC8AD21AF7DE500853396 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2207,6 +2361,16 @@
 			target = 260D692B216846F9003B7DD9 /* ListyUI iOS */;
 			targetProxy = 260D6936216846FA003B7DD9 /* PBXContainerItemProxy */;
 		};
+		263CC8AA21AF7DE500853396 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 263CC8A621AF7DE400853396 /* Listy watchOS Extension */;
+			targetProxy = 263CC8A921AF7DE500853396 /* PBXContainerItemProxy */;
+		};
+		263CC8B421AF7DE600853396 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 263CC89A21AF7DE200853396 /* Listy watchOS */;
+			targetProxy = 263CC8B321AF7DE600853396 /* PBXContainerItemProxy */;
+		};
 		265EA90E21684F460009FF96 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 260D68D92166FD2C003B7DD9 /* ListyKit iOS */;
@@ -2250,6 +2414,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		263CC89D21AF7DE300853396 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				263CC89E21AF7DE300853396 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		265EA957216856820009FF96 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2932,6 +3104,190 @@
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		263CC8B621AF7DE600853396 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = Listy_watchOS_Extension;
+				INFOPLIST_FILE = "Apps/Listy watchOS/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		263CC8B721AF7DE600853396 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = Listy_watchOS_Extension;
+				INFOPLIST_FILE = "Apps/Listy watchOS/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		263CC8B821AF7DE600853396 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Apps/Listy watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		263CC8B921AF7DE600853396 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Apps/Listy watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
 			};
 			name = Release;
 		};
@@ -3687,6 +4043,24 @@
 			buildConfigurations = (
 				260D6941216846FA003B7DD9 /* Debug */,
 				260D6942216846FA003B7DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		263CC8BA21AF7DE600853396 /* Build configuration list for PBXNativeTarget "Listy watchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				263CC8B821AF7DE600853396 /* Debug */,
+				263CC8B921AF7DE600853396 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		263CC8BC21AF7DE600853396 /* Build configuration list for PBXNativeTarget "Listy watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				263CC8B621AF7DE600853396 /* Debug */,
+				263CC8B721AF7DE600853396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
