@@ -21,6 +21,7 @@ class EditInterfaceController: WKInterfaceController {
     @IBOutlet weak var saveButton: WKInterfaceButton!
 
     var presenter: EditListPresenterInput!
+    var enteredTitle: String?
     weak var delegate: EditInterfaceControllerDelegate!
 
     override init() {
@@ -58,7 +59,24 @@ class EditInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
-    @IBAction func titleLabelTapped(_ sender: Any) {}
+    // MARK: - Actions
+
+    @IBAction func titleLabelTapped(_ sender: Any) {
+        presentTextInputController(withSuggestions: nil, allowedInputMode: .allowEmoji) { (results) in
+            if let results = results, results.count > 0 {
+                if let title = results.first as? String {
+                    self.enteredTitle = title
+                    self.titleLabel.setText(title)
+                }
+            } else {
+                // Nothing was selected.
+            }
+        }
+    }
+
+    @IBAction func saveButtonTapped() {
+        self.presenter.save(title: self.enteredTitle)
+    }
 }
 
 extension EditInterfaceController: EditListPresenterOutput {}

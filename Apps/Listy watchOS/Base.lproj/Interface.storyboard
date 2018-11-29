@@ -17,7 +17,6 @@
                         <button width="1" alignment="left" title="Add list" id="dwV-h8-nxV">
                             <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="addListButtonTapped" destination="AgC-eL-Hgc" id="enr-uZ-wsJ"/>
                                 <segue destination="RRD-YQ-kBW" kind="modal" identifier="editList" id="Ikc-hE-GnL"/>
                             </connections>
                         </button>
@@ -59,6 +58,9 @@
                         </label>
                         <button width="1" alignment="left" title="Save" id="PLC-Ty-2Vf">
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="saveButtonTapped" destination="RRD-YQ-kBW" id="UJb-m5-9g9"/>
+                            </connections>
                         </button>
                     </items>
                     <connections>
