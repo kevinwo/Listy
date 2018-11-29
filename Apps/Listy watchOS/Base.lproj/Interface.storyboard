@@ -12,7 +12,7 @@
         <!--Lists-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="Lists" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Listy_watchOS" customModuleProvider="target">
+                <controller title="Lists" id="AgC-eL-Hgc" customClass="ListsInterfaceController" customModule="Listy_watchOS_Extension">
                     <items>
                         <button width="1" alignment="left" title="Add list" id="dwV-h8-nxV">
                             <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

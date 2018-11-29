@@ -32,7 +32,7 @@
 		263CC89F21AF7DE300853396 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263CC89D21AF7DE300853396 /* Interface.storyboard */; };
 		263CC8A121AF7DE400853396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263CC8A021AF7DE400853396 /* Assets.xcassets */; };
 		263CC8A821AF7DE500853396 /* Listy watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 263CC8A721AF7DE400853396 /* Listy watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		263CC8AD21AF7DE500853396 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263CC8AC21AF7DE500853396 /* InterfaceController.swift */; };
+		263CC8AD21AF7DE500853396 /* ListsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263CC8AC21AF7DE500853396 /* ListsInterfaceController.swift */; };
 		263CC8AF21AF7DE500853396 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263CC8AE21AF7DE500853396 /* ExtensionDelegate.swift */; };
 		263CC8B121AF7DE500853396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263CC8B021AF7DE500853396 /* Assets.xcassets */; };
 		263CC8B521AF7DE600853396 /* Listy watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 263CC89B21AF7DE200853396 /* Listy watchOS.app */; };
@@ -453,7 +453,7 @@
 		263CC8A021AF7DE400853396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		263CC8A221AF7DE400853396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		263CC8A721AF7DE400853396 /* Listy watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Listy watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		263CC8AC21AF7DE500853396 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		263CC8AC21AF7DE500853396 /* ListsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsInterfaceController.swift; sourceTree = "<group>"; };
 		263CC8AE21AF7DE500853396 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		263CC8B021AF7DE500853396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		263CC8B221AF7DE500853396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -891,7 +891,6 @@
 			isa = PBXGroup;
 			children = (
 				26D052A921AFA806004968A7 /* Lists */,
-				263CC8AC21AF7DE500853396 /* InterfaceController.swift */,
 				263CC8AE21AF7DE500853396 /* ExtensionDelegate.swift */,
 				263CC8B021AF7DE500853396 /* Assets.xcassets */,
 				263CC8B221AF7DE500853396 /* Info.plist */,
@@ -960,6 +959,7 @@
 		265AB0A921AFDDD900D41B46 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				263CC8AC21AF7DE500853396 /* ListsInterfaceController.swift */,
 				26D052AB21AFA846004968A7 /* ListRowController.swift */,
 			);
 			path = View;
@@ -2366,7 +2366,7 @@
 				265AB0A421AFC1E300D41B46 /* ListsRouter.swift in Sources */,
 				265AB0B021AFEC6E00D41B46 /* EditListRouter.swift in Sources */,
 				263CC8AF21AF7DE500853396 /* ExtensionDelegate.swift in Sources */,
-				263CC8AD21AF7DE500853396 /* InterfaceController.swift in Sources */,
+				263CC8AD21AF7DE500853396 /* ListsInterfaceController.swift in Sources */,
 				265AB0A621AFC3C900D41B46 /* ErrorAlertable+LIST.swift in Sources */,
 				265AB0A821AFC40600D41B46 /* ViewRoutable+LIST.swift in Sources */,
 				26D052AC21AFA846004968A7 /* ListRowController.swift in Sources */,

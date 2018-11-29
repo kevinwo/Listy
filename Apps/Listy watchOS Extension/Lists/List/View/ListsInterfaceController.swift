@@ -1,5 +1,5 @@
 //
-//  InterfaceController.swift
+//  ListsInterfaceController.swift
 //  Listy watchOS Extension
 //
 //  Created by Kevin Wolkober on 11/29/18.
@@ -9,10 +9,11 @@ import WatchKit
 import Foundation
 import ListyKit
 
-class InterfaceController: WKInterfaceController {
+class ListsInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var addListButton: WKInterfaceButton!
     @IBOutlet weak var table: WKInterfaceTable!
+
     var presenter: ListsPresenterInput!
 
     override init() {
@@ -60,13 +61,13 @@ class InterfaceController: WKInterfaceController {
     }
 }
 
-extension InterfaceController: ListsPresenterOutput {
+extension ListsInterfaceController: ListsPresenterOutput {
 
     public func updateView(lists: [List]) {
         self.table.setNumberOfRows(lists.count, withRowType: "List")
 
         for (index, list) in lists.enumerated() {
-            let row = table.rowController(at: index) as! ListRowController
+            let row = self.table.rowController(at: index) as! ListRowController
             row.titleLabel.setText(list.title)
         }
     }
@@ -74,7 +75,7 @@ extension InterfaceController: ListsPresenterOutput {
     public func deleteRow(at indexPath: IndexPath) {}
 }
 
-extension InterfaceController: ListsRouterOutput {
+extension ListsInterfaceController: ListsRouterOutput {
 
     public func reloadData() {
         self.presenter.reloadData()
