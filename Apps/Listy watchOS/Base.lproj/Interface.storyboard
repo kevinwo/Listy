@@ -14,6 +14,12 @@
             <objects>
                 <controller title="Lists" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Listy_watchOS" customModuleProvider="target">
                     <items>
+                        <button width="1" alignment="left" title="Add list" id="dwV-h8-nxV">
+                            <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addListButtonTapped" destination="AgC-eL-Hgc" id="enr-uZ-wsJ"/>
+                            </connections>
+                        </button>
                         <table alignment="left" id="oEp-9Q-V2r">
                             <items>
                                 <tableRow identifier="List" id="klZ-Fc-o2g" customClass="ListRowController" customModule="Listy_watchOS_Extension">
@@ -30,6 +36,7 @@
                         </table>
                     </items>
                     <connections>
+                        <outlet property="addListButton" destination="dwV-h8-nxV" id="rjb-av-sLc"/>
                         <outlet property="table" destination="oEp-9Q-V2r" id="KO1-zU-XMt"/>
                     </connections>
                 </controller>

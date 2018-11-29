@@ -11,6 +11,7 @@ import ListyKit
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var addListButton: WKInterfaceButton!
     @IBOutlet weak var table: WKInterfaceTable!
     var presenter: ListsPresenterInput!
 
@@ -50,6 +51,10 @@ class InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+
+    @IBAction func addListButtonTapped() {
+        self.presenter.addList()
     }
 }
 
