@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "26D0528021AFA204004968A7"
-               BuildableName = "ListyKit_watchOS.framework"
+               BuildableName = "ListyKit.framework"
                BlueprintName = "ListyKit watchOS"
                ReferencedContainer = "container:Listy.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "26D0528021AFA204004968A7"
-            BuildableName = "ListyKit_watchOS.framework"
+            BuildableName = "ListyKit.framework"
             BlueprintName = "ListyKit watchOS"
             ReferencedContainer = "container:Listy.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "26D0528021AFA204004968A7"
-            BuildableName = "ListyKit_watchOS.framework"
+            BuildableName = "ListyKit.framework"
             BlueprintName = "ListyKit watchOS"
             ReferencedContainer = "container:Listy.xcodeproj">
          </BuildableReference>

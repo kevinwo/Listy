@@ -39,6 +39,9 @@
 		264E746C2176EC61000799F2 /* EditTaskInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746B2176EC61000799F2 /* EditTaskInteractorInput.swift */; };
 		264E746E2176F1C9000799F2 /* EditTaskInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746D2176F1C9000799F2 /* EditTaskInteractorOutput.swift */; };
 		264E7477217703E8000799F2 /* FakeEditTaskPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E7476217703E8000799F2 /* FakeEditTaskPresenterInput.swift */; };
+		265AB0A421AFC1E300D41B46 /* ListsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0A321AFC1E300D41B46 /* ListsRouter.swift */; };
+		265AB0A621AFC3C900D41B46 /* ErrorAlertable+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0A521AFC3C900D41B46 /* ErrorAlertable+LIST.swift */; };
+		265AB0A821AFC40600D41B46 /* ViewRoutable+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0A721AFC40600D41B46 /* ViewRoutable+LIST.swift */; };
 		265EA91021684F8F0009FF96 /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		265EA94F216856800009FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA94E216856800009FF96 /* AppDelegate.swift */; };
 		265EA956216856820009FF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265EA955216856820009FF96 /* Assets.xcassets */; };
@@ -113,6 +116,7 @@
 		26D052A621AFA3A6004968A7 /* EditListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595638621AD4F3C0045D85D /* EditListInteractorInput.swift */; };
 		26D052A721AFA3A6004968A7 /* EditListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595638821AD4F5F0045D85D /* EditListInteractorOutput.swift */; };
 		26D052A821AFA3AE004968A7 /* Mirror+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D694F21684964003B7DD9 /* Mirror+LIST.swift */; };
+		26D052AC21AFA846004968A7 /* ListRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D052AB21AFA846004968A7 /* ListRowController.swift */; };
 		26EB60DD21AC037C007B638F /* TasksListViewTableViewDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EB60DC21AC037C007B638F /* TasksListViewTableViewDelegateTests.swift */; };
 		26EB60DF21AC038B007B638F /* TasksListViewTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EB60DE21AC038B007B638F /* TasksListViewTableViewDelegate.swift */; };
 		26EB60E121AC36C7007B638F /* EditTaskPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EB60E021AC36C7007B638F /* EditTaskPresenterInput.swift */; };
@@ -455,6 +459,9 @@
 		264E746D2176F1C9000799F2 /* EditTaskInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskInteractorOutput.swift; sourceTree = "<group>"; };
 		264E746F2176F446000799F2 /* ErrorAlertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertable.swift; sourceTree = "<group>"; };
 		264E7476217703E8000799F2 /* FakeEditTaskPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditTaskPresenterInput.swift; sourceTree = "<group>"; };
+		265AB0A321AFC1E300D41B46 /* ListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouter.swift; sourceTree = "<group>"; };
+		265AB0A521AFC3C900D41B46 /* ErrorAlertable+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorAlertable+LIST.swift"; sourceTree = "<group>"; };
+		265AB0A721AFC40600D41B46 /* ViewRoutable+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewRoutable+LIST.swift"; sourceTree = "<group>"; };
 		265EA94C216856800009FF96 /* Listy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Listy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265EA94E216856800009FF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		265EA955216856820009FF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -518,6 +525,7 @@
 		26C8F05821ABC3FE0013E3B8 /* ListsViewTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListsViewTableViewDelegate.swift; path = ../../../Lists/SceneComponents/List/ListsViewTableViewDelegate.swift; sourceTree = "<group>"; };
 		26C8F05A21ABC4210013E3B8 /* ListsViewTableViewDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewTableViewDelegateTests.swift; sourceTree = "<group>"; };
 		26D0528121AFA204004968A7 /* ListyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ListyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26D052AB21AFA846004968A7 /* ListRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowController.swift; sourceTree = "<group>"; };
 		26E5479A21A50AF900EA4EEA /* ListsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsInteractorOutput.swift; sourceTree = "<group>"; };
 		26E5479D21A50BC900EA4EEA /* FakeListsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsInteractorOutput.swift; sourceTree = "<group>"; };
 		26E5479F21A50E5C00EA4EEA /* ListsInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsInteractorInput.swift; sourceTree = "<group>"; };
@@ -878,10 +886,13 @@
 		263CC8AB21AF7DE500853396 /* Listy watchOS Extension */ = {
 			isa = PBXGroup;
 			children = (
+				26D052A921AFA806004968A7 /* Lists */,
 				263CC8AC21AF7DE500853396 /* InterfaceController.swift */,
 				263CC8AE21AF7DE500853396 /* ExtensionDelegate.swift */,
 				263CC8B021AF7DE500853396 /* Assets.xcassets */,
 				263CC8B221AF7DE500853396 /* Info.plist */,
+				265AB0A521AFC3C900D41B46 /* ErrorAlertable+LIST.swift */,
+				265AB0A721AFC40600D41B46 /* ViewRoutable+LIST.swift */,
 			);
 			path = "Listy watchOS Extension";
 			sourceTree = "<group>";
@@ -932,6 +943,14 @@
 				A595636B21AD2BEE0045D85D /* FakeEditTaskPresenterOutput.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		265AB0A221AFC1B600D41B46 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				265AB0A321AFC1E300D41B46 /* ListsRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		265EA94D216856800009FF96 /* Listy-iOS */ = {
@@ -1151,6 +1170,23 @@
 				26B52C1C217DA7730011375F /* TasksListRouterInput.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		26D052A921AFA806004968A7 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				26D052AA21AFA811004968A7 /* List */,
+				265AB0A221AFC1B600D41B46 /* Router */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		26D052AA21AFA811004968A7 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				26D052AB21AFA846004968A7 /* ListRowController.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		26E5479C21A50B8500EA4EEA /* Interactor */ = {
@@ -2288,8 +2324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265AB0A421AFC1E300D41B46 /* ListsRouter.swift in Sources */,
 				263CC8AF21AF7DE500853396 /* ExtensionDelegate.swift in Sources */,
 				263CC8AD21AF7DE500853396 /* InterfaceController.swift in Sources */,
+				265AB0A621AFC3C900D41B46 /* ErrorAlertable+LIST.swift in Sources */,
+				265AB0A821AFC40600D41B46 /* ViewRoutable+LIST.swift in Sources */,
+				26D052AC21AFA846004968A7 /* ListRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3259,7 +3299,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = "";
@@ -3278,6 +3318,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-iOS.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -3306,7 +3347,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
@@ -3320,6 +3361,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-iOS.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -3347,10 +3389,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3370,6 +3412,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-iOS.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -3396,10 +3439,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -3414,6 +3457,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-iOS.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -3604,10 +3648,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -3636,6 +3680,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -3680,10 +3725,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -3705,6 +3750,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -3847,10 +3893,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3869,6 +3915,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -3896,10 +3943,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -3913,6 +3960,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -3940,10 +3988,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3963,6 +4011,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -3990,10 +4039,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -4008,6 +4057,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
