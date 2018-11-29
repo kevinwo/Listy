@@ -42,7 +42,7 @@
 		265AB0A421AFC1E300D41B46 /* ListsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0A321AFC1E300D41B46 /* ListsRouter.swift */; };
 		265AB0A621AFC3C900D41B46 /* ErrorAlertable+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0A521AFC3C900D41B46 /* ErrorAlertable+LIST.swift */; };
 		265AB0A821AFC40600D41B46 /* ViewRoutable+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0A721AFC40600D41B46 /* ViewRoutable+LIST.swift */; };
-		265AB0AD21AFE5A500D41B46 /* EditInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0AC21AFE5A500D41B46 /* EditInterfaceController.swift */; };
+		265AB0AD21AFE5A500D41B46 /* EditListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0AC21AFE5A500D41B46 /* EditListInterfaceController.swift */; };
 		265AB0B021AFEC6E00D41B46 /* EditListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0AF21AFEC6E00D41B46 /* EditListRouter.swift */; };
 		265EA91021684F8F0009FF96 /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		265EA94F216856800009FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA94E216856800009FF96 /* AppDelegate.swift */; };
@@ -464,7 +464,7 @@
 		265AB0A321AFC1E300D41B46 /* ListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouter.swift; sourceTree = "<group>"; };
 		265AB0A521AFC3C900D41B46 /* ErrorAlertable+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorAlertable+LIST.swift"; sourceTree = "<group>"; };
 		265AB0A721AFC40600D41B46 /* ViewRoutable+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewRoutable+LIST.swift"; sourceTree = "<group>"; };
-		265AB0AC21AFE5A500D41B46 /* EditInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInterfaceController.swift; sourceTree = "<group>"; };
+		265AB0AC21AFE5A500D41B46 /* EditListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListInterfaceController.swift; sourceTree = "<group>"; };
 		265AB0AF21AFEC6E00D41B46 /* EditListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListRouter.swift; sourceTree = "<group>"; };
 		265EA94C216856800009FF96 /* Listy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Listy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265EA94E216856800009FF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -977,7 +977,7 @@
 		265AB0AB21AFDDF600D41B46 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				265AB0AC21AFE5A500D41B46 /* EditInterfaceController.swift */,
+				265AB0AC21AFE5A500D41B46 /* EditListInterfaceController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2362,7 +2362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265AB0AD21AFE5A500D41B46 /* EditInterfaceController.swift in Sources */,
+				265AB0AD21AFE5A500D41B46 /* EditListInterfaceController.swift in Sources */,
 				265AB0A421AFC1E300D41B46 /* ListsRouter.swift in Sources */,
 				265AB0B021AFEC6E00D41B46 /* EditListRouter.swift in Sources */,
 				263CC8AF21AF7DE500853396 /* ExtensionDelegate.swift in Sources */,

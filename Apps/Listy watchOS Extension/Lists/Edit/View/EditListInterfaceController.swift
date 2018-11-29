@@ -9,20 +9,20 @@ import WatchKit
 import Foundation
 import ListyKit
 
-protocol EditInterfaceControllerDelegate: class {
+protocol EditListInterfaceControllerDelegate: class {
 
-    func didCancelWithController(_ controller: EditInterfaceController)
-    func controller(_ controller: EditInterfaceController, didSaveList list: List)
+    func didCancelWithController(_ controller: EditListInterfaceController)
+    func controller(_ controller: EditListInterfaceController, didSaveList list: List)
 }
 
-class EditInterfaceController: WKInterfaceController {
+class EditListInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
     @IBOutlet weak var saveButton: WKInterfaceButton!
 
     var presenter: EditListPresenterInput!
     var enteredTitle: String?
-    weak var delegate: EditInterfaceControllerDelegate!
+    weak var delegate: EditListInterfaceControllerDelegate!
 
     override init() {
         super.init()
@@ -79,9 +79,9 @@ class EditInterfaceController: WKInterfaceController {
     }
 }
 
-extension EditInterfaceController: EditListPresenterOutput {}
+extension EditListInterfaceController: EditListPresenterOutput {}
 
-extension EditInterfaceController: EditListRouterOutput {
+extension EditListInterfaceController: EditListRouterOutput {
 
     public func finishWithCancel() {
         self.delegate.didCancelWithController(self)
