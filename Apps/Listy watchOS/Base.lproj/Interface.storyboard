@@ -48,11 +48,23 @@
             <objects>
                 <controller title="Add List" id="RRD-YQ-kBW" customClass="EditInterfaceController" customModule="Listy_watchOS_Extension">
                     <items>
-                        <label width="1" height="100" alignment="left" text="Tap to add title" numberOfLines="0" minimumScaleFactor="0.5" id="StP-Sy-1Bv"/>
+                        <label width="1" height="100" alignment="left" text="Tap to add title" numberOfLines="0" minimumScaleFactor="0.5" id="StP-Sy-1Bv">
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="aze-Pf-9dS">
+                                    <connections>
+                                        <action selector="titleLabelTapped:" destination="RRD-YQ-kBW" id="QJc-rB-AH1"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                        </label>
                         <button width="1" alignment="left" title="Save" id="PLC-Ty-2Vf">
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="saveButton" destination="PLC-Ty-2Vf" id="9u0-i5-Blc"/>
+                        <outlet property="titleLabel" destination="StP-Sy-1Bv" id="gag-Eh-fHz"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="513" y="142"/>
