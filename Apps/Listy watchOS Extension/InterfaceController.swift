@@ -8,7 +8,6 @@
 import WatchKit
 import Foundation
 
-
 class InterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {

@@ -5,7 +5,7 @@
 //  Created by Kevin Wolkober on 10/5/18.
 //
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 //! Project version number for ListyKit.
 FOUNDATION_EXPORT double ListyKitVersionNumber;
