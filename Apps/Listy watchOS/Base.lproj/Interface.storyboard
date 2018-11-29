@@ -17,7 +17,7 @@
                         <button width="1" alignment="left" title="Add list" id="dwV-h8-nxV">
                             <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="RRD-YQ-kBW" kind="modal" identifier="editList" id="Ikc-hE-GnL"/>
+                                <action selector="addListButtonTapped" destination="AgC-eL-Hgc" id="mTp-Ub-3F9"/>
                             </connections>
                         </button>
                         <table alignment="left" id="oEp-9Q-V2r">
@@ -45,7 +45,7 @@
         <!--Add List-->
         <scene sceneID="sN7-jD-FiF">
             <objects>
-                <controller title="Add List" id="RRD-YQ-kBW" customClass="EditListInterfaceController" customModule="Listy_watchOS_Extension">
+                <controller identifier="EditList" title="Add List" id="RRD-YQ-kBW" customClass="EditListInterfaceController" customModule="Listy_watchOS_Extension">
                     <items>
                         <label width="1" height="100" alignment="left" text="Tap to add title" numberOfLines="0" minimumScaleFactor="0.5" id="StP-Sy-1Bv">
                             <gestureRecognizers>
@@ -69,7 +69,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="513" y="142"/>
+            <point key="canvasLocation" x="397" y="286"/>
         </scene>
     </scenes>
 </document>

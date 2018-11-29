@@ -52,6 +52,12 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+
+    // MARK: - Button actions
+
+    @IBAction func addListButtonTapped() {
+        self.presenter.addList()
+    }
 }
 
 extension InterfaceController: ListsPresenterOutput {

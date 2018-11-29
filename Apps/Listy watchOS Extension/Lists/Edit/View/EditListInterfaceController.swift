@@ -24,15 +24,21 @@ class EditListInterfaceController: WKInterfaceController {
     var enteredTitle: String?
     weak var delegate: EditListInterfaceControllerDelegate!
 
-    override init() {
-        super.init()
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+
+        let context = context as! [String: Any]
+        let list = context["list"] as! List
+        let delegate = context["delegate"] as! EditListInterfaceControllerDelegate
+
+        self.delegate = delegate
 
         let database = Database.newInstance()
         let lists = Lists(database: database)
 
         let presenter = EditListPresenter()
         let router = EditListRouter()
-        let interactor = EditListInteractor(list: List(), lists: lists)
+        let interactor = EditListInteractor(list: list, lists: lists)
 
         self.presenter = presenter
 
@@ -43,10 +49,6 @@ class EditListInterfaceController: WKInterfaceController {
         interactor.output = presenter
 
         router.output = self
-    }
-
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
     }
 
     override func willActivate() {
