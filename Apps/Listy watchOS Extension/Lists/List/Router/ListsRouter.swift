@@ -12,8 +12,7 @@ class ListsRouter: ListsRouterInput {
     var output: ListsRouterOutput!
 
     func showEditListView(with list: List) {
-        let lists = Lists(database: Database.newInstance())
-        self.output.presentController(withName: <#T##String#>, context: <#T##Any?#>)
+        self.output.presentController(withName: "editList", context: nil)
     }
 
     func showTasks(for list: List) {}

@@ -18,6 +18,7 @@
                             <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="addListButtonTapped" destination="AgC-eL-Hgc" id="enr-uZ-wsJ"/>
+                                <segue destination="RRD-YQ-kBW" kind="modal" identifier="editList" id="Ikc-hE-GnL"/>
                             </connections>
                         </button>
                         <table alignment="left" id="oEp-9Q-V2r">
@@ -41,6 +42,20 @@
                     </connections>
                 </controller>
             </objects>
+        </scene>
+        <!--Add List-->
+        <scene sceneID="sN7-jD-FiF">
+            <objects>
+                <controller title="Add List" id="RRD-YQ-kBW" customClass="EditInterfaceController" customModule="Listy_watchOS_Extension">
+                    <items>
+                        <label width="1" height="100" alignment="left" text="Tap to add title" numberOfLines="0" minimumScaleFactor="0.5" id="StP-Sy-1Bv"/>
+                        <button width="1" alignment="left" title="Save" id="PLC-Ty-2Vf">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="513" y="142"/>
         </scene>
     </scenes>
 </document>

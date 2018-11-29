@@ -8,7 +8,4 @@
 import WatchKit
 import ListyKit
 
-extension ViewRoutable where Self: WKInterfaceController {
-
-    public func present(view: ViewRoutable, animated flag: Bool, completion: (() -> Void)?) {}
-}
+extension ViewRoutable where Self: WKInterfaceController {}
