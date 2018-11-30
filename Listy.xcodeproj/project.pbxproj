@@ -82,6 +82,9 @@
 		265AB11321B0F6F700D41B46 /* EditListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99A21685E0B0009FF96 /* EditListInteractor.swift */; };
 		265AB11421B0F6F700D41B46 /* EditListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595638621AD4F3C0045D85D /* EditListInteractorInput.swift */; };
 		265AB11521B0F6F700D41B46 /* EditListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595638821AD4F5F0045D85D /* EditListInteractorOutput.swift */; };
+		265AB11721B1159400D41B46 /* ListsViewTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB11621B1159400D41B46 /* ListsViewTableViewDelegate.swift */; };
+		265AB11921B115AB00D41B46 /* ListsViewTableViewDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB11821B115AB00D41B46 /* ListsViewTableViewDelegateTests.swift */; };
+		265AB11B21B1228100D41B46 /* TestCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 265AB11A21B1228100D41B46 /* TestCellView.xib */; };
 		265EA91021684F8F0009FF96 /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		265EA94F216856800009FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA94E216856800009FF96 /* AppDelegate.swift */; };
 		265EA956216856820009FF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265EA955216856820009FF96 /* Assets.xcassets */; };
@@ -544,6 +547,9 @@
 		265AB0E221B0E6B500D41B46 /* TasksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListViewController.swift; sourceTree = "<group>"; };
 		265AB0E621B0F43800D41B46 /* ListsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewControllerTests.swift; sourceTree = "<group>"; };
 		265AB0EE21B0F5EC00D41B46 /* ListyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ListyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		265AB11621B1159400D41B46 /* ListsViewTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewTableViewDelegate.swift; sourceTree = "<group>"; };
+		265AB11821B115AB00D41B46 /* ListsViewTableViewDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewTableViewDelegateTests.swift; sourceTree = "<group>"; };
+		265AB11A21B1228100D41B46 /* TestCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCellView.xib; sourceTree = "<group>"; };
 		265EA94C216856800009FF96 /* Listy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Listy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265EA94E216856800009FF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		265EA955216856820009FF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1137,6 +1143,7 @@
 			isa = PBXGroup;
 			children = (
 				265AB0D821B0E48900D41B46 /* ListsViewController.swift */,
+				265AB11621B1159400D41B46 /* ListsViewTableViewDelegate.swift */,
 				265AB0DB21B0E4C000D41B46 /* Lists.storyboard */,
 			);
 			path = View;
@@ -1179,6 +1186,8 @@
 			isa = PBXGroup;
 			children = (
 				265AB0E621B0F43800D41B46 /* ListsViewControllerTests.swift */,
+				265AB11821B115AB00D41B46 /* ListsViewTableViewDelegateTests.swift */,
+				265AB11A21B1228100D41B46 /* TestCellView.xib */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -2498,6 +2507,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265AB11B21B1228100D41B46 /* TestCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2676,6 +2686,7 @@
 				265AB0BD21B0D32F00D41B46 /* SplitViewController.swift in Sources */,
 				265AB0E321B0E6B500D41B46 /* TasksListViewController.swift in Sources */,
 				265AB0BB21B0D32F00D41B46 /* AppDelegate.swift in Sources */,
+				265AB11721B1159400D41B46 /* ListsViewTableViewDelegate.swift in Sources */,
 				265AB0D921B0E48900D41B46 /* ListsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2685,6 +2696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				265AB0E721B0F43800D41B46 /* ListsViewControllerTests.swift in Sources */,
+				265AB11921B115AB00D41B46 /* ListsViewTableViewDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

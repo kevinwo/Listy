@@ -11,10 +11,27 @@ import ListyKit
 class ListsViewController: NSViewController {
 
     @IBOutlet weak var tableView: NSTableView!
+    var tableViewDelegate: NSTableViewDelegate!
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+
+        self.tableViewDelegate = ListsViewTableViewDelegate()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+
+        self.tableView.dataSource = self
+        self.tableView.delegate = self.tableViewDelegate
+
+        self.tableView.reloadData()
     }
-    
+}
+
+extension ListsViewController: NSTableViewDataSource {
+
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return 3
+    }
 }

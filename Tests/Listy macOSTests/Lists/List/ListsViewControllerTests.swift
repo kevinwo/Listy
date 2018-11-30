@@ -30,4 +30,11 @@ class ListsViewControllerTests: XCTestCase {
     func testOutlets() {
         XCTAssertNotNil(sut.tableView)
     }
+
+    // MARK: - viewDidLoad()
+
+    func testViewDidLoad() {
+        XCTAssert(sut.tableView.dataSource === sut)
+        XCTAssert(sut.tableView.delegate is ListsViewTableViewDelegate)
+    }
 }
