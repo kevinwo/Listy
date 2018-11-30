@@ -702,13 +702,21 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
+        <!--Lists-->
+        <scene sceneID="z6M-CP-s2h">
+            <objects>
+                <controllerPlaceholder storyboardName="Lists" id="wqM-qi-fTN" sceneMemberID="viewController"/>
+                <customObject id="Bv3-eB-ScL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477" y="635"/>
+        </scene>
         <!--Split View Controller-->
         <scene sceneID="oEm-Bq-2Qz">
             <objects>
                 <splitViewController id="kaw-NT-n4h" customClass="SplitViewController" customModule="Listy" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem id="dhN-pA-AL3"/>
-                        <splitViewItem id="DjQ-Pa-xT6"/>
+                        <splitViewItem id="2v5-RI-pcR"/>
+                        <splitViewItem id="Xr8-Rn-KSo"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="1k4-dB-PF3">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -719,39 +727,21 @@
                     </splitView>
                     <connections>
                         <outlet property="splitView" destination="1k4-dB-PF3" id="yRR-c4-mcN"/>
-                        <segue destination="pGU-II-XmI" kind="relationship" relationship="splitItems" id="Avd-xI-d1L"/>
-                        <segue destination="Zdz-cm-4m1" kind="relationship" relationship="splitItems" id="pYu-Vj-jm5"/>
+                        <segue destination="wqM-qi-fTN" kind="relationship" relationship="splitItems" id="Xvu-Bf-zuc"/>
+                        <segue destination="zB6-0w-yse" kind="relationship" relationship="splitItems" id="UwJ-UP-lTd"/>
                     </connections>
                 </splitViewController>
                 <customObject id="xTo-zx-7v1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="684"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="okD-ht-kv6">
+        <!--Tasks-->
+        <scene sceneID="WB2-kU-qco">
             <objects>
-                <viewController id="pGU-II-XmI" sceneMemberID="viewController">
-                    <view key="view" id="SNf-ZA-fIM">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="JuB-fZ-YsS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <controllerPlaceholder storyboardName="Tasks" id="zB6-0w-yse" sceneMemberID="viewController"/>
+                <customObject id="1HT-QC-KdS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="698" y="484"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="xQl-eC-ion">
-            <objects>
-                <viewController id="Zdz-cm-4m1" sceneMemberID="viewController">
-                    <view key="view" id="nDq-RB-z1b">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="c4u-h3-gpb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="698" y="887"/>
+            <point key="canvasLocation" x="480" y="744"/>
         </scene>
     </scenes>
 </document>

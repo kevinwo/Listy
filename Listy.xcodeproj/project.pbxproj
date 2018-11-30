@@ -49,6 +49,10 @@
 		265AB0BF21B0D33200D41B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265AB0BE21B0D33200D41B46 /* Assets.xcassets */; };
 		265AB0C221B0D33200D41B46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265AB0C021B0D33200D41B46 /* Main.storyboard */; };
 		265AB0CE21B0D33300D41B46 /* Listy_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0CD21B0D33300D41B46 /* Listy_macOSTests.swift */; };
+		265AB0D921B0E48900D41B46 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0D821B0E48900D41B46 /* ListsViewController.swift */; };
+		265AB0DC21B0E4C000D41B46 /* Lists.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265AB0DB21B0E4C000D41B46 /* Lists.storyboard */; };
+		265AB0E121B0E67300D41B46 /* Tasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265AB0E021B0E67300D41B46 /* Tasks.storyboard */; };
+		265AB0E321B0E6B500D41B46 /* TasksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0E221B0E6B500D41B46 /* TasksListViewController.swift */; };
 		265EA91021684F8F0009FF96 /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		265EA94F216856800009FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA94E216856800009FF96 /* AppDelegate.swift */; };
 		265EA956216856820009FF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265EA955216856820009FF96 /* Assets.xcassets */; };
@@ -488,6 +492,10 @@
 		265AB0C921B0D33200D41B46 /* Listy macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Listy macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265AB0CD21B0D33300D41B46 /* Listy_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listy_macOSTests.swift; sourceTree = "<group>"; };
 		265AB0CF21B0D33300D41B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		265AB0D821B0E48900D41B46 /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
+		265AB0DB21B0E4C000D41B46 /* Lists.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lists.storyboard; sourceTree = "<group>"; };
+		265AB0E021B0E67300D41B46 /* Tasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tasks.storyboard; sourceTree = "<group>"; };
+		265AB0E221B0E6B500D41B46 /* TasksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListViewController.swift; sourceTree = "<group>"; };
 		265EA94C216856800009FF96 /* Listy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Listy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265EA94E216856800009FF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		265EA955216856820009FF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1031,6 +1039,8 @@
 		265AB0B921B0D32F00D41B46 /* Listy macOS */ = {
 			isa = PBXGroup;
 			children = (
+				265AB0D621B0E38B00D41B46 /* Lists */,
+				265AB0DD21B0E65C00D41B46 /* Tasks */,
 				265AB0BA21B0D32F00D41B46 /* AppDelegate.swift */,
 				265AB0BC21B0D32F00D41B46 /* SplitViewController.swift */,
 				265AB0BE21B0D33200D41B46 /* Assets.xcassets */,
@@ -1048,6 +1058,56 @@
 				265AB0CF21B0D33300D41B46 /* Info.plist */,
 			);
 			path = "Listy macOSTests";
+			sourceTree = "<group>";
+		};
+		265AB0D621B0E38B00D41B46 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				265AB0D721B0E39600D41B46 /* List */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		265AB0D721B0E39600D41B46 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				265AB0DA21B0E4B600D41B46 /* View */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		265AB0DA21B0E4B600D41B46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				265AB0D821B0E48900D41B46 /* ListsViewController.swift */,
+				265AB0DB21B0E4C000D41B46 /* Lists.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		265AB0DD21B0E65C00D41B46 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				265AB0DE21B0E66400D41B46 /* List */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		265AB0DE21B0E66400D41B46 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				265AB0DF21B0E66A00D41B46 /* View */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		265AB0DF21B0E66A00D41B46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				265AB0E221B0E6B500D41B46 /* TasksListViewController.swift */,
+				265AB0E021B0E67300D41B46 /* Tasks.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		265EA94D216856800009FF96 /* Listy-iOS */ = {
@@ -2322,6 +2382,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265AB0DC21B0E4C000D41B46 /* Lists.storyboard in Resources */,
+				265AB0E121B0E67300D41B46 /* Tasks.storyboard in Resources */,
 				265AB0BF21B0D33200D41B46 /* Assets.xcassets in Resources */,
 				265AB0C221B0D33200D41B46 /* Main.storyboard in Resources */,
 			);
@@ -2500,7 +2562,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				265AB0BD21B0D32F00D41B46 /* SplitViewController.swift in Sources */,
+				265AB0E321B0E6B500D41B46 /* TasksListViewController.swift in Sources */,
 				265AB0BB21B0D32F00D41B46 /* AppDelegate.swift in Sources */,
+				265AB0D921B0E48900D41B46 /* ListsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
