@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SplitViewController.swift
 //  Listy macOS
 //
 //  Created by Kevin Wolkober on 11/30/18.
@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class SplitViewController: NSSplitViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
