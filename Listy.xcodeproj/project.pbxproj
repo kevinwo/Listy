@@ -48,11 +48,11 @@
 		265AB0BD21B0D32F00D41B46 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0BC21B0D32F00D41B46 /* SplitViewController.swift */; };
 		265AB0BF21B0D33200D41B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265AB0BE21B0D33200D41B46 /* Assets.xcassets */; };
 		265AB0C221B0D33200D41B46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265AB0C021B0D33200D41B46 /* Main.storyboard */; };
-		265AB0CE21B0D33300D41B46 /* Listy_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0CD21B0D33300D41B46 /* Listy_macOSTests.swift */; };
 		265AB0D921B0E48900D41B46 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0D821B0E48900D41B46 /* ListsViewController.swift */; };
 		265AB0DC21B0E4C000D41B46 /* Lists.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265AB0DB21B0E4C000D41B46 /* Lists.storyboard */; };
 		265AB0E121B0E67300D41B46 /* Tasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265AB0E021B0E67300D41B46 /* Tasks.storyboard */; };
 		265AB0E321B0E6B500D41B46 /* TasksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0E221B0E6B500D41B46 /* TasksListViewController.swift */; };
+		265AB0E721B0F43800D41B46 /* ListsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0E621B0F43800D41B46 /* ListsViewControllerTests.swift */; };
 		265EA91021684F8F0009FF96 /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		265EA94F216856800009FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA94E216856800009FF96 /* AppDelegate.swift */; };
 		265EA956216856820009FF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265EA955216856820009FF96 /* Assets.xcassets */; };
@@ -490,12 +490,12 @@
 		265AB0C321B0D33200D41B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		265AB0C421B0D33200D41B46 /* Listy_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Listy_macOS.entitlements; sourceTree = "<group>"; };
 		265AB0C921B0D33200D41B46 /* Listy macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Listy macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		265AB0CD21B0D33300D41B46 /* Listy_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listy_macOSTests.swift; sourceTree = "<group>"; };
 		265AB0CF21B0D33300D41B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		265AB0D821B0E48900D41B46 /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		265AB0DB21B0E4C000D41B46 /* Lists.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lists.storyboard; sourceTree = "<group>"; };
 		265AB0E021B0E67300D41B46 /* Tasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tasks.storyboard; sourceTree = "<group>"; };
 		265AB0E221B0E6B500D41B46 /* TasksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListViewController.swift; sourceTree = "<group>"; };
+		265AB0E621B0F43800D41B46 /* ListsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewControllerTests.swift; sourceTree = "<group>"; };
 		265EA94C216856800009FF96 /* Listy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Listy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265EA94E216856800009FF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		265EA955216856820009FF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1054,7 +1054,7 @@
 		265AB0CC21B0D33300D41B46 /* Listy macOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				265AB0CD21B0D33300D41B46 /* Listy_macOSTests.swift */,
+				265AB0E421B0F41C00D41B46 /* Lists */,
 				265AB0CF21B0D33300D41B46 /* Info.plist */,
 			);
 			path = "Listy macOSTests";
@@ -1108,6 +1108,22 @@
 				265AB0E021B0E67300D41B46 /* Tasks.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		265AB0E421B0F41C00D41B46 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				265AB0E521B0F42900D41B46 /* List */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		265AB0E521B0F42900D41B46 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				265AB0E621B0F43800D41B46 /* ListsViewControllerTests.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		265EA94D216856800009FF96 /* Listy-iOS */ = {
@@ -2572,7 +2588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265AB0CE21B0D33300D41B46 /* Listy_macOSTests.swift in Sources */,
+				265AB0E721B0F43800D41B46 /* ListsViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3837,12 +3853,12 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3863,11 +3879,12 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Listy macOS.app/Contents/MacOS/Listy macOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Listy.app/Contents/MacOS/Listy";
 			};
 			name = Debug;
 		};
@@ -3888,12 +3905,12 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -3909,11 +3926,12 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.Listy-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Listy macOS.app/Contents/MacOS/Listy macOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Listy.app/Contents/MacOS/Listy";
 			};
 			name = Release;
 		};
