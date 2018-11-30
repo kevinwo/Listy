@@ -5,13 +5,13 @@ xcode_project: Listy.xcodeproj
 matrix:
   include:
     - xcode_scheme: "Listy iOS"
-      xcode_sdk: iphonesimulator12.1
+      xcode_sdk: iphoneos12.1
 
     - xcode_scheme: "Listy tvOS"
       xcode_sdk: appletvsimulator12.1
 
     - xcode_scheme: "Listy macOS"
-      xcode_sdk: macosx10.13
+      xcode_sdk: macosx10.14
 
     - xcode_scheme: "ListyUI iOS"
       xcode_sdk: iphonesimulator12.1
