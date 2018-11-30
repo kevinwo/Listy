@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import ListyKit
 
 class ListsViewController: NSViewController {
 

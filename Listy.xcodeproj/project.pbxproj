@@ -53,6 +53,35 @@
 		265AB0E121B0E67300D41B46 /* Tasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265AB0E021B0E67300D41B46 /* Tasks.storyboard */; };
 		265AB0E321B0E6B500D41B46 /* TasksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0E221B0E6B500D41B46 /* TasksListViewController.swift */; };
 		265AB0E721B0F43800D41B46 /* ListsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AB0E621B0F43800D41B46 /* ListsViewControllerTests.swift */; };
+		265AB0F521B0F5EC00D41B46 /* ListyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265AB0EE21B0F5EC00D41B46 /* ListyKit.framework */; };
+		265AB0F621B0F5EC00D41B46 /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 265AB0EE21B0F5EC00D41B46 /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		265AB0FB21B0F6D800D41B46 /* ListyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 260D68DD2166FD2C003B7DD9 /* ListyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		265AB0FC21B0F6D800D41B46 /* ErrorAlertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264E746F2176F446000799F2 /* ErrorAlertable.swift */; };
+		265AB0FD21B0F6D800D41B46 /* ViewRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B52C1A217DA6250011375F /* ViewRoutable.swift */; };
+		265AB0FE21B0F6E400D41B46 /* Mirror+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D694F21684964003B7DD9 /* Mirror+LIST.swift */; };
+		265AB0FF21B0F6E400D41B46 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D691121672FE3003B7DD9 /* List.swift */; };
+		265AB10021B0F6E400D41B46 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D691721674F87003B7DD9 /* Lists.swift */; };
+		265AB10121B0F6E400D41B46 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D691F2167704F003B7DD9 /* Task.swift */; };
+		265AB10221B0F6E400D41B46 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D691D2167703F003B7DD9 /* Tasks.swift */; };
+		265AB10321B0F6E400D41B46 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D68FF21670804003B7DD9 /* Database.swift */; };
+		265AB10421B0F6E400D41B46 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D6904216709F0003B7DD9 /* Object.swift */; };
+		265AB10521B0F6E400D41B46 /* SectionableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D6925216841BB003B7DD9 /* SectionableDataSource.swift */; };
+		265AB10621B0F6EE00D41B46 /* ListsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D45A621A4131300788423 /* ListsRouterInput.swift */; };
+		265AB10721B0F6EE00D41B46 /* ListsRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51D45A821A413EB00788423 /* ListsRouterOutput.swift */; };
+		265AB10821B0F6EE00D41B46 /* ListsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA979216857340009FF96 /* ListsPresenter.swift */; };
+		265AB10921B0F6EE00D41B46 /* ListsPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E547A221A5126000EA4EEA /* ListsPresenterInput.swift */; };
+		265AB10A21B0F6EE00D41B46 /* ListsPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E547A921A5163F00EA4EEA /* ListsPresenterOutput.swift */; };
+		265AB10B21B0F6EE00D41B46 /* ListsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA97C216857340009FF96 /* ListsInteractor.swift */; };
+		265AB10C21B0F6EE00D41B46 /* ListsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E5479F21A50E5C00EA4EEA /* ListsInteractorInput.swift */; };
+		265AB10D21B0F6EE00D41B46 /* ListsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E5479A21A50AF900EA4EEA /* ListsInteractorOutput.swift */; };
+		265AB10E21B0F6F700D41B46 /* EditListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595637C21AD3BC60045D85D /* EditListRouterInput.swift */; };
+		265AB10F21B0F6F700D41B46 /* EditListRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595638C21AE2FB50045D85D /* EditListRouterOutput.swift */; };
+		265AB11021B0F6F700D41B46 /* EditListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99721685E0B0009FF96 /* EditListPresenter.swift */; };
+		265AB11121B0F6F700D41B46 /* EditListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595638221AD46590045D85D /* EditListPresenterOutput.swift */; };
+		265AB11221B0F6F700D41B46 /* EditListPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595638421AD4E450045D85D /* EditListPresenterInput.swift */; };
+		265AB11321B0F6F700D41B46 /* EditListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA99A21685E0B0009FF96 /* EditListInteractor.swift */; };
+		265AB11421B0F6F700D41B46 /* EditListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595638621AD4F3C0045D85D /* EditListInteractorInput.swift */; };
+		265AB11521B0F6F700D41B46 /* EditListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595638821AD4F5F0045D85D /* EditListInteractorOutput.swift */; };
 		265EA91021684F8F0009FF96 /* ListyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 260D68DA2166FD2C003B7DD9 /* ListyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		265EA94F216856800009FF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA94E216856800009FF96 /* AppDelegate.swift */; };
 		265EA956216856820009FF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265EA955216856820009FF96 /* Assets.xcassets */; };
@@ -289,6 +318,13 @@
 			remoteGlobalIDString = 265AB0B721B0D32F00D41B46;
 			remoteInfo = "Listy macOS";
 		};
+		265AB0F321B0F5EC00D41B46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 260D68CF2166FAD0003B7DD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 265AB0ED21B0F5EC00D41B46;
+			remoteInfo = "ListyKit macOS";
+		};
 		265EA90D21684F460009FF96 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 260D68CF2166FAD0003B7DD9 /* Project object */;
@@ -375,6 +411,17 @@
 				263CC8B521AF7DE600853396 /* Listy watchOS.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265AB0FA21B0F5EC00D41B46 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				265AB0F621B0F5EC00D41B46 /* ListyKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		265EA90F21684F710009FF96 /* Embed Frameworks */ = {
@@ -496,6 +543,7 @@
 		265AB0E021B0E67300D41B46 /* Tasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tasks.storyboard; sourceTree = "<group>"; };
 		265AB0E221B0E6B500D41B46 /* TasksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListViewController.swift; sourceTree = "<group>"; };
 		265AB0E621B0F43800D41B46 /* ListsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewControllerTests.swift; sourceTree = "<group>"; };
+		265AB0EE21B0F5EC00D41B46 /* ListyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ListyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		265EA94C216856800009FF96 /* Listy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Listy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265EA94E216856800009FF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		265EA955216856820009FF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -670,10 +718,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265AB0F521B0F5EC00D41B46 /* ListyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		265AB0C621B0D33200D41B46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265AB0EB21B0F5EC00D41B46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -766,6 +822,7 @@
 				26D0528121AFA204004968A7 /* ListyKit.framework */,
 				265AB0B821B0D32F00D41B46 /* Listy.app */,
 				265AB0C921B0D33200D41B46 /* Listy macOSTests.xctest */,
+				265AB0EE21B0F5EC00D41B46 /* ListyKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1949,6 +2006,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		265AB0E921B0F5EC00D41B46 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265AB0FB21B0F6D800D41B46 /* ListyKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26D0527C21AFA204004968A7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2093,10 +2158,12 @@
 				265AB0B421B0D32F00D41B46 /* Sources */,
 				265AB0B521B0D32F00D41B46 /* Frameworks */,
 				265AB0B621B0D32F00D41B46 /* Resources */,
+				265AB0FA21B0F5EC00D41B46 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				265AB0F421B0F5EC00D41B46 /* PBXTargetDependency */,
 			);
 			name = "Listy macOS";
 			productName = "Listy macOS";
@@ -2120,6 +2187,24 @@
 			productName = "Listy macOSTests";
 			productReference = 265AB0C921B0D33200D41B46 /* Listy macOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		265AB0ED21B0F5EC00D41B46 /* ListyKit macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 265AB0F721B0F5EC00D41B46 /* Build configuration list for PBXNativeTarget "ListyKit macOS" */;
+			buildPhases = (
+				265AB0E921B0F5EC00D41B46 /* Headers */,
+				265AB0EA21B0F5EC00D41B46 /* Sources */,
+				265AB0EB21B0F5EC00D41B46 /* Frameworks */,
+				265AB0EC21B0F5EC00D41B46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ListyKit macOS";
+			productName = "ListyKit macOS";
+			productReference = 265AB0EE21B0F5EC00D41B46 /* ListyKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		265EA94B216856800009FF96 /* Listy-iOS */ = {
 			isa = PBXNativeTarget;
@@ -2291,6 +2376,9 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 265AB0B721B0D32F00D41B46;
 					};
+					265AB0ED21B0F5EC00D41B46 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					265EA94B216856800009FF96 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -2339,6 +2427,7 @@
 				260D68D92166FD2C003B7DD9 /* ListyKit iOS */,
 				A50889CD21AE6E6C00DCBC7B /* ListyKit tvOS */,
 				26D0528021AFA204004968A7 /* ListyKit watchOS */,
+				265AB0ED21B0F5EC00D41B46 /* ListyKit macOS */,
 				265EA95E216856820009FF96 /* Listy-iOSTests */,
 				A50888FE21AE372D00DCBC7B /* Listy-tvOSTests */,
 				265AB0C821B0D33200D41B46 /* Listy macOSTests */,
@@ -2406,6 +2495,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		265AB0C721B0D33200D41B46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265AB0EC21B0F5EC00D41B46 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2589,6 +2685,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				265AB0E721B0F43800D41B46 /* ListsViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265AB0EA21B0F5EC00D41B46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265AB11321B0F6F700D41B46 /* EditListInteractor.swift in Sources */,
+				265AB10821B0F6EE00D41B46 /* ListsPresenter.swift in Sources */,
+				265AB10D21B0F6EE00D41B46 /* ListsInteractorOutput.swift in Sources */,
+				265AB10221B0F6E400D41B46 /* Tasks.swift in Sources */,
+				265AB11121B0F6F700D41B46 /* EditListPresenterOutput.swift in Sources */,
+				265AB0FD21B0F6D800D41B46 /* ViewRoutable.swift in Sources */,
+				265AB10521B0F6E400D41B46 /* SectionableDataSource.swift in Sources */,
+				265AB10721B0F6EE00D41B46 /* ListsRouterOutput.swift in Sources */,
+				265AB11021B0F6F700D41B46 /* EditListPresenter.swift in Sources */,
+				265AB10C21B0F6EE00D41B46 /* ListsInteractorInput.swift in Sources */,
+				265AB10A21B0F6EE00D41B46 /* ListsPresenterOutput.swift in Sources */,
+				265AB10621B0F6EE00D41B46 /* ListsRouterInput.swift in Sources */,
+				265AB10021B0F6E400D41B46 /* Lists.swift in Sources */,
+				265AB10E21B0F6F700D41B46 /* EditListRouterInput.swift in Sources */,
+				265AB0FF21B0F6E400D41B46 /* List.swift in Sources */,
+				265AB10421B0F6E400D41B46 /* Object.swift in Sources */,
+				265AB11221B0F6F700D41B46 /* EditListPresenterInput.swift in Sources */,
+				265AB10F21B0F6F700D41B46 /* EditListRouterOutput.swift in Sources */,
+				265AB10B21B0F6EE00D41B46 /* ListsInteractor.swift in Sources */,
+				265AB0FE21B0F6E400D41B46 /* Mirror+LIST.swift in Sources */,
+				265AB10121B0F6E400D41B46 /* Task.swift in Sources */,
+				265AB10921B0F6EE00D41B46 /* ListsPresenterInput.swift in Sources */,
+				265AB11421B0F6F700D41B46 /* EditListInteractorInput.swift in Sources */,
+				265AB11521B0F6F700D41B46 /* EditListInteractorOutput.swift in Sources */,
+				265AB10321B0F6E400D41B46 /* Database.swift in Sources */,
+				265AB0FC21B0F6D800D41B46 /* ErrorAlertable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2803,6 +2932,11 @@
 			isa = PBXTargetDependency;
 			target = 265AB0B721B0D32F00D41B46 /* Listy macOS */;
 			targetProxy = 265AB0CA21B0D33300D41B46 /* PBXContainerItemProxy */;
+		};
+		265AB0F421B0F5EC00D41B46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 265AB0ED21B0F5EC00D41B46 /* ListyKit macOS */;
+			targetProxy = 265AB0F321B0F5EC00D41B46 /* PBXContainerItemProxy */;
 		};
 		265EA90E21684F460009FF96 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3744,6 +3878,7 @@
 		265AB0D121B0D33300D41B46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -3794,6 +3929,7 @@
 		265AB0D221B0D33300D41B46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -3932,6 +4068,117 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Listy.app/Contents/MacOS/Listy";
+			};
+			name = Release;
+		};
+		265AB0F821B0F5EC00D41B46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Internal Frameworks/ListyKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.ListyKit-macOS";
+				PRODUCT_NAME = ListyKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		265AB0F921B0F5EC00D41B46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Internal Frameworks/ListyKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinwolkober.Listy.ListyKit-macOS";
+				PRODUCT_NAME = ListyKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -4843,6 +5090,15 @@
 			buildConfigurations = (
 				265AB0D421B0D33300D41B46 /* Debug */,
 				265AB0D521B0D33300D41B46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		265AB0F721B0F5EC00D41B46 /* Build configuration list for PBXNativeTarget "ListyKit macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				265AB0F821B0F5EC00D41B46 /* Debug */,
+				265AB0F921B0F5EC00D41B46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
