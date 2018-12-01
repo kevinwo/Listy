@@ -5,7 +5,7 @@ xcode_project: Listy.xcodeproj
 matrix:
   include:
     - xcode_scheme: "Listy iOS"
-      xcode_sdk: iphoneos12.1
+      xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
 
     - xcode_scheme: "Listy tvOS"
       xcode_sdk: appletvsimulator12.1
