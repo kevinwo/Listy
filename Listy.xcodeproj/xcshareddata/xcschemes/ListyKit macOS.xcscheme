@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "265AB0ED21B0F5EC00D41B46"
-               BuildableName = "ListyKit_macOS.framework"
+               BuildableName = "ListyKit.framework"
                BlueprintName = "ListyKit macOS"
                ReferencedContainer = "container:Listy.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "265AB0ED21B0F5EC00D41B46"
-            BuildableName = "ListyKit_macOS.framework"
+            BuildableName = "ListyKit.framework"
             BlueprintName = "ListyKit macOS"
             ReferencedContainer = "container:Listy.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "265AB0ED21B0F5EC00D41B46"
-            BuildableName = "ListyKit_macOS.framework"
+            BuildableName = "ListyKit.framework"
             BlueprintName = "ListyKit macOS"
             ReferencedContainer = "container:Listy.xcodeproj">
          </BuildableReference>
