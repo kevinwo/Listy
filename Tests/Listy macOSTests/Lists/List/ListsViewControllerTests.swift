@@ -29,6 +29,7 @@ class ListsViewControllerTests: XCTestCase {
 
     func testOutlets() {
         XCTAssertNotNil(sut.tableView)
+        XCTAssertNotNil(sut.addListButton)
     }
 
     // MARK: - viewDidLoad()

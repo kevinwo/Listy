@@ -11,6 +11,8 @@ import ListyKit
 class ListsViewController: NSViewController {
 
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var addListButton: NSButton!
+
     var tableViewDelegate: NSTableViewDelegate!
 
     required init?(coder: NSCoder) {
