@@ -15,7 +15,7 @@ public protocol ViewRoutable: class {
     func presentController(withName name: String, context: Any?)
     func presentAlert(withTitle title: String?, message: String?, preferredStyle: WKAlertControllerStyle, actions: [WKAlertAction])
     func dismiss()
-    #else
+    #elseif os(iOS) || os(tvOS)
     func present(view: ViewRoutable, animated flag: Bool, completion: (() -> Void)?)
     func push(view: ViewRoutable, animated flag: Bool)
     func dismiss(animated flag: Bool, completion: (() -> Void)?)
