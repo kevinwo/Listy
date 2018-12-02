@@ -96,5 +96,34 @@
             </objects>
             <point key="canvasLocation" x="33" y="-13"/>
         </scene>
+        <!--EditTask-->
+        <scene sceneID="15T-QR-PCM">
+            <objects>
+                <controller identifier="EditTask" id="1Ee-I4-5WL" customClass="EditTaskInterfaceController" customModule="Listy_watchOS_Extension">
+                    <items>
+                        <label width="1" height="100" alignment="left" text="Tap to add title" numberOfLines="0" minimumScaleFactor="0.5" id="I3f-rQ-ziy">
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="F3S-gh-pfz">
+                                    <connections>
+                                        <action selector="titleLabelTapped:" destination="1Ee-I4-5WL" id="rLw-Dz-P1v"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                        </label>
+                        <button width="1" alignment="left" title="Save" id="tRS-Go-EFb">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="saveButtonTapped" destination="1Ee-I4-5WL" id="3Av-MI-CnL"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="saveButton" destination="tRS-Go-EFb" id="aka-p2-VQo"/>
+                        <outlet property="titleLabel" destination="I3f-rQ-ziy" id="Wyh-ls-TYK"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="301" y="-13"/>
+        </scene>
     </scenes>
 </document>

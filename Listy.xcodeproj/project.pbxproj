@@ -274,6 +274,7 @@
 		A53B290321B285B300B6C9A3 /* ListsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53B290221B285B300B6C9A3 /* ListsRouter.swift */; };
 		A53B290621B2876300B6C9A3 /* ErrorAlertable+LIST.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53B290521B2876300B6C9A3 /* ErrorAlertable+LIST.swift */; };
 		A53F637221B3D23700E2D0F2 /* TasksListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F637121B3D23700E2D0F2 /* TasksListInterfaceController.swift */; };
+		A53F637521B3D6C800E2D0F2 /* EditTaskInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F637421B3D6C800E2D0F2 /* EditTaskInterfaceController.swift */; };
 		A595636621AD106C0045D85D /* FakeEditTaskRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595636521AD106C0045D85D /* FakeEditTaskRouterInput.swift */; };
 		A595636A21AD29A90045D85D /* EditTaskPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595636921AD29A90045D85D /* EditTaskPresenterOutput.swift */; };
 		A595636C21AD2BEE0045D85D /* FakeEditTaskPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595636B21AD2BEE0045D85D /* FakeEditTaskPresenterOutput.swift */; };
@@ -665,6 +666,7 @@
 		A53B290221B285B300B6C9A3 /* ListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouter.swift; sourceTree = "<group>"; };
 		A53B290521B2876300B6C9A3 /* ErrorAlertable+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorAlertable+LIST.swift"; sourceTree = "<group>"; };
 		A53F637121B3D23700E2D0F2 /* TasksListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListInterfaceController.swift; sourceTree = "<group>"; };
+		A53F637421B3D6C800E2D0F2 /* EditTaskInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskInterfaceController.swift; sourceTree = "<group>"; };
 		A595636521AD106C0045D85D /* FakeEditTaskRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditTaskRouterInput.swift; sourceTree = "<group>"; };
 		A595636921AD29A90045D85D /* EditTaskPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskPresenterOutput.swift; sourceTree = "<group>"; };
 		A595636B21AD2BEE0045D85D /* FakeEditTaskPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditTaskPresenterOutput.swift; sourceTree = "<group>"; };
@@ -1917,6 +1919,7 @@
 			isa = PBXGroup;
 			children = (
 				A53F637021B3D21400E2D0F2 /* List */,
+				A53F637321B3D6AF00E2D0F2 /* Edit */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -1924,9 +1927,25 @@
 		A53F637021B3D21400E2D0F2 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				A53F637121B3D23700E2D0F2 /* TasksListInterfaceController.swift */,
+				A53F637621B3D77400E2D0F2 /* View */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		A53F637321B3D6AF00E2D0F2 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				A53F637421B3D6C800E2D0F2 /* EditTaskInterfaceController.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		A53F637621B3D77400E2D0F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A53F637121B3D23700E2D0F2 /* TasksListInterfaceController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A595636D21AD2D480045D85D /* View */ = {
@@ -2754,6 +2773,7 @@
 				265AB0A621AFC3C900D41B46 /* ErrorAlertable+LIST.swift in Sources */,
 				265AB0A821AFC40600D41B46 /* ViewRoutable+LIST.swift in Sources */,
 				A53F637221B3D23700E2D0F2 /* TasksListInterfaceController.swift in Sources */,
+				A53F637521B3D6C800E2D0F2 /* EditTaskInterfaceController.swift in Sources */,
 				26D052AC21AFA846004968A7 /* ListRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
