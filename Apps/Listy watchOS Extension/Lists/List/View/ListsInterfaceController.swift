@@ -15,6 +15,7 @@ class ListsInterfaceController: WKInterfaceController {
     @IBOutlet weak var table: WKInterfaceTable!
 
     var presenter: ListsPresenterInput!
+    var lists: [List]!
 
     override init() {
         super.init()
@@ -42,6 +43,13 @@ class ListsInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        if table == self.table {
+            let list = self.lists[rowIndex]
+            self.presenter.showTasks(for: list)
+        }
+    }
+
     // MARK: - Button actions
 
     @IBAction func addListButtonTapped() {
@@ -52,6 +60,7 @@ class ListsInterfaceController: WKInterfaceController {
 extension ListsInterfaceController: ListsPresenterOutput {
 
     public func updateView(lists: [List]) {
+        self.lists = lists
         self.table.setNumberOfRows(lists.count, withRowType: "List")
 
         for (index, list) in lists.enumerated() {

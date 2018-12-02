@@ -13,6 +13,7 @@ public protocol ViewRoutable: class {
 
     #if os(watchOS)
     func presentController(withName name: String, context: Any?)
+    func pushController(withName name: String, context: Any?)
     func presentAlert(withTitle title: String?, message: String?, preferredStyle: WKAlertControllerStyle, actions: [WKAlertAction])
     func dismiss()
     #elseif os(iOS) || os(tvOS)

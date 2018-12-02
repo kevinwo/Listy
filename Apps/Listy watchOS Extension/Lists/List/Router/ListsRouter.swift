@@ -32,7 +32,9 @@ class ListsRouter: ListsRouterInput {
         self.output.presentController(withName: "EditList", context: context)
     }
 
-    func showTasks(for list: List) {}
+    func showTasks(for list: List) {
+        self.output.pushController(withName: "Tasks", context: nil)
+    }
 }
 
 extension ListsRouter: EditListInterfaceControllerDelegate {
