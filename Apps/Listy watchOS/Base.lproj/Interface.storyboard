@@ -14,7 +14,7 @@
             <objects>
                 <controller title="Lists" id="AgC-eL-Hgc" customClass="ListsInterfaceController" customModule="Listy_watchOS_Extension">
                     <items>
-                        <button width="1" alignment="left" title="Add list" id="dwV-h8-nxV">
+                        <button width="1" alignment="left" title="Add List" id="dwV-h8-nxV">
                             <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="addListButtonTapped" destination="AgC-eL-Hgc" id="mTp-Ub-3F9"/>
@@ -41,6 +41,31 @@
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="33" y="286"/>
+        </scene>
+        <!--Tasks-->
+        <scene sceneID="gx0-v1-yQa">
+            <objects>
+                <controller identifier="Tasks" title="Tasks" id="iE5-KR-A67" customClass="TasksListInterfaceController" customModule="Listy_watchOS_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Add Task" id="3D0-rP-Pty">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <table alignment="left" id="KD8-eG-7hE">
+                            <items>
+                                <tableRow identifier="Task" id="SI8-P7-wyV">
+                                    <group key="rootItem" width="1" alignment="left" id="Uiw-1i-64J"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="addTaskButton" destination="3D0-rP-Pty" id="ILn-OC-5Uj"/>
+                        <outlet property="table" destination="KD8-eG-7hE" id="2kz-FX-JoR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="301" y="286"/>
         </scene>
         <!--Add List-->
         <scene sceneID="sN7-jD-FiF">
@@ -69,7 +94,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="397" y="286"/>
+            <point key="canvasLocation" x="33" y="-13"/>
         </scene>
     </scenes>
 </document>
