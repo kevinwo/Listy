@@ -34,5 +34,21 @@ class TasksListRouter: TasksListRouterInput {
         return controller
     }
 
-    func showEditTaskView(with task: Task) {}
+    func showEditTaskView(with task: Task) {
+        let tasks = Tasks(database: Database.newInstance())
+        let controller = EditTaskRouter.scene(task: task, delegate: self, tasks: tasks)
+        self.output.present(view: controller, animated: true, completion: nil)
+    }
+}
+
+extension TasksListRouter: EditTaskViewControllerDelegate {
+
+    func didCancelWithController(_ controller: EditTaskViewController) {
+        self.output.dismiss(animated: true, completion: nil)
+    }
+
+    func controller(_ controller: EditTaskViewController, didSaveTask task: Task) {
+        self.output.reloadData()
+        self.output.dismiss(animated: true, completion: nil)
+    }
 }

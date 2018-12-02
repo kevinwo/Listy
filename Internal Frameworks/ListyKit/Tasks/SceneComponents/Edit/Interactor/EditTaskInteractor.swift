@@ -6,8 +6,6 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import UIKit
-
 public final class EditTaskInteractor: EditTaskInteractorInput {
 
     // MARK: - Properties
