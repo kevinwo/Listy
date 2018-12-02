@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Listy_iOS
 @testable import ListyKit
 
 class EditTaskPresenterTests: XCTestCase {
