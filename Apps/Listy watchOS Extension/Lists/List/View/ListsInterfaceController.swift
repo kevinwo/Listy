@@ -23,19 +23,7 @@ class ListsInterfaceController: WKInterfaceController {
         let lists = Lists(database: database)
         let tasks = Tasks(database: database)
 
-        let presenter = ListsPresenter()
-        let router = ListsRouter()
-        let interactor = ListsInteractor(lists: lists, tasks: tasks)
-
-        self.presenter = presenter
-
-        presenter.output = self
-        presenter.router = router
-        presenter.interactor = interactor
-
-        interactor.output = presenter
-
-        router.output = self
+        ListsRouter.setScene(for: self, lists: lists, tasks: tasks)
     }
 
     override func awake(withContext context: Any?) {
