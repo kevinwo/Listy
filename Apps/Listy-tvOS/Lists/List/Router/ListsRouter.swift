@@ -41,7 +41,10 @@ class ListsRouter: ListsRouterInput {
         self.output.present(view: controller, animated: true, completion: nil)
     }
 
-    func showTasks(for list: List) {}
+    func showTasks(for list: List) {
+        let controller = TasksListRouter.scene(list: list)
+        self.output.push(view: controller, animated: true)
+    }
 }
 
 extension ListsRouter: EditListViewControllerDelegate {
