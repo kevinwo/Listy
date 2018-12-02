@@ -14,6 +14,9 @@ class ListsViewTableViewDelegateTests: XCTestCase {
 
     override func setUp() {
         sut = ListsViewTableViewDelegate()
+        sut.cellConfigurationBlock = { (cellView, row) in
+            cellView.textField?.stringValue = "Cool List"
+        }
     }
 
     override func tearDown() {

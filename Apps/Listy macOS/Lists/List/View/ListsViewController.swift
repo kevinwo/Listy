@@ -15,7 +15,7 @@ class ListsViewController: NSViewController {
 
     var presenter: ListsPresenterInput!
     var tableViewDataSource: TableViewDataSource!
-    var tableViewDelegate: NSTableViewDelegate!
+    var tableViewDelegate: ListsViewTableViewDelegate!
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -42,7 +42,16 @@ class ListsViewController: NSViewController {
 
 extension ListsViewController: ListsPresenterOutput {
 
-    public func updateView(lists: [List]) {}
+    public func updateView(lists: [List]) {
+        self.tableViewDataSource.objects = lists
+        self.tableViewDelegate.cellConfigurationBlock = { (cellView, row) in
+            if let list = self.tableViewDataSource.object(for: row) as? List {
+                cellView.textField?.stringValue = list.title
+            }
+        }
+
+        self.tableView.reloadData()
+    }
 
     public func deleteRow(at indexPath: IndexPath) {}
 }
