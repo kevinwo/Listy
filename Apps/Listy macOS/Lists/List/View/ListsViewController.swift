@@ -66,7 +66,6 @@ extension ListsViewController: ListsPresenterOutput {
 extension ListsViewController: ListsRouterOutput {
 
     func addRow(with list: List) {
-        list.title = "New list"
         self.tableViewDataSource.objects.append(list)
         self.tableView.reloadData()
     }
@@ -77,6 +76,8 @@ extension ListsViewController: ListsRouterOutput {
 extension ListsViewController: NSTextFieldDelegate {
 
     func controlTextDidEndEditing(_ obj: Notification) {
-        print("controlTextDidEndEditing")
+        if let textField = obj.object as? NSTextField {
+            self.presenter.save(title: textField.stringValue)
+        }
     }
 }

@@ -15,4 +15,8 @@ public protocol ListsPresenterInput: class {
     func addList()
     func showTasks(for list: List)
     func deleteList(_ list: List, at indexPath: IndexPath)
+
+    #if os(macOS)
+    func save(title: String?)
+    #endif
 }

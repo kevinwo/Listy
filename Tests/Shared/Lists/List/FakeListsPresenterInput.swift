@@ -22,6 +22,12 @@ final class FakeListsPresenterInput: ListsPresenterInput {
     var deletedListIndexPath: IndexPath?
     var listWithTasksToShow: List?
 
+    #if os(macOS)
+    var didCallSaveList: Bool = false
+
+    var saveListTitle: String?
+    #endif
+
     func reloadData() {
         self.didCallReloadData = true
     }
@@ -40,4 +46,11 @@ final class FakeListsPresenterInput: ListsPresenterInput {
         self.deletedList = list
         self.deletedListIndexPath = indexPath
     }
+
+    #if os(macOS)
+    func save(title: String?) {
+        self.didCallSaveList = true
+        self.saveListTitle = title
+    }
+    #endif
 }

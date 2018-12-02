@@ -44,4 +44,17 @@ public class ListsInteractor: ListsInteractorInput {
             self.output.failedToDeleteList(with: error as NSError)
         }
     }
+
+    #if os(macOS)
+    public func saveList(title: String) {
+        let list = List()
+        list.title = title
+
+        do {
+            try lists.add(list)
+        } catch(let error) {
+            self.output.failedToSaveList(with: error as NSError)
+        }
+    }
+    #endif
 }

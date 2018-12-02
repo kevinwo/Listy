@@ -81,3 +81,24 @@ extension ListsViewControllerTests {
         }
     }
 }
+
+// MARK: - NSTextFieldDelegate
+
+extension ListsViewControllerTests {
+
+    // MARK: - controlTextDidEndEditing(_:)
+
+    func testControlTextDidEndEditing() {
+        // given
+        let textField = NSTextField(string: "Cool List")
+        var obj = Notification(name: Notification.Name("TextFieldNotification"))
+        obj.object = textField
+
+        // when
+        sut.controlTextDidEndEditing(obj)
+
+        // then
+        XCTAssertTrue(fakePresenter.didCallSaveList)
+        XCTAssertEqual(fakePresenter.saveListTitle, textField.stringValue)
+    }
+}

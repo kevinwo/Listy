@@ -9,7 +9,7 @@
 import WatchKit
 #endif
 
-@objc public protocol ViewRoutable: class {
+public protocol ViewRoutable: class {
 
     #if os(watchOS)
     func presentController(withName name: String, context: Any?)

@@ -22,6 +22,11 @@ public final class ListsPresenter: ListsPresenterInput {
 
     public func addList() {
         let list = self.interactor.newList()
+
+        #if os(macOS)
+        list.title = "New list"
+        #endif
+
         self.router.showEditListView(with: list)
     }
 
@@ -32,6 +37,18 @@ public final class ListsPresenter: ListsPresenterInput {
     public func deleteList(_ list: List, at indexPath: IndexPath) {
         self.interactor.deleteList(list, at: indexPath)
     }
+
+    #if os(macOS)
+    public func save(title: String?) {
+        guard let title = title, !title.isEmpty else {
+            let error = NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
+            self.output.showErrorAlert(for: error)
+            return
+        }
+
+        self.interactor.saveList(title: title)
+    }
+    #endif
 }
 
 extension ListsPresenter: ListsInteractorOutput {
@@ -47,4 +64,10 @@ extension ListsPresenter: ListsInteractorOutput {
     public func failedToDeleteList(with error: NSError) {
         self.output.showErrorAlert(for: error)
     }
+
+    #if os(macOS)
+    public func failedToSaveList(with error: NSError) {
+        self.output.showErrorAlert(for: error)
+    }
+    #endif
 }
