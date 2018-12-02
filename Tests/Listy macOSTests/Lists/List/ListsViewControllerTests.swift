@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import Listy
+@testable import ListyKit
 
 class ListsViewControllerTests: XCTestCase {
 
@@ -51,5 +52,32 @@ class ListsViewControllerTests: XCTestCase {
 
         // then
         XCTAssertTrue(fakePresenter.didCallAddList)
+    }
+}
+
+// MARK: - MacListsRouterOutput
+
+extension ListsViewControllerTests {
+
+    // MARK: - addRow(with:)
+
+    func testAddRow() {
+        // given
+        let list = List()
+
+        // when
+        sut.addRow(with: list)
+
+        // then
+        XCTAssert(sut.tableViewDataSource.objects.contains(list))
+
+        // @TODO Use synchronous testing approach
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            guard let lastCellView = self.sut.tableView.view(atColumn: 0, row: self.sut.tableView.numberOfRows - 1, makeIfNecessary: false) as? NSTableCellView else {
+                XCTFail("Last row must exist as NSTableCellView"); return
+            }
+
+            XCTAssertEqual(lastCellView.textField?.stringValue, list.title)
+        }
     }
 }

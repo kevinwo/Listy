@@ -48,21 +48,35 @@ class ListsViewController: NSViewController {
 
 extension ListsViewController: ListsPresenterOutput {
 
-    public func updateView(lists: [List]) {
+    func updateView(lists: [List]) {
         self.tableViewDataSource.objects = lists
-        self.tableViewDelegate.cellConfigurationBlock = { (cellView, row) in
+        self.tableViewDelegate.cellConfigurationBlock = { [unowned self] (cellView, row) in
             if let list = self.tableViewDataSource.object(for: row) as? List {
                 cellView.textField?.stringValue = list.title
+                cellView.textField?.delegate = self
             }
         }
 
         self.tableView.reloadData()
     }
 
-    public func deleteRow(at indexPath: IndexPath) {}
+    func deleteRow(at indexPath: IndexPath) {}
 }
 
 extension ListsViewController: ListsRouterOutput {
 
-    public func reloadData() {}
+    func addRow(with list: List) {
+        list.title = "New list"
+        self.tableViewDataSource.objects.append(list)
+        self.tableView.reloadData()
+    }
+
+    func reloadData() {}
+}
+
+extension ListsViewController: NSTextFieldDelegate {
+
+    func controlTextDidEndEditing(_ obj: Notification) {
+        print("controlTextDidEndEditing")
+    }
 }

@@ -30,7 +30,9 @@ class ListsRouter: ListsRouterInput {
         router.output = controller
     }
 
-    func showEditListView(with list: List) {}
+    func showEditListView(with list: List) {
+        self.output.addRow(with: list)
+    }
 
     func showTasks(for list: List) {}
 }

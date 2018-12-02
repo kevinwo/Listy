@@ -8,4 +8,7 @@
 public protocol ListsRouterOutput: ViewRoutable {
 
     func reloadData()
+    #if os(macOS)
+    func addRow(with list: List)
+    #endif
 }
