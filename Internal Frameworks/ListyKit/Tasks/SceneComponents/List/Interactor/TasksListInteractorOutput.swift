@@ -5,10 +5,7 @@
 //  Created by Kevin Wolkober on 10/22/18.
 //
 
-import ListyUI
-import ListyKit
-
-protocol TasksListInteractorOutput {
+public protocol TasksListInteractorOutput: class {
 
     func updateView(tasks: [Task], list: List)
     func deleteRow(at indexPath: IndexPath)

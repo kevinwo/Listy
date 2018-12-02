@@ -5,10 +5,7 @@
 //  Created by Kevin Wolkober on 10/22/18.
 //
 
-import ListyUI
-import ListyKit
-
-protocol TasksListInteractorInput {
+public protocol TasksListInteractorInput {
 
     var output: TasksListInteractorOutput! { get set }
 

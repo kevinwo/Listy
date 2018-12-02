@@ -6,16 +6,14 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import UIKit
-import ListyUI
 import ListyKit
 
-final class TasksListViewController: UITableViewController {
+public final class TasksListViewController: UITableViewController {
 
-    var addBarButtonItem: UIBarButtonItem!
-    var tableViewDataSource: TableViewDataSource
-    var tableViewDelegate: TasksListViewTableViewDelegate
-    var presenter: TasksListPresenterInput!
+    public var presenter: TasksListPresenterInput!
+    internal var addBarButtonItem: UIBarButtonItem!
+    internal var tableViewDataSource: TableViewDataSource
+    internal var tableViewDelegate: TasksListViewTableViewDelegate
 
     // MARK: - Object life cycle
 
@@ -28,7 +26,7 @@ final class TasksListViewController: UITableViewController {
 
     // MARK: - View lifecycle
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         self.addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonItemTapped(_:)))
@@ -49,7 +47,7 @@ final class TasksListViewController: UITableViewController {
 
 extension TasksListViewController: TasksListPresenterOutput {
 
-    func updateView(title: String, tasks: [Task]) {
+    public func updateView(title: String, tasks: [Task]) {
         self.title = title
         self.tableViewDataSource.sections = [tasks]
         self.tableViewDataSource.cellConfigurationBlock = { (cell, object) in
@@ -64,7 +62,7 @@ extension TasksListViewController: TasksListPresenterOutput {
         self.tableView.reloadData()
     }
 
-    func deleteRow(at indexPath: IndexPath) {
+    public func deleteRow(at indexPath: IndexPath) {
         self.tableViewDataSource.sections[indexPath.section].remove(at: indexPath.row)
         self.tableView.deleteRows(at: [indexPath], with: .automatic)
     }
@@ -72,7 +70,7 @@ extension TasksListViewController: TasksListPresenterOutput {
 
 extension TasksListViewController: TasksListRouterOutput {
 
-    func reloadData() {
+    public func reloadData() {
         self.presenter.reloadData()
     }
 }

@@ -5,13 +5,11 @@
 //  Created by Kevin Wolkober on 10/6/18.
 //
 
-import UIKit
-@testable import Listy_iOS
 @testable import ListyKit
 
-class FakeTasksListPresenterInput: TasksListPresenterInput {
+final class FakeTasksListPresenterInput: TasksListPresenterInput {
 
-    var output: TasksListPresenterOutput!
+    weak var output: TasksListPresenterOutput!
     var router: TasksListRouterInput!
     var interactor: TasksListInteractorInput!
 

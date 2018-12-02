@@ -5,10 +5,7 @@
 //  Created by Kevin Wolkober on 10/21/18.
 //
 
-import ListyUI
-import ListyKit
-
-protocol TasksListPresenterOutput: class, ErrorAlertable {
+public protocol TasksListPresenterOutput: class, ErrorAlertable {
 
     var presenter: TasksListPresenterInput! { get set }
 

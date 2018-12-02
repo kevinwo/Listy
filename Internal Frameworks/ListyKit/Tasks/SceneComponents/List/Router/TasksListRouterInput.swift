@@ -5,9 +5,7 @@
 //  Created by Kevin Wolkober on 10/22/18.
 //
 
-import ListyKit
-
-protocol TasksListRouterInput: class {
+public protocol TasksListRouterInput: class {
 
     var output: TasksListRouterOutput! { get set }
 
