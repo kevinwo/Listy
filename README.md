@@ -5,6 +5,10 @@
 
 Listy is yet another multiplatform to-do list app, and it does the most amazing things, like let you add lists and tasks – even delete them – and see what an app with multiple layers might look like. Enjoy!
 
+# Why another to-do app?
+
+There are a number of VIPER architecture examples in the wild, but I had not come across something that shows how VIPER can be applied in a DRY fashion across multiple platforms. Therefore, I decided to put together and share the way I code in the form of a to-do app.
+
 ## Apps
 
 ### Listy iOS
