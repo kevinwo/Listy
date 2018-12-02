@@ -15,6 +15,16 @@ This is the main iOS app target, consisting of list and edit views for lists and
 
 This is the main tvOS app target, consisting of list and edit views for lists and tasks.
 
+### Listy watchOS
+
+This is the main watchOS app target, consisting of list and edit views for lists and tasks.
+
+### Listy macOS
+
+This is the main macOS app target, consisting of list and edit views for lists and tasks.
+
+⚠️ I am not a macOS developer. Please go gentle on feedback! 🙏
+
 ## Internal Frameworks
 
 ### ListyUI
