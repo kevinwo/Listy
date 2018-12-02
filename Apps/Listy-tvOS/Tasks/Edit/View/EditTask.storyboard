@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add List-->
+        <!--Add Task-->
         <scene sceneID="Fwr-1C-aj7">
             <objects>
                 <tableViewController storyboardIdentifier="EditTaskViewController" id="hzc-7F-dvr" customClass="EditTaskViewController" customModule="ListyUI" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                             <outlet property="delegate" destination="hzc-7F-dvr" id="rI7-Qh-mJV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add List" id="jTD-bv-IXc">
+                    <navigationItem key="navigationItem" title="Add Task" id="jTD-bv-IXc">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="beR-sC-37O">
                             <connections>
                                 <action selector="cancelBarButtonItemTapped:" destination="hzc-7F-dvr" id="7rY-0K-JIV"/>

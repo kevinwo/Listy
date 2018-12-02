@@ -26,6 +26,14 @@ public class EditTaskViewController: UITableViewController {
     public var presenter: EditTaskPresenterInput!
     public weak var delegate: EditTaskViewControllerDelegate!
 
+    // MARK: - UITableViewDelegate
+
+    override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            self.titleTextField.becomeFirstResponder()
+        }
+    }
+
     // MARK: - Button actions
 
     @IBAction func cancelBarButtonItemTapped(_ sender: Any) {
