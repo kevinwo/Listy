@@ -9,13 +9,13 @@
 import UIKit
 import ListyKit
 
-protocol EditTaskViewControllerDelegate: class {
+public protocol EditTaskViewControllerDelegate: class {
 
     func didCancelWithController(_ controller: EditTaskViewController)
     func controller(_ controller: EditTaskViewController, didSaveTask task: Task)
 }
 
-class EditTaskViewController: UITableViewController {
+public class EditTaskViewController: UITableViewController {
 
     // MARK: - Properties
 
@@ -23,8 +23,8 @@ class EditTaskViewController: UITableViewController {
     @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var titleTextField: UITextField!
 
-    var presenter: EditTaskPresenterInput!
-    weak var delegate: EditTaskViewControllerDelegate!
+    public var presenter: EditTaskPresenterInput!
+    public weak var delegate: EditTaskViewControllerDelegate!
 
     // MARK: - Button actions
 
@@ -38,11 +38,12 @@ class EditTaskViewController: UITableViewController {
 }
 
 extension EditTaskViewController: EditTaskRouterOutput {
-    func finishWithCancel() {
+
+    public func finishWithCancel() {
         self.delegate.didCancelWithController(self)
     }
 
-    func finishWithSaving(_ task: Task) {
+    public func finishWithSaving(_ task: Task) {
         self.delegate.controller(self, didSaveTask: task)
     }
 }

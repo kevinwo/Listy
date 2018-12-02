@@ -5,7 +5,7 @@
 //  Created by Kevin Wolkober on 10/17/18.
 //
 
-@testable import Listy_iOS
+@testable import ListyKit
 
 class FakeEditTaskPresenterInput: EditTaskPresenterInput {
 

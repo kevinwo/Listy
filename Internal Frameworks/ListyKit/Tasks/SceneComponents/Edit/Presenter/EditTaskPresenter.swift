@@ -6,24 +6,23 @@
 //  Copyright (c) 2018 Kevin Wolkober. All rights reserved.
 //
 
-import ListyUI
-import ListyKit
-
-final class EditTaskPresenter: EditTaskPresenterInput {
+public final class EditTaskPresenter: EditTaskPresenterInput {
 
     // MARK: - Properties
 
-    var output: EditTaskPresenterOutput!
-    var router: EditTaskRouterInput!
-    var interactor: EditTaskInteractorInput!
+    public weak var output: EditTaskPresenterOutput!
+    public var router: EditTaskRouterInput!
+    public var interactor: EditTaskInteractorInput!
+
+    public init() {}
 
     // MARK: - EditTaskPresenterInput
 
-    func cancel() {
+    public func cancel() {
         self.router.finishWithCancel()
     }
 
-    func save(title: String?) {
+    public func save(title: String?) {
         guard let title = title, !title.isEmpty else {
             let error = NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
             self.output.showErrorAlert(for: error)
@@ -36,11 +35,11 @@ final class EditTaskPresenter: EditTaskPresenterInput {
 
 extension EditTaskPresenter: EditTaskInteractorOutput {
 
-    func finish(with task: Task) {
+    public func finish(with task: Task) {
         self.router.finishWithSaving(task)
     }
 
-    func failedToSaveTask(with error: NSError) {
+    public func failedToSaveTask(with error: NSError) {
         self.output.showErrorAlert(for: error)
     }
 }

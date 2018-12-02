@@ -5,8 +5,6 @@
 //  Created by Kevin Wolkober on 11/27/18.
 //
 
-import UIKit
-@testable import Listy_iOS
 @testable import ListyKit
 
 class FakeEditTaskRouterInput: EditTaskRouterInput {

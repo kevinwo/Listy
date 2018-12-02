@@ -6,7 +6,6 @@
 //
 
 import XCTest
-@testable import Listy_iOS
 @testable import ListyUI
 
 class TasksListViewTableViewDelegateTests: XCTestCase {

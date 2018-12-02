@@ -7,22 +7,25 @@
 //
 
 import UIKit
-import ListyKit
 
-final class EditTaskInteractor: EditTaskInteractorInput {
+public final class EditTaskInteractor: EditTaskInteractorInput {
 
     // MARK: - Properties
 
-    weak var output: EditTaskInteractorOutput!
-    let tasks: Tasks
-    var task: Task
+    public weak var output: EditTaskInteractorOutput!
+    internal let tasks: Tasks
+    internal var task: Task
 
-    required init(task: Task, tasks: Tasks) {
+    // MARK: - Object life cycle
+
+    public required init(task: Task, tasks: Tasks) {
         self.task = task
         self.tasks = tasks
     }
 
-    func saveTask(title: String) {
+    // MARK: - EditTaskInteractorInput
+    
+    public func saveTask(title: String) {
         task.title = title
 
         do {
