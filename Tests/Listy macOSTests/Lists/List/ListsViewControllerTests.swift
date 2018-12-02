@@ -11,10 +11,14 @@ import XCTest
 class ListsViewControllerTests: XCTestCase {
 
     var sut: ListsViewController!
+    var fakePresenter: FakeListsPresenterInput!
 
     override func setUp() {
         let storyboard = NSStoryboard(name: "Lists", bundle: nil)
         sut = (storyboard.instantiateInitialController() as! ListsViewController)
+
+        fakePresenter = FakeListsPresenterInput()
+        sut.presenter = fakePresenter
 
         let _ = sut.view
     }
@@ -37,5 +41,15 @@ class ListsViewControllerTests: XCTestCase {
     func testViewDidLoad() {
         XCTAssert(sut.tableView.dataSource is TableViewDataSource)
         XCTAssert(sut.tableView.delegate is ListsViewTableViewDelegate)
+    }
+
+    // MARK: - addListButtonTapped()
+
+    func testAddListButtonTapped() {
+        // when
+        sut.addListButton.tap()
+
+        // then
+        XCTAssertTrue(fakePresenter.didCallAddList)
     }
 }

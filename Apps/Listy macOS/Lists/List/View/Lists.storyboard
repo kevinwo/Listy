@@ -87,6 +87,9 @@
                                     <font key="font" metaFont="cellTitle"/>
                                 </buttonCell>
                                 <color key="contentTintColor" red="0.1333333333" green="0.66274509800000003" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="addListButtonTapped:" target="uPY-qV-zNc" id="EGI-ni-RE2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>

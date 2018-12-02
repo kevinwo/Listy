@@ -228,7 +228,6 @@
 		A5088A6421AE987D00DCBC7B /* ListyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50889CE21AE6E6C00DCBC7B /* ListyKit.framework */; };
 		A5088A6521AE98AA00DCBC7B /* ListyUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 260D692E216846F9003B7DD9 /* ListyUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5088A6621AE98F500DCBC7B /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D6948216847D4003B7DD9 /* TableViewDataSource.swift */; };
-		A5088A6B21AE9AEA00DCBC7B /* FakeListsPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A6921AE9AE400DCBC7B /* FakeListsPresenterInput.swift */; };
 		A5088A6E21AEB69400DCBC7B /* ListsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A6D21AEB69400DCBC7B /* ListsRouter.swift */; };
 		A5088A7121AEB71000DCBC7B /* ListsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A7021AEB71000DCBC7B /* ListsRouterTests.swift */; };
 		A5088A7421AEB77E00DCBC7B /* FakeListsRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5088A7221AEB75000DCBC7B /* FakeListsRouterOutput.swift */; };
@@ -286,6 +285,9 @@
 		A5AC8BF821A56BAE00CA030D /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BF721A56BAE00CA030D /* AppRouterTests.swift */; };
 		A5AC8BFA21A56D3C00CA030D /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BF921A56D3C00CA030D /* AppDelegateTests.swift */; };
 		A5AC8BFE21A56DF800CA030D /* FakeAppRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BFD21A56DF800CA030D /* FakeAppRouterInput.swift */; };
+		A5EF89C421B394DD009F0342 /* NSButton+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EF89C321B394DD009F0342 /* NSButton+Tests.swift */; };
+		A5EF89C921B395AE009F0342 /* FakeListsPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9A4216881B60009FF96 /* FakeListsPresenterInput.swift */; };
+		A5EF89CA21B395AF009F0342 /* FakeListsPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9A4216881B60009FF96 /* FakeListsPresenterInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -639,7 +641,6 @@
 		A5088A5021AE961100DCBC7B /* UIViewController+LIST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LIST.swift"; sourceTree = "<group>"; };
 		A5088A5A21AE96FF00DCBC7B /* Lists.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lists.storyboard; sourceTree = "<group>"; };
 		A5088A5E21AE973800DCBC7B /* ListsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewControllerTests.swift; sourceTree = "<group>"; };
-		A5088A6921AE9AE400DCBC7B /* FakeListsPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsPresenterInput.swift; sourceTree = "<group>"; };
 		A5088A6D21AEB69400DCBC7B /* ListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouter.swift; sourceTree = "<group>"; };
 		A5088A7021AEB71000DCBC7B /* ListsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsRouterTests.swift; sourceTree = "<group>"; };
 		A5088A7221AEB75000DCBC7B /* FakeListsRouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListsRouterOutput.swift; sourceTree = "<group>"; };
@@ -684,6 +685,7 @@
 		A5AC8BF721A56BAE00CA030D /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
 		A5AC8BF921A56D3C00CA030D /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		A5AC8BFD21A56DF800CA030D /* FakeAppRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAppRouterInput.swift; sourceTree = "<group>"; };
+		A5EF89C321B394DD009F0342 /* NSButton+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSButton+Tests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1124,6 +1126,7 @@
 		265AB0CC21B0D33300D41B46 /* Listy macOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				A5EF89C121B394C8009F0342 /* Shared */,
 				265AB0E421B0F41C00D41B46 /* Lists */,
 				265AB0CF21B0D33300D41B46 /* Info.plist */,
 			);
@@ -1217,7 +1220,6 @@
 			isa = PBXGroup;
 			children = (
 				A5AC8BF621A56B8C00CA030D /* AppDelegate */,
-				265EA9A1216880E20009FF96 /* Helpers */,
 				265EA977216857130009FF96 /* Lists */,
 				265EA9BC2168D4330009FF96 /* Tasks */,
 				265EA965216856830009FF96 /* Info.plist */,
@@ -1277,13 +1279,6 @@
 				A595636E21AD37E20045D85D /* Router */,
 			);
 			path = Edit;
-			sourceTree = "<group>";
-		};
-		265EA9A1216880E20009FF96 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		265EA9B22168D3AD0009FF96 /* Tasks */ = {
@@ -1577,6 +1572,7 @@
 		A50889F221AE80D000DCBC7B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A5EF89C721B39584009F0342 /* Lists */,
 				A50889F321AE80DE00DCBC7B /* Helpers */,
 			);
 			path = Shared;
@@ -1664,7 +1660,6 @@
 			isa = PBXGroup;
 			children = (
 				265EA981216857480009FF96 /* ListsViewControllerTests.swift */,
-				265EA9A4216881B60009FF96 /* FakeListsPresenterInput.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1701,7 +1696,6 @@
 			isa = PBXGroup;
 			children = (
 				A5088A5E21AE973800DCBC7B /* ListsViewControllerTests.swift */,
-				A5088A6921AE9AE400DCBC7B /* FakeListsPresenterInput.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2027,6 +2021,38 @@
 				A5AC8BFD21A56DF800CA030D /* FakeAppRouterInput.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A5EF89C121B394C8009F0342 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A5EF89C221B394CD009F0342 /* Helpers */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A5EF89C221B394CD009F0342 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A5EF89C321B394DD009F0342 /* NSButton+Tests.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A5EF89C721B39584009F0342 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				A5EF89C821B39592009F0342 /* List */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		A5EF89C821B39592009F0342 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				265EA9A4216881B60009FF96 /* FakeListsPresenterInput.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2731,7 +2757,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5EF89C421B394DD009F0342 /* NSButton+Tests.swift in Sources */,
 				265AB0E721B0F43800D41B46 /* ListsViewControllerTests.swift in Sources */,
+				A5EF89CA21B395AF009F0342 /* FakeListsPresenterInput.swift in Sources */,
 				265AB11921B115AB00D41B46 /* ListsViewTableViewDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2895,9 +2923,9 @@
 				A5088A4B21AE93E200DCBC7B /* UIBarButtonItem+Tests.swift in Sources */,
 				A5088A7421AEB77E00DCBC7B /* FakeListsRouterOutput.swift in Sources */,
 				A5088A5F21AE973800DCBC7B /* ListsViewControllerTests.swift in Sources */,
-				A5088A6B21AE9AEA00DCBC7B /* FakeListsPresenterInput.swift in Sources */,
 				A5088AAA21AED40B00DCBC7B /* FakeEditListViewControllerDelegate.swift in Sources */,
 				A5088AA321AED2E800DCBC7B /* FakeEditListRouterOutput.swift in Sources */,
+				A5EF89C921B395AE009F0342 /* FakeListsPresenterInput.swift in Sources */,
 				A5088A7121AEB71000DCBC7B /* ListsRouterTests.swift in Sources */,
 				A5088AA821AED3C300DCBC7B /* FakeEditListPresenterInput.swift in Sources */,
 				A5088A9F21AEC53F00DCBC7B /* EditListRouterTests.swift in Sources */,

@@ -38,6 +38,12 @@ class ListsViewController: NSViewController {
 
         self.presenter.reloadData()
     }
+
+    // MARK: - Button actions
+
+    @IBAction func addListButtonTapped(_ sender: Any) {
+        self.presenter.addList()
+    }
 }
 
 extension ListsViewController: ListsPresenterOutput {
