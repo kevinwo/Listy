@@ -336,6 +336,8 @@
 		A53F640C21B4368D00E2D0F2 /* FakeEditTaskInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EA9DC2168D8070009FF96 /* FakeEditTaskInteractorOutput.swift */; };
 		A53F641121B439E900E2D0F2 /* EditTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53F641021B439E900E2D0F2 /* EditTask.storyboard */; };
 		A53F641421B43A7F00E2D0F2 /* EditTaskRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F641321B43A7F00E2D0F2 /* EditTaskRouter.swift */; };
+		A53F641721B43FD800E2D0F2 /* AppRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F641621B43FD800E2D0F2 /* AppRouterInput.swift */; };
+		A53F641921B43FFA00E2D0F2 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53F641821B43FFA00E2D0F2 /* AppRouter.swift */; };
 		A595637021AD37EF0045D85D /* EditListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595636F21AD37EF0045D85D /* EditListRouterTests.swift */; };
 		A595638F21AE2FD80045D85D /* FakeEditListRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595638E21AE2FD80045D85D /* FakeEditListRouterOutput.swift */; };
 		A5AC8BEC21A5469800CA030D /* ListsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC8BEB21A5469800CA030D /* ListsRouterTests.swift */; };
@@ -730,6 +732,8 @@
 		A53F63D621B3E41600E2D0F2 /* TasksListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListRouter.swift; sourceTree = "<group>"; };
 		A53F641021B439E900E2D0F2 /* EditTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditTask.storyboard; sourceTree = "<group>"; };
 		A53F641321B43A7F00E2D0F2 /* EditTaskRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskRouter.swift; sourceTree = "<group>"; };
+		A53F641621B43FD800E2D0F2 /* AppRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterInput.swift; sourceTree = "<group>"; };
+		A53F641821B43FFA00E2D0F2 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		A595636521AD106C0045D85D /* FakeEditTaskRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditTaskRouterInput.swift; sourceTree = "<group>"; };
 		A595636921AD29A90045D85D /* EditTaskPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskPresenterOutput.swift; sourceTree = "<group>"; };
 		A595636B21AD2BEE0045D85D /* FakeEditTaskPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEditTaskPresenterOutput.swift; sourceTree = "<group>"; };
@@ -1540,9 +1544,9 @@
 		A50888F021AE372B00DCBC7B /* Listy-tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				A53F641521B43FA600E2D0F2 /* AppDelegate */,
 				A5088A5921AE96EE00DCBC7B /* Lists */,
 				A53F63CE21B3E2D300E2D0F2 /* Tasks */,
-				A50888F121AE372B00DCBC7B /* AppDelegate.swift */,
 				A50888F821AE372D00DCBC7B /* Assets.xcassets */,
 				A50888FA21AE372D00DCBC7B /* Info.plist */,
 			);
@@ -2223,6 +2227,16 @@
 				A53F641321B43A7F00E2D0F2 /* EditTaskRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		A53F641521B43FA600E2D0F2 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A50888F121AE372B00DCBC7B /* AppDelegate.swift */,
+				A53F641821B43FFA00E2D0F2 /* AppRouter.swift */,
+				A53F641621B43FD800E2D0F2 /* AppRouterInput.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		A595636D21AD2D480045D85D /* View */ = {
@@ -3262,8 +3276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A53F63BA21B3DDF900E2D0F2 /* ListsRouter.swift in Sources */,
+				A53F641721B43FD800E2D0F2 /* AppRouterInput.swift in Sources */,
 				A5088A9C21AEC4C100DCBC7B /* EditListRouter.swift in Sources */,
 				A50888F221AE372B00DCBC7B /* AppDelegate.swift in Sources */,
+				A53F641921B43FFA00E2D0F2 /* AppRouter.swift in Sources */,
 				A53F641421B43A7F00E2D0F2 /* EditTaskRouter.swift in Sources */,
 				A53F63D721B3E41600E2D0F2 /* TasksListRouter.swift in Sources */,
 			);
