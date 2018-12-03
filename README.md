@@ -3,9 +3,9 @@
 
 # Listy
 
-Listy is yet another multiplatform to-do list app, and it does the most amazing things, like let you add lists and tasks – even delete them – and see what an app with multiple layers might look like. Enjoy!
+Listy is yet another multiplatform to-do list app. You can add and delete lists and add and delete tasks. It truly is a productivity wonder.
 
-# Why another to-do app?
+## Why another to-do app?
 
 There are a number of VIPER architecture examples in the wild, but I had not come across something that shows how VIPER can be applied in a DRY fashion across multiple platforms. Therefore, I decided to put together and share the way I code in the form of a to-do app.
 
@@ -42,3 +42,20 @@ This framework provides Foundation-driven functionality, and should be usable on
 ## Install
 
 You should just be able to git clone this repository, build, and run/test!
+
+## License
+
+The source code to Listy is available under the MIT license. See the LICENSE file for more information.
+
+Although technically allowed by the licensing terms, please do not just copy pasta Listy's code and submit your own version to the App Store.
+
+## I am available for hire
+
+and looking for interesting opportunities in New York City. If you like the way I write code, please feel free to get in touch!
+
+## Contact
+
+Kevin Wolkober
+
+* [LinkedIn](https://www.linkedin.com/in/kevinwolkober)
+* [GitHub](https://github.com/kevinwo)
