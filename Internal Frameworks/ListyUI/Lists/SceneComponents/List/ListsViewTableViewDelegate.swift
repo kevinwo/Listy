@@ -9,6 +9,10 @@ class ListsViewTableViewDelegate: NSObject {
 
     var didSelectRowHandler: ((IndexPath) -> Void)?
     var deleteRowHandler: ((IndexPath) -> Void)?
+
+    #if os(tvOS)
+    var focusedIndexPath: IndexPath?
+    #endif
 }
 
 extension ListsViewTableViewDelegate: UITableViewDelegate {
@@ -28,6 +32,12 @@ extension ListsViewTableViewDelegate: UITableViewDelegate {
         }
 
         return [delete]
+    }
+    #endif
+
+    #if os(tvOS)
+    func tableView(_ tableView: UITableView, didUpdateFocusIn context: UITableViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        self.focusedIndexPath = context.nextFocusedIndexPath
     }
     #endif
 }

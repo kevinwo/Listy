@@ -33,14 +33,28 @@ public class ListsViewController: UITableViewController {
         self.tableView.dataSource = self.tableViewDataSource
         self.tableView.delegate = self.tableViewDelegate
 
+        #if os(tvOS)
+        let playButtonTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(playButtonTapped(_:)))
+        playButtonTapRecognizer.allowedPressTypes = [NSNumber(value: UIPress.PressType.playPause.rawValue)];
+        self.view.addGestureRecognizer(playButtonTapRecognizer)
+        #endif
+
         self.presenter.reloadData()
     }
 
-    // MARK: - Button actions
+    // MARK: - Actions
 
     @IBAction func addBarButtonItemTapped(_ sender: Any) {
         self.presenter.addList()
     }
+
+    #if os(tvOS)
+    @objc func playButtonTapped(_ sender: Any) {
+        if let indexPath = self.tableViewDelegate.focusedIndexPath, let list = self.tableViewDataSource.object(at: indexPath) as? List {
+            self.presenter.deleteList(list, at: indexPath)
+        }
+    }
+    #endif
 }
 
 extension ListsViewController: ListsPresenterOutput {
