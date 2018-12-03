@@ -37,6 +37,34 @@
             BlueprintName = "Listy-iOS"
             ReferencedContainer = "container:Listy.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "265AB0B721B0D32F00D41B46"
+            BuildableName = "Listy.app"
+            BlueprintName = "Listy macOS"
+            ReferencedContainer = "container:Listy.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A50888EE21AE372A00DCBC7B"
+            BuildableName = "Listy-tvOS.app"
+            BlueprintName = "Listy-tvOS"
+            ReferencedContainer = "container:Listy.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "260D68D92166FD2C003B7DD9"
+            BuildableName = "ListyKit.framework"
+            BlueprintName = "ListyKit iOS"
+            ReferencedContainer = "container:Listy.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "260D692B216846F9003B7DD9"
+            BuildableName = "ListyUI.framework"
+            BlueprintName = "ListyUI iOS"
+            ReferencedContainer = "container:Listy.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference
