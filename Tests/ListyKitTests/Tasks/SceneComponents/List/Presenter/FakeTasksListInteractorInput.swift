@@ -6,7 +6,6 @@
 //
 
 import Foundation
-@testable import Listy_iOS
 @testable import ListyKit
 
 class FakeTasksListInteractorInput: TasksListInteractorInput {

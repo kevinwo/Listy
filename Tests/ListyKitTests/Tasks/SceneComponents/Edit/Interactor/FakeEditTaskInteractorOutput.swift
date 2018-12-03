@@ -1,12 +1,11 @@
 //
 //  FakeEditTaskInteractorOutput.swift
-//  Listy-iOSTests
+//  ListyKitTests
 //
 //  Created by Kevin Wolkober on 10/6/18.
 //
 
-import UIKit
-@testable import Listy_iOS
+import Foundation
 @testable import ListyKit
 
 class FakeEditTaskInteractorOutput: EditTaskInteractorOutput {
