@@ -7,41 +7,58 @@ Listy is yet another multiplatform to-do list app. You can add and delete lists 
 
 ## Why another to-do app?
 
-There are a number of VIPER architecture examples in the wild, but I had not come across something that shows how VIPER can be applied in a DRY fashion across multiple platforms. Therefore, I decided to put together and share the way I code in the form of a to-do app.
+I wanted to demonstrate an implementation of [VIPER architecture](https://www.objc.io/issues/13-architecture/viper/) in a cross-platform scenario. There are many VIPER architecture examples in the wild, but I haven't seen any that tackle code reusability. Hence, the birth of Listy, a to-do app that will run on any fruit-labled device.
 
-## Apps
+## Project Structure & Features
 
-### Listy iOS
+The following is a brief breakdown of how I structured my Xcode project, labeled by scheme name:
 
-This is the main iOS app target, consisting of list and edit views for lists and tasks.
+### App Targets
 
-### Listy tvOS
+#### Listy iOS
 
-This is the main tvOS app target, consisting of list and edit views for lists and tasks.
+To-do'ing from your iPhone and iPad; iOS 12+
 
-### Listy watchOS
+#### Listy tvOS
 
-This is the main watchOS app target, consisting of list and edit views for lists and tasks.
+Manage to-dos from the comfort of couch and television; tvOS 12+
 
-### Listy macOS
+#### Listy watchOS
 
-This is the main macOS app target, consisting of list and edit views for lists and tasks.
+To-dos on your wrist; watchOS 5.1+
 
-⚠️ I am not a macOS developer. Please go gentle on feedback! 🙏
+#### Listy macOS
 
-## Internal Frameworks
+To-dos on your Mac.
+
+⚠️ I am not a macOS developer. Please go gentle on UI/UX feedback! 🙏
+
+### Supporting Frameworks
+
+The frameworks are shared code connected to platform-specific implementations of Cocoa Touch frameworks internal to the project
 
 ### ListyUI
 
-This framework provides most of the UIKit-driven functionality, with fun things like reusable collection-based data sources which you can use across different platforms.
+ListyUI provides reusable UIKit-driven functionality.
+
+- [x] List and task views
+- [x] Table view data sources and delegates
+- [x] Error alert presentation
+- [x] View controller presentation
 
 ### ListyKit
 
-This framework provides Foundation-driven functionality, and should be usable on iOS, tvOS, watchOS, macOS, anywhere!
+ListyKit provides reusable Foundation-driven functionality.
 
-## Install
+- [x] List and task presenters and interactors
+- [x] Entity models and persistence
+- [x] Error handling and view routing protocols
 
-You should just be able to git clone this repository, build, and run/test!
+## Setup
+
+- Clone this repository.
+- Build for any app scheme in the Listy.xcodeproj.
+- Run and enjoy.
 
 ## License
 
@@ -59,3 +76,10 @@ Kevin Wolkober
 
 * [LinkedIn](https://www.linkedin.com/in/kevinwolkober)
 * [GitHub](https://github.com/kevinwo)
+
+## Great Resources
+
+The following items have been very helpful in developing this project:
+
+* [VIPER architecture](https://www.objc.io/issues/13-architecture/viper/)
+* [Picking an OSS license for your iOS app](https://blog.lazerwalker.com/cortado/2015/07/05/open-source-licenses.html)
