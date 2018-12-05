@@ -123,4 +123,5 @@ Kevin Wolkober
 The following items have been very helpful in developing this project:
 
 * [Architecting iOS Apps with VIPER](https://www.objc.io/issues/13-architecture/viper/)
+* [Creating Cross-Platform Swift Frameworks for iOS, watchOS, and tvOS](https://iosmentor.io/swift-frameworks-ios-watchos-tvos/)
 * [Picking an OSS license for your iOS app](https://blog.lazerwalker.com/cortado/2015/07/05/open-source-licenses.html)
