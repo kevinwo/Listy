@@ -23,6 +23,7 @@ To-do'ing from your iPhone and iPad; iOS 12+
 - [x] View layouts via storyboard
 - [x] Scene configuration (i.e. VIPER module setup)
 - [x] View routing (i.e. tell view to present/push/dismiss another view)
+- [ ] Confirm before deleting lists
 
 #### Listy tvOS
 
@@ -32,7 +33,6 @@ Manage to-dos from the comfort of couch and television; tvOS 12+
 - [x] View layouts via storyboard
 - [x] Scene configuration
 - [x] View routing
-- [ ] Confirm delete before deleting lists and tasks
 
 #### Listy watchOS + extension
 
@@ -44,6 +44,7 @@ To-dos on your wrist; watchOS 5.1+
 - [x] Error alert presentation
 - [x] View routing
 - [x] Handle view routing output (e.g. present/push/dismiss views)
+- [ ] Confirm before deleting lists
 - [ ] Delete lists
 - [ ] Add and delete tasks
 
@@ -56,6 +57,7 @@ To-dos on your Mac; macOS 10.13+
 - [x] Scene configuration
 - [x] Error alert presentation
 - [x] View routing
+- [ ] Confirm before deleting lists
 - [ ] Delete lists
 - [ ] Add and delete tasks
 
@@ -86,8 +88,8 @@ Reusable Foundation-driven functionality.
 ## Setup
 
 - Clone this repository: `https://github.com/kevinwo/Listy.git`
-- Build for any app scheme in the Listy.xcodeproj.
-- Run and enjoy.
+- Open `Listy.xcodeproj`
+- Build and run any scheme, and enjoy!
 
 ## Test Suite
 
@@ -106,9 +108,9 @@ The source code to Listy is available under the MIT license. See the LICENSE fil
 
 Although technically allowed by the licensing terms, please do not just copy pasta Listy's code and submit your own version to the App Store.
 
-## I am available for hire
+## Hire me! 👨‍💻
 
-and looking for interesting opportunities in New York City. If you like the way I write code, please feel free to get in touch!
+I'm looking for interesting opportunities in New York City. If you like the way I write code, please feel free to get in touch!
 
 ## Contact
 
