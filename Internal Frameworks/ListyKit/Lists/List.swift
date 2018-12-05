@@ -11,7 +11,7 @@ public class List: Object {
 
     // MARK: - Properties
 
-    public var title: String!
+    public var title: String = ""
 
     private enum CodingKeys: String, CodingKey {
         case title
