@@ -45,6 +45,19 @@ class ListsRouter: ListsRouterInput {
         let controller = TasksListRouter.scene(list: list)
         self.output.push(view: controller, animated: true)
     }
+
+    func showConfirmDeleteAlert(title: String, confirmActionTitle: String, cancelActionTitle: String, confirmAction: @escaping () -> Void) {
+        let controller = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: confirmActionTitle, style: .destructive) { (_) in
+            confirmAction()
+        }
+        let cancelAction = UIAlertAction(title: cancelActionTitle, style: .cancel, handler: nil)
+
+        controller.addAction(confirmAction)
+        controller.addAction(cancelAction)
+
+        self.output.present(view: controller, animated: true, completion: nil)
+    }
 }
 
 extension ListsRouter: EditListViewControllerDelegate {

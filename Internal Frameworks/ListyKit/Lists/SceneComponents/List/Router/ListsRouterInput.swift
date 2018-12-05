@@ -11,4 +11,8 @@ public protocol ListsRouterInput: class {
 
     func showEditListView(with list: List)
     func showTasks(for list: List)
+
+    #if os(tvOS)
+    func showConfirmDeleteAlert(title: String, confirmActionTitle: String, cancelActionTitle: String, confirmAction: @escaping () -> Void)
+    #endif
 }

@@ -25,4 +25,8 @@ class FakeListsRouterInput: ListsRouterInput {
         self.didCallShowTasks = true
         self.listForShowTasks = list
     }
+
+    #if os(tvOS)
+    func showConfirmDeleteAlert(title: String, confirmActionTitle: String, cancelActionTitle: String, confirmAction: @escaping () -> Void) {}
+    #endif
 }

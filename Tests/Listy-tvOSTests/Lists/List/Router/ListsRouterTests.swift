@@ -112,6 +112,39 @@ class ListsRouterTests: XCTestCase {
         XCTAssert(interactor.output is ListsPresenter)
     }
 
+    // MARK: - showConfirmDeleteAlert(title:confirmActionTitle:cancelActionTitle:confirmAction:)
+
+    func testShowConfirmDeleteAlert() {
+        // given
+        let title = "Are you sure you want to delete Cool List?"
+        let confirmTitle = "Delete"
+        let cancelTitle = "Cancel"
+        let confirm = { () -> Void in
+        }
+
+        // when
+        sut.showConfirmDeleteAlert(title: title, confirmActionTitle: confirmTitle, cancelActionTitle: cancelTitle, confirmAction: confirm)
+
+        // then
+        XCTAssertTrue(fakeOutput.didCallPresentView)
+
+        guard let controller = fakeOutput.presentedView as? UIAlertController else {
+            XCTFail("Presented view should be of type UIAlertController"); return
+        }
+
+        XCTAssertEqual(controller.title, title)
+
+        guard let confirmAction = controller.actions.filter({ $0.title == confirmTitle }).first else {
+            XCTFail("Confirm action should be present"); return
+        }
+        XCTAssertEqual(confirmAction.style, .destructive)
+
+        guard let cancelAction = controller.actions.filter({ $0.title == cancelTitle }).first else {
+            XCTFail("Cancel action should be present"); return
+        }
+        XCTAssertEqual(cancelAction.style, .cancel)
+    }
+
     // MARK: - Private interface
 
     func listsAndTasks() -> (Lists, Tasks) {
