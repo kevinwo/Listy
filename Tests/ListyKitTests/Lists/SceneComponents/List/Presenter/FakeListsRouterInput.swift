@@ -13,8 +13,14 @@ class FakeListsRouterInput: ListsRouterInput {
 
     var didCallShowEditListView: Bool = false
     var didCallShowTasks: Bool = false
+    var didCallShowConfirmDeleteAlert: Bool = false
+
     var listForShowEditListView: List?
     var listForShowTasks: List?
+    var confirmDeleteAlertTitle: String?
+    var confirmDeleteAlertConfirmActionTitle: String?
+    var confirmDeleteAlertCancelActionTitle: String?
+    var confirmDeleteAlertConfirmAction: (() -> Void)?
 
     func showEditListView(with list: List) {
         self.didCallShowEditListView = true
@@ -26,7 +32,11 @@ class FakeListsRouterInput: ListsRouterInput {
         self.listForShowTasks = list
     }
 
-    #if os(tvOS)
-    func showConfirmDeleteAlert(title: String, confirmActionTitle: String, cancelActionTitle: String, confirmAction: @escaping () -> Void) {}
-    #endif
+    func showConfirmDeleteAlert(title: String, confirmActionTitle: String, cancelActionTitle: String, confirmAction: @escaping () -> Void) {
+        self.didCallShowConfirmDeleteAlert = true
+        self.confirmDeleteAlertTitle = title
+        self.confirmDeleteAlertConfirmActionTitle = confirmActionTitle
+        self.confirmDeleteAlertCancelActionTitle = cancelActionTitle
+        self.confirmDeleteAlertConfirmAction = confirmAction
+    }
 }

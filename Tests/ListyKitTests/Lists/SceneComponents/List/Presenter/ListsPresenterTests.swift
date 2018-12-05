@@ -86,6 +86,27 @@ class ListsPresenterTests: XCTestCase {
         XCTAssertEqual(fakeRouter.listForShowTasks, list)
     }
 
+    // MARK: - confirmDeleteList(_:confirmAction:)
+
+    func testConfirmDeleteList() {
+        // given
+        let list = List()
+        list.title = "Cool List"
+
+        let action = { () -> Void in
+        }
+
+        // when
+        sut.confirmDeleteList(list, confirmAction: action)
+
+        // then
+        XCTAssertTrue(fakeRouter.didCallShowConfirmDeleteAlert)
+        XCTAssertNotNil(fakeRouter.confirmDeleteAlertTitle)
+        XCTAssertNotNil(fakeRouter.confirmDeleteAlertConfirmActionTitle)
+        XCTAssertNotNil(fakeRouter.confirmDeleteAlertCancelActionTitle)
+        XCTAssertNotNil(fakeRouter.confirmDeleteAlertConfirmAction)
+    }
+
     // MARK: - deleteList(_:at:)
 
     func testDeleteListAtIndexPath() {

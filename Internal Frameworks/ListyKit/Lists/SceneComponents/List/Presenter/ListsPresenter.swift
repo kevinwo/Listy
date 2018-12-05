@@ -30,6 +30,14 @@ public final class ListsPresenter: ListsPresenterInput {
         self.router.showTasks(for: list)
     }
 
+    public func confirmDeleteList(_ list: List, confirmAction: @escaping () -> Void) {
+        let alertTitle = "Are you sure you want to delete \(list.title)?"
+        let alertConfirmActionTitle = "Confirm"
+        let alertCancelActionTitle = "Cancel"
+
+        self.router.showConfirmDeleteAlert(title: alertTitle, confirmActionTitle: alertConfirmActionTitle, cancelActionTitle: alertCancelActionTitle, confirmAction: confirmAction)
+    }
+
     public func deleteList(_ list: List, at indexPath: IndexPath) {
         self.interactor.deleteList(list, at: indexPath)
     }

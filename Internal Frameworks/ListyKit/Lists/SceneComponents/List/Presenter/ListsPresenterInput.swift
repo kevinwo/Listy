@@ -14,6 +14,7 @@ public protocol ListsPresenterInput: class {
     func reloadData()
     func addList()
     func showTasks(for list: List)
+    func confirmDeleteList(_ list: List, confirmAction: @escaping () -> Void)
     func deleteList(_ list: List, at indexPath: IndexPath)
 
     #if os(macOS)

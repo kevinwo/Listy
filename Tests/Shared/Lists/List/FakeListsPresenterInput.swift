@@ -41,6 +41,8 @@ final class FakeListsPresenterInput: ListsPresenterInput {
         self.listWithTasksToShow =  list
     }
 
+    func confirmDeleteList(_ list: List, confirmAction: @escaping () -> Void) {}
+
     func deleteList(_ list: List, at indexPath: IndexPath) {
         self.didDeleteList = true
         self.deletedList = list
