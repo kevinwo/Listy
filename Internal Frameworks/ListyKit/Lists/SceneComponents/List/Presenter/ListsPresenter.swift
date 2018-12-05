@@ -23,10 +23,6 @@ public final class ListsPresenter: ListsPresenterInput {
     public func addList() {
         let list = self.interactor.newList()
 
-        #if os(macOS)
-        list.title = "New list"
-        #endif
-
         self.router.showEditListView(with: list)
     }
 

@@ -27,7 +27,13 @@ public class ListsInteractor: ListsInteractorInput {
     }
 
     public func newList() -> List {
-        return List()
+        let list = List()
+
+        #if os(macOS)
+        list.title = "New list"
+        #endif
+
+        return list
     }
 
     public func deleteList(_ list: List, at indexPath: IndexPath) {
