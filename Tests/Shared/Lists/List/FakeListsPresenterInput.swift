@@ -16,8 +16,11 @@ final class FakeListsPresenterInput: ListsPresenterInput {
     var didCallReloadData: Bool = false
     var didCallAddList: Bool = false
     var didCallShowTasks: Bool = false
+    var didCallConfirmDeleteList: Bool = false
     var didDeleteList: Bool = false
 
+    var confirmDeleteList: List?
+    var confirmDeleteAction: (() -> Void)?
     var deletedList: List?
     var deletedListIndexPath: IndexPath?
     var listWithTasksToShow: List?
@@ -41,7 +44,11 @@ final class FakeListsPresenterInput: ListsPresenterInput {
         self.listWithTasksToShow =  list
     }
 
-    func confirmDeleteList(_ list: List, confirmAction: @escaping () -> Void) {}
+    func confirmDeleteList(_ list: List, confirmAction: @escaping () -> Void) {
+        self.didCallConfirmDeleteList = true
+        self.confirmDeleteList = list
+        self.confirmDeleteAction = confirmAction
+    }
 
     func deleteList(_ list: List, at indexPath: IndexPath) {
         self.didDeleteList = true

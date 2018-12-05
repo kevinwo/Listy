@@ -60,12 +60,51 @@ class ListsViewControllerTests: XCTestCase {
 
     // MARK: - Button actions
 
+    // MARK: - addBarButtonItemTapped(_:)
+
     func testAddBarButtonItemTapped() {
         // when
         sut.addBarButtonItem.tap()
 
         // then
         XCTAssertTrue(fakePresenter.didCallAddList)
+    }
+
+    // MARK: - playButtonTapped(_:)
+
+    func testPlayButtonTapped_WhenListRowIsFocused() {
+        // given
+        let indexPath = IndexPath(row: 0, section: 0)
+        sut.tableViewDelegate.focusedIndexPath = indexPath
+
+        let list = List()
+        sut.tableViewDataSource.sections = [[list]]
+
+        // when
+        sut.playButtonTapped(self)
+
+        // then
+        XCTAssertTrue(fakePresenter.didCallConfirmDeleteList)
+        XCTAssertEqual(fakePresenter.confirmDeleteList, list)
+        XCTAssertNotNil(fakePresenter.confirmDeleteAction)
+
+        XCTAssertFalse(fakePresenter.didDeleteList)
+        fakePresenter.confirmDeleteAction?()
+        XCTAssertTrue(fakePresenter.didDeleteList)
+    }
+
+    func testPlayButtonTapped_WhenListRowIsNotFocused() {
+        // given
+        let list = List()
+        sut.tableViewDataSource.sections = [[list]]
+
+        // when
+        sut.playButtonTapped(self)
+
+        // then
+        XCTAssertFalse(fakePresenter.didCallConfirmDeleteList)
+        XCTAssertNil(fakePresenter.confirmDeleteList)
+        XCTAssertNil(fakePresenter.confirmDeleteAction)
     }
 
     // MARK: - ListsPresenterOutput

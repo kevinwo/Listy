@@ -8,7 +8,7 @@
 
 import ListyKit
 
-public class ListsViewController: UITableViewController {
+public final class ListsViewController: UITableViewController {
 
     // MARK: - Properties
 
@@ -51,7 +51,9 @@ public class ListsViewController: UITableViewController {
     #if os(tvOS)
     @objc func playButtonTapped(_ sender: Any) {
         if let indexPath = self.tableViewDelegate.focusedIndexPath, let list = self.tableViewDataSource.object(at: indexPath) as? List {
-            self.presenter.deleteList(list, at: indexPath)
+            self.presenter.confirmDeleteList(list) {
+                self.presenter.deleteList(list, at: indexPath)
+            }
         }
     }
     #endif
