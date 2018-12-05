@@ -7,7 +7,7 @@ Listy is yet another cross-platform to-do list app. You can add and delete lists
 
 ## Why another to-do app?
 
-I wanted to demonstrate an implementation of [VIPER architecture](https://www.objc.io/issues/13-architecture/viper/) in a cross-platform scenario. There are many VIPER architecture examples in the wild, but I haven't seen any that tackle code reusability. Hence, the birth of Listy, a to-do app that will run on any fruit-labled device. To read more about it, check out my write-up, [Cross-platform VIPER: An app architecture love story](https://medium.com/the-codes/cross-platform-viper-bde42ba0ba43) (publishing soon!).
+I wanted to demonstrate an implementation of [VIPER architecture](https://www.objc.io/issues/13-architecture/viper/) in a cross-platform scenario. There are many VIPER architecture examples in the wild, but I haven't seen any that tackle code reusability. Hence, the birth of Listy, a to-do app that will run on any fruit-labled device. To read more about it, check out my write-up, [Cross-platform VIPER: An app architecture love story](https://medium.com/the-codes/cross-platform-viper-bde42ba0ba43).
 
 ## Project Structure & Features
 
@@ -23,7 +23,6 @@ To-do'ing from your iPhone and iPad; iOS 12+
 - [x] View layouts via storyboard
 - [x] Scene configuration (i.e. VIPER module setup)
 - [x] View routing (i.e. tell view to present/push/dismiss another view)
-- [x] Unit tests
 
 #### Listy tvOS
 
