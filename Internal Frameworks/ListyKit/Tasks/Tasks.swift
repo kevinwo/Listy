@@ -36,6 +36,10 @@ public class Tasks: NSObject {
     }
 
     public func add(_ task: Task) throws {
+        guard !task.title.isEmpty else {
+            throw NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
+        }
+
         try self.database.save(task)
     }
 

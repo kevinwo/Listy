@@ -79,6 +79,6 @@ class TasksListInteractorTests: XCTestCase {
 
         // then
         XCTAssertNotNil(task)
-        XCTAssertNil(task.title)
+        XCTAssertEqual(task.title, "")
     }
 }

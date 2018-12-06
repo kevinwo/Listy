@@ -105,7 +105,15 @@ class TasksTests: XCTestCase {
         XCTAssertEqual(fetchedTask, task)
     }
 
-    func testAdd_WhenFails() {
+    func testAdd_WhenFailsWithNoTitle() {
+        // given
+        let task = Task()
+
+        // when/then
+        XCTAssertThrowsError(try sut.add(task))
+    }
+
+    func testAdd_WhenFailsWithBadPath() {
         // given
         let badDatabase = Database(path: "/bad/path")
         let tasks = Tasks(database: badDatabase)
