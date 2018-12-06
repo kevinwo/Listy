@@ -52,9 +52,9 @@ public class ListsInteractor: ListsInteractorInput {
     }
 
     #if os(macOS)
-    public func saveList(title: String) {
+    public func saveList(title: String?) {
         let list = List()
-        list.title = title
+        list.title = title ?? ""
 
         do {
             try lists.add(list)

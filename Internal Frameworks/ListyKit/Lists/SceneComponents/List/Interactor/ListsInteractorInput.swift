@@ -12,6 +12,6 @@ public protocol ListsInteractorInput: class {
     func deleteList(_ list: List, at indexPath: IndexPath)
 
     #if os(macOS)
-    func saveList(title: String)
+    func saveList(title: String?)
     #endif
 }
