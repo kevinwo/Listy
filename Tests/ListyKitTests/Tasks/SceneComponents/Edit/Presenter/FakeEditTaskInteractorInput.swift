@@ -11,17 +11,21 @@ import UIKit
 class FakeEditTaskInteractorInput: EditTaskInteractorInput {
 
     weak var output: EditTaskInteractorOutput!
-    var didCallLoadTask: Bool = false
-    var didCallSaveTask: Bool = false
     var task: Task
     let tasks: Tasks
+
+    var didCallLoadTask: Bool = false
+    var didCallSaveTask: Bool = false
+
+    var saveListTask: String?
 
     required init(task: Task, tasks: Tasks) {
         self.task = task
         self.tasks = tasks
     }
 
-    func saveTask(title: String) {
+    func saveTask(title: String?) {
         self.didCallSaveTask = true
+        self.saveListTask = title
     }
 }

@@ -10,5 +10,5 @@ public protocol EditTaskInteractorInput {
     var output: EditTaskInteractorOutput! { get set }
 
     init(task: Task, tasks: Tasks)
-    func saveTask(title: String)
+    func saveTask(title: String?)
 }

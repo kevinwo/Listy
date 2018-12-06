@@ -23,12 +23,6 @@ public final class EditTaskPresenter: EditTaskPresenterInput {
     }
 
     public func save(title: String?) {
-        guard let title = title, !title.isEmpty else {
-            let error = NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
-            self.output.showErrorAlert(for: error)
-            return
-        }
-
         self.interactor.saveTask(title: title)
     }
 }

@@ -23,8 +23,8 @@ public final class EditTaskInteractor: EditTaskInteractorInput {
 
     // MARK: - EditTaskInteractorInput
     
-    public func saveTask(title: String) {
-        task.title = title
+    public func saveTask(title: String?) {
+        task.title = title ?? ""
 
         do {
             try tasks.add(task)

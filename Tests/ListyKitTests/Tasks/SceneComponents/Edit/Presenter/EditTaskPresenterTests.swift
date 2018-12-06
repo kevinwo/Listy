@@ -75,7 +75,7 @@ class EditTaskPresenterTests: XCTestCase {
         sut.save(title: title)
 
         // then
-        XCTAssertFalse(fakeInteractor.didCallSaveTask)
+        XCTAssertTrue(fakeInteractor.didCallSaveTask)
     }
 }
 
