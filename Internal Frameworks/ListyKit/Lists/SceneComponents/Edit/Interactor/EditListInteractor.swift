@@ -21,8 +21,8 @@ public class EditListInteractor: EditListInteractorInput {
         self.lists = lists
     }
 
-    public func saveList(title: String) {
-        list.title = title
+    public func saveList(title: String?) {
+        list.title = title ?? ""
 
         do {
             try lists.add(list)

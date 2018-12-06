@@ -21,7 +21,7 @@ class FakeEditListInteractorInput: EditListInteractorInput {
         self.lists = lists
     }
 
-    func saveList(title: String) {
+    func saveList(title: String?) {
         self.didCallSaveList = true
         self.saveListTitle = title
     }

@@ -54,7 +54,7 @@ class EditListPresenterTests: XCTestCase {
         XCTAssertTrue(fakeRouter.didCallFinishWithCancel)
     }
 
-    // MARK: - save()
+    // MARK: - save(title:)
 
     func testSave_WhenTitleIsPresent() {
         // given
@@ -75,7 +75,7 @@ class EditListPresenterTests: XCTestCase {
         sut.save(title: title)
 
         // then
-        XCTAssertFalse(fakeInteractor.didCallSaveList)
+        XCTAssertTrue(fakeInteractor.didCallSaveList)
     }
 }
 

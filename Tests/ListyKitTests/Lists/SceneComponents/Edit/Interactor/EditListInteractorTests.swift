@@ -62,5 +62,18 @@ class EditListInteractorTests: XCTestCase {
         let allListsAfterSave = lists.all()
         XCTAssertNotNil(allListsAfterSave.filter({ $0.title == title }).first)
         XCTAssertTrue(fakeOutput.didCallFinish)
+        XCTAssertFalse(fakeOutput.didCallFailedToSaveList)
+    }
+
+    func testSaveList_WhenFails() {
+        // given
+        let title: String? = nil
+
+        // when
+        sut.saveList(title: title)
+
+        // then
+        XCTAssertFalse(fakeOutput.didCallFinish)
+        XCTAssertTrue(fakeOutput.didCallFailedToSaveList)
     }
 }

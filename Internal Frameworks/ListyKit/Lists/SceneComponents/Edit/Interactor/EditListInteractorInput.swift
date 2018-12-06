@@ -8,5 +8,5 @@
 public protocol EditListInteractorInput: class {
 
     init(list: List, lists: Lists)
-    func saveList(title: String)
+    func saveList(title: String?)
 }
