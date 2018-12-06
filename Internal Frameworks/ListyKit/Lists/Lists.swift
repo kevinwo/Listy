@@ -34,6 +34,10 @@ public class Lists {
     }
 
     public func add(_ list: List) throws {
+        guard !list.title.isEmpty else {
+            throw NSError(domain: "com.errordomain", code: 0, userInfo: [NSLocalizedFailureReasonErrorKey: "Invalid title"])
+        }
+
         try self.database.save(list)
     }
 

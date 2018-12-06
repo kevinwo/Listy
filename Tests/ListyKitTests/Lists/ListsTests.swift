@@ -95,7 +95,15 @@ class ListsTests: XCTestCase {
         XCTAssertEqual(fetchedList, list)
     }
 
-    func testAdd_WhenFails() {
+    func testAdd_WhenFailsWithNoTitle() {
+        // given
+        let list = List()
+
+        // when/then
+        XCTAssertThrowsError(try sut.add(list))
+    }
+
+    func testAdd_WhenFailsWithBadPath() {
         // given
         let badDatabase = Database(path: "/bad/path")
         let lists = Lists(database: badDatabase)
